@@ -1,0 +1,190 @@
+<Exercise id="1">
+  <name>IS09-02 Schätztheorie 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>ML Gamma
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sei $[var=sample,latex]$ eine unabh&amp;auml;ngige Stichprobe einer Zufallsvariable mit Dichte&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$f(x) = \displaystyle\frac{x^{k-1}e^{-\frac{x}{\theta}}}{\theta^k\Gamma(k)} \quad \text{ f&amp;uuml;r } x &amp;gt; 0 \text{ und } k, \theta &amp;gt; 0$, $\Gamma(k) = \int_0^\infty t^{k-1} e^{-t}\,{\rm d}t.$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sch&amp;auml;tzen Sie $\theta$ mit der Maximum-Likelihood-Methode f&amp;uuml;r $k=[var=k,latex]$. &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Richtig ist $\theta^{ML} = [var=rsol1,latex]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="16">
+        <StageTransition id="17">
+          <conditionExpression id="18">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="19">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="20">
+        <StageHint id="21">
+          <stagehint__order>0</stagehint__order>
+          <text>Versuchen Sie zuerst die Likelihood-Funktion aufzustellen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>1</stagehint__order>
+          <text>$L=f(\theta|x_1,...,x_n)=\prod\limits_{j=1}^n \frac{x_j^{k-1}e^{-\frac{x_j}{\theta}}}{\theta^k\Gamma(k)}$.&lt;br /&gt;
+Vereinfachen Sie diese Funktion nun! Beachten Sie beim Vereinfachen, dass einige Ausdr&amp;uuml;cke reelle Zahlen darstellen und daher nicht notwendigerweise vereinfacht werden m&amp;uuml;ssen, da sie beim sp&amp;auml;teren Ableiten ohnehin wegfallen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="23">
+          <stagehint__order>2</stagehint__order>
+          <text>Logarithmieren Sie die vereinfachte Likelihood-Funktion nun. Beachten Sie dabei die Logarithmengesetze!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="24">
+          <stagehint__order>3</stagehint__order>
+          <text>Bestimmen Sie jetzt das Maximum, in dem Sie die logarithmierte Funktion nach $\theta$ ableiten und gleich $0$ setzen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="25">
+          <stagehint__order>4</stagehint__order>
+          <text>            Setzen Sie die Stichprobe in den ML-Schätzer ein.
+        </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="26"/>
+      <variableUpdatesBeforeCheck id="27"/>
+      <variableUpdatesAfterCheck id="28"/>
+      <variableUpdatesOnNormalExit id="29"/>
+      <variableUpdatesOnRepeat id="30"/>
+      <variableUpdatesOnSkip id="31"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="32"/>
+      <rules id="33"/>
+      <fillInFields id="34">
+        <FillInField id="35">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="36"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $\theta^{ML} = [var=rsol1,latex]$.</defaultFeedback>
+      <correctAnswerRules id="37">
+        <Rule id="38">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="39">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rsol1]-0.0011&amp;&amp;[input=field1]&lt;[var=rsol1]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="40">
+    <VariableDeclaration id="41">
+      <name>k</name>
+      <initializationCode id="42">
+        <code>randomIntegerBetween(1,11)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>theta</name>
+      <initializationCode id="44">
+        <code>randomIntegerBetween(1,11)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>sample</name>
+      <initializationCode id="46">
+        <code>evaluateInR(&apos;round(rgamma(5,shape=[var=k],scale=[var=theta]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>rsol1</name>
+      <initializationCode id="48">
+        <code>evaluateInR(&apos;round(sum(c([var=sample]))/(5*[var=k]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="49"/>
+  <dynamicMolecules id="50"/>
+  <resultFeedbackMappings id="51"/>
+</Exercise>

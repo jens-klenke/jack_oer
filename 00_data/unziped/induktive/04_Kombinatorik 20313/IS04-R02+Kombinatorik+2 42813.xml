@@ -1,0 +1,124 @@
+<Exercise id="1">
+  <name>IS04-R02 Kombinatorik 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Permutation ohne Wiederholung
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie viele M&amp;ouml;glichkeiten gibt es bei einem 52-Blatt Kartenspiel, ein Karo-Blatt (2 bis Ass), bestehend aus 13 Karten, unterschiedlich anzuordnen?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nutzen Sie die $\verb|factorial()|$-Funktion.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Die Formel zur Berechnung der Permutation ohne Wiederholung lautet: $P(n)=n!$.                                                           </text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="14"/>
+      <variableUpdatesBeforeCheck id="15"/>
+      <variableUpdatesAfterCheck id="16"/>
+      <variableUpdatesOnNormalExit id="17"/>
+      <variableUpdatesOnRepeat id="18"/>
+      <variableUpdatesOnSkip id="19"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="20"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>#{c42817}+#{c42816}</finalResultComputationString>
+      <testCasetuples id="21">
+        <TestCaseTuple id="22">
+          <testCases id="23">
+            <StaticRTestCase id="24">
+              <points>75</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+
+Achten Sie darauf, dass Sie die $\verb|factorial()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="25">
+                <RGReQLQuery id="26">
+                  <query>     
+        from factorial:V{FunctionCall} with
+        factorial.name=&quot;factorial&quot;
+        report 0 end
+   </query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="27">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42816</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="28">
+          <testCases id="29">
+            <DynamicRTestCase id="30">
+              <points>25</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Achten Sie darauf, die richtige Funktion u verwenden.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>factorial(13)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42817</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="32"/>
+  <jSXGraphs id="33"/>
+  <dynamicMolecules id="34"/>
+  <resultFeedbackMappings id="35"/>
+</Exercise>

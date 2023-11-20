@@ -1,0 +1,100 @@
+<Exercise id="1">
+  <name>DS4-R02 Streuungsparameter R2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Quartilsabstand berechnen (rivers)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die Spannweite ist ein sehr grobes Streuungsma&amp;szlig;, da es sehr stark von Ausrei&amp;szlig;ern abh&amp;auml;ngt. Als Alternative bietet sich daher oft der Quartilsabstand an, der als Differenz zwischen drittem und erstem Quartil definiert ist.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie diesen f&amp;uuml;r den $\verb|rivers|$-Datensatz &lt;strong&gt;&lt;u&gt;ohne&lt;/u&gt;&lt;/strong&gt; dabei die $\verb|quantile()|$-Funktion zu benutzen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&amp;nbsp;&lt;/em&gt;&lt;/span&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Benutzen Sie die $\verb|IQR()|$-Funktion und setzen Sie (wie bei der $\verb|quantile()|$-Funktion) $\verb|type=1|$, damit die richtigen Quantile zur Berechnung herangezogen werden.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="14"/>
+      <variableUpdatesBeforeCheck id="15"/>
+      <variableUpdatesAfterCheck id="16"/>
+      <variableUpdatesOnNormalExit id="17"/>
+      <variableUpdatesOnRepeat id="18"/>
+      <variableUpdatesOnSkip id="19"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="20"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>#{c14813}</finalResultComputationString>
+      <testCasetuples id="21">
+        <TestCaseTuple id="22">
+          <testCases id="23">
+            <StaticRTestCase id="24">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>IQR</name>
+              <feedbackIfFailed>Leider nicht richtig! Berechnen Sie den Quartilsabstand von $\verb|rivers|$ und achte Sie darauf, dass Sie $\verb|type=1|$ setzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="25">
+                <RGReQLQuery id="26">
+                  <query>		from IQR,riv:V{FunctionCall}, lao3:V{LeftAssignmentOperator3}, pl:V{ParameterList}, type:V{Variable}, n:V{NumericLiteral}, rh:E{RightHandSide}, lh:E{LeftHandSide} with
+                IQR.name=&quot;IQR&quot; and
+                IQR --&gt; pl --&gt; lao3 and
+                lao3 -- lh -&gt; type and
+                type.name=&quot;type&quot; and
+                lao3 -- rh -&gt; n and
+                n.value=1
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="27">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>14813</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="28"/>
+  <jSXGraphs id="29"/>
+  <dynamicMolecules id="30"/>
+  <resultFeedbackMappings id="31"/>
+</Exercise>

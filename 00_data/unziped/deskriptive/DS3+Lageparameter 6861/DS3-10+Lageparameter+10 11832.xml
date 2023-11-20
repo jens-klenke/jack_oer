@@ -1,0 +1,206 @@
+<Exercise id="1">
+  <name>DS3-10 Lageparameter 10</name>
+  <publicDescription></publicDescription>
+  <internalNotes>MC zu Modus, Median, arithmetisches Mittel
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <MCStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Eine H&amp;uuml;hnerfarm konnte im letzten Monat 2800 Eier der Handelsklasse A, 3400 Eier der Handelsklasse B und 1100 Eier der Handelsklasse C liefern. Welche der folgenden Aussagen sind richtig?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;</taskDescription>
+      <skipMessage>Die Aussage: &amp;quot;[var=Aussage1]&amp;quot; ist [var=p1].&lt;br /&gt;
+Die Aussage: &amp;quot;[var=Aussage2]&amp;quot; ist [var=p2].&lt;br /&gt;
+Die Aussage: &amp;quot;Der Median f&amp;uuml;r die Eierqualit&amp;auml;t betr&amp;auml;gt 2800 Eier&amp;quot; ist falsch.&lt;br /&gt;
+Die Aussage: &amp;quot;[var=Aussage4]&amp;quot; ist [var=p4].&lt;br /&gt;
+Die Aussage: &amp;quot;Das arithmetische Mittel der Eierqualit&amp;auml;t betr&amp;auml;gt 2433,33 Eier&amp;quot; ist falsch.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14"/>
+      <hints id="15">
+        <StageHint id="16">
+          <stagehint__order>0</stagehint__order>
+          <text>Lesen Sie die Aussagen sorgf&amp;auml;ltig durch. F&amp;uuml;hren Sie sich erneut die Aussagen der einzelnen Parameter vor Augen.</text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="23"/>
+      <answerOptions id="24">
+        <MCAnswer id="25">
+          <order>0</order>
+          <rule>VARIABLE</rule>
+          <text>[var=Aussage1]</text>
+          <variableName>l1</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="26">
+          <order>1</order>
+          <rule>VARIABLE</rule>
+          <text>[var=Aussage2]</text>
+          <variableName>l2</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="27">
+          <order>2</order>
+          <rule>WRONG</rule>
+          <text>Der Median f&amp;uuml;r die Eierqualit&amp;auml;t betr&amp;auml;gt 2800 Eier.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="28">
+          <order>3</order>
+          <rule>VARIABLE</rule>
+          <text>[var=Aussage4]</text>
+          <variableName>l4</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="29">
+          <order>4</order>
+          <rule>WRONG</rule>
+          <text>Das arithmetische Mittel der Eierqualit&amp;auml;t betr&amp;auml;gt 2433.33 Eier.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+      </answerOptions>
+      <randomize>true</randomize>
+      <singleChoice>false</singleChoice>
+      <correctAnswerFeedback>Korrekt!</correctAnswerFeedback>
+      <defaultFeedback>Sie haben mindestens einen Fehler begangen.</defaultFeedback>
+      <defaultResult>0</defaultResult>
+      <extraFeedbacks id="30"/>
+    </MCStage>
+  </stages>
+  <startStage class="MCStage" reference="6"/>
+  <variableDeclarations id="31">
+    <VariableDeclaration id="32">
+      <name>i</name>
+      <initializationCode id="33">
+        <code>randomIntegerBetween(0,2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="34">
+      <name>j</name>
+      <initializationCode id="35">
+        <code>randomIntegerBetween(0,1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>l</name>
+      <initializationCode id="37">
+        <code>randomIntegerBetween(0,2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>Aussage1</name>
+      <initializationCode id="39">
+        <code>getFromList([var=i], list(&apos;Die modale Handelsklasse ist Handelsklasse A&apos;,&apos;Die modale Handelsklasse ist Handelsklasse B&apos;,&apos;Die modale Handelsklasse ist Handelsklasse C&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>Aussage2</name>
+      <initializationCode id="41">
+        <code>getFromList([var=j], list(&apos;Der Modus ist als Lageparameter nicht geeignet da qualitatives Messniveau vorliegt&apos;,&apos;Der Modus ist als Lageparameter geeignet da qualitatives Messniveau vorliegt&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>Aussage4</name>
+      <initializationCode id="43">
+        <code>getFromList([var=l], list(&apos;Der Median der Eierqualität liegt in Handelsklasse A&apos;,&apos;Der Median der Eierqualität liegt in Handelsklasse B&apos;,&apos;Der Median der Eierqualität liegt in Handelsklasse C&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>l1</name>
+      <initializationCode id="45">
+        <code>ifthenelse(equals([var=Aussage1], &quot;Die modale Handelsklasse ist Handelsklasse B&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>l2</name>
+      <initializationCode id="47">
+        <code>ifthenelse(equals([var=Aussage2], &quot;Der Modus ist als Lageparameter geeignet da qualitatives Meßniveau vorliegt&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>l4</name>
+      <initializationCode id="49">
+        <code>ifthenelse(equals([var=Aussage4], &quot;Der Median der Eierqualität liegt in Handelsklasse B&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>p1</name>
+      <initializationCode id="51">
+        <code>ifthenelse(equals([var=l1], 1), &quot;richtig&quot;, &quot;falsch&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>p2</name>
+      <initializationCode id="53">
+        <code>ifthenelse(equals([var=l2], 1), &quot;richtig&quot;, &quot;falsch&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>p4</name>
+      <initializationCode id="55">
+        <code>ifthenelse(equals([var=l4], 1), &quot;richtig&quot;, &quot;falsch&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="56"/>
+  <dynamicMolecules id="57"/>
+  <resultFeedbackMappings id="58"/>
+</Exercise>

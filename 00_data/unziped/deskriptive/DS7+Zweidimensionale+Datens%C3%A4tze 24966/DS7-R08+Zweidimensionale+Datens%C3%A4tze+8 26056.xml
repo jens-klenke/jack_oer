@@ -1,0 +1,288 @@
+<Exercise id="1">
+  <name>DS7-R08 Zweidimensionale Datensätze 8</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Rangkorrelationskoeffizient berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">bWF0aGUgPC0gYyhbdmFyPXgxXSxbdmFyPXgyXSxbdmFyPXgzXSxbdmFyPXg0XSxbdmFyPXg1XSxbdmFyPXg2XSxbdmFyPXg3XSxbdmFyPXg4XSxbdmFyPXg5XSxbdmFyPXgxMF0pDQpkZXV0c2NoIDwtIGMoW3Zhcj15MV0sW3Zhcj15Ml0sW3Zhcj15M10sW3Zhcj15NF0sW3Zhcj15NV0sW3Zhcj15Nl0sW3Zhcj15N10sW3Zhcj15OF0sW3Zhcj15OV0sW3Zhcj15MTBdKQ==</content>
+      <uploadTimestamp>2022-03-30T16:43:33.320663</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie haben die Noten von 10 Abiturienten in den F&amp;auml;chern Mathematik und Deutsch vorliegen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie mit Hilfe eines geeigneten Ma&amp;szlig;es, ob ein Zusammenhang zwischen diesen beiden Merkmalen vorliegt.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Zun&amp;auml;chst sollten Sie sich &amp;uuml;berlegen, welches Zusammenhangsma&amp;szlig; hier angebracht ist.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Da es sich um ordinal skalierte Merkmale handelt, m&amp;uuml;ssen Sie den Rangkorrelationskoeffizienten berechnen. Dazu k&amp;ouml;nnen Sie diesmal wieder die Funktion $\verb|cor()|$ benutzen, allerdings m&amp;uuml;ssen Sie nun innerhalb der Funktion eine andere Methode spezifizieren.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="17">
+          <stagehint__order>2</stagehint__order>
+          <text>Dies k&amp;ouml;nnen Sie &amp;uuml;ber die Parameterangabe $\verb|method=&amp;#39;...&amp;#39;|$ machen. Zur Auswahl stehen dabei $pearson$, $kendall$ und $spearman$. Welche dieser 3 Methoden sollten Sie hier benutzen?</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="18"/>
+      <variableUpdatesBeforeCheck id="19"/>
+      <variableUpdatesAfterCheck id="20"/>
+      <variableUpdatesOnNormalExit id="21"/>
+      <variableUpdatesOnRepeat id="22"/>
+      <variableUpdatesOnSkip id="23"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="24"/>
+      <initialCode>mathe &lt;- c([var=x1],[var=x2],[var=x3],[var=x4],[var=x5],[var=x6],[var=x7],[var=x8],[var=x9],[var=x10])
+deutsch &lt;- c([var=y1],[var=y2],[var=y3],[var=y4],[var=y5],[var=y6],[var=y7],[var=y8],[var=y9],[var=y10])</initialCode>
+      <finalResultComputationString>min(#{c26061},#{c26060})</finalResultComputationString>
+      <testCasetuples id="25">
+        <TestCaseTuple id="26">
+          <testCases id="27">
+            <StaticRTestCase id="28">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $\verb|cor()|$-Funktion und achten Sie darauf, die beiden vordefinierten Vektoren $\verb|mathe|$ und $\verb|deutsch|$ zu benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="29">
+                <RGReQLQuery id="30">
+                  <query>		from cor:V{FunctionCall}, mathe,dt:V{Variable} with 
+                cor.name=&quot;cor&quot; and
+                cor --&gt;* mathe and
+                cor --&gt;* dt and
+                mathe.name=&quot;mathe&quot; and
+                dt.name=&quot;deutsch&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>26060</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="32">
+          <testCases id="33">
+            <DynamicRTestCase id="34">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $cor()$-Funktion und setzen Sie $method=&quot;spearman&quot;$.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>cor(c([var=x1],[var=x2],[var=x3],[var=x4],[var=x5],[var=x6],[var=x7],[var=x8],[var=x9],[var=x10]),c([var=y1],[var=y2],[var=y3],[var=y4],[var=y5],[var=y6],[var=y7],[var=y8],[var=y9],[var=y10]),method=&quot;spearman&quot;)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="35">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>26061</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="36">
+    <VariableDeclaration id="37">
+      <name>x1</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>x2</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>x3</name>
+      <initializationCode id="42">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>x4</name>
+      <initializationCode id="44">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>x5</name>
+      <initializationCode id="46">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>x6</name>
+      <initializationCode id="48">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>x7</name>
+      <initializationCode id="50">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>x8</name>
+      <initializationCode id="52">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>x9</name>
+      <initializationCode id="54">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>x10</name>
+      <initializationCode id="56">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>y1</name>
+      <initializationCode id="58">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>y2</name>
+      <initializationCode id="60">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>y3</name>
+      <initializationCode id="62">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>y4</name>
+      <initializationCode id="64">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>y5</name>
+      <initializationCode id="66">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>y6</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>y7</name>
+      <initializationCode id="70">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>y8</name>
+      <initializationCode id="72">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>y9</name>
+      <initializationCode id="74">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>y10</name>
+      <initializationCode id="76">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="77"/>
+  <dynamicMolecules id="78"/>
+  <resultFeedbackMappings id="79"/>
+</Exercise>

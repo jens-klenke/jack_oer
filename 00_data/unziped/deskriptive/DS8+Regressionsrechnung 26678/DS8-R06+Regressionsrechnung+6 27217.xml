@@ -1,0 +1,151 @@
+<Exercise id="1">
+  <name>DS8-R06 Regressionsrechnung 6</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Nichtlineare Regression durchführen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>DS8_Regressionsrechnung</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Der Datensatz $\verb|trees|$ enth&amp;auml;lt Daten zu 31 gef&amp;auml;llten Kirschb&amp;auml;umen. Sowohl der Umfang ($\verb|Girth|$) als auch das Volumen ($\verb|Volume|$) jedes Baumes sind als Variable in diesem Datensatz verf&amp;uuml;gbar.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nehmen Sie nun an, Sie wollen den Zusammenhang zwischen diesen beiden Variablen durch folgendes Regressionsmodell darstellen:&lt;br /&gt;&#xd;
+$$\verb|Volume|_r=\alpha\cdot\verb|Girth|_r^\beta+u_r$$&lt;br /&gt;&#xd;
+Sch&amp;auml;tzen Sie das Modell mit Hilfe der Methode der kleinsten Quadrate. K&amp;ouml;nnen Sie den Parameter f&amp;uuml;r $\alpha$, den Sie im Rahmen dieser Regression erhalten ohne weiteres interpretieren? Was m&amp;uuml;ssen Sie beachten?&amp;nbsp;&lt;em&gt;(Hinweis: F&amp;uuml;hren Sie, falls n&amp;ouml;tig, entsprechende Transformationen direkt im $\verb|lm()|$-Befehl durch.)&lt;/em&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;&lt;/span&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Transformieren Sie die gegebene Regressionsfunktion so, dass Sie eine lineare Regressionsfunktion erhalten.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Danach k&amp;ouml;nnen Sie wie &amp;uuml;blich vorgehen, in dem Sie mit Hilfe des $\verb|lm()|$-Befehls eine OLS-Regression durchf&amp;uuml;hren.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="15"/>
+      <variableUpdatesBeforeCheck id="16"/>
+      <variableUpdatesAfterCheck id="17"/>
+      <variableUpdatesOnNormalExit id="18"/>
+      <variableUpdatesOnRepeat id="19"/>
+      <variableUpdatesOnSkip id="20"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="21"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>min(max(#{c27221},#{c27222}),#{c27220})</finalResultComputationString>
+      <testCasetuples id="22">
+        <TestCaseTuple id="23">
+          <testCases id="24">
+            <StaticRTestCase id="25">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die Funktion $\verb|lm()|$.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="26">
+                <RGReQLQuery id="27">
+                  <query>      from lm:V{FunctionCall} with
+      lm.name=&quot;lm&quot; 
+      report 0 end
+    </query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="28">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>27220</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="29">
+          <testCases id="30">
+            <DynamicRTestCase id="31">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Achten Sie darauf, die gegebene Regressionsfunktion durch Transformation in eine lineare zu überführen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>lm(log(trees$Volume)~log(trees$Girth))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="32">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>27221</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="33">
+          <testCases id="34">
+            <DynamicRTestCase id="35">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Achten Sie darauf, die gegebene Regressionsfunktion durch Transformation in eine lineare zu überführen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>lm(log(Volume)~log(Girth),data=trees)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="36">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>27222</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="37"/>
+  <jSXGraphs id="38"/>
+  <dynamicMolecules id="39"/>
+  <resultFeedbackMappings id="40"/>
+</Exercise>

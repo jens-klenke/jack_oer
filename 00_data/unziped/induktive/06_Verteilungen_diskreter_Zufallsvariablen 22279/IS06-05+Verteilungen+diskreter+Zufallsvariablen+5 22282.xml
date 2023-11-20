@@ -1,0 +1,197 @@
+<Exercise id="1">
+  <name>IS06-05 Verteilungen diskreter Zufallsvariablen 5</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Glücksspielaufgabe geometrische Verteilung
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die Wahrscheinlichkeit bei einem Gl&amp;uuml;cksspiel einen Gewinn zu erzielen betr&amp;auml;gt $[var=wsk]$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass Sie mindestens $[var=Spiele]$ mal spielen ohne zu gewinnen? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Es ist $P(X\geq [var=Spiele])=1-P(X&amp;lt;[var=Spiele]) = 1-P(X\leq [var=Spiele2])$ mit $P(X\leq [var=Spiele2]) = F([var=Spiele2]) = (1-[var=wsk])^{[var=Spiele2] + 1}.$&lt;br /&gt;
+$\verb|1-pnbinom([var=Spiele]-1, 1, [var=wsk])|$ = $[var=ansa]$. bzw.&lt;br /&gt;
+$\verb|1-pgeom([var=Spiele]-1, [var=wsk])|$ = $[var=ansa]$.&lt;br /&gt;
+Die Wahrscheinlichkeit, dass Sie mindestens $[var=Spiele]$ mal spielen ohne zu gewinnen betr&amp;auml;gt $[var=ansa]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="16">
+        <StageTransition id="17">
+          <conditionExpression id="18">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="19">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="20">
+        <StageHint id="21">
+          <stagehint__order>0</stagehint__order>
+          <text>&amp;Uuml;berlegen Sie zun&amp;auml;chst, welche Verteilung Sie vorliegen haben.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>1</stagehint__order>
+          <text>Es handelt sich um die geometrische Verteilung.&lt;br /&gt;
+Welchen Wert hat der Parameter $p$? Welche Wahrscheinlichkeit ist gesucht?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="23">
+          <stagehint__order>2</stagehint__order>
+          <text>Es gilt: $p = [var=wsk]$ und gesucht ist $P(X\geq [var=Spiele])$ und $P(X\geq [var=Spiele])=1-P(X&amp;lt;[var=Spiele])$.&lt;br /&gt;
+Die Berechnung &amp;uuml;ber R sieht wie folgt aus:&lt;br /&gt;
+$\verb|1-pnbinom(q, size, prob)|$ mit $q=[var=Spiele]-1$, $size=1$ und $p=[var=wsk]$.&lt;br /&gt;
+Sie k&amp;ouml;nnen auch direkt die geomtrische Verteilung in R benutzen:&lt;br /&gt;
+$\verb|1-pgeom(q, prob)|$ mit $q=[var=Spiele]-1$, und $p=[var=wsk]$</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="24"/>
+      <variableUpdatesBeforeCheck id="25"/>
+      <variableUpdatesAfterCheck id="26"/>
+      <variableUpdatesOnNormalExit id="27"/>
+      <variableUpdatesOnRepeat id="28"/>
+      <variableUpdatesOnSkip id="29"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="30"/>
+      <rules id="31"/>
+      <fillInFields id="32">
+        <FillInField id="33">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="34"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.</defaultFeedback>
+      <correctAnswerRules id="35">
+        <Rule id="36">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="37">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ansa]-0.0011&amp;&amp;[input=field1]&lt;[var=ansa]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="38">
+    <VariableDeclaration id="39">
+      <name>wskpro</name>
+      <initializationCode id="40">
+        <code>evaluateInR(&apos;sample(2:9, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>wsku</name>
+      <initializationCode id="42">
+        <code>([var=wskpro])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>wsk</name>
+      <initializationCode id="44">
+        <code>round(([var=wsku]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>Spiele</name>
+      <initializationCode id="46">
+        <code>evaluateInR(&apos;sample(35:60, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>Spiele2</name>
+      <initializationCode id="48">
+        <code>[var=Spiele]-1</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>ansau</name>
+      <initializationCode id="50">
+        <code>evaluateInR(&apos;pgeom([var=Spiele]-1, [var=wsk], lower.tail=FALSE, log.p=FALSE)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>ansa</name>
+      <initializationCode id="52">
+        <code>round(([var=ansau]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="53"/>
+  <dynamicMolecules id="54"/>
+  <resultFeedbackMappings id="55"/>
+</Exercise>

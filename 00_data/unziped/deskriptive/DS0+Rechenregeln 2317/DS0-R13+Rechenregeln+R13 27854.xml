@@ -1,0 +1,309 @@
+<Exercise id="1">
+  <name>DS0-R13 Rechenregeln R13</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Aktuellen Wert eines Anlage-Portfolios berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">aW52ZXN0bWVudCA8LSBjKFt2YXI9aTFdLFt2YXI9aTJdLFt2YXI9aTNdLFt2YXI9aTRdLFt2YXI9aTVdLFt2YXI9aTZdLFt2YXI9aTddLFt2YXI9aThdKQ0KcmVuZGl0ZSA8LSBjKFt2YXI9cjFdLFt2YXI9cjJdLFt2YXI9cjNdLFt2YXI9cjRdLFt2YXI9cjVdLFt2YXI9cjZdLFt2YXI9cjddLFt2YXI9cjhdKQ0KamFocmUgPC0gYyhbdmFyPWoxXSxbdmFyPWoyXSxbdmFyPWozXSxbdmFyPWo0XSxbdmFyPWo1XSxbdmFyPWo2XSxbdmFyPWo3XSxbdmFyPWo4XSk=</content>
+      <uploadTimestamp>2022-04-11T12:06:12.896269</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Barren Wuffett ist ein bekannter Milliard&amp;auml;r und Investor, der gerne in verschiedenste Anlagen investiert. Sie als sein Berater haben die Aufgabe bekommen, ihm einen &amp;Uuml;berblick &amp;uuml;ber den Wert seines aktuellen Anlage-Portfolios zu geben. Dazu hat er Ihnen Informationen &amp;uuml;ber das investierte Kapital (in Mio. &amp;euro;), die durchschnittliche Anlagenrendite sowie die bisherige Dauer des Investments (in Jahren) f&amp;uuml;r jede Anlage bereitgestellt. Alle Informationen diesbez&amp;uuml;glich sind in den Variablen $\verb|investment|$, $\verb|rendite|$ und $\verb|jahre|$ abgespeichert und stehen im Environment zur Verf&amp;uuml;gung.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Geben Sie Herrn Wuffett einen &amp;Uuml;berblick &amp;uuml;ber die aktuellen Werte seiner Anlagen. Speichern Sie das Ergebnis in der Variablen $\verb|wert|$_$\verb|aktuell|$ ab.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&amp;nbsp;&amp;nbsp;&lt;/em&gt;&lt;/span&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Benutzen Sie die gegebenen Informationen!&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Versuchen Sie sich daran zu erinnern, wie Verzinsung funktioniert.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="17">
+          <stagehint__order>2</stagehint__order>
+          <text>Nicht nur die vier Grundrechenoperationen ($\verb|+|$,$\verb|-|$,$\verb|*|$,$\verb|/|$) werden f&amp;uuml;r Vektoren elementweise durchgef&amp;uuml;hrt.&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="18">
+          <stagehint__order>3</stagehint__order>
+          <text>Auch die exponentielle Funktion angewandt auf Vektoren funktioniert elementweise.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="19"/>
+      <variableUpdatesBeforeCheck id="20"/>
+      <variableUpdatesAfterCheck id="21"/>
+      <variableUpdatesOnNormalExit id="22"/>
+      <variableUpdatesOnRepeat id="23"/>
+      <variableUpdatesOnSkip id="24"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="25"/>
+      <initialCode>investment &lt;- c(80,56,19,46,38,31,50,92)
+rendite &lt;- c(1.13,1.23,1.09,1.04,1.2,1.17,1.06,1.12)
+jahre &lt;- c(7,1,6,4,7,2,2,8)</initialCode>
+      <finalResultComputationString>#{c27858}</finalResultComputationString>
+      <testCasetuples id="26">
+        <TestCaseTuple id="27">
+          <testCases id="28">
+            <StaticRTestCase id="29">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Achten Sie darauf, dass Sie die Variable $\verb|wert|$_$\verb|aktuell|$ nennen und die vordefinierten Variablennamen richtig geschrieben haben.
+</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="30">
+                <RGReQLQuery id="31">
+                  <query>		from lao:V{LeftAssignmentOperator}, wert,inv,ren,jah:V{Variable}, mul:V{MulOperator}, exp:V{ExpOperator}, e1:E{LeftHandSide}, e2:E{RightHandSide}, e3,e4:E{Expression} with 
+                lao -- e1 -&gt; wert and
+                wert.name=&quot;wert_aktuell&quot; and
+                lao -- e2 -&gt; mul and
+                mul --&gt; inv and
+                inv.name=&quot;investment&quot; and
+                mul --&gt; exp and
+                exp -- e3 -&gt; ren and
+                exp -- e4 -&gt; jah and
+                e3.position &lt; e4.position and
+                ren.name=&quot;rendite&quot; and
+                jah.name=&quot;jahre&quot;
+		report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="32">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>27858</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="33">
+    <VariableDeclaration id="34">
+      <name>i1</name>
+      <initializationCode id="35">
+        <code>randomIntegerBetween(80,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>i2</name>
+      <initializationCode id="37">
+        <code>randomIntegerBetween(40,70)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>i3</name>
+      <initializationCode id="39">
+        <code>randomIntegerBetween(10,20)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>i4</name>
+      <initializationCode id="41">
+        <code>randomIntegerBetween(30,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>i5</name>
+      <initializationCode id="43">
+        <code>randomIntegerBetween(20,70)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>i6</name>
+      <initializationCode id="45">
+        <code>randomIntegerBetween(1,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>i7</name>
+      <initializationCode id="47">
+        <code>randomIntegerBetween(1,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>i8</name>
+      <initializationCode id="49">
+        <code>randomIntegerBetween(1,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>r1</name>
+      <initializationCode id="51">
+        <code>evaluateInR(&apos;round(runif(1, 1, 1.25), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>r2</name>
+      <initializationCode id="53">
+        <code>evaluateInR(&apos;round(runif(1, 1, 1.25), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>r3</name>
+      <initializationCode id="55">
+        <code>evaluateInR(&apos;round(runif(1, 1, 1.25), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="56">
+      <name>r4</name>
+      <initializationCode id="57">
+        <code>evaluateInR(&apos;round(runif(1, 1, 1.25), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="58">
+      <name>r5</name>
+      <initializationCode id="59">
+        <code>evaluateInR(&apos;round(runif(1, 1, 1.25), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="60">
+      <name>r6</name>
+      <initializationCode id="61">
+        <code>evaluateInR(&apos;round(runif(1, 1, 1.25), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="62">
+      <name>r7</name>
+      <initializationCode id="63">
+        <code>evaluateInR(&apos;round(runif(1, 1, 1.25), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="64">
+      <name>r8</name>
+      <initializationCode id="65">
+        <code>evaluateInR(&apos;round(runif(1, 1, 1.25), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="66">
+      <name>j1</name>
+      <initializationCode id="67">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="68">
+      <name>j2</name>
+      <initializationCode id="69">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="70">
+      <name>j3</name>
+      <initializationCode id="71">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="72">
+      <name>j4</name>
+      <initializationCode id="73">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="74">
+      <name>j5</name>
+      <initializationCode id="75">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="76">
+      <name>j6</name>
+      <initializationCode id="77">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="78">
+      <name>j7</name>
+      <initializationCode id="79">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="80">
+      <name>j8</name>
+      <initializationCode id="81">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="82"/>
+  <dynamicMolecules id="83"/>
+  <resultFeedbackMappings id="84"/>
+</Exercise>

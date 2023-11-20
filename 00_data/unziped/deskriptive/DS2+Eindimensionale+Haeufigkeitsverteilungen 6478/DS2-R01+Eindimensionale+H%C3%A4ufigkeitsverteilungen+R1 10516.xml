@@ -1,0 +1,111 @@
+<Exercise id="1">
+  <name>DS2-R01 Eindimensionale Häufigkeitsverteilungen R1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Beobachtungen in Vektor abspeichern
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Diese Aufgabe und folgende Aufgaben dienen dazu, das Beispiel aus Kapitel 2 (ab Folie 7) selber in R zu reproduzieren.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Dazu speichern Sie zun&amp;auml;chst die folgenden Beobachtungen (in der Reihenfolge ihres Erscheinens)&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\{11,13,15,16,12,18,14,15,17,14,12,16,13,15,17,16,15,14,13,15\}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+in der Variable $\verb|urliste|$ ab.&amp;nbsp;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Vektoren k&amp;ouml;nnen mit dem $\verb|c()|$-Funktion erzeugt werden.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Vektoren k&amp;ouml;nnen mit &amp;lt;- Variablen zugewiesen werden.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Achten Sie darauf, dass Sie die Variable wirklich $\verb|urliste|$ nennen. Insbesondere unterscheidet R ziwschen Gro&amp;szlig;- und Kleinschreibung.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;Dies war der letzte Hinweis.&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <DynamicRTestCase id="26">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Achten Sie darauf, dass Sie die Beobachtungen in der angegebenen Reihenfolge im Vektor abspeichern und diesen $\verb|urliste|$ nennen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>c(11,13,15,16,12,18,14,15,17,14,12,16,13,15,17,16,15,14,13,15)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="27">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>10519</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="28"/>
+  <jSXGraphs id="29"/>
+  <dynamicMolecules id="30"/>
+  <resultFeedbackMappings id="31"/>
+</Exercise>

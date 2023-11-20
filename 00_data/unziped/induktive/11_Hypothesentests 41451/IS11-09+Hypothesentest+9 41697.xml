@@ -1,0 +1,125 @@
+<Exercise id="1">
+  <name>IS11-09 Hypothesentest 9</name>
+  <publicDescription></publicDescription>
+  <internalNotes>MC Fragen zu Hypothesentests - aus Jack2 übernommen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <MCStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>Entscheiden Sie, ob die folgenden Aussagen wahr oder falsch sind.&amp;nbsp;&lt;br /&gt;&#xd;
+W&amp;auml;hlen Sie dazu die korrektion Optionen aus.</taskDescription>
+      <skipMessage></skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12"/>
+      <variableUpdatesOnEnter id="13"/>
+      <variableUpdatesBeforeCheck id="14"/>
+      <variableUpdatesAfterCheck id="15"/>
+      <variableUpdatesOnNormalExit id="16"/>
+      <variableUpdatesOnRepeat id="17"/>
+      <variableUpdatesOnSkip id="18"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="19"/>
+      <answerOptions id="20">
+        <MCAnswer id="21">
+          <order>0</order>
+          <rule>WRONG</rule>
+          <text>Wenn man $H_0$ ablehnt, obwohl $H_0$ korrekt ist, begeht man einen $\beta$-Fehler</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="22">
+          <order>1</order>
+          <rule>WRONG</rule>
+          <text>Wenn man $H_0$ ablehnt, ist $H_1$ korrekt.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="23">
+          <order>2</order>
+          <rule>CORRECT</rule>
+          <text>Der $\beta$-Fehler besteht darin, $H_0$ nicht abzulehnen, obwohl $H_0$ falsch ist.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="24">
+          <order>3</order>
+          <rule>CORRECT</rule>
+          <text>Das Signifikanzniveau ist eine obere Schranke f&amp;uuml;r die Wahrscheinlichkeit eines $\alpha$-Fehlers</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="25">
+          <order>4</order>
+          <rule>WRONG</rule>
+          <text>Um keinen Fehler zu begehen, sollte man das Signifikanzniveau so hoch wie m&amp;ouml;glich setzen.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="26">
+          <order>5</order>
+          <rule>CORRECT</rule>
+          <text>Die Wahrscheinlichkeit eine falsche Nullhypothese abzulehnen ist $1-\beta$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="27">
+          <order>6</order>
+          <rule>CORRECT</rule>
+          <text>Bei der Wahl des Signifikanzniveaus steht man einem Trade-off zwischen $\alpha$-Fehler und $\beta$-Fehler gegen&amp;uuml;ber.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="28">
+          <order>7</order>
+          <rule>WRONG</rule>
+          <text>Der $t$-Test hat bei gleichem Signifikanzniveau einen gr&amp;ouml;&amp;szlig;eren Ablehnbereich als der Gau&amp;szlig;-Test.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+      </answerOptions>
+      <randomize>true</randomize>
+      <singleChoice>false</singleChoice>
+      <correctAnswerFeedback>Korrekt.</correctAnswerFeedback>
+      <defaultFeedback>Leider falsch.</defaultFeedback>
+      <defaultResult>0</defaultResult>
+      <extraFeedbacks id="29"/>
+    </MCStage>
+  </stages>
+  <startStage class="MCStage" reference="6"/>
+  <variableDeclarations id="30">
+    <VariableDeclaration id="31">
+      <name>x1</name>
+      <initializationCode id="32">
+        <code>1</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="33"/>
+  <dynamicMolecules id="34"/>
+  <resultFeedbackMappings id="35"/>
+</Exercise>

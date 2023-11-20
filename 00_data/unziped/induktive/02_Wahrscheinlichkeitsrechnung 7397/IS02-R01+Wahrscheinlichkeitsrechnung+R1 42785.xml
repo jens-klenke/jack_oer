@@ -1,0 +1,181 @@
+<Exercise id="1">
+  <name>IS02-R01 Wahrscheinlichkeitsrechnung R1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Kolmogoroff-Axiom anwenden
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">V0tlaXQgPC0gYyhbdmFyPXByb2IxXSxbdmFyPXByb2IyXSxbdmFyPXByb2IzXSxbdmFyPXByb2I0XSxbdmFyPXByb2I1XSk=</content>
+      <uploadTimestamp>2022-05-10T11:51:00.551363</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Erinnern Sie sich an die Aussagen des Kolmogoroff-Axioms. Zeigen Sie, dass die nachfolgenden Wahrscheinlichkeiten (vordefiniert im Vektor $\verb|WKeit|$) in Summe 1 ergeben.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nutzen Sie hierf&amp;uuml;r die Summenfunktion $\verb|sum()|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Sie können die Summenfunktion $\verb|sum()|$ benutzen und als Argument den entsprechenden Vektor übergeben.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode>WKeit &lt;- c([var=prob1],[var=prob2],[var=prob3],[var=prob4],[var=prob5])</initialCode>
+      <finalResultComputationString>#{c42790}+#{c42789}</finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Achten Sie darauf, dass Sie die Summenfunktion $\verb|sum()|$ sowie den vordefinierten Vektor $\verb|WKeit|$ benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>from sum:V{FunctionCall}, wk:V{Variable} with
+sum --&gt;* wk and
+sum.name=&quot;sum&quot; and
+wk.name= &quot;WKeit&quot;
+report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42789</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Gucken Sie sich nocheinmal die Kolmogoroff Bedingungen einer Wahrscheinlichkeit an.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>1</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42790</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>prob1</name>
+      <initializationCode id="36">
+        <code>evaluateInR(&apos;round(runif(1, 0.05, 0.25), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="37">
+      <name>prob2</name>
+      <initializationCode id="38">
+        <code>evaluateInR(&apos;round(runif(1, 0.05, 0.2), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>prob3</name>
+      <initializationCode id="40">
+        <code>evaluateInR(&apos;round(runif(1, 0.05, 0.3), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>prob4</name>
+      <initializationCode id="42">
+        <code>evaluateInR(&apos;round(runif(1, 0.05, 0.25), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>prob5u</name>
+      <initializationCode id="44">
+        <code>evaluateInR(&apos;1-[var=prob1]-[var=prob2]-[var=prob3]-[var=prob4]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>prob5</name>
+      <initializationCode id="46">
+        <code>evaluateInR(&apos;round([var=prob5u], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>WSK3</name>
+      <initializationCode id="48">
+        <code>evaluateInR(&apos;[var=prob3]*100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="49"/>
+  <dynamicMolecules id="50"/>
+  <resultFeedbackMappings id="51"/>
+</Exercise>

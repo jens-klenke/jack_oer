@@ -1,0 +1,168 @@
+<Exercise id="1">
+  <name>DS4-04 Streuungsparameter 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>arithmetisches Mittel, Varianz und Quartilsabstand bei konstantem Wert bestimmen.
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>1</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In 20 Kinos in NRW betr&amp;auml;gt der g&amp;uuml;nstigste Eintrittspreis $[var=x1]$ Euro.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie:&amp;nbsp;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:250px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;arithmetische Mittel:&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Standardabweichung:&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Quartilsabstand:&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Verwenden Sie einen Dezimalpunkt!)&lt;/em&gt;&#xd;
+&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>Das arithmetische Mittel betr&amp;auml;gt $[var=x1]$ Euro. Varianz und Quartilsabstand sind in diesem Fall beide $0$.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>Beachten Sie, dass der Preis in allen Kinos $[var=x1]$ Euro betr&amp;auml;gt.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text> Betrachten Sie die Formeln zu den einzelnen Maßen. Müssen Sie die einzelnen Werte explizit berechnen oder können Sie diese auch direkt angeben? 
+	    </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="21"/>
+      <variableUpdatesBeforeCheck id="22"/>
+      <variableUpdatesAfterCheck id="23"/>
+      <variableUpdatesOnNormalExit id="24"/>
+      <variableUpdatesOnRepeat id="25"/>
+      <variableUpdatesOnSkip id="26"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="27"/>
+      <rules id="28"/>
+      <fillInFields id="29">
+        <FillInField id="30">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="31">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="32">
+          <name>field3</name>
+          <orderIndex>2</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="33"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Das arithmetische Mittel betr&amp;auml;gt $[var=x1]$ Euro. Varianz und Quartilsabstand sind in diesem Fall beide $0$.</defaultFeedback>
+      <correctAnswerRules id="34">
+        <Rule id="35">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="36">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]==[var=x1]&amp;&amp;[input=field2]==0&amp;&amp;[input=field3]==0</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="37">
+    <VariableDeclaration id="38">
+      <name>x1</name>
+      <initializationCode id="39">
+        <code>randomIntegerBetween(8,17)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="40"/>
+  <dynamicMolecules id="41"/>
+  <resultFeedbackMappings id="42"/>
+</Exercise>

@@ -1,0 +1,139 @@
+<Exercise id="1">
+  <name>DS4-R03 Streuungsparameter R3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Informationen über Boxplot gewinnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&amp;Auml;hnlich wie beim Histogramm ist es auch beim Boxplot m&amp;ouml;glich, sich, f&amp;uuml;r die Erstellung der Grafik, relevante Informationen anzeigen zu lassen. Um dies zu tun, greifen wir in dieser Aufgabe noch einmal auf den $\verb|cars|$-Datensatz zu, genauer gesagt auf die Variable $\verb|speed|$. Wenden Sie den Befehl $\verb|boxplot()|$ auf die Variable an und setzen Sie $\verb|range=0|$. Letzteres sorgt daf&amp;uuml;r, dass die &amp;auml;u&amp;szlig;eren Grenzen des Boxplots (auch Whisker genannt) der kleinsten bzw. gr&amp;ouml;&amp;szlig;ten Beobachtung entsprechen. Andernfalls werden (standardm&amp;auml;&amp;szlig;ig) andere Grenzen genommen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Lassen Sie sich Ihre L&amp;ouml;sung vorher auswerten, bevor Sie sie abschicken. Was bedeuten insbesondere die Werte in $\verb|stats|$?&lt;em&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Hinweis: Wenn Sie R auf Ihrem PC oder Notebook verwenden, m&amp;uuml;ssen Sie in der $\verb|boxplot()|$-Funktion zus&amp;auml;tzlich $\verb|plot=F|$ angeben, damit kein Boxplot geplottet wird und Sie die Informationen angezeigt bekommen. Da JACK allerdings noch keine Grafiken zeichnen kann, m&amp;uuml;ssen Sie diese Angabe hier nicht zwingend t&amp;auml;tigen.&lt;/em&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;&lt;/span&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung&lt;/strong&gt;:</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Wenden Sie den Befehl $\verb|boxplot()|$ auf die Variable $\verb|speed|$ des $\verb|cars|$-Datensatzes an und setzen Sie $\verb|range=0|$.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Rufen Sie sich noch einmal ins Ged&amp;auml;chtnis, wie man auf einzelne Variablen eines Datensatzes zugreifen kann.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Sie können mit dem $\$$-Zeichen auf einzelne Variablen zugreifen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>min(#{c162322},#{c162321})</finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>boxplot</name>
+              <feedbackIfFailed>Leider nicht richtig! Achten Sie darauf, dass sie die $\verb|boxplot()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>		from box:V{FunctionCall} with
+                box.name=&quot;boxplot&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>162321</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>value</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie den Befehl $\verb|boxplot()|$ und setzen Sie dabei $\verb|range=0|$.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>boxplot(cars$speed,range=0,plot=F)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>162322</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="34"/>
+  <jSXGraphs id="35"/>
+  <dynamicMolecules id="36"/>
+  <resultFeedbackMappings id="37"/>
+</Exercise>

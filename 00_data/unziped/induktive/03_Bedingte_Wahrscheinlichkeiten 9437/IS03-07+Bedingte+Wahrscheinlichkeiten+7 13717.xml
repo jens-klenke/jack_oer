@@ -1,0 +1,305 @@
+<Exercise id="1">
+  <name>IS03-07 Bedingte Wahrscheinlichkeiten 7</name>
+  <publicDescription></publicDescription>
+  <internalNotes>gezinkte Münze, Bayes&apos; 
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie vermuten, dass die M&amp;uuml;nze, die Sie werfen, mit einer Wahrscheinlichkeit von $[var=gezinktper]\%$ gezinkt ist.&lt;br /&gt;&#xd;
+Falls die M&amp;uuml;nze gezinkt ist, verlieren Sie mit Wahrscheinlichkeit $[var=verlierenper]\%$, falls sie nicht gezinkt ist verlieren Sie mit Wahrscheinlichkeit $50\%$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie wahrscheinlich ist es, dass die M&amp;uuml;nze gezinkt ist, falls Sie gerade verloren haben?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung: &lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>Richtig ist $[var=rsol1]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nachdem Sie in der letzten Frage verloren haben, beschlie&amp;szlig;en Sie die soeben ausgerechnete Wahrscheinlichkeit als neue Wahrscheinlichkeit f&amp;uuml;r eine gezinkte M&amp;uuml;nze zu vermuten.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie wahrscheinlich ist es, dass die M&amp;uuml;nze gezinkt ist, wenn Sie jetzt wieder verlieren?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung: &lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+            <skipMessage>Richtig ist $[var=rsol2]$.</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="24">
+              <StageTransition id="25">
+                <conditionExpression id="26">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="27">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="28">
+              <StageHint id="29">
+                <stagehint__order>0</stagehint__order>
+                <text>Hier ben&amp;ouml;tigen Sie wieder den &amp;quot;Satz von Bayes&amp;quot;!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;br /&gt;
+&amp;nbsp;</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="30">
+                <stagehint__order>1</stagehint__order>
+                <text>Es gilt der gleiche Aufbau wie in Teilaufgabe 1.&lt;br /&gt;
+&amp;Uuml;berlegen Sie welcher Teil sich ge&amp;auml;ndert hat!</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="31"/>
+            <variableUpdatesBeforeCheck id="32"/>
+            <variableUpdatesAfterCheck id="33"/>
+            <variableUpdatesOnNormalExit id="34"/>
+            <variableUpdatesOnRepeat id="35"/>
+            <variableUpdatesOnSkip id="36"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="37"/>
+            <rules id="38"/>
+            <fillInFields id="39">
+              <FillInField id="40">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="41"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $[var=rsol2]$.</defaultFeedback>
+            <correctAnswerRules id="42">
+              <Rule id="43">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="44">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rsol2]-0.0011&amp;&amp;[input=field1]&lt;[var=rsol2]+0.0011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="45">
+        <StageTransition id="46">
+          <conditionExpression id="47">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="48">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="49">
+        <StageHint id="50">
+          <stagehint__order>0</stagehint__order>
+          <text>Schauen Sie sich den &amp;quot;Satz von Bayes&amp;quot; noch einmal an! Alle ben&amp;ouml;tigten Wahrscheinlichkeiten sind im Text gegeben.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;br /&gt;
+&amp;nbsp;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="51">
+          <stagehint__order>1</stagehint__order>
+          <text>Es gilt:&lt;br /&gt;
+&lt;br /&gt;
+$P(\text{gezinkt}|\text{verloren})=\frac{P(\text{verloren}|\text{gezinkt})P(\text{gezinkt})}{P(\text{verloren}|\text{gezinkt})P(\text{gezinkt})+P(\text{verloren}|\text{nicht gezinkt})P(\text{nicht gezinkt})}$&lt;br /&gt;
+&lt;br /&gt;
+Nun fehlen nur noch die Wahrscheinlichkeiten aus dem Text.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="52"/>
+      <variableUpdatesBeforeCheck id="53"/>
+      <variableUpdatesAfterCheck id="54"/>
+      <variableUpdatesOnNormalExit id="55"/>
+      <variableUpdatesOnRepeat id="56"/>
+      <variableUpdatesOnSkip id="57"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="58"/>
+      <rules id="59"/>
+      <fillInFields id="60">
+        <FillInField id="61">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="62"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $[var=rsol1]$.</defaultFeedback>
+      <correctAnswerRules id="63">
+        <Rule id="64">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="65">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rsol1]-0.0011&amp;&amp;[input=field1]&lt;[var=rsol1]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="66">
+    <VariableDeclaration id="67">
+      <name>gezinktper</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(50,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>verlierenper</name>
+      <initializationCode id="70">
+        <code>randomIntegerBetween(60,95)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>gezinkt</name>
+      <initializationCode id="72">
+        <code>([var=gezinktper])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>verlieren</name>
+      <initializationCode id="74">
+        <code>([var=verlierenper])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>sol1</name>
+      <initializationCode id="76">
+        <code>([var=gezinkt]*[var=verlieren])/([var=gezinkt]*[var=verlieren]+(1-[var=gezinkt])*0.5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>rsol1</name>
+      <initializationCode id="78">
+        <code>round(([var=sol1]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>sol2</name>
+      <initializationCode id="80">
+        <code>([var=rsol1]*[var=verlieren])/([var=rsol1]*[var=verlieren]+(1-[var=rsol1])*0.5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>rsol2</name>
+      <initializationCode id="82">
+        <code>round(([var=sol2]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="83"/>
+  <dynamicMolecules id="84"/>
+  <resultFeedbackMappings id="85"/>
+</Exercise>

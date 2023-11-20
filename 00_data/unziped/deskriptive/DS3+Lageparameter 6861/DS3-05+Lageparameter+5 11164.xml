@@ -1,0 +1,307 @@
+<Exercise id="1">
+  <name>DS3-05 Lageparameter 5</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Harmonisches Mittel berechnen, Daten gegeben
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>3</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Eine kleine Fluggesellschaft beabsichtigt Kerosin f&amp;uuml;r die Sommermonate Mai, Juni, Juli und August zu kaufen. Die aktuellen Forwardpreise sind:&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:200px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Mai&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$ [var=MaiP] \ \dfrac{\$}{Barrel}$&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Juni&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$ [var=JuniP]&amp;nbsp; \ \dfrac{\$}{Barrel}$&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Juli&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$ [var=JuliP]&amp;nbsp; \ \dfrac{\$}{Barrel}$&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;August&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$ [var=AugustP]&amp;nbsp; \ \dfrac{\$}{Barrel}$&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die Finanzplanung der Fluggesellschaft sieht vor, f&amp;uuml;r die Kerosinbeschaffung in den Monaten Mai, Juni, Juli und August jeweils $[var=$Mai,latex]\ \$$, $[var=$Juni]\ \$$, $[var=$Juli]\ \$$ und $[var=$August]\ \$$ an liquiden Mitteln bereitzustellen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Welcher Kerosinpreis pro Barrel w&amp;uuml;rde bei dieser Planung durchschnittlich bezahlt werden?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung&lt;/strong&gt;:&amp;nbsp; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie auf die zweite Nachkommastelle und verwenden Sie einen Dezimalpunkt)&lt;/em&gt;&#xd;
+&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>Es wurde durchschnittlich ein Kerosinpreis pro Barrel von $[var=HM]\frac{\$}{\textrm{Barrel}}$ bezahlt.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>Gegeben sind Merkmale als Quotient. Liegen die H&amp;auml;ufigkeiten in der Dimension des Z&amp;auml;hlers oder des Nenners vor?&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text>Hier liegen die H&amp;auml;ufigkeiten in der Dimension des Z&amp;auml;hlers vor.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="21">
+          <stagehint__order>2</stagehint__order>
+          <text>Liegen die H&amp;auml;ufigkeiten in der Dimension des Z&amp;auml;hlers vor verwendet man das harmonische Mittel.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>3</stagehint__order>
+          <text>Das harmonische Mittel $\bar{x}_H$ ist als Kehrwert des arithmetischen Mittels der reziproken Beobachtungen definiert und berechnet sich bei häufigkeitsverteilten Daten wie folgt:
+
+     $\bar{x}_H= \frac{n}{\sum_{i=1}^m \frac{n_i}{x_i}}$</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="23"/>
+      <variableUpdatesBeforeCheck id="24"/>
+      <variableUpdatesAfterCheck id="25"/>
+      <variableUpdatesOnNormalExit id="26"/>
+      <variableUpdatesOnRepeat id="27"/>
+      <variableUpdatesOnSkip id="28"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="29"/>
+      <rules id="30"/>
+      <fillInFields id="31">
+        <FillInField id="32">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="33"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt!</defaultFeedback>
+      <correctAnswerRules id="34">
+        <Rule id="35">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="36">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=HM]*0.999&amp;&amp;[input=field1]&lt;[var=HM]*1.001</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="37">
+    <VariableDeclaration id="38">
+      <name>x1</name>
+      <initializationCode id="39">
+        <code>randomIntegerBetween(30,39)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>x2</name>
+      <initializationCode id="41">
+        <code>randomIntegerBetween(40,49)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>x3</name>
+      <initializationCode id="43">
+        <code>randomIntegerBetween(50,59)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>x4</name>
+      <initializationCode id="45">
+        <code>randomIntegerBetween(60,69)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>y1</name>
+      <initializationCode id="47">
+        <code>randomIntegerBetween(4800,5000)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>y2</name>
+      <initializationCode id="49">
+        <code>randomIntegerBetween(5000,5200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>y3</name>
+      <initializationCode id="51">
+        <code>randomIntegerBetween(5200,5400)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>y4</name>
+      <initializationCode id="53">
+        <code>randomIntegerBetween(5400,5600)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>MaiP</name>
+      <initializationCode id="55">
+        <code>evaluateInR(&apos;[var=y1]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="56">
+      <name>JuniP</name>
+      <initializationCode id="57">
+        <code>evaluateInR(&apos;[var=y2]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="58">
+      <name>JuliP</name>
+      <initializationCode id="59">
+        <code>evaluateInR(&apos;[var=y3]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="60">
+      <name>AugustP</name>
+      <initializationCode id="61">
+        <code>evaluateInR(&apos;[var=y4]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="62">
+      <name>Mai</name>
+      <initializationCode id="63">
+        <code>evaluateInR(&apos;[var=x1]*10000&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="64">
+      <name>Juni</name>
+      <initializationCode id="65">
+        <code>evaluateInR(&apos;[var=x2]*10000&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="66">
+      <name>Juli</name>
+      <initializationCode id="67">
+        <code>evaluateInR(&apos;[var=x3]*10000&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="68">
+      <name>August</name>
+      <initializationCode id="69">
+        <code>evaluateInR(&apos;[var=x4]*10000&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="70">
+      <name>H</name>
+      <initializationCode id="71">
+        <code>evaluateInR(&apos;([var=Mai]+[var=Juni]+[var=Juli]+[var=August])/(([var=Mai]/[var=MaiP])+([var=Juni]/[var=JuniP])+([var=Juli]/[var=JuliP])+([var=August]/[var=AugustP]))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="72">
+      <name>HM</name>
+      <initializationCode id="73">
+        <code>evaluateInR(&apos;round([var=H], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="74"/>
+  <dynamicMolecules id="75"/>
+  <resultFeedbackMappings id="76"/>
+</Exercise>

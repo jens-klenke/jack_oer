@@ -1,0 +1,123 @@
+<Exercise id="1">
+  <name>IS00-R04 Rechenregeln R04</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Einen numerischen Wert einer Variablen zuweisen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+R erm&amp;ouml;glicht es ebenso, dass man verschiedenste Dinge in Variablen abspeichern kann. F&amp;uuml;r den Anfang reicht es erst einmal einen numerischen Wert einer Variablen zuzuweisen. Weisen Sie daher der Variablen $\verb|x|$ den numerischen Wert $[var=num]$ zu.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Sie k&amp;ouml;nnen Werte z.B. mit $\verb|&amp;lt;-|$ einer Variablen zuweisen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Achten Sie auch darauf, dass sie die Variable $\verb|x|$ und nicht anders nennen. Beachten Sie in dem Kontext zudem, dass R &quot;case sensitive&quot; ist, also zwischen Groß- und Kleinschreibung unterscheidet.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="15"/>
+      <variableUpdatesBeforeCheck id="16"/>
+      <variableUpdatesAfterCheck id="17"/>
+      <variableUpdatesOnNormalExit id="18"/>
+      <variableUpdatesOnRepeat id="19"/>
+      <variableUpdatesOnSkip id="20"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="21"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>#{c42083}</finalResultComputationString>
+      <testCasetuples id="22">
+        <TestCaseTuple id="23">
+          <testCases id="24">
+            <StaticRTestCase id="25">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+&amp;Uuml;berlegen Sie noch einmal, wie sie Variablen Werte zuweisen k&amp;ouml;nnen. Benutzen Sie dazu $\verb|&lt;-|$. Achten Sie auch darauf, dass Sie die Variable $\verb|x|$ nennen und nicht anders.
+</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="26">
+                <RGReQLQuery id="27">
+                  <query>		from lao:V{LeftAssignmentOperator}, n:V{NumericLiteral}, v:V{Variable}, e1:E{LeftHandSide} with 
+		lao -- e1 -&gt; v and
+                v.name=&quot;x&quot; and
+                lao --&gt; n and
+                n.value=[var=num]
+		report 0 end
+		</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="28">
+                  <query>		from rao:V{RightAssignmentOperator}, n:V{NumericLiteral}, v:V{Variable}, e1:E{RightHandSide} with 
+                rao -- e1 -&gt; v and
+                v.name=&quot;x&quot; and
+                rao --&gt; n and
+                n.value=[var=num]
+		report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42083</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="30">
+    <VariableDeclaration id="31">
+      <name>num</name>
+      <initializationCode id="32">
+        <code>randomIntegerBetween(5,15)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="33"/>
+  <dynamicMolecules id="34"/>
+  <resultFeedbackMappings id="35"/>
+</Exercise>

@@ -1,0 +1,192 @@
+<Exercise id="1">
+  <name>IS04-04 Kombinatorik 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>1.Stage: Möglichkeiten n Kugeln aus N Kugeln zu ziehen, Farben sind dabei überflüssige Information zur Studentenverwirrung?
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>4</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Klassisches Urnenmodell: In einer Urne befinden sich insgesamt $20$ verschieden farbige Kugeln, die von $1$ bis $20$ nummeriert sind. Sie sind wie folgt verteilt:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$$\begin{matrix}&lt;br /&gt;&#xd;
+\textbf{Farbe} &amp;amp; \text{Rot} &amp;amp; \text{Gr&amp;uuml;n} &amp;amp; \text{Blau} \\&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+\textbf{Anzahl} &amp;amp; [var=r] &amp;amp; [var=g] &amp;amp; [var=b]\\&lt;br /&gt;&#xd;
+\end{matrix}$$&lt;br /&gt;&#xd;
+Angenommen Sie sollen nacheinander $[var=t1]$ Kugeln ziehen und die Reihenfolge spielt dabei keine Rolle.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie viele Kugelkombinationen sind m&amp;ouml;glich?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Binomialkoeffizient (Kombinationen ohne Wiederholung):&lt;br /&gt;
+$\binom{N}{n}=\binom{20}{[var=t1]}=[var=sol1]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="16">
+        <StageTransition id="17">
+          <conditionExpression id="18">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="19">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="20">
+        <StageHint id="21">
+          <stagehint__order>0</stagehint__order>
+          <text>Extrahieren Sie die f&amp;uuml;r Sie relevanten Informationen!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>1</stagehint__order>
+          <text>Ziehen Sie die Gesamtheit oder nur einen Teil daraus? Ist dabei die Reihenfolge der Anordnung relevant?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="23">
+          <stagehint__order>2</stagehint__order>
+          <text>Sie ziehen $[var=t1]$ aus insgesamt $20$ möglichen Kugeln, folglich nur aus einem Teil der Gesamtheit. Die Reihenfolge der Kugeln ist laut Aufgabenstellung unerheblich.
+</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="24"/>
+      <variableUpdatesBeforeCheck id="25"/>
+      <variableUpdatesAfterCheck id="26"/>
+      <variableUpdatesOnNormalExit id="27"/>
+      <variableUpdatesOnRepeat id="28"/>
+      <variableUpdatesOnSkip id="29"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="30"/>
+      <rules id="31"/>
+      <fillInFields id="32">
+        <FillInField id="33">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="34"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Binomialkoeffizient (Kombinationen ohne Wiederholung):&lt;br /&gt;
+$\binom{N}{n}=\binom{20}{[var=t1]}=[var=sol1]$.</defaultFeedback>
+      <correctAnswerRules id="35">
+        <Rule id="36">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="37">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==[var=sol1]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="38">
+    <VariableDeclaration id="39">
+      <name>r</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(4,8)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>g</name>
+      <initializationCode id="42">
+        <code>randomIntegerBetween(6,9)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>b</name>
+      <initializationCode id="44">
+        <code>20-[var=r]-[var=g]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>t1</name>
+      <initializationCode id="46">
+        <code>randomIntegerBetween(3,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>sol1</name>
+      <initializationCode id="48">
+        <code>ifthenelse([var=t1]==3, 1140, ifthenelse([var=t1]==4, 4845, 15504))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>sol2</name>
+      <initializationCode id="50">
+        <code>ifthenelse([var=t1]==3, 1540, ifthenelse([var=t1]==4, 8855, 42504))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="51"/>
+  <dynamicMolecules id="52"/>
+  <resultFeedbackMappings id="53"/>
+</Exercise>

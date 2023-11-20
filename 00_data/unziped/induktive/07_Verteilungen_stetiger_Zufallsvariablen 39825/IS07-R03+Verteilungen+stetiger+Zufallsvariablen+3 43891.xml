@@ -1,0 +1,155 @@
+<Exercise id="1">
+  <name>IS07-R03 Verteilungen stetiger Zufallsvariablen 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Berechnung von Quantilen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Gegeben sei eine Normalverteilung mit Erwartungswert $\mu=[var=EW]$ und Varianz $\sigma^2=[var=Var]$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie das $[var=Quantil]$-Quantil der vorliegenden Normalverteilung. Benutzen Sie hierf&amp;uuml;r die Funktion $\verb|qnorm()|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Die Funktion $\verb|qnorm(p,mean,sd)|$ kann den Wert eines Quantils mit Hilfe der entsprechenden Wahrscheinlichkeit, die Sie &amp;uuml;ber den Parameter $\verb|p|$ angeben k&amp;ouml;nnen, berechnen. Dar&amp;uuml;ber hinaus sollten Sie wie &amp;uuml;blich Erwartungswert $\verb|mean|$ und Standardabweichung $\verb|sd|$ der zu betrachtenden Normalverteilung spezifizieren.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Vergessen Sie nicht die Wurzel aus der Varianz zu ziehen, da Sie für diesen Befehl die Standardabweichung benötigen. Sie können dafür die Funktion $\verb|sqrt()|$ benutzen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="15"/>
+      <variableUpdatesBeforeCheck id="16"/>
+      <variableUpdatesAfterCheck id="17"/>
+      <variableUpdatesOnNormalExit id="18"/>
+      <variableUpdatesOnRepeat id="19"/>
+      <variableUpdatesOnSkip id="20"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="21"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="22">
+        <TestCaseTuple id="23">
+          <testCases id="24">
+            <StaticRTestCase id="25">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+Achten Sie darauf, dass sie die $\verb|qnorm()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="26">
+                <RGReQLQuery id="27">
+                  <query>	        from qnorm:V{FunctionCall} with
+                qnorm.name=&quot;qnorm&quot; 
+                report 0 end	</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="28">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43935</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="29">
+          <testCases id="30">
+            <DynamicRTestCase id="31">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>qnorm([var=Quantil],[var=EW],sqrt([var=Var]))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="32">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43936</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="33">
+    <VariableDeclaration id="34">
+      <name>Quantil</name>
+      <initializationCode id="35">
+        <code>evaluateInR(&apos;round(runif(1, 0.75, 0.99), 3)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>EW</name>
+      <initializationCode id="37">
+        <code>randomIntegerBetween(0,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>Var</name>
+      <initializationCode id="39">
+        <code>randomIntegerBetween(1,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>WSK</name>
+      <initializationCode id="41">
+        <code>evaluateInR(&apos;[var=Quantil]*100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="42"/>
+  <dynamicMolecules id="43"/>
+  <resultFeedbackMappings id="44"/>
+</Exercise>

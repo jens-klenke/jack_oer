@@ -1,0 +1,645 @@
+<Exercise id="1">
+  <name>IS03-02 Bedingte Wahrscheinlichkeiten 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>1.Stage: Satz d. t. W&apos;keit
+2. Stage: bedingte W&apos;keit umstellen
+3. Stage: bedingte Gegen-W&apos;keit umstellen
+4. Stage: Satz von Bayes
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>3</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>Stage 1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Am D&amp;uuml;sseldorfer Flughafen kommen $[var=hamper]$% der landenden Maschinen aus Hamburg, $[var=berper]$% aus Berlin und $[var=mueper]$% aus M&amp;uuml;nchen. Man wei&amp;szlig;, dass $[var=latehamper]$% der Maschinen aus Hamburg, $[var=lateberper]$% der Maschinen aus Berlin und $[var=latemueper]$% der Maschinen aus M&amp;uuml;nchen Versp&amp;auml;tung haben.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass eine landende Maschine versp&amp;auml;tet eintrifft?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Richtig ist $P(\text{Versp&amp;auml;tung}) = P(\text{Versp&amp;auml;tung}|\text{Hamburg})\cdot P(\text{Hamburg}) +$&lt;br /&gt;
+&lt;br /&gt;
+$P(\text{Versp&amp;auml;tung}|\text{Berlin})\cdot P(\text{Berlin}) + P(\text{Versp&amp;auml;tung}|\text{M&amp;uuml;nchen})\cdot P(\text{M&amp;uuml;nchen}) = [var=rsol1]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>Stage 2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass ein Flugzeug aus Berlin landet und sich versp&amp;auml;tet hat.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung: &lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+            <skipMessage>$P(\text{Versp&amp;auml;tung}|\text{Berlin}) = \frac{P(\text{Versp&amp;auml;tung}~\cap ~\text{Berlin})}{P(\text{Berlin})}.$ Daraus folgt $P(\text{Versp&amp;auml;tung}~\cap ~\text{Berlin}) = P(\text{Versp&amp;auml;tung}|\text{Berlin})\cdot P(\text{Berlin}) = [var=rsol2]$.</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="24">
+                  <internalName>Stage 3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass eine Maschine aus M&amp;uuml;nchen landet und keine Versp&amp;auml;tung hat?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                  <skipMessage>$P(\text{keine Versp&amp;auml;tung}~\cap~ \text{M&amp;uuml;nchen}) = P(\text{keine Versp&amp;auml;tung}|\text{M&amp;uuml;nchen})\cdot P(\text{M&amp;uuml;nchen}) = [var=rsol3]$.</skipMessage>
+                  <defaultTransition id="25">
+                    <conditionExpression id="26">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="27">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="28">
+                    <StageTransition id="29">
+                      <conditionExpression id="30">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="31">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" id="32">
+                        <internalName>Stage 4</internalName>
+                        <externalName>Stage 4</externalName>
+                        <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass eine Maschine aus Hamburg kommt, wenn bekannt ist, dass sie Versp&amp;auml;tung hat?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                        <skipMessage>$P(\text{Hamburg}|\text{Versp&amp;auml;tung}) = \frac{P(\text{Hamburg}~ \cap~ \text{Versp&amp;auml;tung})}{P(\text{Versp&amp;auml;tung})} = [var=rsol4]$.</skipMessage>
+                        <defaultTransition id="33">
+                          <conditionExpression id="34">
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="35">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>true</isRepeat>
+                        </defaultTransition>
+                        <skipTransitions id="36">
+                          <StageTransition id="37">
+                            <conditionExpression id="38">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="39">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </skipTransitions>
+                        <stageTransitions id="40">
+                          <StageTransition id="41">
+                            <conditionExpression id="42">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="43">
+                              <code>[meta=stageCurrentResult]&gt;=100</code>
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </stageTransitions>
+                        <hints id="44">
+                          <StageHint id="45">
+                            <stagehint__order>0</stagehint__order>
+                            <text>Betrachten Sie den Satz von Bayes.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="46">
+                            <stagehint__order>1</stagehint__order>
+                            <text>Es gilt: $P(\text{Hamburg}|\text{Versp&amp;auml;tung}) = \frac{P(\text{Hamburg}~ \cap~ \text{Versp&amp;auml;tung})}{P(\text{Versp&amp;auml;tung})}.$&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="47">
+                            <stagehint__order>2</stagehint__order>
+                            <text>$P(\text{Versp&amp;auml;tung})$ haben Sie in Frage 1 bereits berechnet.&lt;br /&gt;
+$P(\text{Hamburg}~ \cap~ \text{Versp&amp;auml;tung})$ k&amp;ouml;nnen Sie analog zu Frage 2 berechnen.</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                        </hints>
+                        <variableUpdatesOnEnter id="48"/>
+                        <variableUpdatesBeforeCheck id="49"/>
+                        <variableUpdatesAfterCheck id="50"/>
+                        <variableUpdatesOnNormalExit id="51"/>
+                        <variableUpdatesOnRepeat id="52"/>
+                        <variableUpdatesOnSkip id="53"/>
+                        <weight>1</weight>
+                        <orderIndex>3</orderIndex>
+                        <allowSkip>true</allowSkip>
+                        <resources id="54"/>
+                        <rules id="55"/>
+                        <fillInFields id="56">
+                          <FillInField id="57">
+                            <name>field1</name>
+                            <orderIndex>0</orderIndex>
+                            <size>6</size>
+                            <formularEditorType>NUMBER</formularEditorType>
+                          </FillInField>
+                        </fillInFields>
+                        <dropDownFields id="58"/>
+                        <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                        <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$P(\text{Hamburg}|\text{Versp&amp;auml;tung}) = \frac{P(\text{Hamburg}~ \cap~ \text{Versp&amp;auml;tung})}{P(\text{Versp&amp;auml;tung})} = [var=rsol4]$.</defaultFeedback>
+                        <correctAnswerRules id="59">
+                          <Rule id="60">
+                            <name>CorrectAnswer1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="61">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rsol4]-0.0011&amp;&amp;[input=field1]&lt;[var=rsol4]+0.0011</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <points>0</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </correctAnswerRules>
+                        <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                        <defaultResult>0</defaultResult>
+                      </targetStage>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="62">
+                    <StageTransition id="63">
+                      <conditionExpression id="64">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="65">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="32"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="66">
+                    <StageHint id="67">
+                      <stagehint__order>0</stagehint__order>
+                      <text>Benutzen Sie auch hier wieder die Definition der bedingten Wahrscheinlichkeit.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                    <StageHint id="68">
+                      <stagehint__order>1</stagehint__order>
+                      <text>Es gilt: $P(\text{keine Versp&amp;auml;tung}|\text{M&amp;uuml;nchen}) = 1 - P(\text{Versp&amp;auml;tung}|\text{M&amp;uuml;nchen})$.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                    <StageHint id="69">
+                      <stagehint__order>2</stagehint__order>
+                      <text>Es gilt: $P(\text{keine Versp&amp;auml;tung}|\text{M&amp;uuml;nchen}) = \frac{P(\text{keine Versp&amp;auml;tung}~\cap ~\text{M&amp;uuml;nchen})}{P(\text{M&amp;uuml;nchen})}$.&lt;br /&gt;
+Wie in Frage 2 k&amp;ouml;nnen Sie die gesuchte W&amp;#39;keit nun berechnen.</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="70"/>
+                  <variableUpdatesBeforeCheck id="71"/>
+                  <variableUpdatesAfterCheck id="72"/>
+                  <variableUpdatesOnNormalExit id="73"/>
+                  <variableUpdatesOnRepeat id="74"/>
+                  <variableUpdatesOnSkip id="75"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="76"/>
+                  <rules id="77"/>
+                  <fillInFields id="78">
+                    <FillInField id="79">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="80"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$P(\text{keine Versp&amp;auml;tung}~\cap~ \text{M&amp;uuml;nchen}) = P(\text{keine Versp&amp;auml;tung}|\text{M&amp;uuml;nchen})\cdot P(\text{M&amp;uuml;nchen}) = [var=rsol3]$.</defaultFeedback>
+                  <correctAnswerRules id="81">
+                    <Rule id="82">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="83">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rsol3]-0.0011&amp;&amp;[input=field1]&lt;[var=rsol3]+0.0011</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="84">
+              <StageTransition id="85">
+                <conditionExpression id="86">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="87">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="24"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="88">
+              <StageHint id="89">
+                <stagehint__order>0</stagehint__order>
+                <text>Betrachten Sie die Definition der bedingten Wahrscheinlichkeit.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="90">
+                <stagehint__order>1</stagehint__order>
+                <text>Es gilt allgemein: $P(A|B) = \frac{P(A~\cap~ B)}{P(B)}.$&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="91">
+                <stagehint__order>2</stagehint__order>
+                <text>Hier gilt:&lt;br /&gt;
+$P(\text{Versp&amp;auml;tung}|\text{Berlin}) = \frac{P(\text{Versp&amp;auml;tung}~\cap ~\text{Berlin})}{P(\text{Berlin})}.$ Diese Formel k&amp;ouml;nnen Sie nun nach der gesuchten W&amp;#39;keit umstellen.</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="92"/>
+            <variableUpdatesBeforeCheck id="93"/>
+            <variableUpdatesAfterCheck id="94"/>
+            <variableUpdatesOnNormalExit id="95"/>
+            <variableUpdatesOnRepeat id="96"/>
+            <variableUpdatesOnSkip id="97"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="98"/>
+            <rules id="99"/>
+            <fillInFields id="100">
+              <FillInField id="101">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="102"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$P(\text{Versp&amp;auml;tung}|\text{Berlin}) = \frac{P(\text{Versp&amp;auml;tung}~\cap ~\text{Berlin})}{P(\text{Berlin})}.$ Daraus folgt $P(\text{Versp&amp;auml;tung}~\cap ~\text{Berlin}) = P(\text{Versp&amp;auml;tung}|\text{Berlin})\cdot P(\text{Berlin}) = [var=rsol2]$.</defaultFeedback>
+            <correctAnswerRules id="103">
+              <Rule id="104">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="105">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rsol2]-0.0011&amp;&amp;[input=field1]&lt;[var=rsol2]+0.0011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="106">
+        <StageTransition id="107">
+          <conditionExpression id="108">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="109">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="110">
+        <StageHint id="111">
+          <stagehint__order>0</stagehint__order>
+          <text>Benutzen Sie den Satz der totalen Wahrscheinlichkeit!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;br /&gt;
+&amp;nbsp;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="112">
+          <stagehint__order>1</stagehint__order>
+          <text>Folgende W&amp;#39;keiten sind bekannt: $P(\text{Hamburg}) = [var=ham]$, ist die W&amp;#39;keit, dass ein Flugzeug aus Hamburg landet.&lt;br /&gt;
+$P(\text{Berlin}) = [var=ber]$, ist die W&amp;#39;keit, dass ein Flugzeug aus Berlin landet.&lt;br /&gt;
+$P(\text{M&amp;uuml;nchen}) = [var=mue]$, ist die W&amp;#39;keit, dass ein Flugzeug aus M&amp;uuml;nchen landet.&lt;br /&gt;
+&lt;br /&gt;
+Welche W&amp;#39;keiten stehen noch im Text?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;br /&gt;
+&amp;nbsp;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="113">
+          <stagehint__order>2</stagehint__order>
+          <text>Folgende W&amp;#39;keiten sind weiterhin bekannt: $P(\text{Versp&amp;auml;tung}|\text{Hamburg}) = [var=lateham]$, ist die W&amp;#39;keit, dass ein Flugzeug aus Hamburg versp&amp;auml;tet landet.&lt;br /&gt;
+$P(\text{Versp&amp;auml;tung}|\text{Berlin}) = [var=lateber]$, ist die W&amp;#39;keit, dass ein Flugzeug aus Berlin versp&amp;auml;tet landet.&lt;br /&gt;
+$P(\text{Versp&amp;auml;tung}|\text{M&amp;uuml;nchen}) = [var=latemue]$, ist die W&amp;#39;keit, dass ein Flugzeug aus M&amp;uuml;nchen versp&amp;auml;tet landet.&lt;br /&gt;
+&lt;br /&gt;
+Welche W&amp;#39;keiten stehen noch im Text?&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="114">
+          <stagehint__order>3</stagehint__order>
+          <text>Gesucht ist die W&amp;#39;keit, dass ein Flugzeug Versp&amp;auml;tung hat, egal von welchem Flughafen es kommt.&lt;br /&gt;
+$P(\text{Versp&amp;auml;tung}) = ?$, nutzen Sie nun den Satz der totalen W&amp;#39;keit!</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="115"/>
+      <variableUpdatesBeforeCheck id="116"/>
+      <variableUpdatesAfterCheck id="117"/>
+      <variableUpdatesOnNormalExit id="118"/>
+      <variableUpdatesOnRepeat id="119"/>
+      <variableUpdatesOnSkip id="120"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="121"/>
+      <rules id="122"/>
+      <fillInFields id="123">
+        <FillInField id="124">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="125"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $P(\text{Versp&amp;auml;tung}) = P(\text{Versp&amp;auml;tung}|\text{Hamburg})\cdot P(\text{Hamburg}) +$&lt;br /&gt;
+&lt;br /&gt;
+$P(\text{Versp&amp;auml;tung}|\text{Berlin})\cdot P(\text{Berlin}) + P(\text{Versp&amp;auml;tung}|\text{M&amp;uuml;nchen})\cdot P(\text{M&amp;uuml;nchen}) = [var=rsol1]$.</defaultFeedback>
+      <correctAnswerRules id="126">
+        <Rule id="127">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="128">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rsol1]-0.0011&amp;&amp;[input=field1]&lt;[var=rsol1]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+    <FillInStage reference="24"/>
+    <FillInStage reference="32"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="129">
+    <VariableDeclaration id="130">
+      <name>hamper</name>
+      <initializationCode id="131">
+        <code>randomIntegerBetween(1,33)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="132">
+      <name>berper</name>
+      <initializationCode id="133">
+        <code>randomIntegerBetween(1,33)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="134">
+      <name>mueper</name>
+      <initializationCode id="135">
+        <code>evaluateInR(&apos;100-([var=hamper])-([var=berper])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="136">
+      <name>ham</name>
+      <initializationCode id="137">
+        <code>evaluateInR(&apos;([var=hamper])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="138">
+      <name>ber</name>
+      <initializationCode id="139">
+        <code>evaluateInR(&apos;([var=berper])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="140">
+      <name>mue</name>
+      <initializationCode id="141">
+        <code>evaluateInR(&apos;([var=mueper])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="142">
+      <name>latehamper</name>
+      <initializationCode id="143">
+        <code>randomIntegerBetween(1,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="144">
+      <name>lateberper</name>
+      <initializationCode id="145">
+        <code>randomIntegerBetween(1,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="146">
+      <name>latemueper</name>
+      <initializationCode id="147">
+        <code>randomIntegerBetween(1,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="148">
+      <name>lateham</name>
+      <initializationCode id="149">
+        <code>evaluateInR(&apos;([var=latehamper])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="150">
+      <name>lateber</name>
+      <initializationCode id="151">
+        <code>evaluateInR(&apos;([var=lateberper])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="152">
+      <name>latemue</name>
+      <initializationCode id="153">
+        <code>evaluateInR(&apos;([var=latemueper])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="154">
+      <name>sol1</name>
+      <initializationCode id="155">
+        <code>evaluateInR(&apos;([var=ham])*([var=lateham])+([var=ber])*([var=lateber])+([var=mue])*([var=latemue])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="156">
+      <name>rsol1</name>
+      <initializationCode id="157">
+        <code>evaluateInR(&apos;round(([var=sol1]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="158">
+      <name>sol2</name>
+      <initializationCode id="159">
+        <code>evaluateInR(&apos;([var=ber])*([var=lateber])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="160">
+      <name>rsol2</name>
+      <initializationCode id="161">
+        <code>evaluateInR(&apos;round(([var=sol2]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="162">
+      <name>sol3</name>
+      <initializationCode id="163">
+        <code>evaluateInR(&apos;([var=mue])*(1-([var=latemue]))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="164">
+      <name>rsol3</name>
+      <initializationCode id="165">
+        <code>evaluateInR(&apos;round(([var=sol3]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="166">
+      <name>sol4</name>
+      <initializationCode id="167">
+        <code>evaluateInR(&apos;([var=ham])*([var=lateham])/([var=sol1])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="168">
+      <name>rsol4</name>
+      <initializationCode id="169">
+        <code>evaluateInR(&apos;round(([var=sol4]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="170"/>
+  <dynamicMolecules id="171"/>
+  <resultFeedbackMappings id="172"/>
+</Exercise>

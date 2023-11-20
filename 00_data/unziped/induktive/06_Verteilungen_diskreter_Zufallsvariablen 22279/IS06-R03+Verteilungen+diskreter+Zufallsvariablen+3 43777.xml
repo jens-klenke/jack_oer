@@ -1,0 +1,149 @@
+<Exercise id="1">
+  <name>IS06-R03 Verteilungen diskreter Zufallsvariablen 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>W&apos;keit mit pnbinom()/dnbinom() berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sei $X\sim Geom([var=prob])$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie die Wahrscheinlichkeit $P(X\geq [var=versuche])$ &lt;u&gt;ohne&lt;/u&gt; ($!$) dabei die Funktionen $\verb|dgeom()|$ sowie $\verb|pgeom()|$ zu benutzen oder es h&amp;auml;ndisch auszurechnen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Kennen Sie eine andere wesentlich allgemeinere Verteilung, die Sie zur Berechnung heranziehen k&amp;ouml;nnen? Wenn nicht, schauen Sie sich evtl. nochmal alle besprochenen Verteilungen an.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Die geometrische Verteilung ist lediglich ein Spezialfall der negativen Binomialverteilung für $r=1$. D.h. Sie können die Funktion $\verb|dnbinom()|$ oder $\verb|pnbinom()|$ benutzen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="15"/>
+      <variableUpdatesBeforeCheck id="16"/>
+      <variableUpdatesAfterCheck id="17"/>
+      <variableUpdatesOnNormalExit id="18"/>
+      <variableUpdatesOnRepeat id="19"/>
+      <variableUpdatesOnSkip id="20"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="21"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="22">
+        <TestCaseTuple id="23">
+          <testCases id="24">
+            <StaticRTestCase id="25">
+              <points>60</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+Achten Sie darauf, dass sie die $\verb|pnbinom()|$- oder $\verb|dnbinom()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="26">
+                <RGReQLQuery id="27">
+                  <query>                from pnbinom, dnbinom:V{FunctionCall} with
+                pnbinom.name=&quot;pnbinom&quot; or
+                dnbinom.name=&quot;dnbinom&quot;
+                report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="28">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43780</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="29">
+          <testCases id="30">
+            <DynamicRTestCase id="31">
+              <points>40</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>1-pnbinom([var=versuche2],1,[var=prob])</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="32">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43781</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="33">
+    <VariableDeclaration id="34">
+      <name>prob</name>
+      <initializationCode id="35">
+        <code>evaluateInR(&apos;round(runif(1, 0.01, 1), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>versuche</name>
+      <initializationCode id="37">
+        <code>evaluateInR(&apos;round(runif(1, 1, 5), 0)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>versuche2</name>
+      <initializationCode id="39">
+        <code>evaluateInR(&apos;[var=versuche]-1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="40"/>
+  <dynamicMolecules id="41"/>
+  <resultFeedbackMappings id="42"/>
+</Exercise>

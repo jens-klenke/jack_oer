@@ -1,0 +1,126 @@
+<Exercise id="1">
+  <name>IS00-R03 Rechenregeln R03</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Logarithmus/Exponentialfunktion
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Zeigen Sie mit Hilfe von R, dass gilt: $e^{log(1)}=1$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Sie k&amp;ouml;nnen R wie einen Taschenrechner benutzen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Benutzen Sie f&amp;uuml;r den Logarithmus die $\verb|log()|$-Funktion, f&amp;uuml;r die Exponentialfunktion die $\verb|exp()|$-Funktion.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Sie können (müssen Sie aber nicht) die Aufgabe auch lösen, in dem Sie die angegebene Gleichung in R eingeben. R wird Ihnen dann über sog. boolesche Operatoren ($\verb|TRUE|$ bzw. $\verb|FALSE|$) anzeigen, ob die Gleichung stimmt oder nicht. Nutzen Sie dazu bitte $\verb|==|$ anstatt $\verb|=|$, da letzteres in R für Zuweisungen benutzt wird und daher nicht funktioniert.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>#{c42026}</finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+
+&amp;Uuml;berlegen Sie noch einmal, wie sie das Ganze berechnen. 
+Benutzen Sie die $\verb|log()|$- sowie die $\verb|exp()|$-Funktion.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>		from l,e:V{FunctionCall}, n:V{NumericLiteral} with 
+		l --&gt;* e and
+                l.name=&quot;log&quot; and
+                e.name=&quot;exp&quot; and
+                e --&gt;* n and
+                n.value=1
+		report 0 end
+		</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="29">
+                  <query>		from l,e:V{FunctionCall}, n:V{NumericLiteral} with 
+                e --&gt;* l and
+                l.name=&quot;log&quot; and
+                e.name=&quot;exp&quot; and
+                l --&gt;* n and
+                n.value=1
+		report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="30">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42026</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="31"/>
+  <jSXGraphs id="32"/>
+  <dynamicMolecules id="33"/>
+  <resultFeedbackMappings id="34"/>
+</Exercise>

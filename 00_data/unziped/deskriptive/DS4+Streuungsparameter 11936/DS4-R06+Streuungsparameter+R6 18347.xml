@@ -1,0 +1,225 @@
+<Exercise id="1">
+  <name>DS4-R06 Streuungsparameter R6</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Variationskoeffizient berechnen (Kurswerte Apple Aktie)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2"/>
+  <resources id="3">
+    <ExerciseResource id="4">
+      <content id="5">YWFwbCA8LSBjKDExOC4zMCwxMDUuMjYsOTcuMzQsOTYuNjksMTA4Ljk5LDkzLjc0LDk5Ljg2LDk1LjYwLDEwNC4yMSwxMDYuMTAsMTEzLjA1LDExMy41NCkNCg==</content>
+      <uploadTimestamp>2022-03-02T17:19:38.092741</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="6">
+    <RStage id="7">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nehmen Sie an, Sie wollen die Streuung der Apple Aktie mit der der Deutsche Bank Aktie vergleichen. Da die Kurse der Deutsche Bank Aktie allerdings in $&amp;euro;$ und nicht in $\$$ angegeben sind, brauchen Sie zum Vergleich beider Streuungen den Variationskoeffizienten. Der Variationskoeffizient f&amp;uuml;r die Deutsche Bank Aktie ist hierbei mit $0.13$ gegeben.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie den Variationskoeffizienten f&amp;uuml;r die Apple Aktie.&lt;br /&gt;&#xd;
+Welche Aktie streut mehr?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="8">
+        <conditionExpression id="9">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="10">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="11"/>
+      <stageTransitions id="12"/>
+      <hints id="13">
+        <StageHint id="14">
+          <stagehint__order>0</stagehint__order>
+          <text>$v=\frac{s}{\bar x}$&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>1</stagehint__order>
+          <text>Die Standardabweichung $s$ k&amp;ouml;nnen Sie mit Hilfe der Funktion $\verb|sd()|$, das arithmetische Mittel $\bar x$ mit Hilfe der Funktion $\verb|mean()|$ berechnen.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>2</stagehint__order>
+          <text>Beachten Sie erneut den Vorfaktor $\frac{n-1}{n}$ und die entsprechende Anpassung bei der Berechnung der Standardabweichung.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode>aapl &lt;- c([var=var1], [var=var2], [var=var3], [var=var4], [var=var5], [var=var6], [var=var7], [var=var8], [var=var9], [var=var10], [var=var11], [var=var12])
+</initialCode>
+      <finalResultComputationString>min(#{c18352},#{c18351})</finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die vordefinierte Variable.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>		from clos:V{Variable} with 
+                clos.name=&quot;aapl&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="30">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>18351</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="31">
+          <testCases id="32">
+            <DynamicRTestCase id="33">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Teilen Sie die Standardabweichung durch das arithmetische Mittel um den Variationskoeffizienten zu bestimmen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>(sqrt(11/12)*sd(c([var=var1], [var=var2], [var=var3], [var=var4], [var=var5], [var=var6], [var=var7], [var=var8], [var=var9], [var=var10], [var=var11], [var=var12])))/(mean(c([var=var1], [var=var2], [var=var3], [var=var4], [var=var5], [var=var6], [var=var7], [var=var8], [var=var9], [var=var10], [var=var11], [var=var12])))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="34">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>18352</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="7"/>
+  <variableDeclarations id="35">
+    <VariableDeclaration id="36">
+      <name>var1</name>
+      <initializationCode id="37">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>var2</name>
+      <initializationCode id="39">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>var3</name>
+      <initializationCode id="41">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>var4</name>
+      <initializationCode id="43">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>var5</name>
+      <initializationCode id="45">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>var6</name>
+      <initializationCode id="47">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>var7</name>
+      <initializationCode id="49">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>var8</name>
+      <initializationCode id="51">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>var9</name>
+      <initializationCode id="53">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>var10</name>
+      <initializationCode id="55">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="56">
+      <name>var11</name>
+      <initializationCode id="57">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="58">
+      <name>var12</name>
+      <initializationCode id="59">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="60"/>
+  <dynamicMolecules id="61"/>
+  <resultFeedbackMappings id="62"/>
+</Exercise>

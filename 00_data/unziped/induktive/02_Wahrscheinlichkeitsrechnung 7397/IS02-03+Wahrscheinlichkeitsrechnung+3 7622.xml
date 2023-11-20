@@ -1,0 +1,615 @@
+<Exercise id="1">
+  <name>IS02-03 Wahrscheinlichkeitsrechnung 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>4 Stages, W&apos;keiten berechnen, bei gegebenen P(A), P(B) usw....
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+F&amp;uuml;r zwei zuf&amp;auml;llige Ereignisse $A$ und $B$ gilt $P(A) = [var=PA]$, $P(B) = [var=PB]$ und $P(A \cup B) = [var=PAuB]$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+Berechnen Sie:&amp;nbsp; $P(A \cap B)=$ &amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>Die richtige Antwort lautet:&lt;br /&gt;
+$P(A \cap B)=[var=PA] + [var=PB] - [var=PAuB] = [var=PAnB]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+F&amp;uuml;r zwei zuf&amp;auml;llige Ereignisse $A$ und $B$ gilt $P(A) = [var=PA]$, $P(B) = [var=PB]$ und $P(A \cup B) = [var=PAuB]$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+Berechnen Sie:&amp;nbsp; $P(\bar{A} \cap \bar{B})=$ &amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+            <skipMessage>Die richtige Antwort lautet:&lt;br /&gt;
+$P(\bar{A} \cap \bar{B})= 1 - [var=PAuB] = [var=PA_nB_]$.</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="24">
+                  <internalName>3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+F&amp;uuml;r zwei zuf&amp;auml;llige Ereignisse $A$ und $B$ gilt $P(A) = [var=PA]$, $P(B) = [var=PB]$ und $P(A \cup B) = [var=PAuB]$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+Berechnen Sie:&amp;nbsp; $P(\bar{A}\cup B)=$ &amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                  <skipMessage>Die richtige Antwort lautet:&lt;br /&gt;
+$P(\bar{A}\cup B)= 1 - [var=PA] + [var=PB] - ([var=PB] - [var=PAnB]) =[var=PA_uB]$.</skipMessage>
+                  <defaultTransition id="25">
+                    <conditionExpression id="26">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="27">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="28">
+                    <StageTransition id="29">
+                      <conditionExpression id="30">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="31">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" id="32">
+                        <internalName>4</internalName>
+                        <externalName>Stage 4</externalName>
+                        <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+F&amp;uuml;r zwei zuf&amp;auml;llige Ereignisse $A$ und $B$ gilt $P(A) = [var=PA]$, $P(B) = [var=PB]$ und $P(A \cup B) = [var=PAuB]$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+Berechnen Sie:&amp;nbsp; $P(A\cup\bar{B})=$ &amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                        <skipMessage>Die richtige Antwort lautet:&lt;br /&gt;
+$P(A\cup\bar{B})= [var=PA] + (1-[var=PB]) - ([var=PA] - [var=PAnB]) = [var=PAuB_]$</skipMessage>
+                        <defaultTransition id="33">
+                          <conditionExpression id="34">
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="35">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>true</isRepeat>
+                        </defaultTransition>
+                        <skipTransitions id="36">
+                          <StageTransition id="37">
+                            <conditionExpression id="38">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="39">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </skipTransitions>
+                        <stageTransitions id="40">
+                          <StageTransition id="41">
+                            <conditionExpression id="42">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="43">
+                              <code>[meta=stageCurrentResult]&gt;=100</code>
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </stageTransitions>
+                        <hints id="44">
+                          <StageHint id="45">
+                            <stagehint__order>0</stagehint__order>
+                            <text>Versuchen Sie sich die gesuchte Wahrscheinlichkeit zun&amp;auml;chst wieder &amp;uuml;ber ein Venn-Diagramm zu veranschaulichen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="46">
+                            <stagehint__order>1</stagehint__order>
+                            <text>$P(A\cup \bar{B})=P(A)+P(\bar{B})-P(A\cap \bar{B})$ $P(A)$ ist bekannt und $P(\bar{B})$ l&amp;auml;sst sich &amp;uuml;ber $P(B)$ leicht bestimmen.&lt;br /&gt;
+&lt;br /&gt;
+Wie kommen Sie an die Wahrscheinlichkeit f&amp;uuml;r $P(A\cap \bar{B})$? Versuchen Sie dies zun&amp;auml;chst &amp;uuml;ber ein Venn-Diagramm zu l&amp;ouml;sen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="47">
+                            <stagehint__order>2</stagehint__order>
+                            <text>$P(A\cup \bar{B})=P(A)+P(\bar{B})-P(A\cap \bar{B})=P(A)+P(\bar{B})-[P(A)-P(A\cap B)]$&lt;br /&gt;
+&lt;br /&gt;
+Setzen Sie die einzelnen Wahrscheinlichkeit noch ein um das gesuchte Ergebnis zu erhalten.</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                        </hints>
+                        <variableUpdatesOnEnter id="48"/>
+                        <variableUpdatesBeforeCheck id="49"/>
+                        <variableUpdatesAfterCheck id="50"/>
+                        <variableUpdatesOnNormalExit id="51"/>
+                        <variableUpdatesOnRepeat id="52"/>
+                        <variableUpdatesOnSkip id="53"/>
+                        <weight>1</weight>
+                        <orderIndex>3</orderIndex>
+                        <allowSkip>true</allowSkip>
+                        <resources id="54"/>
+                        <rules id="55"/>
+                        <fillInFields id="56">
+                          <FillInField id="57">
+                            <name>field1</name>
+                            <orderIndex>0</orderIndex>
+                            <size>10</size>
+                            <formularEditorType>NUMBER</formularEditorType>
+                          </FillInField>
+                        </fillInFields>
+                        <dropDownFields id="58"/>
+                        <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                        <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$P(A\cup\bar{B})= [var=PA] + (1-[var=PB]) - ([var=PA] - [var=PAnB]) = [var=PAuB_]$</defaultFeedback>
+                        <correctAnswerRules id="59">
+                          <Rule id="60">
+                            <name>CorrectAnswer1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="61">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=PAuB_]-0.0011&amp;&amp;[input=field1]&lt;[var=PAuB_]+0.0011</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <points>0</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </correctAnswerRules>
+                        <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                        <defaultResult>0</defaultResult>
+                      </targetStage>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="62">
+                    <StageTransition id="63">
+                      <conditionExpression id="64">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="65">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="32"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="66">
+                    <StageHint id="67">
+                      <stagehint__order>0</stagehint__order>
+                      <text>Versuchen Sie sich die gesuchte Wahrscheinlichkeit zun&amp;auml;chst wieder &amp;uuml;ber ein Venn-Diagramm zu veranschaulichen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                    <StageHint id="68">
+                      <stagehint__order>1</stagehint__order>
+                      <text>$P(\bar{A}\cup B)=P(\bar{A})+P(B)-P(\bar{A}\cap B)$&lt;br /&gt;
+&lt;br /&gt;
+Wobei $P(\bar{A})$ &amp;uuml;ber die Wahrscheinlichkeit $P(A)$ zu berechnen ist und $P(B)$ bekannt ist. Wie erhalten Sie die Wahrscheinlichkeit $P(\bar{A}\cap B)$?&lt;br /&gt;
+&lt;br /&gt;
+Versuchen Sie dieses Ereignis zun&amp;auml;chst &amp;uuml;ber ein Venn-Diagramm zu veranschaulichen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                    <StageHint id="69">
+                      <stagehint__order>2</stagehint__order>
+                      <text>$P(\bar{A}\cup B)=P(\bar{A})+P(B)-P(\bar{A}\cap B)=P(\bar{A})+P(B)-[P(B)-P(A\cap B)]$&lt;br /&gt;
+&lt;br /&gt;
+Mit $P(\bar{A}) = 1 - P(A)$ m&amp;uuml;ssen Sie die einzelnen Wahrscheinlichkeiten nur noch einsetzen und erhalten die gesuchte Wahrscheinlichkeit .</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="70"/>
+                  <variableUpdatesBeforeCheck id="71"/>
+                  <variableUpdatesAfterCheck id="72"/>
+                  <variableUpdatesOnNormalExit id="73"/>
+                  <variableUpdatesOnRepeat id="74"/>
+                  <variableUpdatesOnSkip id="75"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="76"/>
+                  <rules id="77"/>
+                  <fillInFields id="78">
+                    <FillInField id="79">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>10</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="80"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider nicht korrekt. &lt;/br&gt;
+&lt;/br&gt;
+$P(\bar{A}\cup B)= 1 - [var=PA] + [var=PB] - ([var=PB] - [var=PAnB]) =[var=PA_uB]$.</defaultFeedback>
+                  <correctAnswerRules id="81">
+                    <Rule id="82">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="83">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=PA_uB]-0.0011&amp;&amp;[input=field1]&lt;[var=PA_uB]+0.0011</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="84">
+              <StageTransition id="85">
+                <conditionExpression id="86">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="87">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="24"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="88">
+              <StageHint id="89">
+                <stagehint__order>0</stagehint__order>
+                <text>Versuchen Sie sich die gesuchte Wahrscheinlichkeit zun&amp;auml;chst wieder &amp;uuml;ber ein Venn-Diagramm zu veranschaulichen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="90">
+                <stagehint__order>1</stagehint__order>
+                <text>$P(\bar{A}\cap \bar{B})=P(\overline{A\cup B})$&lt;br /&gt;
+&lt;br /&gt;
+Wie kommen Sie nun an die Wahrscheinlichkeit f&amp;uuml;r $P(\overline{A\cup B})$?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="91">
+                <stagehint__order>2</stagehint__order>
+                <text>$P(\bar{A}\cap \bar{B})=P(\overline{A\cup B})=1-P(A\cup B)$&lt;br /&gt;
+&lt;br /&gt;
+Nun m&amp;uuml;ssen Sie die gegebene Wahrscheinlichkeit nur noch einsetzen und erhalten das gesuchte Ergebnis.</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="92"/>
+            <variableUpdatesBeforeCheck id="93"/>
+            <variableUpdatesAfterCheck id="94"/>
+            <variableUpdatesOnNormalExit id="95"/>
+            <variableUpdatesOnRepeat id="96"/>
+            <variableUpdatesOnSkip id="97"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="98"/>
+            <rules id="99"/>
+            <fillInFields id="100">
+              <FillInField id="101">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>10</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="102"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.&lt;/br&gt;
+&lt;/br&gt;
+$P(\bar{A} \cap \bar{B})= 1 - [var=PAuB] = [var=PA_nB_]$.</defaultFeedback>
+            <correctAnswerRules id="103">
+              <Rule id="104">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="105">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=PA_nB_]-0.0011&amp;&amp;[input=field1]&lt;[var=PA_nB_]+0.0011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="106">
+        <StageTransition id="107">
+          <conditionExpression id="108">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="109">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="110">
+        <StageHint id="111">
+          <stagehint__order>0</stagehint__order>
+          <text>Versuchen Sie sich die gesuchte Wahrscheinlichkeit zun&amp;auml;chst &amp;uuml;ber ein Venn-Diagramm zu veranschaulichen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="112">
+          <stagehint__order>1</stagehint__order>
+          <text>$P(A\cup B)=P(A)+P(B)-P(A\cap B)$&lt;br /&gt;
+&lt;br /&gt;
+Diese Gleichung k&amp;ouml;nnen Sie nun nach der gesuchten Wahrscheinlichkeit umstellen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="113">
+          <stagehint__order>2</stagehint__order>
+          <text>$P(A\cap B)=P(A)+P(B)-P(A\cup B)$&lt;br /&gt;
+&lt;br /&gt;
+Nun m&amp;uuml;ssen Sie die gegebenen Wahrscheinlichkeit nur noch einsetzen.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="114"/>
+      <variableUpdatesBeforeCheck id="115"/>
+      <variableUpdatesAfterCheck id="116"/>
+      <variableUpdatesOnNormalExit id="117"/>
+      <variableUpdatesOnRepeat id="118"/>
+      <variableUpdatesOnSkip id="119"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="120"/>
+      <rules id="121"/>
+      <fillInFields id="122">
+        <FillInField id="123">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>10</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="124"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt. &lt;/br&gt;
+&lt;br&gt;
+$P(A \cap B)=[var=PA] + [var=PB] - [var=PAuB] = [var=PAnB]$.</defaultFeedback>
+      <correctAnswerRules id="125">
+        <Rule id="126">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="127">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=PAnB]-0.0011&amp;&amp;[input=field1]&lt;[var=PAnB]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+    <FillInStage reference="24"/>
+    <FillInStage reference="32"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="128">
+    <VariableDeclaration id="129">
+      <name>yy1</name>
+      <initializationCode id="130">
+        <code>randomIntegerBetween(45,55)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="131">
+      <name>yy2</name>
+      <initializationCode id="132">
+        <code>randomIntegerBetween(25,35)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="133">
+      <name>yy3</name>
+      <initializationCode id="134">
+        <code>randomIntegerBetween(57,64)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="135">
+      <name>y1</name>
+      <initializationCode id="136">
+        <code>([var=yy1])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="137">
+      <name>y2</name>
+      <initializationCode id="138">
+        <code>([var=yy2])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="139">
+      <name>y3</name>
+      <initializationCode id="140">
+        <code>([var=yy3])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="141">
+      <name>PA</name>
+      <initializationCode id="142">
+        <code>round(([var=y1]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="143">
+      <name>PB</name>
+      <initializationCode id="144">
+        <code>round(([var=y2]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="145">
+      <name>PAuB</name>
+      <initializationCode id="146">
+        <code>round(([var=y3]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="147">
+      <name>PAnBu</name>
+      <initializationCode id="148">
+        <code>([var=PA])+([var=PB])-([var=PAuB])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="149">
+      <name>PAnB</name>
+      <initializationCode id="150">
+        <code>round(([var=PAnBu]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="151">
+      <name>PA_nB_u</name>
+      <initializationCode id="152">
+        <code>1-([var=PAuB])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="153">
+      <name>PA_nB_</name>
+      <initializationCode id="154">
+        <code>round(([var=PA_nB_u]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="155">
+      <name>PA_uBu</name>
+      <initializationCode id="156">
+        <code>(1-([var=PA]))+([var=PB])-(([var=PB])-([var=PAnB]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="157">
+      <name>PA_uB</name>
+      <initializationCode id="158">
+        <code>round(([var=PA_uBu]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="159">
+      <name>PAuB_u</name>
+      <initializationCode id="160">
+        <code>([var=PA])+(1-([var=PB]))-(([var=PA])-([var=PAnB]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="161">
+      <name>PAuB_</name>
+      <initializationCode id="162">
+        <code>round(([var=PAuB_u]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="163"/>
+  <dynamicMolecules id="164"/>
+  <resultFeedbackMappings id="165"/>
+</Exercise>

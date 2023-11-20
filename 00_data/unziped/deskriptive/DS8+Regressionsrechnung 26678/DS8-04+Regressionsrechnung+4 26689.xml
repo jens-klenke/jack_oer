@@ -1,0 +1,515 @@
+<Exercise id="1">
+  <name>DS8-04 Regressionsrechnung 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Stage 1: 
+Bestimmen Sie mit der Methode der kleinsten Quadrate eine isoelastische Preisabsatzfunktion
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>4</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ein Produzent hat in f&amp;uuml;nf aufeinander folgenden Perioden nachstehende Preise und Absatzmengen f&amp;uuml;r sein Gut beobachtet:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\begin{matrix}&lt;br /&gt;&#xd;
+\text{Periode} \,\, r &amp;amp; \text{Preis} \,\, x_r &amp;amp; \text{Menge} \,\, y_r \\&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+1 &amp;amp; [var=p1] &amp;amp; [var=q1] \\&lt;br /&gt;&#xd;
+2 &amp;amp; [var=p2] &amp;amp; [var=q2] \\&lt;br /&gt;&#xd;
+3 &amp;amp; [var=p3] &amp;amp; [var=q3] \\&lt;br /&gt;&#xd;
+4 &amp;amp; [var=p4] &amp;amp; [var=q4] \\&lt;br /&gt;&#xd;
+5 &amp;amp; [var=p5] &amp;amp; [var=q5] \\&lt;br /&gt;&#xd;
+\end{matrix}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bestimmen Sie mit der Methode der kleinsten Quadrate eine isoelastische Preisabsatzfunktion der folgenden Form:&lt;br /&gt;&#xd;
+$$y_r = \alpha \, x_r^\beta$$&amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:240px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$\alpha =$&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$\beta=$&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Runden Sie Ihre Ergebnisse auf 2 Stellen Nachkommastellen und nutzen Sie einen Dezimalpunkt.)&lt;/em&gt;&lt;/span&gt;&#xd;
+&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>$\alpha = [var=alpha]$&lt;br /&gt;
+$\beta = [var=beta]$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>Da es sich um eine nicht-lineare Funktion handelt, muss diese zuerst transformiert werden.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text>Wenden Sie auf beiden Seiten der Gleichung den nat&amp;uuml;rlichen Logarithmus an.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="21">
+          <stagehint__order>2</stagehint__order>
+          <text>Um die transformierte Gleichung sch&amp;auml;tzen zu k&amp;ouml;nnen, m&amp;uuml;ssen Sie die gegeben Daten entsprechend transformieren (auch logarithmieren).&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>3</stagehint__order>
+          <text>Beachten Sie, dass $\alpha^* = ln(\alpha)$ ein nicht-linearer Parameter ist. Gesucht wird $\alpha$!</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="23"/>
+      <variableUpdatesBeforeCheck id="24"/>
+      <variableUpdatesAfterCheck id="25"/>
+      <variableUpdatesOnNormalExit id="26"/>
+      <variableUpdatesOnRepeat id="27"/>
+      <variableUpdatesOnSkip id="28"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="29"/>
+      <rules id="30">
+        <Rule id="31">
+          <name>Feedback_11</name>
+          <orderIndex>11</orderIndex>
+          <validationExpression id="32">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field1]!=[var=alpha]&amp;&amp;[input=field2]!=[var=beta]&amp;&amp;[input=field1]&gt;[var=alpha]-10000&amp;&amp;[input=field1]&lt;[var=alpha]+10000&amp;&amp;[input=field2]&gt;[var=beta]-0.025&amp;&amp;[input=field2]&lt;[var=beta]+0.025</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Knapp daneben! Die richtigen Werte lauten $\alpha=$[var=$alpha] und $\beta=$[var=beta].</feedbackText>
+          <points>80</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="33">
+          <name>Feedback_10</name>
+          <orderIndex>10</orderIndex>
+          <validationExpression id="34">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field2]!=[var=beta]&amp;&amp;[input=field2]&gt;[var=beta]-0.025&amp;&amp;[input=field2]&lt;[var=beta]+0.025&amp;&amp;[input=field1]&gt;[var=alpha]+10000</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$\beta$ ist fast richtig. Der wahre Werte lautet [var=$beta]. Aber $\alpha$ ist leider falsch.</feedbackText>
+          <points>40</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="35">
+          <name>Feedback_9</name>
+          <orderIndex>9</orderIndex>
+          <validationExpression id="36">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field2]!=[var=beta]&amp;&amp;[input=field2]&gt;[var=beta]-0.025&amp;&amp;[input=field2]&lt;[var=beta]+0.025&amp;&amp;[input=field1]&lt;[var=alpha]-10000</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$\beta$ ist fast richtig. Der wahre Werte lautet [var=$beta]. Aber $\alpha$ ist leider falsch.</feedbackText>
+          <points>40</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="37">
+          <name>Feedback_8</name>
+          <orderIndex>8</orderIndex>
+          <validationExpression id="38">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field2]==[var=beta]&amp;&amp;[input=field1]&gt;[var=alpha]+10000</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$\beta$ ist richtig. Jedoch ist $\alpha$ leider falsch.</feedbackText>
+          <points>50</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="39">
+          <name>Feedback_7</name>
+          <orderIndex>7</orderIndex>
+          <validationExpression id="40">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field2]==[var=beta]&amp;&amp;[input=field1]&lt;[var=alpha]-10000</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$\beta$ ist richtig. Jedoch ist $\alpha$ leider falsch.</feedbackText>
+          <points>50</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="41">
+          <name>Feedback_6</name>
+          <orderIndex>6</orderIndex>
+          <validationExpression id="42">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field2]==[var=beta]&amp;&amp;[input=field1]&gt;[var=alpha]-10000&amp;&amp;[input=field1]&lt;[var=alpha]+10000</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$\beta$ ist richtig. $\alpha$ liegt knapp daneben: $\alpha =$[var=alpha] </feedbackText>
+          <points>80</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="43">
+          <name>Feedback_5</name>
+          <orderIndex>5</orderIndex>
+          <validationExpression id="44">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field1]!=[var=alpha]&amp;&amp;[input=field1]&gt;[var=alpha]-10000&amp;&amp;[input=field1]&lt;[var=alpha]+100&amp;&amp;[input=field2]&gt;[var=beta]+0.025</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$\alpha$ ist fast richtig. Der wahre Werte lautet [var=$alpha]. Aber $\beta$ ist leider falsch.</feedbackText>
+          <points>40</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="45">
+          <name>Feedback_4</name>
+          <orderIndex>4</orderIndex>
+          <validationExpression id="46">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field1]!=[var=alpha]&amp;&amp;[input=field1]&gt;[var=alpha]-10000&amp;&amp;[input=field1]&lt;[var=alpha]+100&amp;&amp;[input=field2]&lt;[var=beta]-0.025</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$\alpha$ ist fast richtig. Der wahre Werte lautet [var=$alpha]. Aber $\beta$ ist leider falsch.</feedbackText>
+          <points>40</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="47">
+          <name>Feedback_3</name>
+          <orderIndex>3</orderIndex>
+          <validationExpression id="48">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field1]==[var=alpha]&amp;&amp;[input=field2]&gt;[var=beta]+0.025</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$\alpha$ ist richtig. Jedoch ist $\beta$ leider falsch.</feedbackText>
+          <points>50</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="49">
+          <name>Feedback_2</name>
+          <orderIndex>2</orderIndex>
+          <validationExpression id="50">
+            <code>!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field1]==[var=alpha]&amp;&amp;[input=field2]&lt;[var=beta]-0.025</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$\alpha$ ist richtig. Jedoch ist $\beta$ leider falsch.</feedbackText>
+          <points>50</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="51">
+          <name>Feedback_1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="52">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==[var=alpha]&amp;&amp;[input=field2]&gt;[var=beta]-0.025&amp;&amp;[input=field2]&lt;[var=beta]+0.025</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$\alpha$ ist richtig. $\beta$ liegt knapp daneben: $\beta =$[var=beta]</feedbackText>
+          <points>80</points>
+          <terminal>false</terminal>
+        </Rule>
+      </rules>
+      <fillInFields id="53">
+        <FillInField id="54">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>10</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="55">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>10</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="56"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider beides falsch.</defaultFeedback>
+      <correctAnswerRules id="57">
+        <Rule id="58">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="59">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field1]&gt;[var=alpha]-20.11&amp;&amp;[input=field1]&lt;[var=alpha]+20.11&amp;&amp;[input=field2]&gt;[var=beta]-0.11&amp;&amp;[input=field2]&lt;[var=beta]+0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="60">
+    <VariableDeclaration id="61">
+      <name>p1</name>
+      <initializationCode id="62">
+        <code>randomIntegerBetween(28,30)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>p2</name>
+      <initializationCode id="64">
+        <code>randomIntegerBetween(30,33)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>p3</name>
+      <initializationCode id="66">
+        <code>randomIntegerBetween(34,40)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>p4</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(41,46)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>p5</name>
+      <initializationCode id="70">
+        <code>randomIntegerBetween(47,55)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>a</name>
+      <initializationCode id="72">
+        <code>randomIntegerBetween(100000,108000)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>a1</name>
+      <initializationCode id="74">
+        <code>randomIntegerBetween(1400,1600)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>b</name>
+      <initializationCode id="76">
+        <code>evaluateInR(&apos;-1*([var=a1]/1000)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>q1</name>
+      <initializationCode id="78">
+        <code>round([var=a]*pow([var=p1], [var=b]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>q2</name>
+      <initializationCode id="80">
+        <code>round([var=a]*pow([var=p2], [var=b]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>q3</name>
+      <initializationCode id="82">
+        <code>round([var=a]*pow([var=p3], [var=b]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>q4</name>
+      <initializationCode id="84">
+        <code>round([var=a]*pow([var=p4], [var=b]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>q5</name>
+      <initializationCode id="86">
+        <code>round([var=a]*pow([var=p5], [var=b]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>lp1</name>
+      <initializationCode id="88">
+        <code>evaluateInR(&apos;log([var=p1])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="89">
+      <name>lp2</name>
+      <initializationCode id="90">
+        <code>evaluateInR(&apos;log([var=p2])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="91">
+      <name>lp3</name>
+      <initializationCode id="92">
+        <code>evaluateInR(&apos;log([var=p3])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="93">
+      <name>lp4</name>
+      <initializationCode id="94">
+        <code>evaluateInR(&apos;log([var=p4])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="95">
+      <name>lp5</name>
+      <initializationCode id="96">
+        <code>evaluateInR(&apos;log([var=p5])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="97">
+      <name>lq1</name>
+      <initializationCode id="98">
+        <code>evaluateInR(&apos;log([var=q1])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="99">
+      <name>lq2</name>
+      <initializationCode id="100">
+        <code>evaluateInR(&apos;log([var=q2])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="101">
+      <name>lq3</name>
+      <initializationCode id="102">
+        <code>evaluateInR(&apos;log([var=q3])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="103">
+      <name>lq4</name>
+      <initializationCode id="104">
+        <code>evaluateInR(&apos;log([var=q4])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="105">
+      <name>lq5</name>
+      <initializationCode id="106">
+        <code>evaluateInR(&apos;log([var=q5])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="107">
+      <name>mlp</name>
+      <initializationCode id="108">
+        <code>evaluateInR(&apos;([var=lp1]+[var=lp2]+[var=lp3]+[var=lp4]+[var=lp5])/5&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="109">
+      <name>mlq</name>
+      <initializationCode id="110">
+        <code>evaluateInR(&apos;([var=lq1]+[var=lq2]+[var=lq3]+[var=lq4]+[var=lq5])/5&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="111">
+      <name>b2</name>
+      <initializationCode id="112">
+        <code>evaluateInR(&apos;(([var=lp1]-[var=mlp])*([var=lq1]-[var=mlq])+([var=lp2]-[var=mlp])*([var=lq2]-[var=mlq])+([var=lp3]-[var=mlp])*([var=lq3]-[var=mlq])+([var=lp4]-[var=mlp])*([var=lq4]-[var=mlq])+([var=lp5]-[var=mlp])*([var=lq5]-[var=mlq]))/(([var=lp1]-[var=mlp])^2+([var=lp2]-[var=mlp])^2+([var=lp3]-[var=mlp])^2+([var=lp4]-[var=mlp])^2+([var=lp5]-[var=mlp])^2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="113">
+      <name>a2</name>
+      <initializationCode id="114">
+        <code>evaluateInR(&apos;[var=mlq]-[var=b2]*[var=mlp]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="115">
+      <name>alpha</name>
+      <initializationCode id="116">
+        <code>evaluateInR(&apos;round((exp([var=a2])), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="117">
+      <name>beta</name>
+      <initializationCode id="118">
+        <code>evaluateInR(&apos;round(([var=b2]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="119">
+      <name>try_1</name>
+      <initializationCode id="120">
+        <code>pow([var=p1], [var=b])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="121">
+      <name>try_2</name>
+      <initializationCode id="122">
+        <code>pow([var=p1], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="123"/>
+  <dynamicMolecules id="124"/>
+  <resultFeedbackMappings id="125"/>
+</Exercise>

@@ -1,0 +1,132 @@
+<Exercise id="1">
+  <name>IS12-03 Zweidimensionale Zufallsvariablen 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Dichtefunktion bestimmen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2"/>
+  <resources id="3"/>
+  <stages id="4">
+    <FillInStage id="5">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Es ist folgende Funktion gegeben : $$f(x,y)= \begin{cases} [var=faktor] \cdot cxy &amp;amp; , \quad 0 \leq x \leq [var=x_upper] , \, 0 \leq y \leq [var=y_upper] \\ 0 &amp;amp; , \quad \mbox{sonst. } \end{cases}$$ Bestimmen Sie $c$ so, dass $f(x,y)$ gemeinsame Dichtefunktion der beiden Zufallsvariablen X und Y wird.&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die zweite Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+      <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;br /&gt;
+&lt;br /&gt;
+$\int\limits_0^{[var=y_upper]}\int\limits_0^{[var=x_upper]} [var=faktor] \cdot cxy \ dxdy\stackrel{!}{=}1$ &lt;br /&gt;
+$\Leftrightarrow [var=faktor] \cdot c \cdot [var=x_upper]^2 \cdot [var=y_upper]^2 \stackrel{!}{=}1$ &lt;br /&gt;
+$\Leftrightarrow c = [var=sol_stage1]$</skipMessage>
+      <defaultTransition id="6">
+        <conditionExpression id="7">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="8">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="9"/>
+      <stageTransitions id="10"/>
+      <hints id="11"/>
+      <variableUpdatesOnEnter id="12"/>
+      <variableUpdatesBeforeCheck id="13"/>
+      <variableUpdatesAfterCheck id="14"/>
+      <variableUpdatesOnNormalExit id="15"/>
+      <variableUpdatesOnRepeat id="16"/>
+      <variableUpdatesOnSkip id="17"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="18"/>
+      <rules id="19"/>
+      <fillInFields id="20">
+        <FillInField id="21">
+          <name>fillin1</name>
+          <orderIndex>0</orderIndex>
+          <size>10</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="22"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&lt;br /&gt;
+$\int\limits_0^{[var=y_upper]}\int\limits_0^{[var=x_upper]} [var=faktor] \cdot cxy \ dxdy\stackrel{!}{=}1$ &lt;br /&gt;
+$\Leftrightarrow [var=faktor] \cdot c \cdot [var=x_upper]^2 \cdot [var=y_upper]^2 \stackrel{!}{=}1$ &lt;br /&gt;
+$\Leftrightarrow c = [var=sol_stage1]$</defaultFeedback>
+      <correctAnswerRules id="23">
+        <Rule id="24">
+          <name>Feedback 1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="25">
+            <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=sol_stage1])
+) &lt;= 0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Das Ergebnis ist richtig.&lt;br /&gt;
+&lt;br /&gt;
+$\int\limits_0^{[var=y_upper]}\int\limits_0^{[var=x_upper]} [var=faktor] \cdot cxy \ dxdy\stackrel{!}{=}1$ &lt;br /&gt;
+$\Leftrightarrow [var=faktor] \cdot c \cdot [var=x_upper]^2 \cdot [var=y_upper]^2 \stackrel{!}{=}1$ &lt;br /&gt;
+$\Leftrightarrow c = [var=sol_stage1]$</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="5"/>
+  <variableDeclarations id="26">
+    <VariableDeclaration id="27">
+      <name>faktor</name>
+      <initializationCode id="28">
+        <code>randomIntegerBetween(1,11)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="29">
+      <name>x_upper</name>
+      <initializationCode id="30">
+        <code>randomIntegerBetween(1,4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="31">
+      <name>y_upper</name>
+      <initializationCode id="32">
+        <code>randomIntegerBetween(1,4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="33">
+      <name>sol_stage1</name>
+      <initializationCode id="34">
+        <code>round(
+4 / ([var=faktor] * [var=x_upper]^2 * [var=y_upper]^2)
+, 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="35"/>
+  <dynamicMolecules id="36"/>
+  <resultFeedbackMappings id="37"/>
+</Exercise>

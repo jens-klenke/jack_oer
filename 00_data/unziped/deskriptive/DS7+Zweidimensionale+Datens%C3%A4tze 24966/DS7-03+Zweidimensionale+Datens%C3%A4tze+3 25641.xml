@@ -1,0 +1,591 @@
+<Exercise id="1">
+  <name>DS7-03 Zweidimensionale Datensätze 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Stage1: Kontingenztabelle vervollständigen unter der Annahme stochastischer Unabhängigkeit -&gt; abs. Häuf.
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+F&amp;uuml;r die beiden metrischen Merkmale $X$ und $Y$ liegt folgende unvollst&amp;auml;ndige Kontingenztabelle vor:&lt;br /&gt;&#xd;
+Komplettieren Sie die Tabelle unter der Annahme, dass $X$ und $Y$ statistisch unabh&amp;auml;ngig sind.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:500px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;X/Y&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$y_1$&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$y_2$&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$y_3$&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;$n_{i\cdot}$&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$x_1$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a2g]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;&lt;input name=&quot;field3&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$x_2$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a4g]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;input name=&quot;field4&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field4&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;input name=&quot;field5&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field5&quot; /&gt;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;$[var=nip2]$&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$x_3$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;input name=&quot;field6&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field6&quot; /&gt;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;input name=&quot;field7&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field7&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;input name=&quot;field8&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field8&quot; /&gt;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;&lt;input name=&quot;field9&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field9&quot; /&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;br /&gt;&#xd;
+			$n_{\cdot j}$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;input name=&quot;field10&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field10&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;br /&gt;&#xd;
+			$[var=npj2]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;input name=&quot;field11&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field11&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;&lt;br /&gt;&#xd;
+			100&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Durch Rundungsfehler kann ihr $n$ den Wert 99.9 oder 100.1 annehmen. Dies wird als richtig gewertet.&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>$$\begin{matrix}&lt;br /&gt;
+X/Y &amp;amp; y_1 &amp;amp; y_2 &amp;amp; y_3 &amp;amp; n_{i\cdot} \\&lt;br /&gt;
+\hline&lt;br /&gt;
+x_1 &amp;amp; [var=a1g] &amp;amp; [var=a2g] &amp;amp; [var=a3g] &amp;amp; [var=nip1] \\&lt;br /&gt;
+
+x_2 &amp;amp; [var=a4g] &amp;amp; [var=a5g] &amp;amp; [var=a6g] &amp;amp; [var=nip2] \\&lt;br /&gt;
+
+x_3 &amp;amp; [var=a7g] &amp;amp; [var=a8g] &amp;amp; [var=a9g] &amp;amp; [var=nip3] \\&lt;br /&gt;
+
+n_{\cdot j} &amp;amp; [var=npj1] &amp;amp; [var=npj2] &amp;amp; [var=npj3] &amp;amp; 100 \\&lt;br /&gt;
+
+\end{matrix}$$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>Es gilt:&lt;br /&gt;
+$n_{\cdot j}=\sum\limits_{i=1}^mn_{ij}$ und&lt;br /&gt;
+$n_{i\cdot}=\sum\limits_{j=1}^ln_{ij}$.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text>&amp;Uuml;berlegen Sie sich jetzt, wie sich die Unabh&amp;auml;ngigkeit der beiden Merkmale auf die Kontigenztabelle auswirkt.&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="21">
+          <stagehint__order>2</stagehint__order>
+          <text>Da hier absolute Häufigkeiten angegeben sind, sollten Sie insbesondere beachten, dass $n_{ij}=\frac{n_{i \cdot}n_{\cdot j}}{n}$ gilt.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="22"/>
+      <variableUpdatesBeforeCheck id="23"/>
+      <variableUpdatesAfterCheck id="24"/>
+      <variableUpdatesOnNormalExit id="25"/>
+      <variableUpdatesOnRepeat id="26"/>
+      <variableUpdatesOnSkip id="27"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="28"/>
+      <rules id="29"/>
+      <fillInFields id="30">
+        <FillInField id="31">
+          <name>field6</name>
+          <orderIndex>5</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="32">
+          <name>field5</name>
+          <orderIndex>4</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="33">
+          <name>field4</name>
+          <orderIndex>3</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="34">
+          <name>field3</name>
+          <orderIndex>2</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="35">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="36">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="37">
+          <name>field11</name>
+          <orderIndex>10</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="38">
+          <name>field10</name>
+          <orderIndex>9</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="39">
+          <name>field9</name>
+          <orderIndex>8</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="40">
+          <name>field8</name>
+          <orderIndex>7</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="41">
+          <name>field7</name>
+          <orderIndex>6</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="42"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+$$\begin{matrix}&lt;br /&gt;
+X/Y &amp;amp; y_1 &amp;amp; y_2 &amp;amp; y_3 &amp;amp; n_{i\cdot} \\&lt;br /&gt;
+\hline&lt;br /&gt;
+x_1 &amp;amp; [var=a1g] &amp;amp; [var=a2g] &amp;amp; [var=a3g] &amp;amp; [var=nip1] \\&lt;br /&gt;
+
+x_2 &amp;amp; [var=a4g] &amp;amp; [var=a5g] &amp;amp; [var=a6g] &amp;amp; [var=nip2] \\&lt;br /&gt;
+
+x_3 &amp;amp; [var=a7g] &amp;amp; [var=a8g] &amp;amp; [var=a9g] &amp;amp; [var=nip3] \\&lt;br /&gt;
+
+n_{\cdot j} &amp;amp; [var=npj1] &amp;amp; [var=npj2] &amp;amp; [var=npj3] &amp;amp; 100 \\&lt;br /&gt;
+
+\end{matrix}$$</defaultFeedback>
+      <correctAnswerRules id="43">
+        <Rule id="44">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="45">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;!isEmpty([input=field9])&amp;&amp;isRealNumber([input=field9])&amp;&amp;!isEmpty([input=field10])&amp;&amp;isRealNumber([input=field10])&amp;&amp;!isEmpty([input=field11])&amp;&amp;isRealNumber([input=field11])&amp;&amp;[input=field1]&lt;[var=a1g]+0.11&amp;&amp;[input=field1]&gt;[var=a1g]-0.11&amp;&amp;[input=field2]&lt;[var=a3g]+0.11&amp;&amp;[input=field2]&gt;[var=a3g]-0.11&amp;&amp;[input=field3]&lt;[var=nip1]+0.11&amp;&amp;[input=field3]&gt;[var=nip1]-0.11&amp;&amp;[input=field4]&lt;[var=a5g]+0.11&amp;&amp;[input=field4]&gt;[var=a5g]-0.11&amp;&amp;[input=field5]&lt;[var=a6g]+0.11&amp;&amp;[input=field5]&gt;[var=a6g]-0.11&amp;&amp;[input=field6]&lt;[var=a7g]+0.11&amp;&amp;[input=field6]&gt;[var=a7g]-0.11&amp;&amp;[input=field7]&lt;[var=a8g]+0.11&amp;&amp;[input=field7]&gt;[var=a8g]-0.11&amp;&amp;[input=field8]&lt;[var=a9g]+0.11&amp;&amp;[input=field8]&gt;[var=a9g]-0.11&amp;&amp;[input=field9]&lt;[var=nip3]+0.11&amp;&amp;[input=field9]&gt;[var=nip3]-0.11&amp;&amp;[input=field10]&lt;[var=npj1]+0.11&amp;&amp;[input=field10]&gt;[var=npj1]-0.11&amp;&amp;[input=field11]&lt;[var=npj3]+0.11&amp;&amp;[input=field11]&gt;[var=npj3]-0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="46">
+    <VariableDeclaration id="47">
+      <name>nip1</name>
+      <initializationCode id="48">
+        <code>randomIntegerBetween(1,45)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>nip2</name>
+      <initializationCode id="50">
+        <code>randomIntegerBetween(1,45)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>nip3</name>
+      <initializationCode id="52">
+        <code>evaluateInR(&apos;100-[var=nip1]-[var=nip2]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>npj1</name>
+      <initializationCode id="54">
+        <code>randomIntegerBetween(1,45)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>npj2</name>
+      <initializationCode id="56">
+        <code>randomIntegerBetween(1,45)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>npj3</name>
+      <initializationCode id="58">
+        <code>evaluateInR(&apos;100-[var=npj1]-[var=npj2]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>a1</name>
+      <initializationCode id="60">
+        <code>evaluateInR(&apos;[var=nip1]*[var=npj1]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>a2</name>
+      <initializationCode id="62">
+        <code>evaluateInR(&apos;[var=nip1]*[var=npj2]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>a3</name>
+      <initializationCode id="64">
+        <code>evaluateInR(&apos;[var=nip1]*[var=npj3]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>a4</name>
+      <initializationCode id="66">
+        <code>evaluateInR(&apos;[var=nip2]*[var=npj1]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>a5</name>
+      <initializationCode id="68">
+        <code>evaluateInR(&apos;[var=nip2]*[var=npj2]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>a6</name>
+      <initializationCode id="70">
+        <code>evaluateInR(&apos;[var=nip2]*[var=npj3]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>a7</name>
+      <initializationCode id="72">
+        <code>evaluateInR(&apos;[var=nip3]*[var=npj1]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>a8</name>
+      <initializationCode id="74">
+        <code>evaluateInR(&apos;[var=nip3]*[var=npj2]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>a9</name>
+      <initializationCode id="76">
+        <code>evaluateInR(&apos;[var=nip3]*[var=npj3]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>a1g</name>
+      <initializationCode id="78">
+        <code>evaluateInR(&apos;round([var=a1], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>a2g</name>
+      <initializationCode id="80">
+        <code>evaluateInR(&apos;round([var=a2], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>a3g</name>
+      <initializationCode id="82">
+        <code>evaluateInR(&apos;round([var=a3], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>a4g</name>
+      <initializationCode id="84">
+        <code>evaluateInR(&apos;round([var=a4], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>a5g</name>
+      <initializationCode id="86">
+        <code>evaluateInR(&apos;round([var=a5], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>a6g</name>
+      <initializationCode id="88">
+        <code>evaluateInR(&apos;round([var=a6], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="89">
+      <name>a7g</name>
+      <initializationCode id="90">
+        <code>evaluateInR(&apos;round([var=a7], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="91">
+      <name>a8g</name>
+      <initializationCode id="92">
+        <code>evaluateInR(&apos;round([var=a8], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="93">
+      <name>a9g</name>
+      <initializationCode id="94">
+        <code>evaluateInR(&apos;round([var=a9], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="95">
+      <name>gt2</name>
+      <initializationCode id="96">
+        <code>ifthenelse([var=a2g]&lt;10,&apos;\enspace&apos;,&apos;&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="97">
+      <name>gt4</name>
+      <initializationCode id="98">
+        <code>ifthenelse([var=a4g]&lt;10,&apos;\enspace&apos;,&apos;&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="99">
+      <name>t2</name>
+      <initializationCode id="100">
+        <code>evaluateInR(&apos;[var=a2g]*10&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="101">
+      <name>t4</name>
+      <initializationCode id="102">
+        <code>evaluateInR(&apos;[var=a4g]*10&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="103">
+      <name>a2gg</name>
+      <initializationCode id="104">
+        <code>ifthenelse(equals([var=t2],1)||equals([var=t2],2)||equals([var=t2],3)||equals([var=t2],4)||equals([var=t2],5)||equals([var=t2],6)||equals([var=t2],7)||equals([var=t2],8)||equals([var=t2],9)||equals([var=t2],10)||equals([var=t2],11)||equals([var=t2],12)||equals([var=t2],13)||equals([var=t2],14)||equals([var=t2],15)||equals([var=t2],16)||equals([var=t2],17)||equals([var=t2],18)||equals([var=t2],19)||equals([var=t2],20)||equals([var=t2],21)||equals([var=t2],22)||equals([var=t2],23)||equals([var=t2],24)||equals([var=t2],25)||equals([var=t2],26)||equals([var=t2],27)||equals([var=t2],28)||equals([var=t2],29)||equals([var=t2],30)||equals([var=t2],31)||equals([var=t2],32)||equals([var=t2],33)||equals([var=t2],34)||equals([var=t2],35)||equals([var=t2],36)||equals([var=t2],37)||equals([var=t2],38)||equals([var=t2],39)||equals([var=t2],40)||equals([var=t2],41)||equals([var=t2],42)||equals([var=t2],43)||equals([var=t2],44)||equals([var=t2],45)||equals([var=t2],46)||equals([var=t2],47)||equals([var=t2],48)||equals([var=t2],49)||equals([var=t2],50)||equals([var=t2],51)||equals([var=t2],52)||equals([var=t2],53)||equals([var=t2],54)||equals([var=t2],55)||equals([var=t2],56)||equals([var=t2],57)||equals([var=t2],58)||equals([var=t2],59)||equals([var=t2],60)||equals([var=t2],61)||equals([var=t2],62)||equals([var=t2],63)||equals([var=t2],64)||equals([var=t2],65)||equals([var=t2],66)||equals([var=t2],67)||equals([var=t2],68)||equals([var=t2],69)||equals([var=t2],70)||equals([var=t2],71)||equals([var=t2],72)||equals([var=t2],73)||equals([var=t2],74)||equals([var=t2],75)||equals([var=t2],76)||equals([var=t2],77)||equals([var=t2],78)||equals([var=t2],79)||equals([var=t2],80)||equals([var=t2],81)||equals([var=t2],82)||equals([var=t2],83)||equals([var=t2],84)||equals([var=t2],85)||equals([var=t2],86)||equals([var=t2],87)||equals([var=t2],88)||equals([var=t2],89)||equals([var=t2],90)||equals([var=t2],91)||equals([var=t2],92)||equals([var=t2],93)||equals([var=t2],94)||equals([var=t2],95)||equals([var=t2],96)||equals([var=t2],97)||equals([var=t2],98)||equals([var=t2],99)||equals([var=t2],100),&apos;\enspace&apos;,&apos;&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="105">
+      <name>a2ggg</name>
+      <initializationCode id="106">
+        <code>ifthenelse(equals([var=t2],10)||equals([var=t2],20)||equals([var=t2],30)||equals([var=t2],40)||equals([var=t2],50)||equals([var=t2],60)||equals([var=t2],70)||equals([var=t2],80)||equals([var=t2],90)||equals([var=t2],100),&apos;\enspace&apos;,&apos;&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="107">
+      <name>a4gg</name>
+      <initializationCode id="108">
+        <code>ifthenelse(equals([var=t4],1)||equals([var=t4],2)||equals([var=t4],3)||equals([var=t4],4)||equals([var=t4],5)||equals([var=t4],6)||equals([var=t4],7)||equals([var=t4],8)||equals([var=t4],9)||equals([var=t4],10)||equals([var=t4],11)||equals([var=t4],12)||equals([var=t4],13)||equals([var=t4],14)||equals([var=t4],15)||equals([var=t4],16)||equals([var=t4],17)||equals([var=t4],18)||equals([var=t4],19)||equals([var=t4],20)||equals([var=t4],21)||equals([var=t4],22)||equals([var=t4],23)||equals([var=t4],24)||equals([var=t4],25)||equals([var=t4],26)||equals([var=t4],27)||equals([var=t4],28)||equals([var=t4],29)||equals([var=t4],30)||equals([var=t4],31)||equals([var=t4],32)||equals([var=t4],33)||equals([var=t4],34)||equals([var=t4],35)||equals([var=t4],36)||equals([var=t4],37)||equals([var=t4],38)||equals([var=t4],39)||equals([var=t4],40)||equals([var=t4],41)||equals([var=t4],42)||equals([var=t4],43)||equals([var=t4],44)||equals([var=t4],45)||equals([var=t4],46)||equals([var=t4],47)||equals([var=t4],48)||equals([var=t4],49)||equals([var=t4],50)||equals([var=t4],51)||equals([var=t4],52)||equals([var=t4],53)||equals([var=t4],54)||equals([var=t4],55)||equals([var=t4],56)||equals([var=t4],57)||equals([var=t4],58)||equals([var=t4],59)||equals([var=t4],60)||equals([var=t4],61)||equals([var=t4],62)||equals([var=t4],63)||equals([var=t4],64)||equals([var=t4],65)||equals([var=t4],66)||equals([var=t4],67)||equals([var=t4],68)||equals([var=t4],69)||equals([var=t4],70)||equals([var=t4],71)||equals([var=t4],72)||equals([var=t4],73)||equals([var=t4],74)||equals([var=t4],75)||equals([var=t4],76)||equals([var=t4],77)||equals([var=t4],78)||equals([var=t4],79)||equals([var=t4],80)||equals([var=t4],81)||equals([var=t4],82)||equals([var=t4],83)||equals([var=t4],84)||equals([var=t4],85)||equals([var=t4],86)||equals([var=t4],87)||equals([var=t4],88)||equals([var=t4],89)||equals([var=t4],90)||equals([var=t4],91)||equals([var=t4],92)||equals([var=t4],93)||equals([var=t4],94)||equals([var=t4],95)||equals([var=t4],96)||equals([var=t4],97)||equals([var=t4],98)||equals([var=t4],99)||equals([var=t4],100),&apos;\enspace&apos;,&apos;&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="109">
+      <name>a4ggg</name>
+      <initializationCode id="110">
+        <code>ifthenelse(equals([var=t4],10)||equals([var=t4],20)||equals([var=t4],30)||equals([var=t4],40)||equals([var=t4],50)||equals([var=t4],60)||equals([var=t4],70)||equals([var=t4],80)||equals([var=t4],90)||equals([var=t4],100),&apos;\enspace&apos;,&apos;&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="111">
+      <name>a</name>
+      <initializationCode id="112">
+        <code>randomIntegerBetween(15,30)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="113">
+      <name>b</name>
+      <initializationCode id="114">
+        <code>randomIntegerBetween(2,15)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="115">
+      <name>c</name>
+      <initializationCode id="116">
+        <code>randomIntegerBetween(60,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="117">
+      <name>x1y1</name>
+      <initializationCode id="118">
+        <code>evaluateInR(&apos;[var=a]/100.&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="119">
+      <name>x2y3</name>
+      <initializationCode id="120">
+        <code>evaluateInR(&apos;[var=b]/100.&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="121">
+      <name>fx1</name>
+      <initializationCode id="122">
+        <code>evaluateInR(&apos;[var=c]/100.&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="123">
+      <name>fx2</name>
+      <initializationCode id="124">
+        <code>evaluateInR(&apos;(100-[var=c])/100.&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="125">
+      <name>fy1</name>
+      <initializationCode id="126">
+        <code>evaluateInR(&apos;round([var=x1y1]/[var=fx1], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="127">
+      <name>x2y1</name>
+      <initializationCode id="128">
+        <code>evaluateInR(&apos;round(([var=fy1]-[var=x1y1]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="129">
+      <name>x2y2</name>
+      <initializationCode id="130">
+        <code>evaluateInR(&apos;round(([var=fx2]-[var=x2y1]-[var=x2y3]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="131">
+      <name>fy2</name>
+      <initializationCode id="132">
+        <code>evaluateInR(&apos;round(([var=x2y2]/[var=fx2]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="133">
+      <name>x1y2</name>
+      <initializationCode id="134">
+        <code>evaluateInR(&apos;round(([var=fy2]-[var=x2y2]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="135">
+      <name>fy3</name>
+      <initializationCode id="136">
+        <code>evaluateInR(&apos;round((1-[var=fy2]-[var=fy1]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="137">
+      <name>x1y3</name>
+      <initializationCode id="138">
+        <code>evaluateInR(&apos;round(([var=fy3]-[var=x2y3]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="139"/>
+  <dynamicMolecules id="140"/>
+  <resultFeedbackMappings id="141"/>
+</Exercise>

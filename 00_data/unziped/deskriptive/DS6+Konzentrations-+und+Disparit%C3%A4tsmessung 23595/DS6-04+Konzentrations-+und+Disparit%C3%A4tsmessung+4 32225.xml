@@ -1,0 +1,441 @@
+<Exercise id="1">
+  <name>DS6-04 Konzentrations- und Disparitätsmessung 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Stage1: Ausprägungen aus Text bestimmen
+Stage2: Spannweite berechnen
+Stage3: Ginikoeffizient berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>3</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Jeder der 100 Angestellten einer Versicherung verdient ein festes monatliches Bruttogehalt (in Euro) in H&amp;ouml;he von $x_1$ , $x_2$ oder $x_3$ (mit $x_1 &amp;lt; x_2 &amp;lt; x_3$). Die Gehaltssumme aller 100 Angestellter betr&amp;auml;gt im Monat [var=Gehaltsum] Euro.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Es sei bekannt, dass die [var=x1]% der Angestellten mit dem Bruttogehalt $x_1$ 20% der gesamten Gehaltssumme beziehen, w&amp;auml;hrend auf die [var=x3]% mit dem Bruttogehalt $x_3$ ein Anteil von 35% entf&amp;auml;llt.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie hoch sind die Brutto geh&amp;auml;lter $x_1$, $x_2$ und $x_3$?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$x_1=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+$x_2=$&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+$x_3=$&amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die &lt;strong&gt;zweite &lt;/strong&gt;Nachkommastelle und verwenden Sie einen Dezimalpunkt)&lt;/em&gt;</taskDescription>
+      <skipMessage>$x_1=[var=g1g]$&lt;br /&gt;
+$x_2=[var=g2g]$&lt;br /&gt;
+$x_3=[var=g3g]$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie die Spannweite der Bruttogeh&amp;auml;lter:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+$R_X =$&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die &lt;strong&gt;zweite &lt;/strong&gt;Nachkommastelle und verwenden Sie einen Dezimalpunkt)&lt;/em&gt;</taskDescription>
+            <skipMessage>Die Spannweite beträgt [var=Sp].</skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18">
+              <StageTransition id="19">
+                <conditionExpression id="20">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="21">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="22">
+                  <internalName>3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie den Gini-Koeffizient f&amp;uuml;r eine Aussage &amp;uuml;ber die Disparit&amp;auml;t der Bruttogeh&amp;auml;lter!&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$D_G=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die &lt;strong&gt;zweite &lt;/strong&gt;Nachkommastelle und verwenden Sie einen Dezimalpunkt)&lt;/em&gt;</taskDescription>
+                  <skipMessage>Der Gini Koeffizient beträgt [var=DGG].</skipMessage>
+                  <defaultTransition id="23">
+                    <conditionExpression id="24">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="25">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="26">
+                    <StageTransition id="27">
+                      <conditionExpression id="28">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="29">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="30">
+                    <StageTransition id="31">
+                      <conditionExpression id="32">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="33">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="34">
+                    <StageHint id="35">
+                      <stagehint__order>0</stagehint__order>
+                      <text>Liegen die Daten als H&amp;auml;ufigkeitsverteilung oder als Einzelbeobachtung vor?&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="22"/>
+                    </StageHint>
+                    <StageHint id="36">
+                      <stagehint__order>1</stagehint__order>
+                      <text>Der Gini-Koeffizient bei h&amp;auml;ufigkeitsverteilten Daten betr&amp;auml;gt:&lt;br /&gt;
+$D_{G}=\frac{\sum_{i=1}^{m}(H_{i-1}+H_{i})n_{i}x_{i}}{n\bar{x}}-1$ oder, wegen $n_{i}x_{i}/n\bar{x}=c_{i}$, $D_{G}=\sum_{i=1}^{m}(H_{i-1}+H_{i})c_{i}-1.$</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="22"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="37"/>
+                  <variableUpdatesBeforeCheck id="38"/>
+                  <variableUpdatesAfterCheck id="39"/>
+                  <variableUpdatesOnNormalExit id="40"/>
+                  <variableUpdatesOnRepeat id="41"/>
+                  <variableUpdatesOnSkip id="42"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="43"/>
+                  <rules id="44"/>
+                  <fillInFields id="45">
+                    <FillInField id="46">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="47"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider nicht korrekt. &lt;/br&gt;
+&lt;/br&gt;
+Der Gini Koeffizient beträgt [var=DGG].</defaultFeedback>
+                  <correctAnswerRules id="48">
+                    <Rule id="49">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="50">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=DGG]-0.011&amp;&amp;[input=field1]&lt;[var=DGG]+0.011</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="51">
+              <StageTransition id="52">
+                <conditionExpression id="53">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="54">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="22"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="55">
+              <StageHint id="56">
+                <stagehint__order>0</stagehint__order>
+                <text>$R=\max_{j}(x_{j})-\min_{j}(x_{j})$.</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="57"/>
+            <variableUpdatesBeforeCheck id="58"/>
+            <variableUpdatesAfterCheck id="59"/>
+            <variableUpdatesOnNormalExit id="60"/>
+            <variableUpdatesOnRepeat id="61"/>
+            <variableUpdatesOnSkip id="62"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="63"/>
+            <rules id="64"/>
+            <fillInFields id="65">
+              <FillInField id="66">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="67"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.&lt;/br&gt;
+&lt;/br&gt;
+Die Spannweite beträgt [var=Sp].</defaultFeedback>
+            <correctAnswerRules id="68">
+              <Rule id="69">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="70">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=Sp]*0.9&amp;&amp;[input=field1]&lt;[var=Sp]*1.1</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="71">
+        <StageTransition id="72">
+          <conditionExpression id="73">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="74">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="75">
+        <StageHint id="76">
+          <stagehint__order>0</stagehint__order>
+          <text>Bei den gegebenen Daten handelt es sich um diskret klassierte Daten. Gegeben sind die relativen H&amp;auml;ufigkeiten $h_1=\frac{[var=x1]}{n}$ und $h_3=\frac{[var=x3]}{n}$.&lt;br /&gt;
+Damit l&amp;auml;sst sich auf $h_2$ schlie&amp;szlig;en. Da auch $n$ gegeben ist, kann auf die absoluten H&amp;auml;ufigkeiten geschlossen werden.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="77"/>
+      <variableUpdatesBeforeCheck id="78"/>
+      <variableUpdatesAfterCheck id="79"/>
+      <variableUpdatesOnNormalExit id="80"/>
+      <variableUpdatesOnRepeat id="81"/>
+      <variableUpdatesOnSkip id="82"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="83"/>
+      <rules id="84"/>
+      <fillInFields id="85">
+        <FillInField id="86">
+          <name>field3</name>
+          <orderIndex>2</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="87">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="88">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="89"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$x_1=[var=g1g]$&lt;br /&gt;
+$x_2=[var=g2g]$&lt;br /&gt;
+$x_3=[var=g3g]$</defaultFeedback>
+      <correctAnswerRules id="90">
+        <Rule id="91">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="92">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]&gt;[var=g1g]*0.9&amp;&amp;[input=field1]&lt;[var=g1g]*1.1&amp;&amp;[input=field2]&gt;[var=g2g]*0.9&amp;&amp;[input=field2]&lt;[var=g2g]*1.1&amp;&amp;[input=field3]&gt;[var=g3g]*0.9&amp;&amp;[input=field3]&lt;[var=g3g]*1.1</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="14"/>
+    <FillInStage reference="22"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="93">
+    <VariableDeclaration id="94">
+      <name>v</name>
+      <initializationCode id="95">
+        <code>randomIntegerBetween(35,60)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="96">
+      <name>Gehaltsum</name>
+      <initializationCode id="97">
+        <code>evaluateInR(&apos;[var=v]*10000&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="98">
+      <name>x1</name>
+      <initializationCode id="99">
+        <code>randomIntegerBetween(30,35)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="100">
+      <name>x3</name>
+      <initializationCode id="101">
+        <code>randomIntegerBetween(10,24)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="102">
+      <name>x2</name>
+      <initializationCode id="103">
+        <code>evaluateInR(&apos;100-[var=x3]-[var=x1]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="104">
+      <name>g1</name>
+      <initializationCode id="105">
+        <code>evaluateInR(&apos;0.2*[var=Gehaltsum]/[var=x1]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="106">
+      <name>g1g</name>
+      <initializationCode id="107">
+        <code>evaluateInR(&apos;round([var=g1], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="108">
+      <name>g2</name>
+      <initializationCode id="109">
+        <code>evaluateInR(&apos;0.45*[var=Gehaltsum]/[var=x2]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="110">
+      <name>g2g</name>
+      <initializationCode id="111">
+        <code>evaluateInR(&apos;round([var=g2], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="112">
+      <name>g3</name>
+      <initializationCode id="113">
+        <code>evaluateInR(&apos;0.35*[var=Gehaltsum]/[var=x3]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="114">
+      <name>g3g</name>
+      <initializationCode id="115">
+        <code>evaluateInR(&apos;round([var=g3], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="116">
+      <name>Sp</name>
+      <initializationCode id="117">
+        <code>evaluateInR(&apos;round([var=g3g]-[var=g1g], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="118">
+      <name>DG</name>
+      <initializationCode id="119">
+        <code>evaluateInR(&apos;1-(0.2*[var=x1]/100+0.85*[var=x2]/100+1.65*[var=x3]/100)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="120">
+      <name>DGG</name>
+      <initializationCode id="121">
+        <code>evaluateInR(&apos;round([var=DG], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="122"/>
+  <dynamicMolecules id="123"/>
+  <resultFeedbackMappings id="124"/>
+</Exercise>

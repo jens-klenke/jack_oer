@@ -1,0 +1,231 @@
+<Exercise id="1">
+  <name>IS00-02 Schulwissen 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Diese Aufgabe kann ohne Kenntnisse in induktiver Statistik gelöst werden. Sie dienen dazu, sich mit JACK vertraut zu machen.
+
+Siehe Jack2 IS00-02 Schulwissen 2
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie: $\displaystyle [var=$i1]^2$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;.</taskDescription>
+      <skipMessage>$[var=i1]^2=[var=i1]\cdot[var=i1]=[var=j].$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="MCStage" id="14">
+            <internalName>#2</internalName>
+            <externalName></externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Welche der folgenden Aussagen stimmen?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+W&amp;auml;hlen Sie aus.</taskDescription>
+            <skipMessage>Die erste Aussage ist richtig, die zweite ist auch richtig. &lt;/br&gt;
+Die dritte Aussage ist falsch, denn es gilt $x^0=1$.&lt;/br&gt;
+Die vierte Aussage ist auch falsch, denn es gilt $x^1=x$.</skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>false</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18"/>
+            <stageTransitions id="19"/>
+            <hints id="20"/>
+            <variableUpdatesOnEnter id="21"/>
+            <variableUpdatesBeforeCheck id="22"/>
+            <variableUpdatesAfterCheck id="23"/>
+            <variableUpdatesOnNormalExit id="24"/>
+            <variableUpdatesOnRepeat id="25"/>
+            <variableUpdatesOnSkip id="26"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="27"/>
+            <answerOptions id="28">
+              <MCAnswer id="29">
+                <order>0</order>
+                <rule>CORRECT</rule>
+                <text>$\sqrt{ [var=a] }$ kann nicht ohne die komplexen Zahlen berechnet werden.</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="30">
+                <order>1</order>
+                <rule>CORRECT</rule>
+                <text>$[var=i2]^2 = [var=ans_i2]$</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="31">
+                <order>2</order>
+                <rule>WRONG</rule>
+                <text>$[var=b]^0 = 0$</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="32">
+                <order>3</order>
+                <rule>WRONG</rule>
+                <text>$[var=b]^1 = 0$</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+            </answerOptions>
+            <randomize>true</randomize>
+            <singleChoice>false</singleChoice>
+            <correctAnswerFeedback></correctAnswerFeedback>
+            <defaultFeedback></defaultFeedback>
+            <defaultResult>0</defaultResult>
+            <extraFeedbacks id="33"/>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="34">
+        <StageTransition id="35">
+          <conditionExpression id="36">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="37">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="MCStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="38">
+        <StageHint id="39">
+          <stagehint__order>0</stagehint__order>
+          <text>$[var=i1]^2=[var=i1]\cdot[var=i1]$.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="40"/>
+      <variableUpdatesBeforeCheck id="41"/>
+      <variableUpdatesAfterCheck id="42"/>
+      <variableUpdatesOnNormalExit id="43"/>
+      <variableUpdatesOnRepeat id="44"/>
+      <variableUpdatesOnSkip id="45"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="46"/>
+      <rules id="47"/>
+      <fillInFields id="48">
+        <FillInField id="49">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>12</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="50"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt. &lt;/br&gt;
+&lt;/br&gt;
+Die Lösung wäre: $[var=i1]^2=[var=i1]\cdot[var=i1]=[var=j].$</defaultFeedback>
+      <correctAnswerRules id="51">
+        <Rule id="52">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="53">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[var=j]==[input=field1]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <MCStage reference="14"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="54">
+    <VariableDeclaration id="55">
+      <name>i1</name>
+      <initializationCode id="56">
+        <code>randomIntegerBetween(1,12)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>j</name>
+      <initializationCode id="58">
+        <code>pow([var=i1], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>a</name>
+      <initializationCode id="60">
+        <code>randomIntegerBetween(-10,-1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>b</name>
+      <initializationCode id="62">
+        <code>randomIntegerBetween(1,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>i2</name>
+      <initializationCode id="64">
+        <code>randomIntegerBetween(1,12)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>ans_i2</name>
+      <initializationCode id="66">
+        <code>pow([var=i2], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="67"/>
+  <dynamicMolecules id="68"/>
+  <resultFeedbackMappings id="69"/>
+</Exercise>

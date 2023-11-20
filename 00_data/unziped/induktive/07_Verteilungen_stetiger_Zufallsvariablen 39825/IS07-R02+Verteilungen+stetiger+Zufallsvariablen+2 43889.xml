@@ -1,0 +1,174 @@
+<Exercise id="1">
+  <name>IS07-R02 Verteilungen stetiger Zufallsvariablen 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Wahrscheinlichkeiten der Normalverteilung berechnen
+
+Vorige Formulierung: mit $X \sim N([var=EW], [var=VAR])$.
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die Dauer einer menschlichen Schwangerschaft (von der Befruchtung bis zur Geburt) ist approximativ normalverteilt.&lt;br /&gt;&#xd;
+Es gilt: $\mu_X = [var=EW]$ und $\sigma^{2}_X = [var=VAR]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Mit welcher Wahrscheinlichkeit dauert eine Schwangerschaft zwischen $[var=Unter]$ und $[var=Ober]$ Tagen? Nutzen Sie bitte die Funktion $\verb|pnorm()|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Die ben&amp;ouml;tigte Funktion f&amp;uuml;r die Verteilungsfunktion der Normalverteilung lautet $\verb|pnorm(q,mean,sd)|$.&lt;br /&gt;
+Dabei stellt $\verb|q|$ die gegebene Stelle der Verteilungsfunktion dar, der Parameter $\verb|mean|$ gibt den Erwartungswert an und der Parameter $\verb|sd|$ die Standardabweichung.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Erinnern Sie sich, dass $P(x_1 \leq X \leq x_2) = P(X\leq x_2) - P(X\leq x_1) = F(x_2) - F(x_2)$.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Beachten Sie, dass in der Aufgabenstellung die Varianz $\sigma^2$ gegeben ist, in R der Parameter $\verb|sd|$ aber der Standardabweichung $\sigma$ entspricht.&lt;br /&gt;
+In R l&amp;auml;sst sich die Quadratwurzel mithilfe der Funktion $\verb|sqrt(x)|$ berechnen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Achten Sie darauf, dass Sie die $\verb|pnorm()|$ -Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>	        from pnorm,integrate:V{FunctionCall} with
+                pnorm.name=&quot;pnorm&quot; or
+                integrate.name=&quot;integrate&quot;
+                report 0 end	</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43895</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}
+		postprocess &lt;- function(w){
+                        as.numeric(w[1])
+		}</postCode>
+              <expectedOutput>pnorm([var=Ober],[var=EW],sqrt([var=VAR]))-pnorm([var=Unter],[var=EW],sqrt([var=VAR]))</expectedOutput>
+              <postprocessingFunction>postprocess</postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43896</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>EW</name>
+      <initializationCode id="36">
+        <code>randomIntegerBetween(258,271)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="37">
+      <name>VAR</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(144,256)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>Unter</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(220,247)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>Ober</name>
+      <initializationCode id="42">
+        <code>randomIntegerBetween(248,280)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="43"/>
+  <dynamicMolecules id="44"/>
+  <resultFeedbackMappings id="45"/>
+</Exercise>

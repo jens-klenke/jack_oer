@@ -1,0 +1,437 @@
+<Exercise id="1">
+  <name>DS6-08 Konzentrations- und Disparitätsmessung 8</name>
+  <publicDescription></publicDescription>
+  <internalNotes>1. Stage: Anteile ermitteln
+2. Stage: Gini-Koeffizient
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie befragen zu den kommenden Bundestagswahlen B&amp;uuml;rger:innen Ihrer Nachbarschaft. Dabei wollen Sie herausfinden, wie diese sich entscheiden w&amp;uuml;rden, wenn nur die folgenden f&amp;uuml;nf Parteien zur Wahl st&amp;uuml;nden. Sie erhalten folgendes Ergebnis:&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:600px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Parteien&lt;/td&gt;&#xd;
+			&lt;td&gt;CDU&lt;/td&gt;&#xd;
+			&lt;td&gt;SPD&lt;/td&gt;&#xd;
+			&lt;td&gt;FDP&lt;/td&gt;&#xd;
+			&lt;td&gt;Gr&amp;uuml;ne&lt;/td&gt;&#xd;
+			&lt;td&gt;Die Linke&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Stimmen&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$A]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$B]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$C]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$D]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$Ee]$&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ermitteln Sie zun&amp;auml;chst die Anteile der einzelnen Merkmalstr&amp;auml;ger an der Merkmalssumme.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$c_1=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+$c_2=$&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+$c_3=$&amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+$c_4=$&amp;nbsp;&lt;input name=&quot;field4&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field4&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+$c_5=$&amp;nbsp;&lt;input name=&quot;field5&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field5&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die $\textbf{dritte}$ Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+      <skipMessage>$$\begin{matrix}&lt;br /&gt;
+\hline&lt;br /&gt;
+\qquad  \quad  \textrm{Parteien} \qquad \qquad &amp;amp; \textrm{CDU} \qquad \qquad &amp;amp; \textrm{SPD} \qquad \qquad &amp;amp; \textrm{FDP} \qquad \qquad &amp;amp; \textrm{Gr&amp;uuml;ne} \qquad \qquad &amp;amp; \textrm{Die Linke} \qquad \qquad \\&lt;br /&gt;
+\hline&lt;br /&gt;
+\quad \textrm{Stimmen} \qquad  &amp;amp; [var=A] \qquad \qquad &amp;amp; [var=B] \qquad \qquad &amp;amp; [var=C] \qquad \qquad &amp;amp; [var=D] \qquad \qquad &amp;amp; [var=Ee] \qquad \qquad \\&lt;br /&gt;
+\textrm{Stimmanteil} \enspace  c_j &amp;amp; [var=c1] \qquad \qquad &amp;amp; [var=c2] \qquad \qquad &amp;amp; [var=c3] \qquad \qquad &amp;amp; [var=c4] \qquad \qquad &amp;amp; [var=c5] \qquad \qquad \\&lt;br /&gt;
+\end{matrix}$$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ermitteln Sie nun den Gini-Koeffizienten f&amp;uuml;r die Ihnen vorliegenden Werte!&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:600px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Parteien&lt;/td&gt;&#xd;
+			&lt;td&gt;CDU&lt;/td&gt;&#xd;
+			&lt;td&gt;SPD&lt;/td&gt;&#xd;
+			&lt;td&gt;FDP&lt;/td&gt;&#xd;
+			&lt;td&gt;Gr&amp;uuml;ne&lt;/td&gt;&#xd;
+			&lt;td&gt;Die Linke&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Stimmen&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$A]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$B]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$C]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$D]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$Ee]$&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Stimmanteil $c_j$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$c1]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$c2]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$c3]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$c4]$&lt;/td&gt;&#xd;
+			&lt;td&gt;$[var=$c5]$&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$D_G=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die $\textbf{dritte}$ Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+            <skipMessage>$D_G=[var=ginig]$</skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18">
+              <StageTransition id="19">
+                <conditionExpression id="20">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="21">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="22">
+              <StageTransition id="23">
+                <conditionExpression id="24">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="25">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="26">
+              <StageHint id="27">
+                <stagehint__order>0</stagehint__order>
+                <text>Die Formel zur Berechnung des Gini-Koeffizienten ist:
+
+       $D_G=\frac{2\sum_{j=1}^n jc_j-1}{n}-1$
+    </text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="28"/>
+            <variableUpdatesBeforeCheck id="29"/>
+            <variableUpdatesAfterCheck id="30"/>
+            <variableUpdatesOnNormalExit id="31"/>
+            <variableUpdatesOnRepeat id="32"/>
+            <variableUpdatesOnSkip id="33"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="34"/>
+            <rules id="35"/>
+            <fillInFields id="36">
+              <FillInField id="37">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>8</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="38"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider falsch.</defaultFeedback>
+            <correctAnswerRules id="39">
+              <Rule id="40">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="41">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&lt;[var=ginig]+0.011&amp;&amp;[input=field1]&gt;[var=ginig]-0.011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="42">
+        <StageTransition id="43">
+          <conditionExpression id="44">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="45">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="46">
+        <StageHint id="47">
+          <stagehint__order>0</stagehint__order>
+          <text>Die Merkmalssumme des Datensatzes ist $\sum_{j=1}^{n}x_{j} = n \bar{x} $; der auf den $j$-ten Merkmalstr&amp;auml;ger entfallende Anteil $c_{j}$ der Merkmalssumme ist \[c_{j}=\frac{x_{j}}{n \bar{x}}.\]</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="48"/>
+      <variableUpdatesBeforeCheck id="49"/>
+      <variableUpdatesAfterCheck id="50"/>
+      <variableUpdatesOnNormalExit id="51"/>
+      <variableUpdatesOnRepeat id="52"/>
+      <variableUpdatesOnSkip id="53"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="54"/>
+      <rules id="55"/>
+      <fillInFields id="56">
+        <FillInField id="57">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="58">
+          <name>field5</name>
+          <orderIndex>4</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="59">
+          <name>field4</name>
+          <orderIndex>3</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="60">
+          <name>field3</name>
+          <orderIndex>2</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="61">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="62"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+$$\begin{matrix}&lt;br /&gt;
+\hline&lt;br /&gt;
+\qquad  \quad  \textrm{Parteien} \qquad \qquad &amp;amp; \textrm{CDU} \qquad \qquad &amp;amp; \textrm{SPD} \qquad \qquad &amp;amp; \textrm{FDP} \qquad \qquad &amp;amp; \textrm{Gr&amp;uuml;ne} \qquad \qquad &amp;amp; \textrm{Die Linke} \qquad \qquad \\&lt;br /&gt;
+\hline&lt;br /&gt;
+\quad \textrm{Stimmen} \qquad  &amp;amp; [var=A] \qquad \qquad &amp;amp; [var=B] \qquad \qquad &amp;amp; [var=C] \qquad \qquad &amp;amp; [var=D] \qquad \qquad &amp;amp; [var=Ee] \qquad \qquad \\&lt;br /&gt;
+\textrm{Stimmanteil} \enspace  c_j &amp;amp; [var=c1] \qquad \qquad &amp;amp; [var=c2] \qquad \qquad &amp;amp; [var=c3] \qquad \qquad &amp;amp; [var=c4] \qquad \qquad &amp;amp; [var=c5] \qquad \qquad \\&lt;br /&gt;
+\end{matrix}$$</defaultFeedback>
+      <correctAnswerRules id="63">
+        <Rule id="64">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="65">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;[input=field1]&lt;[var=c1]+0.011&amp;&amp;[input=field1]&gt;[var=c1]-0.011&amp;&amp;[input=field2]&lt;[var=c2]+0.011&amp;&amp;[input=field2]&gt;[var=c2]-0.011&amp;&amp;[input=field3]&lt;[var=c3]+0.011&amp;&amp;[input=field3]&gt;[var=c3]-0.011&amp;&amp;[input=field4]&lt;[var=c4]+0.011&amp;&amp;[input=field4]&gt;[var=c4]-0.011&amp;&amp;[input=field5]&lt;[var=c5]+0.011&amp;&amp;[input=field5]&gt;[var=c5]-0.011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="14"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="66">
+    <VariableDeclaration id="67">
+      <name>A</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(800,1000)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>B</name>
+      <initializationCode id="70">
+        <code>randomIntegerBetween(500,700)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>C</name>
+      <initializationCode id="72">
+        <code>randomIntegerBetween(200,400)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>D</name>
+      <initializationCode id="74">
+        <code>[var=C]-10</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>Ee</name>
+      <initializationCode id="76">
+        <code>[var=C]-100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>Summe</name>
+      <initializationCode id="78">
+        <code>evaluateInR(&apos;[var=A]+[var=B]+[var=C]+[var=D]+[var=Ee]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>c11</name>
+      <initializationCode id="80">
+        <code>evaluateInR(&apos;[var=A]/[var=Summe]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>c22</name>
+      <initializationCode id="82">
+        <code>evaluateInR(&apos;[var=B]/[var=Summe]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>c33</name>
+      <initializationCode id="84">
+        <code>evaluateInR(&apos;[var=C]/[var=Summe]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>c44</name>
+      <initializationCode id="86">
+        <code>evaluateInR(&apos;[var=D]/[var=Summe]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>c55</name>
+      <initializationCode id="88">
+        <code>evaluateInR(&apos;[var=Ee]/[var=Summe]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="89">
+      <name>c1</name>
+      <initializationCode id="90">
+        <code>evaluateInR(&apos;round([var=c11], 3)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="91">
+      <name>c2</name>
+      <initializationCode id="92">
+        <code>evaluateInR(&apos;round([var=c22], 3)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="93">
+      <name>c3</name>
+      <initializationCode id="94">
+        <code>evaluateInR(&apos;round([var=c33], 3)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="95">
+      <name>c4</name>
+      <initializationCode id="96">
+        <code>evaluateInR(&apos;round([var=c44], 3)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="97">
+      <name>c5</name>
+      <initializationCode id="98">
+        <code>evaluateInR(&apos;round([var=c55], 3)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="99">
+      <name>gini</name>
+      <initializationCode id="100">
+        <code>(2*(1*([var=c5])+2*([var=c4])+3*([var=c3])+4*([var=c2])+5*([var=c1]))-1)/5-1</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="101">
+      <name>ginig</name>
+      <initializationCode id="102">
+        <code>round([var=gini], 3)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="103"/>
+  <dynamicMolecules id="104"/>
+  <resultFeedbackMappings id="105"/>
+</Exercise>

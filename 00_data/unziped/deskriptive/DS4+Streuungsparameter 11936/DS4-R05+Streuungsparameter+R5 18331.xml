@@ -1,0 +1,214 @@
+<Exercise id="1">
+  <name>DS4-R05 Streuungsparameter R5</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Standardabweichung berechnen (Kurswerte Apple Aktie)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">YWFwbCA8LSBjKDExOC4zMCwxMDUuMjYsOTcuMzQsOTYuNjksMTA4Ljk5LDkzLjc0LDk5Ljg2LDk1LjYwLDEwNC4yMSwxMDYuMTAsMTEzLjA1LDExMy41NCkNCg==</content>
+      <uploadTimestamp>2022-03-02T17:19:38.077181</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In der vorherigen Aufgabe haben Sie die Varianz der Kurswerte von Apple Aktien berechnet. Ein entscheidener Nachteil der Varianz ist jedoch, dass es eine andere Dimension als das betrachtete Merkmal hat (n&amp;auml;mlich $\$^2$). Das macht das Ganze nicht sonderlich intuitiv interpretierbar.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie daher die Standardabweichung der Kurswerte.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Beachten Sie erneut den Vorfaktor $\frac{n-1}{n}$ und die entsprechende Anpassung im Rahmen dieser Berechnung.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;&lt;/span&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Der Befehl f&amp;uuml;r die Standardabweichung lautet $\verb|sd()|$.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode>aapl &lt;- c([var=var1], [var=var2], [var=var3], [var=var4], [var=var5], [var=var6], [var=var7], [var=var8], [var=var9], [var=var10], [var=var11], [var=var12])
+</initialCode>
+      <finalResultComputationString>#{c18336}+#{c18335}</finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die vordefinierte Variable.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>		from clos:V{Variable} with 
+                clos.name=&quot;aapl&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>18335</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie den Befehl $\verb|sd()|$ und achten Sie auf die entsprechende Anpassung des Vorfaktors.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>sqrt(11/12)*sd(c([var=var1], [var=var2], [var=var3], [var=var4], [var=var5], [var=var6], [var=var7], [var=var8], [var=var9], [var=var10], [var=var11], [var=var12]))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>18336</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>var1</name>
+      <initializationCode id="36">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="37">
+      <name>var2</name>
+      <initializationCode id="38">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>var3</name>
+      <initializationCode id="40">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>var4</name>
+      <initializationCode id="42">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>var5</name>
+      <initializationCode id="44">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>var6</name>
+      <initializationCode id="46">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>var7</name>
+      <initializationCode id="48">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>var8</name>
+      <initializationCode id="50">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>var9</name>
+      <initializationCode id="52">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>var10</name>
+      <initializationCode id="54">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>var11</name>
+      <initializationCode id="56">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>var12</name>
+      <initializationCode id="58">
+        <code>round(randomBetween(95,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="59"/>
+  <dynamicMolecules id="60"/>
+  <resultFeedbackMappings id="61"/>
+</Exercise>

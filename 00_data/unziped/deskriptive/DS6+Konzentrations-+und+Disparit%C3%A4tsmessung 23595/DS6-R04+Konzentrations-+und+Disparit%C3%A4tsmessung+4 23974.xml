@@ -1,0 +1,141 @@
+<Exercise id="1">
+  <name>DS6-R04 Konzentrations- und Disparitätsmessung 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Herfindahl-Index berechnen (händisch)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">bWFya3QgPC0gYygyMCw1MCwyMDAsMzAsMzUwKQ0KYW50ZWlsIDwtIGMoMC41Mzg0NjE1NCwwLjMwNzY5MjMxLDAuMDc2OTIzMDgsMC4wNDYxNTM4NSwwLjAzMDc2OTIzKQ==</content>
+      <uploadTimestamp>2022-03-22T12:27:58.109596</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie nun mit Hilfe der Formel den Herfindahl-Index f&amp;uuml;r diesen Markt. Wie konzentriert ist dieser?&amp;nbsp;Neben den Ums&amp;auml;tzen (im Vektor $\verb|markt|$) sind nun auch die jeweiligen H&amp;auml;ufigkeitssummenanteile im Vektor $\verb|anteil|$ abgespeichert und m&amp;uuml;ssen nicht neu berechnet werden.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>$C_H=\sum_{j=1}^n c_{j}^2$&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Setzen Sie diese Formel in R um. Benutzen Sie dazu die $\verb|sum()|$-Funktion.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode>markt &lt;- c(20, 50, 200, 30, 350)
+anteil &lt;- c(0.53846154, 0.30769231, 0.07692308, 0.04615385, 0.03076923)</initialCode>
+      <finalResultComputationString>#{c23987}+#{c23986}</finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Schauen Sie sich nochmal die Formel an und achten Sie darauf, die vordefinierte Variable $\verb|anteil|$ zu benutzen. </feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>		from sum:V{FunctionCall}, ant:V{Variable}, exp:V{ExpOperator}, num:V{NumericLiteral}, e1,e2:E{Expression} with 
+                sum.name=&quot;sum&quot; and
+                sum --&gt;* exp and
+                exp -- e1 -&gt; ant and
+                exp -- e2 -&gt; num and
+                e1.position = 0 and
+                e2.position = 1 and
+                ant.name=&quot;anteil&quot; and
+                num.value=2
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="30">
+            <name></name>
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>23986</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="31">
+          <testCases id="32">
+            <DynamicRTestCase id="33">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Schauen Sie sich nochmal die Formel für den Herfindahl-Index an.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>sum(c(0.03076923,0.07692308,0.30769231,0.04615385,0.53846154)^2)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="34">
+            <name></name>
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>23987</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="35"/>
+  <jSXGraphs id="36"/>
+  <dynamicMolecules id="37"/>
+  <resultFeedbackMappings id="38"/>
+</Exercise>

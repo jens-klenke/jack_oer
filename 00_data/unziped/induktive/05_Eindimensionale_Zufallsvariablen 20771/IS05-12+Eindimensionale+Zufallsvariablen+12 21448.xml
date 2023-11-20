@@ -1,0 +1,261 @@
+<Exercise id="1">
+  <name>IS05-12 Eindimensionale Zufallsvariablen 12</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Anzahl am gleichen Tag Geburtstag
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In einem Tutorium befinden sich [var=N] nicht verwandte Stundierende. Bezeichne $X$ die Anzahl an P&amp;auml;rchen, die am selben Tag Geburtstag haben. (Z.B. erg&amp;auml;ben 3 Leute mit dem selben Geburtstag 3 P&amp;auml;rchen)&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie $E(X)=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>$E(X)=[var=ansa]$</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+3 Studierende die an einem Tag Geburtstag haben seien ein Triple. Bezeichne $Y$ die Anzahl von Triple. (Z.B. erg&amp;auml;ben 4 Leute mit dem selben Geburtstag 4 Triple)&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie $E(Y)=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+            <skipMessage>$E(Y)=[var=ansb]$</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="24">
+              <StageTransition id="25">
+                <conditionExpression id="26">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="27">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="28">
+              <StageHint id="29">
+                <stagehint__order>0</stagehint__order>
+                <text>Wenn jeder am selben Tag Geburtstag h&amp;auml;tte, w&amp;auml;re $Y=[var=N]*([var=N]-1)*([var=N]-2)/6$</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="30"/>
+            <variableUpdatesBeforeCheck id="31"/>
+            <variableUpdatesAfterCheck id="32"/>
+            <variableUpdatesOnNormalExit id="33"/>
+            <variableUpdatesOnRepeat id="34"/>
+            <variableUpdatesOnSkip id="35"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="36"/>
+            <rules id="37"/>
+            <fillInFields id="38">
+              <FillInField id="39">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="40"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$E(Y)=[var=ansb]$</defaultFeedback>
+            <correctAnswerRules id="41">
+              <Rule id="42">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="43">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ansb]-0.0011&amp;&amp;[input=field1]&lt;[var=ansb]+0.0011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="44">
+        <StageTransition id="45">
+          <conditionExpression id="46">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="47">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="48">
+        <StageHint id="49">
+          <stagehint__order>0</stagehint__order>
+          <text>Wenn jeder am selben Tag Geburtstag h&amp;auml;tte, w&amp;auml;re $X=[var=N]*([var=N]-1)/2$</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="50"/>
+      <variableUpdatesBeforeCheck id="51"/>
+      <variableUpdatesAfterCheck id="52"/>
+      <variableUpdatesOnNormalExit id="53"/>
+      <variableUpdatesOnRepeat id="54"/>
+      <variableUpdatesOnSkip id="55"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="56"/>
+      <rules id="57"/>
+      <fillInFields id="58">
+        <FillInField id="59">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="60"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$E(X)=[var=ansa]$</defaultFeedback>
+      <correctAnswerRules id="61">
+        <Rule id="62">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="63">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ansa]-0.0011&amp;&amp;[input=field1]&lt;[var=ansa]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="64">
+    <VariableDeclaration id="65">
+      <name>N</name>
+      <initializationCode id="66">
+        <code>randomIntegerBetween(15,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>ansau</name>
+      <initializationCode id="68">
+        <code>evaluateInR(&apos;choose([var=N], 2)/365&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>ansa</name>
+      <initializationCode id="70">
+        <code>round(([var=ansau]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>ansbu</name>
+      <initializationCode id="72">
+        <code>evaluateInR(&apos;choose([var=N], 3)/133225&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>ansb</name>
+      <initializationCode id="74">
+        <code>round(([var=ansbu]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="75"/>
+  <dynamicMolecules id="76"/>
+  <resultFeedbackMappings id="77"/>
+</Exercise>

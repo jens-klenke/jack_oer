@@ -1,0 +1,705 @@
+<Exercise id="1">
+  <name>IS05-09 Eindimensionale Zufallsvariablen 9</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Produkt zweier Würfe mit Tetraeder:
+
+1.Stage: W&apos;keits- und Vertelungsfunktion bestimmen und F(x) berechnen
+2.Stage: P(x1 &lt; X &lt; x2) berechnen
+3.Stage: E-Wert berechnen
+4.Stage: Varianz berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>4</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="4">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie betrachten eine Zufallsvariable $X$, deren Auspr&amp;auml;gung das Produkt der Augenzahlen zweier hintereinander get&amp;auml;tigter W&amp;uuml;rfe eines Tetraeder beschreibt.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Erstellen Sie die vollst&amp;auml;ndige Wahrscheinlichkeitsfunktion, sowie die Verteilungsfunktion.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie $F([var=Frage1]).$&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>$F([var=Frage1])=[var=l21]$</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$P(3 \le X \le [var=Frage2])$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+            <skipMessage>$P(3\le X \le [var=Frage2])=[var=m6]$</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="24">
+                  <internalName>3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie $E(X).$&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung: &lt;/strong&gt;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                  <skipMessage>$E(X)= \frac{1}{16} \cdot 1 + \frac{2}{16} \cdot 2 + \frac{2}{16} \cdot 3 + \frac{3}{16} \cdot 4 + \frac{2}{16} \cdot 6 + \frac{2}{16} \cdot 8 + \frac{1}{16} \cdot 9 + \frac{2}{16} \cdot 12 +\frac{1}{16} \cdot 16 = 6.25$</skipMessage>
+                  <defaultTransition id="25">
+                    <conditionExpression id="26">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="27">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="28">
+                    <StageTransition id="29">
+                      <conditionExpression id="30">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="31">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" id="32">
+                        <internalName>4</internalName>
+                        <externalName>Stage 4</externalName>
+                        <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie $Var(X).$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                        <skipMessage>$Var(X)= 17.1875$</skipMessage>
+                        <defaultTransition id="33">
+                          <conditionExpression id="34">
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="35">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>true</isRepeat>
+                        </defaultTransition>
+                        <skipTransitions id="36">
+                          <StageTransition id="37">
+                            <conditionExpression id="38">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="39">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </skipTransitions>
+                        <stageTransitions id="40">
+                          <StageTransition id="41">
+                            <conditionExpression id="42">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="43">
+                              <code>[meta=stageCurrentResult]&gt;=100</code>
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </stageTransitions>
+                        <hints id="44">
+                          <StageHint id="45">
+                            <stagehint__order>0</stagehint__order>
+                            <text>Hier kann der spezielle Verschiebungssatz angewandt werden.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="46">
+                            <stagehint__order>1</stagehint__order>
+                            <text>Es gilt: $Var(X) = E(X^2) - E(X)^2.$&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="47">
+                            <stagehint__order>2</stagehint__order>
+                            <text>$E(X)$ haben Sie in Frage 3 bereits berechnet.&lt;br /&gt;
+$E(X^2)$ berechnet sich analog, au&amp;szlig;er dass $x_i^2$ statt $x_i$ in der Formel f&amp;uuml;r den Erwartungswert verwendet wird.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="48">
+                            <stagehint__order>3</stagehint__order>
+                            <text>	$E(X^2) = \frac{1}{16} \cdot 1^2 + \frac{2}{16} \cdot 2^2 \frac{2}{16} \cdot 3^2 + \frac{3}{16} \cdot 4^2 + \frac{2}{16} \cdot 6^2 + \frac{2}{16} \cdot 8^2 \frac{1}{16} \cdot 9^2 + \frac{2}{16} \cdot 12^2 +\frac{1}{16} \cdot 16^2 $  
+	 </text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                        </hints>
+                        <variableUpdatesOnEnter id="49"/>
+                        <variableUpdatesBeforeCheck id="50"/>
+                        <variableUpdatesAfterCheck id="51"/>
+                        <variableUpdatesOnNormalExit id="52"/>
+                        <variableUpdatesOnRepeat id="53"/>
+                        <variableUpdatesOnSkip id="54"/>
+                        <weight>1</weight>
+                        <orderIndex>3</orderIndex>
+                        <allowSkip>true</allowSkip>
+                        <resources id="55"/>
+                        <rules id="56"/>
+                        <fillInFields id="57">
+                          <FillInField id="58">
+                            <name>field1</name>
+                            <orderIndex>0</orderIndex>
+                            <size>6</size>
+                            <formularEditorType>NUMBER</formularEditorType>
+                          </FillInField>
+                        </fillInFields>
+                        <dropDownFields id="59"/>
+                        <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                        <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+$Var(X)= 17.1875$</defaultFeedback>
+                        <correctAnswerRules id="60">
+                          <Rule id="61">
+                            <name>CorrectAnswer1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="62">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;17.1864&amp;&amp;[input=field1]&lt;17.1886</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <points>0</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </correctAnswerRules>
+                        <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                        <defaultResult>0</defaultResult>
+                      </targetStage>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="63">
+                    <StageTransition id="64">
+                      <conditionExpression id="65">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="66">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="32"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="67">
+                    <StageHint id="68">
+                      <stagehint__order>0</stagehint__order>
+                      <text>Der Erwartungswert sind die kummulierten Auspr&amp;auml;gungen, gewichtet mit der Wahrscheinlichkeit. $E(X) = \sum_{i=1}^n x_i f(x_i).$&lt;br /&gt;
+Da Sie $f(x)$ in Frage $1$ bereits bestimmt haben, k&amp;ouml;nnen Sie $E(X)$ einfach berechnen.</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="69"/>
+                  <variableUpdatesBeforeCheck id="70"/>
+                  <variableUpdatesAfterCheck id="71"/>
+                  <variableUpdatesOnNormalExit id="72"/>
+                  <variableUpdatesOnRepeat id="73"/>
+                  <variableUpdatesOnSkip id="74"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="75"/>
+                  <rules id="76"/>
+                  <fillInFields id="77">
+                    <FillInField id="78">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="79"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+$E(X)= \frac{1}{16} \cdot 1 + \frac{2}{16} \cdot 2 + \frac{2}{16} \cdot 3 + \frac{3}{16} \cdot 4 + \frac{2}{16} \cdot 6 + \frac{2}{16} \cdot 8 + \frac{1}{16} \cdot 9 + \frac{2}{16} \cdot 12 +\frac{1}{16} \cdot 16 = 6.25$</defaultFeedback>
+                  <correctAnswerRules id="80">
+                    <Rule id="81">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="82">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;6.2489&amp;&amp;[input=field1]&lt;6.2511</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="83">
+              <StageTransition id="84">
+                <conditionExpression id="85">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="86">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="24"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="87">
+              <StageHint id="88">
+                <stagehint__order>0</stagehint__order>
+                <text>$P(3\le X \le [var=Frage2])=P(X \le [var=Frage2])-P(X &amp;lt; 3)$&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="89">
+                <stagehint__order>1</stagehint__order>
+                <text>Allgemein gilt: $P(X \le x) = F(x).$&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="90">
+                <stagehint__order>2</stagehint__order>
+                <text>Hier gilt also: $P(3\le X \le [var=Frage2])=F([var=Frage2]) - F(2)$, da $P(X &amp;lt; 3) = P(X\le 2) = F(2).$</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="91"/>
+            <variableUpdatesBeforeCheck id="92"/>
+            <variableUpdatesAfterCheck id="93"/>
+            <variableUpdatesOnNormalExit id="94"/>
+            <variableUpdatesOnRepeat id="95"/>
+            <variableUpdatesOnSkip id="96"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="97"/>
+            <rules id="98"/>
+            <fillInFields id="99">
+              <FillInField id="100">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="101"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+$P(3\le X \le [var=Frage2])=[var=m6]$</defaultFeedback>
+            <correctAnswerRules id="102">
+              <Rule id="103">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="104">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=m6]-0.0011&amp;&amp;[input=field1]&lt;[var=m6]+0.0011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="105">
+        <StageTransition id="106">
+          <conditionExpression id="107">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="108">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="109">
+        <StageHint id="110">
+          <stagehint__order>0</stagehint__order>
+          <text>&amp;Uuml;berlegen Sie sich zun&amp;auml;chst alle m&amp;ouml;glichen Ausg&amp;auml;nge des Zufallsexperiments. M&amp;ouml;glicherweise hilft dabei eine Tabelle der Form: $$\begin{vmatrix}\hline \frac{\textrm{1. Wurf}}{\textrm{2. Wurf}} &amp;amp; 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 \\ \hline 1 &amp;amp; &amp;amp; &amp;amp; &amp;amp; \\ 2 &amp;amp; &amp;amp; &amp;amp; &amp;amp; \\ 3 &amp;amp; &amp;amp; &amp;amp; &amp;amp; \\ 4 &amp;amp; &amp;amp; &amp;amp; &amp;amp; \\ \hline \end{vmatrix}$$&lt;br /&gt;
+&lt;br /&gt;
+(In einem weiteren Hinweis ist diese Tabelle ausgef&amp;uuml;llt)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="111">
+          <stagehint__order>1</stagehint__order>
+          <text>$$\begin{vmatrix}\hline \frac{\textrm{1. Wurf}}{\textrm{2. Wurf}} \qquad &amp;amp; 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 \\ \hline 1 &amp;amp; 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 \\ 2 &amp;amp; 2 &amp;amp; 4 &amp;amp; 6 &amp;amp; 8 \\ 3 &amp;amp; 3 &amp;amp; 6 &amp;amp; 9 &amp;amp; 12 \\ 4 &amp;amp; 4 &amp;amp; 8 &amp;amp; 12 &amp;amp; 16 \\ \hline \end{vmatrix}$$&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="112">
+          <stagehint__order>2</stagehint__order>
+          <text>Um die Wahrscheinlichkeitsfunktion zu bestimmen, m&amp;uuml;ssen Sie die W&amp;#39;keiten der einzelnen Ausg&amp;auml;nge bestimmen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="113">
+          <stagehint__order>3</stagehint__order>
+          <text>Es gilt z.B.: $f(x) = \frac{1}{16}, ~ \text{f&amp;uuml;r}~ x=1$, da es insgesamt $16$ m&amp;ouml;gliche Ausg&amp;auml;nge gibt, aber nur bei einer M&amp;ouml;glichkeit $1$ rauskommt.&lt;br /&gt;
+Bestimmen Sie nun die komplette W&amp;#39;keitsfunktion und leiten daraus die Verteilungsfunktion her.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="114"/>
+      <variableUpdatesBeforeCheck id="115"/>
+      <variableUpdatesAfterCheck id="116"/>
+      <variableUpdatesOnNormalExit id="117"/>
+      <variableUpdatesOnRepeat id="118"/>
+      <variableUpdatesOnSkip id="119"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="120"/>
+      <rules id="121"/>
+      <fillInFields id="122">
+        <FillInField id="123">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="124"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+$F([var=Frage1])=[var=l21]$</defaultFeedback>
+      <correctAnswerRules id="125">
+        <Rule id="126">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="127">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=l21]-0.0011&amp;&amp;[input=field1]&lt;[var=l21]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+    <FillInStage reference="24"/>
+    <FillInStage reference="32"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="128">
+    <VariableDeclaration id="129">
+      <name>i</name>
+      <initializationCode id="130">
+        <code>randomIntegerBetween(0,20)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="131">
+      <name>Frage1</name>
+      <initializationCode id="132">
+        <code>getFromList([var=i], list(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,0,-1,-3))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="133">
+      <name>l1</name>
+      <initializationCode id="134">
+        <code>ifthenelse(equals([var=i], 0), 0.0625, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="135">
+      <name>l2</name>
+      <initializationCode id="136">
+        <code>ifthenelse(equals([var=i], 1), 0.1875, [var=l1])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="137">
+      <name>l3</name>
+      <initializationCode id="138">
+        <code>ifthenelse(equals([var=i], 2), 0.3125, [var=l2])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="139">
+      <name>l4</name>
+      <initializationCode id="140">
+        <code>ifthenelse(equals([var=i], 3), 0.5, [var=l3])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="141">
+      <name>l5</name>
+      <initializationCode id="142">
+        <code>ifthenelse(equals([var=i], 4), 0.5, [var=l4])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="143">
+      <name>l6</name>
+      <initializationCode id="144">
+        <code>ifthenelse(equals([var=i], 5), 0.625, [var=l5])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="145">
+      <name>l7</name>
+      <initializationCode id="146">
+        <code>ifthenelse(equals([var=i], 6), 0.625, [var=l6])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="147">
+      <name>l8</name>
+      <initializationCode id="148">
+        <code>ifthenelse(equals([var=i], 7), 0.75, [var=l7])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="149">
+      <name>l9</name>
+      <initializationCode id="150">
+        <code>ifthenelse(equals([var=i], 8), 0.8125, [var=l8])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="151">
+      <name>l10</name>
+      <initializationCode id="152">
+        <code>ifthenelse(equals([var=i], 9), 0.8125, [var=l9])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="153">
+      <name>l11</name>
+      <initializationCode id="154">
+        <code>ifthenelse(equals([var=i], 10), 0.8125, [var=l10])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="155">
+      <name>l12</name>
+      <initializationCode id="156">
+        <code>ifthenelse(equals([var=i], 11), 0.9375, [var=l11])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="157">
+      <name>l13</name>
+      <initializationCode id="158">
+        <code>ifthenelse(equals([var=i], 12), 0.9375, [var=l12])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="159">
+      <name>l14</name>
+      <initializationCode id="160">
+        <code>ifthenelse(equals([var=i], 13), 0.9375, [var=l13])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="161">
+      <name>l15</name>
+      <initializationCode id="162">
+        <code>ifthenelse(equals([var=i], 14), 0.9375, [var=l14])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="163">
+      <name>l16</name>
+      <initializationCode id="164">
+        <code>ifthenelse(equals([var=i], 15), 1, [var=l15])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="165">
+      <name>l17</name>
+      <initializationCode id="166">
+        <code>ifthenelse(equals([var=i], 16), 1, [var=l16])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="167">
+      <name>l18</name>
+      <initializationCode id="168">
+        <code>ifthenelse(equals([var=i], 17), 1, [var=l17])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="169">
+      <name>l19</name>
+      <initializationCode id="170">
+        <code>ifthenelse(equals([var=i], 18), 0, [var=l18])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="171">
+      <name>l20</name>
+      <initializationCode id="172">
+        <code>ifthenelse(equals([var=i], 19), 0, [var=l19])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="173">
+      <name>l21</name>
+      <initializationCode id="174">
+        <code>ifthenelse(equals([var=i], 20), 0, [var=l20])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="175">
+      <name>j</name>
+      <initializationCode id="176">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="177">
+      <name>Frage2</name>
+      <initializationCode id="178">
+        <code>getFromList([var=j], list(4,6,8,9,12,16))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="179">
+      <name>m1</name>
+      <initializationCode id="180">
+        <code>ifthenelse(equals([var=j], 0), 0.3125, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="181">
+      <name>m2</name>
+      <initializationCode id="182">
+        <code>ifthenelse(equals([var=j], 1), 0.4375, [var=m1])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="183">
+      <name>m3</name>
+      <initializationCode id="184">
+        <code>ifthenelse(equals([var=j], 2), 0.5625, [var=m2])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="185">
+      <name>m4</name>
+      <initializationCode id="186">
+        <code>ifthenelse(equals([var=j], 3), 0.625, [var=m3])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="187">
+      <name>m5</name>
+      <initializationCode id="188">
+        <code>ifthenelse(equals([var=j], 4), 0.75, [var=m4])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="189">
+      <name>m6</name>
+      <initializationCode id="190">
+        <code>ifthenelse(equals([var=j], 5), 0.8125, [var=m5])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="191"/>
+  <dynamicMolecules id="192"/>
+  <resultFeedbackMappings id="193"/>
+</Exercise>

@@ -1,0 +1,150 @@
+<Exercise id="1">
+  <name>IS00-R08 Rechenregeln R08</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Alle geraden Zahlen von 1 bis 10 mit seq()-Befehl erstellen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Erstellen Sie nun einen Vektor, der alle geraden Zahlen von $1$ bis $10$ enth&amp;auml;lt.&lt;br /&gt;&#xd;
+Schreiben Sie die L&amp;ouml;sung &lt;strong&gt;nicht&lt;/strong&gt; manuell in einen Vektor. Speichern Sie das Ergebnis in der Variablen $\verb|gerade_zahlen|$ ab.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Den $\verb|:|$-Operator k&amp;ouml;nnen Sie nun nicht mehr benutzen, da Sie Abst&amp;auml;nde haben, die gr&amp;ouml;&amp;szlig;er als $1$ sind.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Benutzen Sie die $\verb|seq()|$-Funktion.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Legen Sie jeweils den Start- und Endpunkt sowie diesmal auch den Abstand zwischen zwei Zahlen fest.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>#{c42203} + #{c42205} </finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>75</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+&amp;Uuml;berlegen Sie noch einmal, wie der $\verb|seq()|$-Befehl funktioniert. Achten Sie auch darauf, dass Sie das Ergebnis der Variablen $\verb|gerade|$_$\verb|zahlen|$ zuordnen.
+</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>		from lao:V{LeftAssignmentOperator}, seq:V{FunctionCall}, v:V{Variable}, e1:E{LeftHandSide}, e2:E{RightHandSide} with 
+                lao -- e1 -&gt; v and
+                v.name=&quot;gerade_zahlen&quot; and
+                lao -- e2 -&gt; seq and
+                (seq.name=&quot;seq&quot; or seq.name=&quot;seq.int&quot;)
+		report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42203</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>25</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Ihre Eingabe liefert den Wert [var=testcaseOutput] zurück, sollte aber 2 4 6 8 10 liefern! -[var=penalty] Punkte&quot;
+			</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>seq(2,10,2)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42205</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>num</name>
+      <initializationCode id="36">
+        <code>randomIntegerBetween(5,15)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="37"/>
+  <dynamicMolecules id="38"/>
+  <resultFeedbackMappings id="39"/>
+</Exercise>

@@ -1,0 +1,667 @@
+<Exercise id="1">
+  <name>IS02-02 Wahrscheinlichkeitsrechnung 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>2 Stages, MC-Aufgaben zu Wahrscheinlichkeiten vereinigter und disjunkter Mengen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <MCStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Seien $A$, $B \subset \Omega$. Dann gilt immer:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;</taskDescription>
+      <skipMessage>Nur zwei Antwortm&amp;ouml;glichkeiten sind korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Die Gleichungen $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ und $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ sind korrekt.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="MCStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Seien $A$, $B \subset \Omega$. Dann gilt immer:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;</taskDescription>
+            <skipMessage>    Nur
+	
+    $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$
+	
+    ist eine korrekte Aussage.
+  </skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18">
+              <StageTransition id="19">
+                <conditionExpression id="20">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="21">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="22">
+              <StageTransition id="23">
+                <conditionExpression id="24">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="25">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="26">
+              <StageHint id="27">
+                <stagehint__order>0</stagehint__order>
+                <text> Versuchen Sie die einzelnen Gleichungen über ein erstelltes Venn-Diagramm zu überprüfen. </text>
+                <malus>0</malus>
+                <stage class="MCStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="28"/>
+            <variableUpdatesBeforeCheck id="29"/>
+            <variableUpdatesAfterCheck id="30"/>
+            <variableUpdatesOnNormalExit id="31"/>
+            <variableUpdatesOnRepeat id="32"/>
+            <variableUpdatesOnSkip id="33"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="34"/>
+            <answerOptions id="35">
+              <MCAnswer id="36">
+                <order>0</order>
+                <rule>WRONG</rule>
+                <text> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid \overline{B})$</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="37">
+                <order>1</order>
+                <rule>CORRECT</rule>
+                <text> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="38">
+                <order>2</order>
+                <rule>WRONG</rule>
+                <text> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(\overline{A} \mid \overline{B})$</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="39">
+                <order>3</order>
+                <rule>WRONG</rule>
+                <text> $\textrm{P}(\overline{A}\mid B)=\textrm{P}(\overline{B} \mid A)$</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="40">
+                <order>4</order>
+                <rule>WRONG</rule>
+                <text> Keine der Antworten ist richtig.</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+            </answerOptions>
+            <randomize>true</randomize>
+            <singleChoice>false</singleChoice>
+            <correctAnswerFeedback> Richtig. </correctAnswerFeedback>
+            <defaultFeedback>  Leider nicht richtig. </defaultFeedback>
+            <defaultResult>0</defaultResult>
+            <extraFeedbacks id="41">
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="42">
+                <expression id="43">
+                  <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="44">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="45">
+                <expression id="46">
+                  <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="47">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="48">
+                <expression id="49">
+                  <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="50">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="51">
+                <expression id="52">
+                  <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="53">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="54">
+                <expression id="55">
+                  <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="56">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="57">
+                <expression id="58">
+                  <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="59">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="60">
+                <expression id="61">
+                  <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="62">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="63">
+                <expression id="64">
+                  <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="65">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="66">
+                <expression id="67">
+                  <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="68">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="69">
+                <expression id="70">
+                  <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="71">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="72">
+                <expression id="73">
+                  <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="74">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="75">
+                <expression id="76">
+                  <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="77">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="78">
+                <expression id="79">
+                  <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="80">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="81">
+                <expression id="82">
+                  <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="83">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="84">
+                <expression id="85">
+                  <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="86">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>50</result>
+                <feedbackText> $\textrm{P}(\overline{A}\mid B)=1-\textrm{P}(A \mid B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+            </extraFeedbacks>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="87">
+        <StageTransition id="88">
+          <conditionExpression id="89">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="90">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="MCStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="91">
+        <StageHint id="92">
+          <stagehint__order>0</stagehint__order>
+          <text> Versuchen Sie die einzelnen Gleichungen über ein erstelltes Venn-Diagramm zu überprüfen. </text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="93"/>
+      <variableUpdatesBeforeCheck id="94"/>
+      <variableUpdatesAfterCheck id="95"/>
+      <variableUpdatesOnNormalExit id="96"/>
+      <variableUpdatesOnRepeat id="97"/>
+      <variableUpdatesOnSkip id="98"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="99"/>
+      <answerOptions id="100">
+        <MCAnswer id="101">
+          <order>0</order>
+          <rule>CORRECT</rule>
+          <text> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="102">
+          <order>1</order>
+          <rule>WRONG</rule>
+          <text> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(\overline{A} \cap \overline{B})$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="103">
+          <order>2</order>
+          <rule>WRONG</rule>
+          <text> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cup B)$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="104">
+          <order>3</order>
+          <rule>CORRECT</rule>
+          <text> $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="105">
+          <order>4</order>
+          <rule>WRONG</rule>
+          <text> Keine der Antworten ist richtig.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+      </answerOptions>
+      <randomize>true</randomize>
+      <singleChoice>false</singleChoice>
+      <correctAnswerFeedback> Richtig. </correctAnswerFeedback>
+      <defaultFeedback>Leider nicht richtig. &lt;/br&gt;
+&lt;/br&gt;
+Nur $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ und $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ sind korrekte Aussagen.</defaultFeedback>
+      <defaultResult>0</defaultResult>
+      <extraFeedbacks id="106">
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="107">
+          <expression id="108">
+            <code>[input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="109">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ ist in der Tat korrekt. Es ist aber noch eine weitere Aussage korrekt.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="110">
+          <expression id="111">
+            <code>![input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="112">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ ist in der Tat korrekt. Es ist aber noch eine weitere Aussage korrekt.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="113">
+          <expression id="114">
+            <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="115">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ ist in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="116">
+          <expression id="117">
+            <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="118">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ ist in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="119">
+          <expression id="120">
+            <code>[input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="121">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ ist in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="122">
+          <expression id="123">
+            <code>![input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="124">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ ist in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="125">
+          <expression id="126">
+            <code>[input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="127">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ ist in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="128">
+          <expression id="129">
+            <code>![input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="130">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ ist in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="131">
+          <expression id="132">
+            <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="133">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="134">
+          <expression id="135">
+            <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="136">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="137">
+          <expression id="138">
+            <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="139">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="140">
+          <expression id="141">
+            <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="142">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="143">
+          <expression id="144">
+            <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="145">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="146">
+          <expression id="147">
+            <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="148">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ ist in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="149">
+          <expression id="150">
+            <code>[input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="151">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ und $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ sind in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="152">
+          <expression id="153">
+            <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;![input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="154">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ und $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ sind in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="155">
+          <expression id="156">
+            <code>[input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="157">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ und $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ sind in der Tat korrekt. Bei der anderen Aussage sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="158">
+          <expression id="159">
+            <code>[input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="160">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ und $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ sind in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="161">
+          <expression id="162">
+            <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="163">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ und $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ sind in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="164">
+          <expression id="165">
+            <code>[input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;[input=mcindex_2]&amp;&amp;[input=mcindex_3]&amp;&amp;[input=mcindex_4]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="166">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>50</result>
+          <feedbackText> $\textrm{P}(\overline{A \cap B})=1-\textrm{P}(A \cap B)$ und $\textrm{P}(\overline{A \cap B})=\textrm{P}(\overline{A} \cup \overline{B})$ sind in der Tat korrekt. Bei den anderen Aussagen sollten Sie noch einmal überlegen.  </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+      </extraFeedbacks>
+    </MCStage>
+    <MCStage reference="14"/>
+  </stages>
+  <startStage class="MCStage" reference="6"/>
+  <variableDeclarations id="167"/>
+  <jSXGraphs id="168"/>
+  <dynamicMolecules id="169"/>
+  <resultFeedbackMappings id="170"/>
+</Exercise>

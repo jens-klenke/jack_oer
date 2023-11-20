@@ -1,0 +1,189 @@
+<Exercise id="1">
+  <name>IS04-01 Kombinatorik 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Eigenschaften des Binomialkoeffizienten
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <MCStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>Der Binomialkoeffizient hat einige interessante Eigenschaften. Welche der Aussagen ist korrekt?</taskDescription>
+      <skipMessage>Es ist ${N}\choose{1}$ =&amp;nbsp;${N}\choose{(N-1)}$ korrekt.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12"/>
+      <variableUpdatesOnEnter id="13"/>
+      <variableUpdatesBeforeCheck id="14"/>
+      <variableUpdatesAfterCheck id="15"/>
+      <variableUpdatesOnNormalExit id="16"/>
+      <variableUpdatesOnRepeat id="17"/>
+      <variableUpdatesOnSkip id="18"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="19"/>
+      <answerOptions id="20">
+        <MCAnswer id="21">
+          <order>0</order>
+          <rule>CORRECT</rule>
+          <text>${N}\choose{1}$ =&amp;nbsp;${N}\choose{(N-1)}$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="22">
+          <order>1</order>
+          <rule>WRONG</rule>
+          <text>${N}\choose{1}$ =&amp;nbsp;${N}\choose{(N+1)}$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="23">
+          <order>2</order>
+          <rule>WRONG</rule>
+          <text>${N}\choose{1}$ = $0\; \forall \; n\;&amp;gt;\;N$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+      </answerOptions>
+      <randomize>true</randomize>
+      <singleChoice>true</singleChoice>
+      <correctAnswerFeedback>Das ist korrekt.</correctAnswerFeedback>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Es ist ${N}\choose{1}$ =&amp;nbsp;${N}\choose{(N-1)}$ korrekt.</defaultFeedback>
+      <defaultResult>0</defaultResult>
+      <extraFeedbacks id="24"/>
+    </MCStage>
+  </stages>
+  <startStage class="MCStage" reference="6"/>
+  <variableDeclarations id="25">
+    <VariableDeclaration id="26">
+      <name>i</name>
+      <initializationCode id="27">
+        <code>randomIntegerBetween(0,8)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="28">
+      <name>j</name>
+      <initializationCode id="29">
+        <code>chooseFromComplement(list(0,1,2,3,4,5,6,7,8), list([var=i]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="30">
+      <name>k</name>
+      <initializationCode id="31">
+        <code>chooseFromComplement(list(0,1,2,3,4,5,6,7,8), list([var=i],[var=j]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="32">
+      <name>l</name>
+      <initializationCode id="33">
+        <code>chooseFromComplement(list(0,1,2,3,4,5,6,7,8), list([var=i],[var=j],[var=k]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="34">
+      <name>task1</name>
+      <initializationCode id="35">
+        <code>concat(&quot;getFromSet(&apos;&quot;,[var=i],&quot;&apos;,&apos;{N\choose 0} = {N \choose N};{N\choose 1}={N\choose N-1};{N\choose n}=0 \&gt; \forall \&gt; n &gt; N;{N+1\choose n+1}={N\choose n}+{N\choose n+1};{N \choose n}={N-1 \choose n-1}+{N-1 \choose n};{N\choose 1} = {N \choose N};{N\choose n} = {N \choose N-n};\sum_{i=0}^{N}{N\choose i} = 2^N;\sum_{i=0}^{N}{i\choose n} = 2^N&apos;)&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>task2</name>
+      <initializationCode id="37">
+        <code>concat(&quot;getFromSet(&apos;&quot;,[var=j],&quot;&apos;,&apos;{N\choose 0} = {N \choose N};{N\choose 1}={N\choose N-1};{N\choose n}=0 \&gt; \forall \&gt; n &gt; N;{N+1\choose n+1}={N\choose n}+{N\choose n+1};{N \choose n}={N-1 \choose n-1}+{N-1 \choose n};{N\choose 1} = {N \choose N};{N\choose n} = {N \choose N-n};\sum_{i=0}^{N}{N\choose i} = 2^N;\sum_{i=0}^{N}{i\choose n} = 2^N&apos;)&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>task3</name>
+      <initializationCode id="39">
+        <code>concat(&quot;getFromSet(&apos;&quot;,[var=k],&quot;&apos;,&apos;{N\choose 0} = {N \choose N};{N\choose 1}={N\choose N-1};{N\choose n}=0 \&gt; \forall \&gt; n &gt; N;{N+1\choose n+1}={N\choose n}+{N\choose n+1};{N \choose n}={N-1 \choose n-1}+{N-1 \choose n};{N\choose 1} = {N \choose N};{N\choose n} = {N \choose N-n};\sum_{i=0}^{N}{N\choose i} = 2^N;\sum_{i=0}^{N}{i\choose n} = 2^N&apos;)&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>task4</name>
+      <initializationCode id="41">
+        <code>concat(&quot;getFromSet(&apos;&quot;,[var=l],&quot;&apos;,&apos;{N\choose 0} = {N \choose N};{N\choose 1}={N\choose N-1};{N\choose n}=0 \&gt; \forall \&gt; n &gt; N;{N+1\choose n+1}={N\choose n}+{N\choose n+1};{N \choose n}={N-1 \choose n-1}+{N-1 \choose n};{N\choose 1} = {N \choose N};{N\choose n} = {N \choose N-n};\sum_{i=0}^{N}{N\choose i} = 2^N;\sum_{i=0}^{N}{i\choose n} = 2^N&apos;)&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>sol1</name>
+      <initializationCode id="43">
+        <code>ifthenelse((equalsExpr([var=i], 0)||equalsExpr([var=i], 1)||equalsExpr([var=i], 2)||equalsExpr([var=i], 3)||equalsExpr([var=i], 4)||equalsExpr([var=i], 6)||equalsExpr([var=i], 7)), 10, 01)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>sol2</name>
+      <initializationCode id="45">
+        <code>ifthenelse(equalsExpr([var=j], 0)||equalsExpr([var=j], 1)||equalsExpr([var=j], 2)||equalsExpr([var=j], 3)||equalsExpr([var=j], 4)||equalsExpr([var=j], 6)||equalsExpr([var=j], 7), 10, 01)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>sol3</name>
+      <initializationCode id="47">
+        <code>ifthenelse(equalsExpr([var=k], 0)||equalsExpr([var=k], 1)||equalsExpr([var=k], 2)||equalsExpr([var=k], 3)||equalsExpr([var=k], 4)||equalsExpr([var=k], 6)||equalsExpr([var=k], 7), 10, 01)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>sol4</name>
+      <initializationCode id="49">
+        <code>ifthenelse(equalsExpr([var=l], 0)||equalsExpr([var=l], 1)||equalsExpr([var=l], 2)||equalsExpr([var=l], 3)||equalsExpr([var=l], 4)||equalsExpr([var=l], 6)||equalsExpr([var=l], 7), 10, 01)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>adv1</name>
+      <initializationCode id="51">
+        <code>concat(&quot;ifthenelse(&apos;&quot;,[var=i],&quot;==0&apos;,&apos;Lösung der ersten Aufgabe: Richtig! \\ {N\choose 0} = {N \choose N} \Leftrightarrow \frac{N!}{0! \cdot (N-0)!} = \frac{N!}{N! \cdot (N-N)!} \Leftrightarrow \frac{N!}{N!} = \frac{N!}{N!}&apos;,ifthenelse(&apos;&quot;,[var=i],&quot;==1&apos;,&apos;Lösung der ersten Aufgabe: Richtig! \\ {N\choose 1}={N\choose N-1} \Leftrightarrow \frac{N!}{1!\cdot (N-1)!}=\frac{N!}{(N-1)!\cdot 1!}&apos;,ifthenelse(&apos;&quot;,[var=i],&quot;==2&apos;,&apos;Lösung der ersten Aufgabe: Richtig! \\ {N \choose n} = \frac{N!}{n! \cdot \underbrace{(N-n)}_{&lt;0 \: \forall \: n&gt;N}!}&apos;,ifthenelse(&apos;&quot;,[var=i],&quot;==3&apos;,&apos;Lösung der ersten Aufgabe: Richtig! \\ {N\choose n}+{N\choose n+1} \\ \Leftrightarrow \frac{N!}{n!\: (N-n)!} + \frac{N!}{(n+1)!\: (N-n-1)!}\\ \text{Brueche auf gleichen Nenner bringen:} \\ \Leftrightarrow \frac{N!\: (n+1)}{(n+1)!\: (N-n)!} + \frac{N!\: (N-n)}{(n+1)!\: (N-n)!} \\ \Leftrightarrow \frac{N!\: (N+1)}{(n+1)!\: (N-n)!} \\ \Leftrightarrow {N+1 \choose n+1}&apos;,ifthenelse(&apos;&quot;,[var=i],&quot;==4&apos;,&apos;Lösung der ersten Aufgabe: Richtig! \\ {N-1 \choose n-1}+{N-1 \choose n} = \frac{(N-1)!}{(n-1)!\:(N-n)!}+\frac{(N-1)!}{n!\:(N-n-1)!} \\ = \frac{(N-1)!\: n}{n(n-1)!\:(N-n)!}+\frac{(N-1)!\: (N-n)}{n!(N-n)(N-n-1)!} \\ =\frac{(N-1)!\: (n+N-n)}{n!\: (N-n)!} \\ =\frac{N!}{n!\: (N-n)!}={N \choose n}&apos;,ifthenelse(&apos;&quot;,[var=i],&quot;==5&apos;,&apos;Lösung der ersten Aufgabe: Falsch! \\ \frac{N!}{1!\: (N-1)!} \neq \frac{N!}{N!\: 0!}&apos;,ifthenelse(&apos;&quot;,[var=i],&quot;==6&apos;,&apos;Lösung der ersten Aufgabe: Richtig! \\ \frac{N!}{n!\: (N-n)!} = \frac{N!}{(N-n)!\: n!}&apos;,ifthenelse(&apos;&quot;,[var=i],&quot;==7&apos;,&apos;Lösung der ersten Aufgabe: Richtig! \\ \text{Laut dem binomischen Lehrsatz gilt:}\\ (a+b)^m = \sum_{i=0}^{m}{m \choose i}a^{m-i}b^i \\ \text{Wenn}\: a=b=1 \:\text{gilt so folgt} \\ 2^m = \sum_{i=0}^{m}{m \choose i} &apos;,ifthenelse(&apos;&quot;,[var=i],&quot;==8&apos;,&apos;Lösung der ersten Aufgabe: Falsch! \\ \text{Laut dem binomischen Lehrsatz gilt:}\\ (a+b)^m = \sum_{i=0}^{m}{m \choose i}a^{m-i}b^i \\ \text{Wenn}\: a=b=1 \:\text{gilt so folgt} \\ 2^m = \sum_{i=0}^{m}{m \choose i} &apos;,&apos;Err&apos;)))))))))&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>adv2</name>
+      <initializationCode id="53">
+        <code>concat(&quot;ifthenelse(&apos;&quot;,[var=j],&quot;==0&apos;,&apos;Lösung der zweiten Aufgabe: Richtig! \\ {N\choose 0} = {N \choose N} \Leftrightarrow \frac{N!}{0! \cdot (N-0)!} = \frac{N!}{N! \cdot (N-N)!} \Leftrightarrow \frac{N!}{N!} = \frac{N!}{N!}&apos;,ifthenelse(&apos;&quot;,[var=j],&quot;==1&apos;,&apos;Lösung der zweiten Aufgabe: Richtig! \\ {N\choose 1}={N\choose N-1} \Leftrightarrow \frac{N!}{1!\cdot (N-1)!}=\frac{N!}{(N-1)!\cdot 1!}&apos;,ifthenelse(&apos;&quot;,[var=j],&quot;==2&apos;,&apos;Lösung der zweiten Aufgabe: Richtig! \\ {N \choose n} = \frac{N!}{n! \cdot \underbrace{(N-n)}_{&lt;0 \: \forall \: n&gt;N}!}&apos;,ifthenelse(&apos;&quot;,[var=j],&quot;==3&apos;,&apos;Lösung der zweiten Aufgabe: Richtig! \\ {N\choose n}+{N\choose n+1} \\ \Leftrightarrow \frac{N!}{n!\: (N-n)!} + \frac{N!}{(n+1)!\: (N-n-1)!}\\ \text{Brueche auf gleichen Nenner bringen:} \\ \Leftrightarrow \frac{N!\: (n+1)}{(n+1)!\: (N-n)!} + \frac{N!\: (N-n)}{(n+1)!\: (N-n)!} \\ \Leftrightarrow \frac{N!\: (N+1)}{(n+1)!\: (N-n)!} \\ \Leftrightarrow {N+1 \choose n+1}&apos;,ifthenelse(&apos;&quot;,[var=j],&quot;==4&apos;,&apos;Lösung der zweiten Aufgabe: Richtig! \\ {N-1 \choose n-1}+{N-1 \choose n} = \frac{(N-1)!}{(n-1)!\:(N-n)!}+\frac{(N-1)!}{n!\:(N-n-1)!} \\ = \frac{(N-1)!\: n}{n(n-1)!\:(N-n)!}+\frac{(N-1)!\: (N-n)}{n!(N-n)(N-n-1)!} \\ =\frac{(N-1)!\: (n+N-n)}{n!\: (N-n)!} \\ =\frac{N!}{n!\: (N-n)!}={N \choose n}&apos;,ifthenelse(&apos;&quot;,[var=j],&quot;==5&apos;,&apos;Lösung der zweiten Aufgabe: Falsch! \\ \frac{N!}{1!\: (N-1)!} \neq \frac{N!}{N!\: 0!}&apos;,ifthenelse(&apos;&quot;,[var=j],&quot;==6&apos;,&apos;Lösung der zweiten Aufgabe: Richtig! \\ \frac{N!}{n!\: (N-n)!} = \frac{N!}{(N-n)!\: n!}&apos;,ifthenelse(&apos;&quot;,[var=j],&quot;==7&apos;,&apos;Lösung der zweiten Aufgabe: Richtig! \\ \text{Laut dem binomischen Lehrsatz gilt:}\\ (a+b)^m = \sum_{i=0}^{m}{m \choose i}a^{m-i}b^i \\ \text{Wenn}\: a=b=1 \: \text{gilt so folgt} \\ 2^m = \sum_{i=0}^{m}{m \choose i} &apos;,ifthenelse(&apos;&quot;,[var=j],&quot;==8&apos;,&apos;Lösung der zweiten Aufgabe: Falsch! \\ \text{Laut dem binomischen Lehrsatz gilt:}\\ (a+b)^m = \sum_{i=0}^{m}{m \choose i}a^{m-i}b^i \\ \text{Wenn}\: a=b=1 \:\text{gilt so folgt} \\ 2^m = \sum_{i=0}^{m}{m \choose i} &apos;,&apos;Err&apos;)))))))))&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>adv3</name>
+      <initializationCode id="55">
+        <code>concat(&quot;ifthenelse(&apos;&quot;,[var=k],&quot;==0&apos;,&apos;Lösung der dritten Aufgabe: Richtig! \\ {N\choose 0} = {N \choose N} \Leftrightarrow \frac{N!}{0! \cdot (N-0)!} = \frac{N!}{N! \cdot (N-N)!} \Leftrightarrow \frac{N!}{N!} = \frac{N!}{N!}&apos;,ifthenelse(&apos;&quot;,[var=k],&quot;==1&apos;,&apos;Lösung der dritten Aufgabe: Richtig! \\ {N\choose 1}={N\choose N-1} \Leftrightarrow \frac{N!}{1!\cdot (N-1)!}=\frac{N!}{(N-1)!\cdot 1!}&apos;,ifthenelse(&apos;&quot;,[var=k],&quot;==2&apos;,&apos;Lösung der dritten Aufgabe: Richtig! \\ {N \choose n} = \frac{N!}{n! \cdot \underbrace{(N-n)}_{&lt;0 \: \forall \: n&gt;N}!}&apos;,ifthenelse(&apos;&quot;,[var=k],&quot;==3&apos;,&apos;Lösung der dritten Aufgabe: Richtig! \\ {N\choose n}+{N\choose n+1} \\ \Leftrightarrow \frac{N!}{n!\: (N-n)!} + \frac{N!}{(n+1)!\: (N-n-1)!}\\ \text{Brueche auf gleichen Nenner bringen:} \\ \Leftrightarrow \frac{N!\: (n+1)}{(n+1)!\: (N-n)!} + \frac{N!\: (N-n)}{(n+1)!\: (N-n)!} \\ \Leftrightarrow \frac{N!\: (N+1)}{(n+1)!\: (N-n)!} \\ \Leftrightarrow {N+1 \choose n+1}&apos;,ifthenelse(&apos;&quot;,[var=k],&quot;==4&apos;,&apos;Lösung der dritten Aufgabe:Richtig! \\ {N-1 \choose n-1}+{N-1 \choose n} = \frac{(N-1)!}{(n-1)!\:(N-n)!}+\frac{(N-1)!}{n!\:(N-n-1)!} \\ = \frac{(N-1)!\: n}{n(n-1)!\:(N-n)!}+\frac{(N-1)!\: (N-n)}{n!(N-n)(N-n-1)!} \\ =\frac{(N-1)!\: (n+N-n)}{n!\: (N-n)!} \\ =\frac{N!}{n!\: (N-n)!}={N \choose n}&apos;,ifthenelse(&apos;&quot;,[var=k],&quot;==5&apos;,&apos;Lösung der dritten Aufgabe: Falsch! \\ \frac{N!}{1!\: (N-1)!} \neq \frac{N!}{N!\: 0!}&apos;,ifthenelse(&apos;&quot;,[var=k],&quot;==6&apos;,&apos;Lösung der dritten Aufgabe: Richtig! \\ \frac{N!}{n!\: (N-n)!} = \frac{N!}{(N-n)!\: n!}&apos;,ifthenelse(&apos;&quot;,[var=k],&quot;==7&apos;,&apos;Lösung der dritten Aufgabe: Richtig! \\ \text{Laut dem binomischen Lehrsatz gilt:}\\ (a+b)^m = \sum_{i=0}^{m}{m \choose i}a^{m-i}b^i \\ \text{Wenn}\: a=b=1 \: \text{gilt so folgt} \\ 2^m = \sum_{i=0}^{m}{m \choose i} &apos;,ifthenelse(&apos;&quot;,[var=k],&quot;==8&apos;,&apos;Lösung der dritten Aufgabe: Falsch! \\ \text{Laut dem binomischen Lehrsatz gilt:}\\ (a+b)^m = \sum_{i=0}^{m}{m \choose i}a^{m-i}b^i \\ \text{Wenn}\: a=b=1 \:\text{gilt so folgt} \\ 2^m = \sum_{i=0}^{m}{m \choose i} &apos;,&apos;Err&apos;)))))))))&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="56"/>
+  <dynamicMolecules id="57"/>
+  <resultFeedbackMappings id="58"/>
+</Exercise>

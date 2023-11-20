@@ -1,0 +1,202 @@
+<Exercise id="1">
+  <name>DS0-R07 Rechenregeln R7</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Sequenz aus Aufgabe 6 mit seq()-Befehl oder &quot;:&quot;-Operator erstellen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Versuchen Sie nun die gleiche Zahlenfolge aus der vorherigen Aufgabe (Zahlen von 1 bis 10) schneller und damit effizienter zu erzeugen. Schreiben Sie die L&amp;ouml;sung daher diesmal $NICHT$ manuell in einen Vektor. Speichern Sie das Ergebnis in der Variablen $\verb|zahlen|$ ab.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;&lt;/span&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Sie k&amp;ouml;nnen Sequenzen in R mit dem $\verb|:|$-Operator oder der $\verb|seq()|$-Funktion erzeugen.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Legen Sie bei beiden M&amp;ouml;glichkeiten jeweils den Start- und Endpunkt fest&lt;br /&gt;
+&lt;br /&gt;
+(Sie k&amp;ouml;nnen beim $\verb|seq()|$-Befehl zus&amp;auml;tzlich noch die Abst&amp;auml;nde zwischen den jeweiligen Zahlen festlegen, m&amp;uuml;ssen Sie aber nicht, da die Default-Einstellung hier bereits 1 ist, also $\verb|by=1|$).</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="15"/>
+      <variableUpdatesBeforeCheck id="16"/>
+      <variableUpdatesAfterCheck id="17"/>
+      <variableUpdatesOnNormalExit id="18"/>
+      <variableUpdatesOnRepeat id="19"/>
+      <variableUpdatesOnSkip id="20"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="21"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>min(#{c27969},#{c27971})</finalResultComputationString>
+      <testCasetuples id="22">
+        <TestCaseTuple id="23">
+          <testCases id="24">
+            <StaticRTestCase id="25">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Achten Sie darauf, dass Sie den Vektor einer Variablen namens $zahlen$ zuweisen und den $seq()$-Befehl oder den $:$-Operator benutzen.
+</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="26">
+                <RGReQLQuery id="27">
+                  <query>		from sequ:V{SequenceOperator}, n1,n2:V{NumericLiteral}, lao:V{LeftAssignmentOperator}, v:V{Variable}, lh:E{LeftHandSide}, rh:E{RightHandSide}, e1,e2:E{Expression} with 
+		lao -- lh -&gt; v and
+                v.name=&quot;zahlen&quot; and
+                lao -- rh -&gt; sequ and
+                sequ -- e1 -&gt; n1 and
+                sequ -- e2 -&gt; n2 and
+                e1.position = 0 and
+                e2.position = 1 and
+                n1.value=1 and
+                n2.value=10
+		report 0 end
+		</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="28">
+                  <query>		from sequ:V{SequenceOperator}, cc:V{FunctionCall}, n1,n2:V{NumericLiteral}, lao:V{LeftAssignmentOperator}, v:V{Variable}, lh:E{LeftHandSide}, rh:E{RightHandSide}, e1,e2:E{Expression} with 
+		lao -- lh -&gt; v and
+                v.name=&quot;zahlen&quot; and
+                lao -- rh -&gt; cc and
+                cc.name=&quot;c&quot; and
+                cc --&gt;* sequ and
+                sequ -- e1 -&gt; n1 and
+                sequ -- e2 -&gt; n2 and
+                e1.position = 0 and
+                e2.position = 1 and
+                n1.value=1 and
+                n2.value=10
+		report 0 end</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="29">
+                  <query>		from seq:V{FunctionCall}, lao:V{LeftAssignmentOperator}, v:V{Variable}, lh:E{LeftHandSide}, rh:E{RightHandSide} with 
+                lao -- lh -&gt; v and
+                v.name=&quot;zahlen&quot; and
+                lao -- rh -&gt; seq and
+                (seq.name=&quot;seq&quot; or seq.name=&quot;seq.int&quot; or seq.name=&quot;seq_len&quot; or seq.name=&quot;seq_along&quot;)
+		report 0 end</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="30">
+                  <query>		from cc:V{FunctionCall}, n1,n2,n3,n4,n5,n6,n7,n8,n9,n10:V{NumericLiteral}, pl:V{ParameterList}, e1,e2,e3,e4,e5,e6,e7,e8,e9,e10:E{Parameter} with 
+                cc.name=&quot;c&quot; and
+                cc --&gt; pl and
+                pl -- e1 -&gt; n1 and
+                pl -- e2 -&gt; n2 and
+                pl -- e3 -&gt; n3 and
+                pl -- e4 -&gt; n4 and
+                pl -- e5 -&gt; n5 and
+                pl -- e6 -&gt; n6 and
+                pl -- e7 -&gt; n7 and
+                pl -- e8 -&gt; n8 and
+                pl -- e9 -&gt; n9 and
+                pl -- e10 -&gt; n10 and
+		e1.position = 0 and
+		e2.position = 1 and
+		e3.position = 2 and
+		e4.position = 3 and
+		e5.position = 4 and
+		e6.position = 5 and
+		e7.position = 6 and
+		e8.position = 7 and
+		e9.position = 8 and
+		e10.position = 9 and
+                n1.value=1 and
+                n2.value=2 and
+                n3.value=3 and
+                n4.value=4 and
+                n5.value=5 and
+                n6.value=6 and
+                n7.value=7 and
+                n8.value=8 and
+                n9.value=9 and
+                n10.value=10
+		report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>27969</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="32">
+          <testCases id="33">
+            <DynamicRTestCase id="34">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Ihre Eingabe liefert den Wert [var=testcaseOutput] zurück, sollte aber 1 2 3 4 5 6 7 8 9 10 liefern! </feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>1:10</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="35">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>27971</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="36">
+    <VariableDeclaration id="37">
+      <name>num</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(5,15)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="39"/>
+  <dynamicMolecules id="40"/>
+  <resultFeedbackMappings id="41"/>
+</Exercise>

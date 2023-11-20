@@ -1,0 +1,157 @@
+<Exercise id="1">
+  <name>DS5-R01 Schiefe- und Kurtosisparameter 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Absolute Schiefe berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">aGVhZChEQVggPC0gYXMubWF0cml4KEV1U3RvY2tNYXJrZXRzKVssMV0pDQpoZWFkKERBWF9yZXR1cm5zIDwtIERBWC9sYWcoREFYLC0xKS0xKQ0K</content>
+      <uploadTimestamp>2022-03-22T10:30:39.029953</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Der Datensatz $\verb|EuStockMarkets|$ enth&amp;auml;lt die t&amp;auml;glichen Kurswerte von vier europ&amp;auml;ischen Aktienindizes (DAX, SMI, CAC und FTSE) f&amp;uuml;r den Zeitraum $1991$ bis $1998$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie ausgehend davon die absolute Schiefe der Kurs&amp;auml;nderungen des DAX.&lt;br /&gt;&#xd;
+Die Kurs&amp;auml;nderungen wurden dazu bereits berechnet und sind im Vektor $\verb|DAX_returns|$ gespeichert.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Die Formel f&amp;uuml;r die absolute Schiefe lautet:&lt;br /&gt;
+$\frac{1}{n}\sum_{j=1}^{n} (x_j-\bar x)^3$.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Die Befehle $\verb|length()|$, $\verb|sum()|$ sowie $\verb|mean()|$ k&amp;ouml;nnen Ihnen bei der Berechnung helfen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode>head(DAX &lt;- as.matrix(EuStockMarkets)[,1])
+head(DAX_returns &lt;- DAX/lag(DAX,-1)-1)
+</initialCode>
+      <finalResultComputationString>#{c23354} + #{c23353}</finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. Die Befehle $\verb|sum()|$ sowie $\verb|length()|$ oder $\verb|mean()|$ sollten Sie auf jeden Fall benutzen.
+
+Versuchen Sie die Formel für die absolute Schiefe in R-Code umzusetzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>from 
+mean1,mean2:V{FunctionCall} with 
+
+mean1.name=&quot;mean&quot; and
+mean2.name=&quot;mean&quot;
+
+report 0 end
+		</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="30">
+                  <query>from 
+sum,mean,fun:V{FunctionCall} with 
+
+mean.name=&quot;mean&quot; and
+sum.name=&quot;sum&quot; and
+fun.name=&quot;length&quot; 
+
+report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>23353</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="32">
+          <testCases id="33">
+            <DynamicRTestCase id="34">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Achten Sie bei der Berechnung darauf die Klammern richtig zu setzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>-4.72048e-07</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="35">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>23354</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="36"/>
+  <jSXGraphs id="37"/>
+  <dynamicMolecules id="38"/>
+  <resultFeedbackMappings id="39"/>
+</Exercise>

@@ -1,0 +1,172 @@
+<Exercise id="1">
+  <name>IS07-R04 Verteilungen stetiger Zufallsvariablen 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>W&apos;keit berechnen und dabei Zusammenhang zwischen (Standard-)Normalverteilung und Chi-Quadrat-Verteilung nutzen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Seien $X_1$ und $X_2$ zwei unabh&amp;auml;ngige normalverteilte Zufallsvariablen mit Erwartungswert $\mu=0$ und Varianz $\sigma^2=[var=sig2]$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie die Wahrscheinlichkeit $P(X_1^2+X_2^2&amp;gt;[var=bound])$. Nutzen Sie dazu die Funktion $\verb|pchisq()|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Zun&amp;auml;chst sollten Sie sich klarmachen, wie (Standard-)Normalverteilung und Chi-Quadrat-Verteilung zusammenh&amp;auml;ngen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Die Summe von $n$ unabh&amp;auml;ngigen quadrierten standardnormalverteilten Zufallsvariablen folgt einer Chi-Quadrat-Verteilung mit Freiheitsgrad $n$.&lt;br /&gt;
+Formal: $X\sim\chi^2_n$, wobei $X=Z_1^2+...+Z_n^2$ mit $Z_i\sim\mathcal{N}(0,1)$ f&amp;uuml;r $i=1,...,n$. K&amp;ouml;nnen Sie diesen Zusammenhang so ohne weiteres benutzen?&lt;br /&gt;
+Beachten Sie in dem Kontext, dass beide Zufallsvariablen $\mathcal{N}(0,\sigma^2)$- und nicht $\mathcal{N}(0,1)$-verteilt sind. Versuchen Sie daher $X_1$ und $X_2$ in eine geeignete Darstellung zu &amp;uuml;berf&amp;uuml;hren.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Es gilt $X_i=\sigma Z_i$ bzw. $X_i^2=\sigma^2Z_i^2$ f&amp;uuml;r $i=1,2$. Nutzen Sie diesen Zusammenhang, um die gesuchte Wahrscheinlichkeit umzuschreiben.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>3</stagehint__order>
+          <text>Substituieren in die gesuchte Wahrscheinlichkeit ergibt $P(X_1^2+X_2^2&amp;gt;c)=P(\sigma^2Z_1^2+\sigma^2Z_2^2&amp;gt;c)=P(Z_1^2+Z_2^2&amp;gt;\frac{c}{\sigma^2})$.&lt;br /&gt;
+Von dieser Summe wissen Sie nun, dass sie $\chi_2^2$-verteilt ist, sodass Sie $\verb|pchisq(q, df)|$ benutzen k&amp;ouml;nnen. Neben dem Funktionswert $\verb|q|$ m&amp;uuml;ssen Sie dabei die Anzahl der Freiheitsgrade $\verb|df|$ spezifizieren.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+
+ Achten Sie darauf, dass sie die $\verb|pchisq()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>                from pchisq, integ:V{FunctionCall} with
+                pchisq.name=&quot;pchisq&quot; or
+                integ.name=&quot;integrate&quot;
+                report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="30">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43897</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="31">
+          <testCases id="32">
+            <DynamicRTestCase id="33">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}
+		postprocess &lt;- function(w){
+                        as.numeric(w[1])
+		}</postCode>
+              <expectedOutput>1-pchisq([var=wkeit],2)</expectedOutput>
+              <postprocessingFunction>postprocess</postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="34">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43898</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="35">
+    <VariableDeclaration id="36">
+      <name>sig2</name>
+      <initializationCode id="37">
+        <code>evaluateInR(&apos;round(runif(1, 5, 20))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>bound</name>
+      <initializationCode id="39">
+        <code>evaluateInR(&apos;round(runif(1, 2, 10), 0)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>wkeit</name>
+      <initializationCode id="41">
+        <code>evaluateInR(&apos;[var=bound]/[var=sig2]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="42"/>
+  <dynamicMolecules id="43"/>
+  <resultFeedbackMappings id="44"/>
+</Exercise>

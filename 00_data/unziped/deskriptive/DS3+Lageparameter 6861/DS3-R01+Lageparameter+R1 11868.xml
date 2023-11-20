@@ -1,0 +1,229 @@
+<Exercise id="1">
+  <name>DS3-R01 Lageparameter R1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Median von Geschwindigkeiten berechnen (car-Paket)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Diese Aufgabe soll dazu dienen, den Median mit Hilfe von R zu berechnen. Allerdings bekommen Sie diesmal keine Daten vorgegeben, sondern werden mit einem bereits vorhandenen Beispieldatensatz aus einem Paket arbeiten.&lt;br /&gt;&#xd;
+Der Datensatz $\verb|cars|$ aus dem Paket $\verb|car|$ enth&amp;auml;lt Geschwindigkeits- sowie Entfernungsdaten zu $50$ Autos aus den $20$er-Jahren.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie den Median der Geschwindigkeiten, d.h. berechnen Sie die Geschwindigkeit, die von $50$% der Autos nicht &amp;uuml;berschritten wurde. Die entsprechende Variable hei&amp;szlig;t $\verb|speed|$. Das Paket muss weder installiert noch geladen werden, sondern steht Ihnen bereits zur Verf&amp;uuml;gung.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Verschaffen Sie sich zun&amp;auml;chst einen &amp;Uuml;berblick &amp;uuml;ber den Datensatz, in dem Sie sich $\verb|cars|$ in der Konsole auswerten lassen.&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Eine M&amp;ouml;glichkeit auf einzelne Variablen eines Datensatzes zuzugreifen ist die Verwendung des $\$$-Operators.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Beispielform: $\verb|Datensatz|$\$$\verb|Variable|$.&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>3</stagehint__order>
+          <text>Der Befehl f&amp;uuml;r den Median lautet $\verb|median()|$.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>#{c11872} + #{c11871}</finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $\verb|median()|$- oder $\verb|quantile()|$-Funktion und achten Sie darauf, dass Sie die richtig auf die Variable $\verb|speed|$ zugreifen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>		from quan:V{FunctionCall}, lao3:V{LeftAssignmentOperator3}, pl:V{ParameterList}, type:V{Variable}, n:V{NumericLiteral}, rh:E{RightHandSide}, lh:E{LeftHandSide} with
+                quan.name=&quot;quantile&quot; and
+                quan --&gt; pl --&gt; lao3 and
+                lao3 -- lh -&gt; type and
+                type.name=&quot;type&quot; and
+                lao3 -- rh -&gt; n and
+                n.value=1
+                report 0 end
+		</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="30">
+                  <query>		from med:V{FunctionCall}  with 
+                med.name=&quot;median&quot;
+                report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>11871</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="32">
+          <testCases id="33">
+            <DynamicRTestCase id="34">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie den $\verb|median()|$ oder $\verb|quantile()|$-Befehl.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}
+		
+		postprocess &lt;- function(w){
+                        gg &lt;- as.numeric(w)
+			return(gg);
+		}</postCode>
+              <expectedOutput>median(cars$speed)</expectedOutput>
+              <postprocessingFunction>postprocess</postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="35">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>11872</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="36">
+    <VariableDeclaration id="37">
+      <name>x1</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>x2</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>x3</name>
+      <initializationCode id="42">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>x4</name>
+      <initializationCode id="44">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>x5</name>
+      <initializationCode id="46">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>x6</name>
+      <initializationCode id="48">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>x7</name>
+      <initializationCode id="50">
+        <code>randomIntegerBetween(3000,8000)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>x8</name>
+      <initializationCode id="52">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>x9</name>
+      <initializationCode id="54">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>x10</name>
+      <initializationCode id="56">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="57"/>
+  <dynamicMolecules id="58"/>
+  <resultFeedbackMappings id="59"/>
+</Exercise>

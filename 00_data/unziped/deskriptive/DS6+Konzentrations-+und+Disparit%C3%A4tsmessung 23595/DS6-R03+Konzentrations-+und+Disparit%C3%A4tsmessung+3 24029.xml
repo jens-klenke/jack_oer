@@ -1,0 +1,148 @@
+<Exercise id="1">
+  <name>DS6-R03 Konzentrations- und Disparitätsmessung 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Konzentrationsraten bestimmen
+Sortier-Reihenfolge plausibel, in Bezug auf DS6-01
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">bWFya3QgPC0gYygyMCw1MCwyMDAsMzAsMzUwKQ==</content>
+      <uploadTimestamp>2022-03-22T12:27:58.150336</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nehmen Sie an, ein Markt bestehe aus 5 Unternehmen. Die letztj&amp;auml;hrigen Ums&amp;auml;tze dieser 5 Unternehmen sind in dem Vektor $\verb|markt|$ abgespeichert.&amp;nbsp;Berechnen Sie die entsprechenden Konzentrationsraten mit absteigenden Werten.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code Testen&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Vergewissern Sie sich, wie Konzentrationsraten definiert sind.&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>$C_j=\sum_{r=1}^j c_r$, wobei $c_r$ die jeweiligen Merkmalssummenanteile sind.&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="17">
+          <stagehint__order>2</stagehint__order>
+          <text>Um Eintr&amp;auml;ge eines Vektors zu kumulieren, k&amp;ouml;nnen Sie den $\verb|cumsum()|$-Befehl benutzen.&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="18">
+          <stagehint__order>3</stagehint__order>
+          <text>Achten Sie darauf, die entsprechenden Ums&amp;auml;tze mit Hilfe des $\verb|sort()|$-Befehls absteigend zu sortieren.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="19"/>
+      <variableUpdatesBeforeCheck id="20"/>
+      <variableUpdatesAfterCheck id="21"/>
+      <variableUpdatesOnNormalExit id="22"/>
+      <variableUpdatesOnRepeat id="23"/>
+      <variableUpdatesOnSkip id="24"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="25"/>
+      <initialCode>markt &lt;- c(20, 50, 200, 30, 350)</initialCode>
+      <finalResultComputationString>min(#{c24034},#{c24033})</finalResultComputationString>
+      <testCasetuples id="26">
+        <TestCaseTuple id="27">
+          <testCases id="28">
+            <StaticRTestCase id="29">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie auf jeden Fall die Befehle $\verb|sort()|$ und $\verb|cumsum()|$. Achten Sie außerdem darauf, die vordefinierte Variable $\verb|markt|$ zu verwenden.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="30">
+                <RGReQLQuery id="31">
+                  <query>		from sort,csum:V{FunctionCall}, markt:V{Variable} with 
+                sort.name=&quot;sort&quot; and
+                csum.name=&quot;cumsum&quot; and
+                markt.name=&quot;markt&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="32">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>24033</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="33">
+          <testCases id="34">
+            <DynamicRTestCase id="35">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Schauen Sie sich nochmal an, wie Konzentrationsraten definiert sind.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>cumsum(sort(c(20,50,200,30,350),decreasing=T))/sum(c(20,50,200,30,350))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="36">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>24034</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="37"/>
+  <jSXGraphs id="38"/>
+  <dynamicMolecules id="39"/>
+  <resultFeedbackMappings id="40"/>
+</Exercise>

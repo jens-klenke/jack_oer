@@ -1,0 +1,147 @@
+<Exercise id="1">
+  <name>IS02-08 Wahrscheinlichkeitsrechnung 8</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Jury-Entscheidung Münzwurf
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Eine Jury, bestehend aus drei Mitgliedern, hat zwei Mitglieder, die mit Wahrscheinlichkeit $p$ unabh&amp;auml;ngig voneinander korrekt bewerten. Das dritte Mitglied wirft f&amp;uuml;r jede Entscheidung eine faire M&amp;uuml;nze. Die Jury entscheidet bei (2/3-)Mehrheit.&lt;br /&gt;&#xd;
+Hat eine Jury, bestehend aus einem Mitglied, das mit Wahrscheinlichkeit $p$ korrekt entscheidet eine h&amp;ouml;here Wahrscheinlichkeit, eine korrekte Entscheidung zu treffen?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;select name=&quot;field1&quot;&gt;&lt;option value=&quot;0&quot;&gt;field1&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&amp;nbsp;</taskDescription>
+      <skipMessage>Beide Jurys haben die gleiche Wahrscheinlichkeit eine korrekte Entscheidung zu treffen.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>&amp;Uuml;berlegen Sie zun&amp;auml;chst, wie viele g&amp;uuml;nstige Ausg&amp;auml;nge (Jury entscheidet korrekt) es gibt. Berechnen Sie anschlie&amp;szlig;end f&amp;uuml;r jeden dieser Ausg&amp;auml;nge die entsprechende Wahrscheinlichkeit und fassen Sie zusammen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text>Z.B. ist $P(\text{Alle Jurymitglieder entscheiden korrekt})=\frac{1}{2}\cdot p\cdot p=\frac{1}{2}p^2$.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="21"/>
+      <variableUpdatesBeforeCheck id="22"/>
+      <variableUpdatesAfterCheck id="23"/>
+      <variableUpdatesOnNormalExit id="24"/>
+      <variableUpdatesOnRepeat id="25"/>
+      <variableUpdatesOnSkip id="26"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="27"/>
+      <rules id="28"/>
+      <fillInFields id="29">
+        <FillInField id="30">
+          <name>fillin1</name>
+          <orderIndex>0</orderIndex>
+          <size>10</size>
+          <formularEditorType>NONE</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="31">
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="32">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <randomize>true</randomize>
+          <items id="33">
+            <string>Die Jury mit einem Mitglied hat eine höhere Wahrscheinlichkeit eine korrekte Entscheidung zu treffen.</string>
+            <string>Die Jury mit drei Mitgliedern hat eine höhere Wahrscheinlichkeit eine korrekte Entscheidung zu treffen.</string>
+            <string>Beide Jurys haben die gleiche Wahrscheinlichkeit eine korrekte Entscheidung zu treffen.</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+      </dropDownFields>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>Das ist leider nicht korrekt.&amp;nbsp;&lt;br /&gt;
+&lt;br /&gt;
+Beide Jurys haben die gleiche Wahrscheinlichkeit eine korrekte Entscheidung zu treffen.</defaultFeedback>
+      <correctAnswerRules id="34">
+        <Rule id="35">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="36">
+            <code>[input=field1]==2</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig. Sehr schön!</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="37">
+    <VariableDeclaration id="38">
+      <name>i1</name>
+      <initializationCode id="39">
+        <code>randomIntegerBetween(0,19)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="40"/>
+  <dynamicMolecules id="41"/>
+  <resultFeedbackMappings id="42"/>
+</Exercise>

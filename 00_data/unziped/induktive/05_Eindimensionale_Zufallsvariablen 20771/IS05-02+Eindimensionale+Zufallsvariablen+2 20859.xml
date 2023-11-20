@@ -1,0 +1,333 @@
+<Exercise id="1">
+  <name>IS05-02 Eindimensionale Zufallsvariablen 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Verteilungsfunktion gegeben, Dichtefunktion bestimmen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Gegeben ist folgende Verteilungsfunktion: $F(x)= \begin{cases} 0 &amp;amp; \mbox{f&amp;uuml;r }\quad x &amp;lt; [var=$A] \\ [var=$AWsk1] &amp;amp; \mbox{f&amp;uuml;r }\quad [var=$A] \le x &amp;lt; [var=$B] \\ [var=$AWsk2k] &amp;amp; \mbox{f&amp;uuml;r }\quad [var=$B] \le x &amp;lt; [var=$C] \\ [var=$AWsk3k] &amp;amp; \mbox{f&amp;uuml;r }\quad [var=$C] \le x &amp;lt; [var=$D] \\ [var=$AWsk4k] &amp;amp; \mbox{f&amp;uuml;r }\quad [var=$D] \le x &amp;lt; [var=$Ee] \\ 1 &amp;amp; \mbox{f&amp;uuml;r }\quad [var=$Ee] \le x \end{cases}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie lautet die Wahrscheinlichkeitsfunktion?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\enspace \, x_i \, \enspace$ &amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp; &amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp; &amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp; &amp;nbsp;&lt;input name=&quot;field4&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field4&quot; /&gt;&amp;nbsp; &amp;nbsp;&lt;input name=&quot;field5&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field5&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$f(x_i)$ &amp;nbsp;&lt;input name=&quot;field6&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field6&quot; /&gt;&amp;nbsp; &amp;nbsp;&lt;input name=&quot;field7&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field7&quot; /&gt;&amp;nbsp; &amp;nbsp;&lt;input name=&quot;field8&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field8&quot; /&gt;&amp;nbsp; &amp;nbsp;&lt;input name=&quot;field9&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field9&quot; /&gt;&amp;nbsp; &amp;nbsp;&lt;input name=&quot;field10&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field10&quot; /&gt;&amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>$$\begin{matrix}&lt;br /&gt;
+x_i &amp;amp; [var=A] &amp;amp; [var=B] &amp;amp; [var=C] &amp;amp; [var=D] &amp;amp; [var=Ee] \\&lt;br /&gt;
+\hline&lt;br /&gt;
+f(x_i) &amp;amp; [var=AWsk1] &amp;amp; [var=AWsk2] &amp;amp; [var=AWsk3] &amp;amp; [var=AWsk4] &amp;amp; [var=AWsk5] \\&lt;br /&gt;
+\end{matrix}$$</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="16">
+        <StageTransition id="17">
+          <conditionExpression id="18">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="19">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="20">
+        <StageHint id="21">
+          <stagehint__order>0</stagehint__order>
+          <text>Welche Bedeutung haben die &amp;quot;Sprungh&amp;ouml;hen&amp;quot; der Verteilungsfunktion?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>1</stagehint__order>
+          <text>Zum Beispiel ist das erste $x_1 = [var=A]$ mit $f(x_1) = [var=AWsk1]$. Wie geht es nun weiter?</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="23"/>
+      <variableUpdatesBeforeCheck id="24"/>
+      <variableUpdatesAfterCheck id="25"/>
+      <variableUpdatesOnNormalExit id="26"/>
+      <variableUpdatesOnRepeat id="27"/>
+      <variableUpdatesOnSkip id="28"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="29"/>
+      <rules id="30">
+        <Rule id="31">
+          <name>Feedback_1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="32">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;[input=field1]==[var=A]&amp;&amp;[input=field2]==[var=B]&amp;&amp;[input=field3]==[var=C]&amp;&amp;[input=field4]==[var=D]&amp;&amp;[input=field5]==[var=Ee]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$x_i$ korrekt</feedbackText>
+          <points>50</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="33">
+          <name>Feedback_2</name>
+          <orderIndex>2</orderIndex>
+          <validationExpression id="34">
+            <code>!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;!isEmpty([input=field9])&amp;&amp;isRealNumber([input=field9])&amp;&amp;!isEmpty([input=field10])&amp;&amp;isRealNumber([input=field10])&amp;&amp;[input=field6]==[var=AWsk1]&amp;&amp;[input=field7]==[var=AWsk2]&amp;&amp;[input=field8]==[var=AWsk3]&amp;&amp;[input=field9]==[var=AWsk4]&amp;&amp;[input=field10]==[var=AWsk5]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>$f(x_i)$ korrekt</feedbackText>
+          <points>50</points>
+          <terminal>false</terminal>
+        </Rule>
+      </rules>
+      <fillInFields id="35">
+        <FillInField id="36">
+          <name>field10</name>
+          <orderIndex>9</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="37">
+          <name>field9</name>
+          <orderIndex>8</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="38">
+          <name>field8</name>
+          <orderIndex>7</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="39">
+          <name>field7</name>
+          <orderIndex>6</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="40">
+          <name>field6</name>
+          <orderIndex>5</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="41">
+          <name>field5</name>
+          <orderIndex>4</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="42">
+          <name>field4</name>
+          <orderIndex>3</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="43">
+          <name>field3</name>
+          <orderIndex>2</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="44">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="45">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="46"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$$\begin{matrix}&lt;br /&gt;
+x_i &amp;amp; [var=A] &amp;amp; [var=B] &amp;amp; [var=C] &amp;amp; [var=D] &amp;amp; [var=Ee] \\&lt;br /&gt;
+\hline&lt;br /&gt;
+f(x_i) &amp;amp; [var=AWsk1] &amp;amp; [var=AWsk2] &amp;amp; [var=AWsk3] &amp;amp; [var=AWsk4] &amp;amp; [var=AWsk5] \\&lt;br /&gt;
+\end{matrix}$$</defaultFeedback>
+      <correctAnswerRules id="47">
+        <Rule id="48">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="49">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;!isEmpty([input=field9])&amp;&amp;isRealNumber([input=field9])&amp;&amp;!isEmpty([input=field10])&amp;&amp;isRealNumber([input=field10])&amp;&amp;[input=field1]==[var=A]&amp;&amp;[input=field2]==[var=B]&amp;&amp;[input=field3]==[var=C]&amp;&amp;[input=field4]==[var=D]&amp;&amp;[input=field5]==[var=Ee]&amp;&amp;[input=field6]==[var=AWsk1]&amp;&amp;[input=field7]==[var=AWsk2]&amp;&amp;[input=field8]==[var=AWsk3]&amp;&amp;[input=field9]==[var=AWsk4]&amp;&amp;[input=field10]==[var=AWsk5]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="50">
+    <VariableDeclaration id="51">
+      <name>AWsk1</name>
+      <initializationCode id="52">
+        <code>evaluateInR(&apos;sample(1:24, 1)/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>AWsk2</name>
+      <initializationCode id="54">
+        <code>evaluateInR(&apos;sample(1:24, 1)/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>AWsk3</name>
+      <initializationCode id="56">
+        <code>evaluateInR(&apos;sample(1:24, 1)/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>AWsk4</name>
+      <initializationCode id="58">
+        <code>evaluateInR(&apos;sample(1:24, 1)/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>AWsk5</name>
+      <initializationCode id="60">
+        <code>evaluateInR(&apos;round(1-([var=AWsk1]+[var=AWsk2]+[var=AWsk3]+[var=AWsk4]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>AWsk2ku</name>
+      <initializationCode id="62">
+        <code>([var=AWsk1])+([var=AWsk2])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>AWsk2k</name>
+      <initializationCode id="64">
+        <code>round(([var=AWsk2ku]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>AWsk3ku</name>
+      <initializationCode id="66">
+        <code>([var=AWsk1])+([var=AWsk2])+([var=AWsk3])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>AWsk3k</name>
+      <initializationCode id="68">
+        <code>round(([var=AWsk3ku]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>AWsk4ku</name>
+      <initializationCode id="70">
+        <code>([var=AWsk1])+([var=AWsk2])+([var=AWsk3])+([var=AWsk4])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>AWsk4k</name>
+      <initializationCode id="72">
+        <code>round(([var=AWsk4ku]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>A</name>
+      <initializationCode id="74">
+        <code>evaluateInR(&apos;sample(1:2, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>B</name>
+      <initializationCode id="76">
+        <code>evaluateInR(&apos;sample(3:5, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>C</name>
+      <initializationCode id="78">
+        <code>evaluateInR(&apos;sample(6:7, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>D</name>
+      <initializationCode id="80">
+        <code>evaluateInR(&apos;sample(8:9, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>Ee</name>
+      <initializationCode id="82">
+        <code>evaluateInR(&apos;sample(10:13, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="83"/>
+  <dynamicMolecules id="84"/>
+  <resultFeedbackMappings id="85"/>
+</Exercise>

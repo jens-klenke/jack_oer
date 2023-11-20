@@ -1,0 +1,133 @@
+<Exercise id="1">
+  <name>IS07-R05 Verteilungen stetiger Zufallsvariablen 5</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Berechnung eines Quantils der Studentschen t-Verteilung
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie das $[var=p]$-Quantil einer t-Verteilung mit $[var=df]$ Freiheitsgraden.&lt;br /&gt;&#xd;
+Nutzen Sie daf&amp;uuml;r bitte die Funktion $\verb|qt()|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text> Der Funktion $\verb|qt(p,df)|$ muss über den Parameter $\verb|p|$ die Wahrscheinlichkeit des gesuchten $p$-Quantils, sowie die Anzahl der Freiheitsgrade ($\verb|df|$) übergeben werden </text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="14"/>
+      <variableUpdatesBeforeCheck id="15"/>
+      <variableUpdatesAfterCheck id="16"/>
+      <variableUpdatesOnNormalExit id="17"/>
+      <variableUpdatesOnRepeat id="18"/>
+      <variableUpdatesOnSkip id="19"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="20"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="21">
+        <TestCaseTuple id="22">
+          <testCases id="23">
+            <StaticRTestCase id="24">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+Achten Sie darauf, dass sie die $\verb|qt()|$-Funktion benutzen</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="25">
+                <RGReQLQuery id="26">
+                  <query>      from qt:V{FunctionCall} with
+      qt.name=&quot;qt&quot;    
+      report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="27">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43975</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="28">
+          <testCases id="29">
+            <DynamicRTestCase id="30">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}
+    </postCode>
+              <expectedOutput>qt([var=p], [var=df])</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43976</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="32">
+    <VariableDeclaration id="33">
+      <name>p</name>
+      <initializationCode id="34">
+        <code>evaluateInR(&apos;sample(c(0.9, 0.95, 0.99, 0.85, 0.8),1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="35">
+      <name>df</name>
+      <initializationCode id="36">
+        <code>evaluateInR(&apos;round(runif(1, 80, 100), 0)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="37"/>
+  <dynamicMolecules id="38"/>
+  <resultFeedbackMappings id="39"/>
+</Exercise>

@@ -1,0 +1,156 @@
+<Exercise id="1">
+  <name>IS04-R01 Kombinatorik 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Kombination ohne Wiederholung
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">eXhjdnl4Y3Z5eGN2eGN2eHljdg==</content>
+      <uploadTimestamp>2022-05-10T11:51:00.678401</uploadTimestamp>
+      <filename>blah.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie haben eine T&amp;uuml;te Bonbons mit [var=n] verschiedenen S&amp;uuml;&amp;szlig;igkeiten. Sie ziehen [var=k] S&amp;uuml;&amp;szlig;igkeiten aus der T&amp;uuml;te. Wie viele unterschiedliche Kombinationen k&amp;ouml;nnen sie, unabh&amp;auml;ngig von der Reihenfolge der S&amp;uuml;&amp;szlig;igkeiten, ziehen?&lt;br /&gt;&#xd;
+Sie legen die Bonbons nach dem Ziehen (nat&amp;uuml;rlich, das sind S&amp;uuml;&amp;szlig;igkeiten) nicht wieder zur&amp;uuml;ck.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Beachten Sie, die Funktion $\verb|choose()|$ zu nutzen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Mithilfe der $\verb|choose(n,k)|$-Funktion kann der Binomialkoeffizient berechnet werden.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Die allgemeine Formel lautet $K(n,k)=\frac{n!}{k!(n-k)!}=\binom{n}{k}$&lt;br /&gt;
+(Beachten Sie, dass die Notation hier von der in den Vorlesungsfolien abweicht.).</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>75</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Die Lösung stimmt, überlegen Sie aber bei der Methodik noch einmal. 
+
+Achten Sie darauf, die $\verb|choose()|$-Funktion zu nutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>   
+        from cho:V{FunctionCall} with
+          cho.name=&quot;choose&quot;
+        report 0 end
+   </query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="30">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42831</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="31">
+          <testCases id="32">
+            <DynamicRTestCase id="33">
+              <points>25</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Überprüfen Sie, ob ihre Eingabe der Aufgabenstellung entspricht.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>choose([var=n], [var=k])</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="34">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42832</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="35">
+    <VariableDeclaration id="36">
+      <name>n</name>
+      <initializationCode id="37">
+        <code>evaluateInR(&apos;round(runif(1, 10, 20), 0)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>k</name>
+      <initializationCode id="39">
+        <code>evaluateInR(&apos;round(runif(1, 3, 5), 0)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="40"/>
+  <dynamicMolecules id="41"/>
+  <resultFeedbackMappings id="42"/>
+</Exercise>

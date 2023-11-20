@@ -1,0 +1,291 @@
+<Exercise id="1">
+  <name>DS6-03 Konzentrations- und Disparitätsmessung 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>arithmetisches Mittel und Ginikoeffizient gegeben
+Stage1: MC absoluter Zuwachs  
+Stage2: MC relativer Zuwachs
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <MCStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In einem Unternehmen nimmt der Gini-Koeffizient der Stundenl&amp;ouml;hne den Wert $\frac{[var=g]}{[var=gn]}$ an.&lt;br /&gt;&#xd;
+Das arithmetische Mittel der Stundenl&amp;ouml;hne betr&amp;auml;gt [var=am] EUR.&lt;br /&gt;&#xd;
+Wie &amp;auml;ndert sich der Gini-Koeffizient, wenn jeder Lohnempf&amp;auml;nger 5 EUR pro Stunde mehr erh&amp;auml;lt?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;</taskDescription>
+      <skipMessage>Der Gini-Koeffizient muss abnehmen, da bei gleichem absoluten Zuwachs a die vorhandenen Lohnunterschiede relativ zur Merkmalssumme mit a -&gt; unendlich
+  immer geringer werden: sie konvergieren gegen null. Oder: Bei gleicher absoluter Lohnzunahme wachsen die kleinen Löhne schneller als die großen.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="MCStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie &amp;auml;ndert sich der Gini-Koeffizient, wenn jeder Lohnempf&amp;auml;nger 10% mehr Lohn erh&amp;auml;lt?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;</taskDescription>
+            <skipMessage>     In diesem Fall bleibt der Gini-Koeffizient unverändert, da alle den gleichen prozentualen Anteil erhalten. Die Anteile an der
+     Merkmalssumme bleiben konstant.
+   </skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18">
+              <StageTransition id="19">
+                <conditionExpression id="20">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="21">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="22">
+              <StageTransition id="23">
+                <conditionExpression id="24">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="25">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="26">
+              <StageHint id="27">
+                <stagehint__order>0</stagehint__order>
+                <text>Alle Merkmalsträger bekommen relativ den gleichen Zuwachs von 10%.</text>
+                <malus>0</malus>
+                <stage class="MCStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="28"/>
+            <variableUpdatesBeforeCheck id="29"/>
+            <variableUpdatesAfterCheck id="30"/>
+            <variableUpdatesOnNormalExit id="31"/>
+            <variableUpdatesOnRepeat id="32"/>
+            <variableUpdatesOnSkip id="33"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="34"/>
+            <answerOptions id="35">
+              <MCAnswer id="36">
+                <order>0</order>
+                <rule>CORRECT</rule>
+                <text>Der Gini-Koeffizient ändert sich nicht.</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="37">
+                <order>1</order>
+                <rule>WRONG</rule>
+                <text>Der Gini-Koeffizient wird größer.</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="38">
+                <order>2</order>
+                <rule>WRONG</rule>
+                <text>Der Gini-Koeffizient wird kleiner.</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="39">
+                <order>3</order>
+                <rule>WRONG</rule>
+                <text>Ob sich der Gini-Koeffizient ändert kann nicht allgemein beantwortet werden, sondern hängt von den einzelnen Löhnen ab.</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+            </answerOptions>
+            <randomize>true</randomize>
+            <singleChoice>false</singleChoice>
+            <correctAnswerFeedback>Richtig.&lt;/br&gt;
+&lt;/br&gt;
+In diesem Fall bleibt der Gini-Koeffizient unverändert, da alle den gleichen prozentualen Anteil erhalten. Die Anteile an der
+  Merkmalssumme bleiben konstant.</correctAnswerFeedback>
+            <defaultFeedback>Leider nicht richtig.&lt;/br&gt;
+&lt;/br&gt;
+In diesem Fall bleibt der Gini-Koeffizient unverändert, da alle den gleichen prozentualen Anteil erhalten. Die Anteile an der
+Merkmalssumme bleiben konstant.
+   </defaultFeedback>
+            <defaultResult>0</defaultResult>
+            <extraFeedbacks id="40">
+              <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="41">
+                <expression id="42">
+                  <code>![input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]</code>
+                  <domain>MATH</domain>
+                </expression>
+                <condition id="43">
+                  <code></code>
+                  <domain>MATH</domain>
+                </condition>
+                <result>0</result>
+                <feedbackText>Falsch, mindestens eine Antwort ist richtig.</feedbackText>
+              </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+            </extraFeedbacks>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="44">
+        <StageTransition id="45">
+          <conditionExpression id="46">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="47">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="MCStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="48">
+        <StageHint id="49">
+          <stagehint__order>0</stagehint__order>
+          <text>Alle Merkmalsträger bekommen absolut den gleichen Zuwachs von 5 EUR.</text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="50"/>
+      <variableUpdatesBeforeCheck id="51"/>
+      <variableUpdatesAfterCheck id="52"/>
+      <variableUpdatesOnNormalExit id="53"/>
+      <variableUpdatesOnRepeat id="54"/>
+      <variableUpdatesOnSkip id="55"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="56"/>
+      <answerOptions id="57">
+        <MCAnswer id="58">
+          <order>0</order>
+          <rule>WRONG</rule>
+          <text> Der Gini-Koeffizient ändert sich nicht.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="59">
+          <order>1</order>
+          <rule>WRONG</rule>
+          <text> Der Gini-Koeffizient wird größer.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="60">
+          <order>2</order>
+          <rule>CORRECT</rule>
+          <text> Der Gini-koeffizient wird kleiner.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="61">
+          <order>3</order>
+          <rule>WRONG</rule>
+          <text>Ob sich der Gini-Koeffizient ändert kann nicht allgemein beantwortet werden, sondern hängt von den einzelnen Löhnen ab.</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+      </answerOptions>
+      <randomize>true</randomize>
+      <singleChoice>false</singleChoice>
+      <correctAnswerFeedback>Richtig.&lt;/br&gt;
+&lt;/br&gt;
+Der Gini-Koeffizient muss abnehmen, da bei gleichem absoluten Zuwachs $a$ die vorhandenen Lohnunterschiede relativ zur Merkmalssumme mit $a \rightarrow \infty$
+  immer geringer werden: sie konvergieren gegen null. Oder: Bei gleicher absoluter Lohnzunahme wachsen die kleinen Löhne schneller als die großen. </correctAnswerFeedback>
+      <defaultFeedback>Leider nicht richtig.
+&lt;/br&gt;
+&lt;/br&gt;
+Der Gini-Koeffizient muss abnehmen, da bei gleichem absoluten Zuwachs $a$ die vorhandenen Lohnunterschiede relativ zur Merkmalssumme mit $a \rightarrow \infty$
+  immer geringer werden: sie konvergieren gegen null. Oder: Bei gleicher absoluter Lohnzunahme wachsen die kleinen Löhne schneller als die großen.</defaultFeedback>
+      <defaultResult>0</defaultResult>
+      <extraFeedbacks id="62">
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="63">
+          <expression id="64">
+            <code>![input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="65">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>0</result>
+          <feedbackText>Falsch, mindestens eine Antwort ist richtig.</feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+      </extraFeedbacks>
+    </MCStage>
+    <MCStage reference="14"/>
+  </stages>
+  <startStage class="MCStage" reference="6"/>
+  <variableDeclarations id="66">
+    <VariableDeclaration id="67">
+      <name>g</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(3,9)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>gn</name>
+      <initializationCode id="70">
+        <code>10</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>am</name>
+      <initializationCode id="72">
+        <code>randomIntegerBetween(8,18)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="73"/>
+  <dynamicMolecules id="74"/>
+  <resultFeedbackMappings id="75"/>
+</Exercise>

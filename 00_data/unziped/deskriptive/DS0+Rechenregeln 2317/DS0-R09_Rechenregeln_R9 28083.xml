@@ -1,0 +1,177 @@
+<Exercise id="1">
+  <name>DS0-R09_Rechenregeln_R9</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Benutzen des rep()-Befehls
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2"/>
+  <resources id="3"/>
+  <stages id="4">
+    <RStage id="5">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Erstellen Sie einen Vektor, der $7$mal die Zahl $[var=num]$ enth&amp;auml;lt. Speichern Sie das Ergebnis in der Variablen $\verb|wiederholung|$ ab.&lt;br /&gt;&#xd;
+Versuchen Sie erneut das Ganze so effizient wie m&amp;ouml;glich zu l&amp;ouml;sen und schreiben Sie die L&amp;ouml;sung $NICHT$ manuell in einen Vektor.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="6">
+        <conditionExpression id="7">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="8">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="9"/>
+      <stageTransitions id="10"/>
+      <hints id="11">
+        <StageHint id="12">
+          <stagehint__order>0</stagehint__order>
+          <text>Sie k&amp;ouml;nnen Wiederholungen in R mit dem $\verb|rep()|$-Befehl erzeugen. &lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="5"/>
+        </StageHint>
+        <StageHint id="13">
+          <stagehint__order>1</stagehint__order>
+          <text>Legen Sie zunächst die zu wiederholende Zahl, danach die Anzahl der Wiederholungen fest.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="5"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="14"/>
+      <variableUpdatesBeforeCheck id="15"/>
+      <variableUpdatesAfterCheck id="16"/>
+      <variableUpdatesOnNormalExit id="17"/>
+      <variableUpdatesOnRepeat id="18"/>
+      <variableUpdatesOnSkip id="19"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="20"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>min(#{c28086},min(#{c28088},#{c28087}))</finalResultComputationString>
+      <testCasetuples id="21">
+        <TestCaseTuple id="22">
+          <testCases id="23">
+            <StaticRTestCase id="24">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! &amp;Uuml;berlegen Sie noch einmal, wie der $\verb|rep()|$-Befehl funktioniert. Achten Sie auch darauf, dass Sie das Ergebnis der Variablen $\verb|wiederholung|$ zuordnen.
+</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="25">
+                <RGReQLQuery id="26">
+                  <query>
+		from lao:V{LeftAssignmentOperator}, rep:V{FunctionCall}, v:V{Variable}, e1:E{LeftHandSide}, e2:E{RightHandSide} with 
+                lao -- e1 -&gt; v and
+                v.name=&quot;wiederholung&quot; and
+                lao -- e2 -&gt; rep and
+                (rep.name=&quot;rep&quot; or rep.name=&quot;rep.int&quot; or rep.name=&quot;rep_len&quot;)
+		report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="27">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>28086</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="28">
+          <testCases id="29">
+            <StaticRTestCase id="30">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Erstellen Sie den Vektor nicht manuell.
+</feedbackIfFailed>
+              <ruleMode>ABSENCE</ruleMode>
+              <queries class="linked-list" id="31">
+                <RGReQLQuery id="32">
+                  <query>
+		from cc:V{FunctionCall}, n1,n2,n3,n4,n5,n6,n7:V{NumericLiteral}, pl:V{ParameterList} with 
+                cc.name=&quot;c&quot; and
+                cc --&gt; pl and
+                pl --&gt; n1 and
+                pl --&gt; n2 and
+                pl --&gt; n3 and
+                pl --&gt; n4 and
+                pl --&gt; n5 and
+                pl --&gt; n6 and
+                pl --&gt; n7 and
+                n1.value=[var=num] and
+                n2.value=[var=num] and
+                n3.value=[var=num] and
+                n4.value=[var=num] and
+                n5.value=[var=num] and
+                n6.value=[var=num] and
+                n7.value=[var=num]
+		report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>28087</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="34">
+          <testCases id="35">
+            <DynamicRTestCase id="36">
+              <points>100</points>
+              <pointsMode>DEDUCTION</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Ihre Eingabe liefert den Wert [var=testcaseOutput] zurück, sollte aber [var=num] [var=num] [var=num] [var=num] [var=num] [var=num] [var=num] liefern! -[var=penalty] Punkte&quot;
+			</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>rep([var=num],7)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="37">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>28088</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="5"/>
+  <variableDeclarations id="38">
+    <VariableDeclaration id="39">
+      <name>num</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(1,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="41"/>
+  <dynamicMolecules id="42"/>
+  <resultFeedbackMappings id="43"/>
+</Exercise>

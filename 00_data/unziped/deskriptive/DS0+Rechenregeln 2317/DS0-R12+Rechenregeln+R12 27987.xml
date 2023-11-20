@@ -1,0 +1,152 @@
+<Exercise id="1">
+  <name>DS0-R12 Rechenregeln R12</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Zwei unterschiedlich lange Vektoren addieren
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">YSA8LSBjKFt2YXI9eDFdLFt2YXI9eDJdLFt2YXI9eDNdLFt2YXI9eDRdLFt2YXI9eDVdKQ0KYiA8LSBjKDEwLDAp</content>
+      <uploadTimestamp>2022-04-11T12:06:13.103875</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nachdem wir in der vorherigen Aufgabe zwei gleich lange Vektoren addiert haben, wollen wir uns nun anschauen, wie R mit unterschiedlich langen Vektoren umgeht. Dazu wurde ein $5$-zeiliger Vektor (Variable $\verb|a|$) sowie ein $2$-zeiliger Vektor (Variable $\verb|b|$) vordefiniert.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Addieren Sie diese beiden Vektoren und lassen Sie sich das Ergebnis, bevor Sie den Code abschicken, &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; anzeigen. K&amp;ouml;nnen Sie sich das Ergebnis erkl&amp;auml;ren? Wie rechnet R mit unterschiedlich langen Vektoren?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Experimentieren Sie mit Hilfe des &amp;quot;Auswerten&amp;quot;-Buttons auch ruhig mit anderen Rechenoperatoren wie $\verb|*|$,$\verb|/|$ oder $\verb|^|$.</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Addieren Sie die beiden Vektoren $\verb|a|$ und $\verb|b|$.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Die Aufgabe unterscheidet sich in ihrem Vorgehen nicht groß von der vorherigen Aufgabe.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode>a &lt;- c(0,0,4,1,0)
+b &lt;- c(10,0)</initialCode>
+      <finalResultComputationString>#{c27991}</finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Sie müssen die beiden vordefinierten Vektoren addieren.
+</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>		from add:V{AddOperator}, a,b:V{Variable} with 
+                add --&gt; a and
+                add --&gt; b and
+                a.name=&quot;a&quot; and
+                b.name=&quot;b&quot;
+		report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="30">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>27991</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="31">
+    <VariableDeclaration id="32">
+      <name>x1</name>
+      <initializationCode id="33">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="34">
+      <name>x2</name>
+      <initializationCode id="35">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>x3</name>
+      <initializationCode id="37">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>x4</name>
+      <initializationCode id="39">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>x5</name>
+      <initializationCode id="41">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="42"/>
+  <dynamicMolecules id="43"/>
+  <resultFeedbackMappings id="44"/>
+</Exercise>

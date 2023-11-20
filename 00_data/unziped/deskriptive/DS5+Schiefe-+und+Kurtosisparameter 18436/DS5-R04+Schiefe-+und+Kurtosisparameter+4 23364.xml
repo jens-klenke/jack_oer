@@ -1,0 +1,156 @@
+<Exercise id="1">
+  <name>DS5-R04 Schiefe- und Kurtosisparameter 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Absolute Kurtosis berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">aGVhZChEQVggPC0gYXMubWF0cml4KEV1U3RvY2tNYXJrZXRzKVssMV0pDQpoZWFkKERBWF9yZXR1cm5zIDwtIERBWC9sYWcoREFYLC0xKS0xKQ0K</content>
+      <uploadTimestamp>2022-03-22T10:30:39.085558</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie nun den absoluten Kurtosisparameter f&amp;uuml;r die DAX Returns.&lt;br /&gt;&#xd;
+Diese sind weiterhin im Vektor $\verb|DAX|$_$\verb|returns|$ gespeichert.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Die Formel f&amp;uuml;r die absolute Kurtosis lautet: $\frac{1}{n}\sum_{j=1}^{n} (x_j-\bar x)^4$.&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Die Befehle $\verb|length()|$, $\verb|sum()|$ sowie $\verb|mean()|$ k&amp;ouml;nnen Ihnen bei der Berechnung helfen.&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="17">
+          <stagehint__order>2</stagehint__order>
+          <text>Konzeptionell hat sich gegenüber der Schiefe nur die Formel geändert.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="18"/>
+      <variableUpdatesBeforeCheck id="19"/>
+      <variableUpdatesAfterCheck id="20"/>
+      <variableUpdatesOnNormalExit id="21"/>
+      <variableUpdatesOnRepeat id="22"/>
+      <variableUpdatesOnSkip id="23"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="24"/>
+      <initialCode>head(DAX &lt;- as.matrix(EuStockMarkets)[,1])
+head(DAX_returns &lt;- DAX/lag(DAX,-1)-1)
+</initialCode>
+      <finalResultComputationString>#{c23369} + #{c23368}</finalResultComputationString>
+      <testCasetuples id="25">
+        <TestCaseTuple id="26">
+          <testCases id="27">
+            <StaticRTestCase id="28">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+
+ Die Befehle $\verb|sum()|$ sowie $\verb|length()|$ oder $\verb|mean()|$ sollten Sie auf jeden Fall benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="29">
+                <RGReQLQuery id="30">
+                  <query>from sum,len,mean:V{FunctionCall} with 
+sum.name=&quot;sum&quot; and
+len.name=&quot;length&quot; or
+mean.name=&quot;mean&quot;
+report 0 end
+		</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="31">
+                  <query>from 
+mean1,mean2:V{FunctionCall} with 
+
+mean1.name=&quot;mean&quot; and
+mean2.name=&quot;mean&quot;
+
+report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="32">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>23368</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="33">
+          <testCases id="34">
+            <DynamicRTestCase id="35">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Achten Sie bei der Berechnung darauf die Klammern richtig zu setzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>9.584409e-08</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="36">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>23369</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="37"/>
+  <jSXGraphs id="38"/>
+  <dynamicMolecules id="39"/>
+  <resultFeedbackMappings id="40"/>
+</Exercise>

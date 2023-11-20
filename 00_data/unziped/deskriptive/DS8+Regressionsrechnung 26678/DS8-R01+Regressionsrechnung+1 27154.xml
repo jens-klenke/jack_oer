@@ -1,0 +1,164 @@
+<Exercise id="1">
+  <name>DS8-R01 Regressionsrechnung 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Regression durchführen (lm-Objekt erzeugen)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Der Datensatz $\verb|faithful|$ enth&amp;auml;lt Daten zum Old Faithful Geysir im Yellowstone Nationalpark. Sowohl die Dauer jeder Eruption ($\verb|eruptions|$) als auch die Wartezeit zwischen zwei Eruptionen ($\verb|waiting|$) sind als Variablen in diesem Datensatz verf&amp;uuml;gbar.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nehmen Sie nun an, Sie wollen den Zusammenhang zwischen diesen beiden Variablen durch folgendes Regressionsmodell darstellen:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$$\verb|waiting|_r = \alpha +\beta\cdot\verb|eruptions|_r+u_r$$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Speichern Sie das Ergebnis in der Variablen $\verb|reg|$ ab. Beachten Sie, dass sie sich in der entsprechenden R-Funktion f&amp;uuml;r Regressionen auf den Datensatz beziehen m&amp;uuml;ssen, damit die sinnvoll Variablen genutzt werden k&amp;ouml;nnen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;&lt;/span&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Der Befehl f&amp;uuml;r eine Regression in R lautet $\verb|lm()|$ (linear model).&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Die Variablen werden innerhalb des Befehls mit $\sim$ verkn&amp;uuml;pft.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Die zu erklärende Variable steht an erster Stelle.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>min(max(#{c27160},#{c27161}),#{c27159})</finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die Funktion $\verb|lm()|$ und speichern Sie das Objekt in der Variablen $\verb|reg|$ ab.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>      from lm:V{FunctionCall}, reg:V{Variable}, lao:V{LeftAssignmentOperator}, rh:E{RightHandSide}, lh:E{LeftHandSide} with
+        lao -- lh -&gt; reg and
+        reg.name=&quot;reg&quot; and
+        lao -- rh -&gt; lm and 
+        lm.name=&quot;lm&quot; 
+      report 0 end
+    </query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>27159</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Achten Sie darauf, Regressand und Regressor in der richtigen Reihenfolge anzugeben.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>lm(faithful$waiting~faithful$eruptions)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>27160</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="34">
+          <testCases id="35">
+            <DynamicRTestCase id="36">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Achten Sie darauf, Regressand und Regressor in der richtigen Reihenfolge anzugeben.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>lm(waiting~eruptions, data=faithful)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="37">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>27161</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="38"/>
+  <jSXGraphs id="39"/>
+  <dynamicMolecules id="40"/>
+  <resultFeedbackMappings id="41"/>
+</Exercise>

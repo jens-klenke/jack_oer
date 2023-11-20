@@ -1,0 +1,181 @@
+<Exercise id="1">
+  <name>DS5-R05 Schiefe- und Kurtosisparameter 5</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Relative Kurtosis berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">aGVhZChEQVggPC0gYXMubWF0cml4KEV1U3RvY2tNYXJrZXRzKVssMV0pDQpoZWFkKERBWF9yZXR1cm5zIDwtIERBWC9sYWcoREFYLC0xKS0xKQ0KbiA8LSBsZW5ndGgoREFYX3JldHVybnMpDQphYnNfa3VydG9zaXMgPC0gOS41ODQ0MDllLTA4</content>
+      <uploadTimestamp>2022-03-22T10:30:39.093636</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nehmen Sie an, dass die Dow Jones Returns eine relative Kurtosis von $7.87$ haben.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie dazu (mit Hilfe der Formel) den relativen Kurtosisparameter f&amp;uuml;r die DAX Returns und vergleichen Sie.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bei welchem Index liegen schwerere R&amp;auml;nder (sog. &amp;quot;heavy tails&amp;quot;) vor?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Der absolute Kurtosisparameter aus der vorherigen Aufgabe, die Kurs&amp;auml;nderungen des DAX sowie die L&amp;auml;nge dieses Vektors sind bereits gegeben. Sie sind in den Variablen $\verb|abs|$_$\verb|kurtosis|$, $\verb|DAX|$_$\verb|returns|$ und $\verb|n|$ gespeichert.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Die Formel f&amp;uuml;r die relative Kurtosis lautet: $\frac{\theta_{\text{K}}}{s^{4}}$.&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Sie ben&amp;ouml;tigen nur $s^4$, wobei $s$ die Standardabweichung bezeichnet.&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="17">
+          <stagehint__order>2</stagehint__order>
+          <text>Sie k&amp;ouml;nnen bei der Berechnung von $s^4$ sowohl den $\verb|var()|$ als auch den $\verb|sd()|$ benutzen. Beachten Sie bei beiden Ans&amp;auml;tzen den Korrekturfaktor $\frac{n-1}{n}$ bzw. die Wurzel davon.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="18"/>
+      <variableUpdatesBeforeCheck id="19"/>
+      <variableUpdatesAfterCheck id="20"/>
+      <variableUpdatesOnNormalExit id="21"/>
+      <variableUpdatesOnRepeat id="22"/>
+      <variableUpdatesOnSkip id="23"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="24"/>
+      <initialCode>head(DAX &lt;- as.matrix(EuStockMarkets)[,1])
+head(DAX_returns &lt;- DAX/lag(DAX,-1)-1)
+n &lt;- length(DAX_returns)
+abs_kurtosis &lt;- 9.584409e-08</initialCode>
+      <finalResultComputationString>min(#{c23386},min(#{c23384},#{c23385}))</finalResultComputationString>
+      <testCasetuples id="25">
+        <TestCaseTuple id="26">
+          <testCases id="27">
+            <StaticRTestCase id="28">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+
+Sie sollten eine dieser drei Funktionen benutzen: $\verb|sum|$, $\verb|sd()|$ oder $\verb|var()|$ (bei letzten beiden Korrekturfaktor beachten!).</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="29">
+                <RGReQLQuery id="30">
+                  <query>		from sum,len,sd,var:V{FunctionCall} with 
+                sum.name=&quot;sum&quot; or
+                sd.name=&quot;sd&quot; or
+                var.name=&quot;var&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>23384</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="32">
+          <testCases id="33">
+            <StaticRTestCase id="34">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+
+Benutzen Sie nicht die Funktion $\verb|kurtosis()|$.</feedbackIfFailed>
+              <ruleMode>ABSENCE</ruleMode>
+              <queries class="linked-list" id="35">
+                <RGReQLQuery id="36">
+                  <query>		from kur:V{FunctionCall} with 
+                kur.name=&quot;kurtosis&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="37">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>23385</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="38">
+          <testCases id="39">
+            <DynamicRTestCase id="40">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+Achten Sie auf die Klammersetzung und beachten Sie den Korrekturfaktor, wenn Sie $\verb|var()|$ oder $\verb|sd()|$ benutzen sollten.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>8.588388</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="41">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>23386</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="42"/>
+  <jSXGraphs id="43"/>
+  <dynamicMolecules id="44"/>
+  <resultFeedbackMappings id="45"/>
+</Exercise>

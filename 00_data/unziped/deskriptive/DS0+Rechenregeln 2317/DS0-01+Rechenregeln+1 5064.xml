@@ -1,0 +1,595 @@
+<Exercise id="1">
+  <name>DS0-01 Rechenregeln 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/
+</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width: 675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie $\displaystyle S= \sum\limits_{i=1}^{100} i$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:350px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$S=$&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die &lt;b&gt;vierte&amp;nbsp;&lt;/b&gt;Nachkommastelle.)&lt;/em&gt;</taskDescription>
+      <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Mit der Summenformel von Gau&amp;szlig; erh&amp;auml;lt man $\displaystyle \sum_{i=1}^{100} i = \frac{100\cdot(100+1)}{2} = 5050.$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <targetStage class="FillInStage" id="10">
+          <internalName>2</internalName>
+          <externalName>Stage 2</externalName>
+          <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width: 675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie: $\displaystyle S= \sum\limits_{i=1}^{[var=stage_2_i]} i^2$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:350px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$S=$&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die &lt;b&gt;vierte&amp;nbsp;&lt;/b&gt;Nachkommastelle.)&lt;/em&gt;</taskDescription>
+          <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Es gilt $\displaystyle \sum\limits_{i=1}^{T} i^2 = \frac{T}{6} + \frac{T^2}{2} + \frac{T^3}{3}$ $\displaystyle= \frac{[var=stage_2_i]}{6} + \frac{[var=stage_2_i]^2}{2} + \frac{[var=stage_2_i]^3}{3} = [var=stage_2_sol]$.</skipMessage>
+          <defaultTransition id="11">
+            <conditionExpression id="12">
+              <domain>MATH</domain>
+            </conditionExpression>
+            <stageExpression id="13">
+              <domain>MATH</domain>
+            </stageExpression>
+            <isRepeat>true</isRepeat>
+          </defaultTransition>
+          <skipTransitions id="14">
+            <StageTransition id="15">
+              <conditionExpression id="16">
+                <code></code>
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <targetStage class="FillInStage" id="18">
+                <internalName>3</internalName>
+                <externalName>Stage 3</externalName>
+                <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width: 675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie: $\displaystyle S= \sum\limits_{i=1}^{[var=stage_3_i]}&amp;nbsp; i$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:350px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$S=$&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die &lt;b&gt;vierte&amp;nbsp;&lt;/b&gt;Nachkommastelle.)&lt;/em&gt;</taskDescription>
+                <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Mit der Summenformel von Gau&amp;szlig; erh&amp;auml;lt man $\displaystyle \sum_{i=1}^{[var=stage_3_i]} i = \frac{[var=stage_3_i]\cdot([var=stage_3_i]+1)}{2} = [var=stage_3_sol].$</skipMessage>
+                <defaultTransition id="19">
+                  <conditionExpression id="20">
+                    <domain>MATH</domain>
+                  </conditionExpression>
+                  <stageExpression id="21">
+                    <domain>MATH</domain>
+                  </stageExpression>
+                  <isRepeat>true</isRepeat>
+                </defaultTransition>
+                <skipTransitions id="22">
+                  <StageTransition id="23">
+                    <conditionExpression id="24">
+                      <code></code>
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="25">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <targetStage class="FillInStage" id="26">
+                      <internalName>4</internalName>
+                      <externalName>Stage 4</externalName>
+                      <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width: 675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie: $\displaystyle S= \sum\limits_{i=[var=stage_4_lower]}^{[var=stage_4_upper]}i$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:350px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$S=$&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die &lt;b&gt;vierte&amp;nbsp;&lt;/b&gt;Nachkommastelle.)&lt;/em&gt;</taskDescription>
+                      <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Mit der Summenformel von Gau&amp;szlig; erh&amp;auml;lt man $\displaystyle \sum_{i=[var=stage_4_lower]}^{[var=stage_4_upper]} i = \displaystyle\sum_{i=1}^{[var=stage_4_upper]}i - \displaystyle\sum_{i=1}^{[var=stage_4_lower]-1}i = [var=stage_4_sol] $&lt;br /&gt;
+&lt;br /&gt;
+Man kann nat&amp;uuml;rlich auch zusammenfassen:&lt;br /&gt;
+&lt;br /&gt;
+$ \displaystyle \begin{align*}&lt;br /&gt;
+\sum_{i=n}^m i &amp;amp; = \frac{m(m+1)}{2} - \frac{(n-1)((n-1)+1)}{2} = \frac{m(m+1)}{2} - \frac{(n-1)n}{2} \\&lt;br /&gt;
+&amp;amp; =&amp;nbsp;\frac{m(m+1)-(n-1)n}{2} = \frac{(m+n)(m-n+1)}{2}&lt;br /&gt;
+\end{align*}$&lt;br /&gt;
+&amp;nbsp;</skipMessage>
+                      <defaultTransition id="27">
+                        <conditionExpression id="28">
+                          <domain>MATH</domain>
+                        </conditionExpression>
+                        <stageExpression id="29">
+                          <domain>MATH</domain>
+                        </stageExpression>
+                        <isRepeat>true</isRepeat>
+                      </defaultTransition>
+                      <skipTransitions id="30"/>
+                      <stageTransitions id="31">
+                        <StageTransition id="32">
+                          <conditionExpression id="33">
+                            <code></code>
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="34">
+                            <code>[meta=stageCurrentResult]&gt;=100</code>
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>false</isRepeat>
+                        </StageTransition>
+                      </stageTransitions>
+                      <hints id="35">
+                        <StageHint id="36">
+                          <stagehint__order>0</stagehint__order>
+                          <text>Benutzen Sie die Gau&amp;szlig;&amp;#39;sche Summenformel.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+                          <malus>0</malus>
+                          <stage class="FillInStage" reference="26"/>
+                        </StageHint>
+                        <StageHint id="37">
+                          <stagehint__order>1</stagehint__order>
+                          <text>Diese lautet $\displaystyle\sum_{i=1}^n i = \frac{n(n+1)}{2}$.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+                          <malus>0</malus>
+                          <stage class="FillInStage" reference="26"/>
+                        </StageHint>
+                        <StageHint id="38">
+                          <stagehint__order>2</stagehint__order>
+                          <text>$\displaystyle \sum_{i=[var=$xa4]}^{[var=$xb4]}i = \displaystyle\sum_{i=1}^{[var=$xb4]}i - \displaystyle\sum_{i=1}^{[var=$xa4]-1}i$. </text>
+                          <malus>0</malus>
+                          <stage class="FillInStage" reference="26"/>
+                        </StageHint>
+                      </hints>
+                      <variableUpdatesOnEnter id="39"/>
+                      <variableUpdatesBeforeCheck id="40"/>
+                      <variableUpdatesAfterCheck id="41"/>
+                      <variableUpdatesOnNormalExit id="42"/>
+                      <variableUpdatesOnRepeat id="43"/>
+                      <variableUpdatesOnSkip id="44"/>
+                      <weight>1</weight>
+                      <orderIndex>3</orderIndex>
+                      <allowSkip>true</allowSkip>
+                      <resources id="45"/>
+                      <rules id="46"/>
+                      <fillInFields id="47">
+                        <FillInField id="48">
+                          <name>field1</name>
+                          <orderIndex>0</orderIndex>
+                          <size>8</size>
+                          <formularEditorType>NUMBER</formularEditorType>
+                        </FillInField>
+                      </fillInFields>
+                      <dropDownFields id="49"/>
+                      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                      <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Mit der Summenformel von Gau&amp;szlig; erh&amp;auml;lt man $\displaystyle \sum_{i=[var=stage_4_lower]}^{[var=stage_4_upper]} i = \displaystyle\sum_{i=1}^{[var=stage_4_upper]}i - \displaystyle\sum_{i=1}^{[var=stage_4_lower]-1}i = [var=stage_4_sol] $&lt;br /&gt;
+&lt;br /&gt;
+Man kann nat&amp;uuml;rlich auch zusammenfassen:&lt;br /&gt;
+&lt;br /&gt;
+$ \displaystyle \begin{align*}&lt;br /&gt;
+\sum_{i=n}^m i &amp;amp; = \frac{m(m+1)}{2} - \frac{(n-1)((n-1)+1)}{2} = \frac{m(m+1)}{2} - \frac{(n-1)n}{2} \\&lt;br /&gt;
+&amp;amp; =&amp;nbsp;\frac{m(m+1)-(n-1)n}{2} = \frac{(m+n)(m-n+1)}{2}&lt;br /&gt;
+\end{align*}$&lt;br /&gt;
+&amp;nbsp;</defaultFeedback>
+                      <correctAnswerRules id="50">
+                        <Rule id="51">
+                          <name>CorrectAnswer1</name>
+                          <orderIndex>1</orderIndex>
+                          <validationExpression id="52">
+                            <code>!isEmpty([input=field1])&amp;&amp;
+isRealNumber([input=field1])&amp;&amp;
+[input=field1]==[var=stage_4_sol]</code>
+                            <domain>MATH</domain>
+                          </validationExpression>
+                          <points>0</points>
+                          <terminal>false</terminal>
+                        </Rule>
+                      </correctAnswerRules>
+                      <correctAnswerFeedback>Das Ergebnis ist richtig.&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Mit der Summenformel von Gau&amp;szlig; erh&amp;auml;lt man $\displaystyle \sum_{i=[var=stage_4_lower]}^{[var=stage_4_upper]} i = \displaystyle\sum_{i=1}^{[var=stage_4_upper]}i - \displaystyle\sum_{i=1}^{[var=stage_4_lower]-1}i = [var=stage_4_sol] $&lt;br /&gt;
+&lt;br /&gt;
+Man kann nat&amp;uuml;rlich auch zusammenfassen:&lt;br /&gt;
+&lt;br /&gt;
+$ \displaystyle \begin{align*}&lt;br /&gt;
+\sum_{i=n}^m i &amp;amp; = \frac{m(m+1)}{2} - \frac{(n-1)((n-1)+1)}{2} = \frac{m(m+1)}{2} - \frac{(n-1)n}{2} \\&lt;br /&gt;
+&amp;amp; =&amp;nbsp;\frac{m(m+1)-(n-1)n}{2} = \frac{(m+n)(m-n+1)}{2}&lt;br /&gt;
+\end{align*}$&lt;br /&gt;
+&amp;nbsp;</correctAnswerFeedback>
+                      <defaultResult>0</defaultResult>
+                    </targetStage>
+                    <isRepeat>false</isRepeat>
+                  </StageTransition>
+                </skipTransitions>
+                <stageTransitions id="53">
+                  <StageTransition id="54">
+                    <conditionExpression id="55">
+                      <code></code>
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="56">
+                      <code>[meta=stageCurrentResult]&gt;=100</code>
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <targetStage class="FillInStage" reference="26"/>
+                    <isRepeat>false</isRepeat>
+                  </StageTransition>
+                </stageTransitions>
+                <hints id="57">
+                  <StageHint id="58">
+                    <stagehint__order>0</stagehint__order>
+                    <text>Benutzen Sie die Gau&amp;szlig;&amp;#39;sche Summenformel.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+                    <malus>0</malus>
+                    <stage class="FillInStage" reference="18"/>
+                  </StageHint>
+                  <StageHint id="59">
+                    <stagehint__order>1</stagehint__order>
+                    <text>Diese lautet $\displaystyle\sum_{i=1}^n i = \frac{n(n+1)}{2}$. </text>
+                    <malus>0</malus>
+                    <stage class="FillInStage" reference="18"/>
+                  </StageHint>
+                </hints>
+                <variableUpdatesOnEnter id="60"/>
+                <variableUpdatesBeforeCheck id="61"/>
+                <variableUpdatesAfterCheck id="62"/>
+                <variableUpdatesOnNormalExit id="63"/>
+                <variableUpdatesOnRepeat id="64"/>
+                <variableUpdatesOnSkip id="65"/>
+                <weight>1</weight>
+                <orderIndex>2</orderIndex>
+                <allowSkip>true</allowSkip>
+                <resources id="66"/>
+                <rules id="67"/>
+                <fillInFields id="68">
+                  <FillInField id="69">
+                    <name>field1</name>
+                    <orderIndex>0</orderIndex>
+                    <size>8</size>
+                    <formularEditorType>NUMBER</formularEditorType>
+                  </FillInField>
+                </fillInFields>
+                <dropDownFields id="70"/>
+                <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Mit der Summenformel von Gau&amp;szlig; erh&amp;auml;lt man $\displaystyle \sum_{i=1}^{[var=stage_3_i]} i = \frac{[var=stage_3_i]\cdot([var=stage_3_i]+1)}{2} = [var=stage_3_sol].$</defaultFeedback>
+                <correctAnswerRules id="71">
+                  <Rule id="72">
+                    <name>CorrectAnswer1</name>
+                    <orderIndex>1</orderIndex>
+                    <validationExpression id="73">
+                      <code>!isEmpty([input=field1])&amp;&amp;
+isRealNumber([input=field1])&amp;&amp;
+[input=field1]==[var=stage_3_sol]</code>
+                      <domain>MATH</domain>
+                    </validationExpression>
+                    <points>0</points>
+                    <terminal>false</terminal>
+                  </Rule>
+                </correctAnswerRules>
+                <correctAnswerFeedback>Das Ergebnis ist richtig.&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Mit der Summenformel von Gau&amp;szlig; erh&amp;auml;lt man $\displaystyle \sum_{i=1}^{[var=stage_3_i]} i = \frac{[var=stage_3_i]\cdot([var=stage_3_i]+1)}{2} = [var=stage_3_sol].$</correctAnswerFeedback>
+                <defaultResult>0</defaultResult>
+              </targetStage>
+              <isRepeat>false</isRepeat>
+            </StageTransition>
+          </skipTransitions>
+          <stageTransitions id="74">
+            <StageTransition id="75">
+              <conditionExpression id="76">
+                <code></code>
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="77">
+                <code>[meta=stageCurrentResult]&gt;=100</code>
+                <domain>MATH</domain>
+              </stageExpression>
+              <targetStage class="FillInStage" reference="18"/>
+              <isRepeat>false</isRepeat>
+            </StageTransition>
+          </stageTransitions>
+          <hints id="78">
+            <StageHint id="79">
+              <stagehint__order>0</stagehint__order>
+              <text>Benutzen Sie die Formel $\displaystyle \sum_{i=1}^{T}i^2 = \frac{T}{6} + \frac{T^2}{2} + \frac{T^3}{3}$.</text>
+              <malus>0</malus>
+              <stage class="FillInStage" reference="10"/>
+            </StageHint>
+          </hints>
+          <variableUpdatesOnEnter id="80"/>
+          <variableUpdatesBeforeCheck id="81"/>
+          <variableUpdatesAfterCheck id="82"/>
+          <variableUpdatesOnNormalExit id="83"/>
+          <variableUpdatesOnRepeat id="84"/>
+          <variableUpdatesOnSkip id="85"/>
+          <weight>1</weight>
+          <orderIndex>1</orderIndex>
+          <allowSkip>true</allowSkip>
+          <resources id="86"/>
+          <rules id="87"/>
+          <fillInFields id="88">
+            <FillInField id="89">
+              <name>field1</name>
+              <orderIndex>0</orderIndex>
+              <size>8</size>
+              <formularEditorType>NUMBER</formularEditorType>
+            </FillInField>
+          </fillInFields>
+          <dropDownFields id="90"/>
+          <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+          <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Es gilt $\displaystyle \sum\limits_{i=1}^{T} i^2 = \frac{T}{6} + \frac{T^2}{2} + \frac{T^3}{3}$ $\displaystyle= \frac{[var=stage_2_i]}{6} + \frac{[var=stage_2_i]^2}{2} + \frac{[var=stage_2_i]^3}{3} = [var=stage_2_sol]$.</defaultFeedback>
+          <correctAnswerRules id="91">
+            <Rule id="92">
+              <name>CorrectAnswer1</name>
+              <orderIndex>1</orderIndex>
+              <validationExpression id="93">
+                <code>!isEmpty([input=field1])&amp;&amp;
+isRealNumber([input=field1])&amp;&amp;
+[input=field1]==[var=stage_2_sol]</code>
+                <domain>MATH</domain>
+              </validationExpression>
+              <points>0</points>
+              <terminal>false</terminal>
+            </Rule>
+          </correctAnswerRules>
+          <correctAnswerFeedback>Das Ergebnis ist richtig.&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Es gilt $\displaystyle \sum\limits_{i=1}^{T} i^2 = \frac{T}{6} + \frac{T^2}{2} + \frac{T^3}{3}$ $\displaystyle= \frac{[var=stage_2_i]}{6} + \frac{[var=stage_2_i]^2}{2} + \frac{[var=stage_2_i]^3}{3} = [var=stage_2_sol]$.</correctAnswerFeedback>
+          <defaultResult>0</defaultResult>
+        </targetStage>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="94">
+        <StageTransition id="95">
+          <conditionExpression id="96">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="97">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="10"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="98"/>
+      <hints id="99">
+        <StageHint id="100">
+          <stagehint__order>0</stagehint__order>
+          <text>Benutzen Sie die Gau&amp;szlig;&amp;#39;sche Summenformel.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="101">
+          <stagehint__order>1</stagehint__order>
+          <text>Diese lautet $\displaystyle\sum_{i=1}^n i = \frac{n(n+1)}{2}$. </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="102"/>
+      <variableUpdatesBeforeCheck id="103"/>
+      <variableUpdatesAfterCheck id="104"/>
+      <variableUpdatesOnNormalExit id="105"/>
+      <variableUpdatesOnRepeat id="106"/>
+      <variableUpdatesOnSkip id="107"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="108"/>
+      <rules id="109"/>
+      <fillInFields id="110">
+        <FillInField id="111">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="112"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Mit der Summenformel von Gau&amp;szlig; erh&amp;auml;lt man $\displaystyle \sum_{i=1}^{100} i = \frac{100\cdot(100+1)}{2} = 5050.$</defaultFeedback>
+      <correctAnswerRules id="113">
+        <Rule id="114">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="115">
+            <code>!isEmpty([input=field1])&amp;&amp;
+isRealNumber([input=field1])&amp;&amp;
+[input=field1] == 5050</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Das Ergebnis ist richtig.&lt;br /&gt;
+&lt;br /&gt;
+&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Mit der Summenformel von Gau&amp;szlig; erh&amp;auml;lt man $\displaystyle \sum_{i=1}^{100} i = \frac{100\cdot(100+1)}{2} = 5050.$</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="10"/>
+    <FillInStage reference="18"/>
+    <FillInStage reference="26"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="116">
+    <VariableDeclaration id="117">
+      <name>stage_2_i</name>
+      <initializationCode id="118">
+        <code>randomIntegerBetween(1,30)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="119">
+      <name>stage_2_sol</name>
+      <initializationCode id="120">
+        <code>[var=stage_2_i]/6+pow([var=stage_2_i], 2)/2+pow([var=stage_2_i], 3)/3</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="121">
+      <name>stage_3_i</name>
+      <initializationCode id="122">
+        <code>randomIntegerBetween(20,999)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="123">
+      <name>stage_3_sol</name>
+      <initializationCode id="124">
+        <code>[var=stage_3_i]*([var=stage_3_i]+1)/2</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="125">
+      <name>stage_4_lower</name>
+      <initializationCode id="126">
+        <code>randomIntegerBetween(20,999)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="127">
+      <name>add</name>
+      <initializationCode id="128">
+        <code>randomIntegerBetween(20,999)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="129">
+      <name>stage_4_upper</name>
+      <initializationCode id="130">
+        <code>[var=stage_4_lower]+[var=add]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="131">
+      <name>stage_4_sol</name>
+      <initializationCode id="132">
+        <code>(([var=stage_4_lower]+[var=stage_4_upper])*([var=stage_4_upper]-[var=stage_4_lower]+1))/2</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="133"/>
+  <dynamicMolecules id="134"/>
+  <resultFeedbackMappings id="135"/>
+</Exercise>

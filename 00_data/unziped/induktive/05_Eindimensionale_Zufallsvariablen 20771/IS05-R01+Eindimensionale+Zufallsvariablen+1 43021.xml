@@ -1,0 +1,173 @@
+<Exercise id="1">
+  <name>IS05-R01 Eindimensionale Zufallsvariablen 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>W&apos;keit mit gegebener CDF berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">Q0RGIDwtIGZ1bmN0aW9uKHgpIHsNCiAgcmV0dXJuKGlmZWxzZSh4IDw9IDAsIDAsIGlmZWxzZSh4IDwgMiwgMC4wMzEyNSp4XjUsIDEpKSkNCn0=</content>
+      <uploadTimestamp>2022-05-11T09:13:59.688365</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Gegeben sei folgende Verteilungsfunktion:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$F(x) =&lt;br /&gt;&#xd;
+\begin{cases} 0 &amp;amp; \mbox{f&amp;uuml;r} \quad x \leq 0, \\&lt;br /&gt;&#xd;
+0.03125x^5 &amp;amp; \mbox{f&amp;uuml;r} \quad 0 &amp;lt; x &amp;lt; 2, \\&lt;br /&gt;&#xd;
+1 &amp;amp; \mbox{f&amp;uuml;r} \quad x \geq 2.&lt;br /&gt;&#xd;
+\end{cases}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie $P([var=lower]&amp;lt;X&amp;lt;[var=upper])$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nutzen Sie dazu die vordefinierte und verf&amp;uuml;gbare Funktion $\verb|CDF()|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Es gilt: $P(x_1&amp;lt;X&amp;lt;x_2)=F(x_2)-F(x_1)$.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode>CDF &lt;- function(x) {
+  return(ifelse(x &lt;= 0, 0, ifelse(x &lt; 2, 0.03125*x^5, 1)))
+}</initialCode>
+      <finalResultComputationString>#{c43028}+#{c43027}</finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Achten Sie darauf, dass Sie die vordefinierte Funktion $\verb|CDF()|$ benutzen können.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>                from cdf:V{FunctionCall} with
+                cdf.name=&quot;CDF&quot;
+                report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43027</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>[var=sol]</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43028</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>a</name>
+      <initializationCode id="36">
+        <code>evaluateInR(&apos;round(runif(1, 0, 2), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="37">
+      <name>b</name>
+      <initializationCode id="38">
+        <code>evaluateInR(&apos;round(runif(1, 0, 2), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>lower</name>
+      <initializationCode id="40">
+        <code>evaluateInR(&apos;min([var=a], [var=b])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>upper</name>
+      <initializationCode id="42">
+        <code>evaluateInR(&apos;max([var=a], [var=b])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>sol</name>
+      <initializationCode id="44">
+        <code>evaluateInR(&apos;(0.03125*[var=upper]^5)-(0.03125*[var=lower]^5)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="45"/>
+  <dynamicMolecules id="46"/>
+  <resultFeedbackMappings id="47"/>
+</Exercise>

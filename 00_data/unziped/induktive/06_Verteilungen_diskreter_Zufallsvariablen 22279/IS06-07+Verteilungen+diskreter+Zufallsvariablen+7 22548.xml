@@ -1,0 +1,721 @@
+<Exercise id="1">
+  <name>IS06-07 Verteilungen diskreter Zufallsvariablen 7</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Sammelbildaufgabe
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>5</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In dieser Aufgabe wollen wir Schritt f&amp;uuml;r Schritt folgendes praktisches Problem l&amp;ouml;sen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Zur Fu&amp;szlig;ball WM werden von der Deutschen Manschaft einzelne Sammelbilder zu bestimmten Produkten (bspw. Schokoriegel) beigelegt (jedes Sammelbild mit gleicher Wahrscheinlichkeit), also genau eine Karte von $[var=anzahl]$ verschiedenen pro gekauftem Produkt.&lt;br /&gt;&#xd;
+Gesucht ist, die mittlere Anzahl an Produkten die man kaufen muss, um alle Bilder gesammelt zu haben.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Da das Problem nicht in einer Zeile l&amp;ouml;sbar ist, verfahren wir in mehreren Schritten:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie zun&amp;auml;chst die Wahrscheinlichkeit, wenn Sie bereits $[var=im1]$ verschiedene Karten besitzen, dass Sie beim n&amp;auml;chsten Kauf $[var=i]$ verschiedene Karten haben, also dass Sie eine noch nicht bereits erworbene Karte kaufen. &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Richtig ist $\frac{[var=anzahl]-[var=im1]}{[var=anzahl]}=[var=rPXi]$, da es noch $[var=anzahl]-[var=im1]$ Karten gibt, die Sie noch nicht besitzen von insgesamt $[var=anzahl]$ Karten.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Jetzt fragen wir uns, mit welcher Wahrscheinlichkeit Sie $[var=k]$ Fehlk&amp;auml;ufe machen bis Sie die $[var=i]$. neue, noch nicht erworbene Karte bekommen? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+            <skipMessage>Richtig ist $P(X_{[var=i]}=[var=k]) = (1-[var=rPXi])^[var=k] \cdot [var=rPXi] = [var=rPXik]$.</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="24">
+                  <internalName>3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie als N&amp;auml;chstes die mittlere Anzahl an Fehlk&amp;auml;ufen zwischen der $[var=im1]$. und $[var=i]$. neuen Karte. &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                  <skipMessage>Richtig ist $E(X_{[var=i]}) = \frac{1-p}{p} = \frac{1-[var=rPXi]}{[var=rPXi]}=[var=EXi]$.</skipMessage>
+                  <defaultTransition id="25">
+                    <conditionExpression id="26">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="27">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="28">
+                    <StageTransition id="29">
+                      <conditionExpression id="30">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="31">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" id="32">
+                        <internalName>4</internalName>
+                        <externalName>Stage 4</externalName>
+                        <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Was ist die mittlere Anzahl aller Fehlk&amp;auml;ufe (also K&amp;auml;ufe einer Karte, die Sie schon haben) bis Sie alle $[var=anzahl]$ verschiedenen Karten haben? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                        <skipMessage>Richtig ist $[var=EX]$.</skipMessage>
+                        <defaultTransition id="33">
+                          <conditionExpression id="34">
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="35">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>true</isRepeat>
+                        </defaultTransition>
+                        <skipTransitions id="36">
+                          <StageTransition id="37">
+                            <conditionExpression id="38">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="39">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <targetStage class="FillInStage" id="40">
+                              <internalName>5</internalName>
+                              <externalName>Stage 5</externalName>
+                              <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Zum Schluss, wie oft muss man das Produkt im Mittel kaufen, bis Sie alle Karten erworben haben? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                              <skipMessage>Richtig ist $[var=EX] + [var=anzahl] = [var=sol1]$.</skipMessage>
+                              <defaultTransition id="41">
+                                <conditionExpression id="42">
+                                  <domain>MATH</domain>
+                                </conditionExpression>
+                                <stageExpression id="43">
+                                  <domain>MATH</domain>
+                                </stageExpression>
+                                <isRepeat>true</isRepeat>
+                              </defaultTransition>
+                              <skipTransitions id="44">
+                                <StageTransition id="45">
+                                  <conditionExpression id="46">
+                                    <code></code>
+                                    <domain>MATH</domain>
+                                  </conditionExpression>
+                                  <stageExpression id="47">
+                                    <domain>MATH</domain>
+                                  </stageExpression>
+                                  <isRepeat>false</isRepeat>
+                                </StageTransition>
+                              </skipTransitions>
+                              <stageTransitions id="48">
+                                <StageTransition id="49">
+                                  <conditionExpression id="50">
+                                    <code></code>
+                                    <domain>MATH</domain>
+                                  </conditionExpression>
+                                  <stageExpression id="51">
+                                    <code>[meta=stageCurrentResult]&gt;=100</code>
+                                    <domain>MATH</domain>
+                                  </stageExpression>
+                                  <isRepeat>false</isRepeat>
+                                </StageTransition>
+                              </stageTransitions>
+                              <hints id="52">
+                                <StageHint id="53">
+                                  <stagehint__order>0</stagehint__order>
+                                  <text>Eben haben Sie die mittlere Anzahl an Fehlk&amp;auml;ufen berechnet. Dazu m&amp;uuml;ssen Sie die Anzahl an Erstk&amp;auml;ufen addieren.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                                  <malus>0</malus>
+                                  <stage class="FillInStage" reference="40"/>
+                                </StageHint>
+                                <StageHint id="54">
+                                  <stagehint__order>1</stagehint__order>
+                                  <text>Wie viele Erstk&amp;auml;ufe gibt es?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                                  <malus>0</malus>
+                                  <stage class="FillInStage" reference="40"/>
+                                </StageHint>
+                                <StageHint id="55">
+                                  <stagehint__order>2</stagehint__order>
+                                  <text>Wie viele verschiedenen Karten gibt es?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                                  <malus>0</malus>
+                                  <stage class="FillInStage" reference="40"/>
+                                </StageHint>
+                                <StageHint id="56">
+                                  <stagehint__order>3</stagehint__order>
+                                  <text>Sie müssen also die mittlere Anzahl an Fehlkäufen betrachten und die Anzahl Karten insgesamt addieren,
+  da Sie diese Karten schließlich auch kaufen müssen.
+  </text>
+                                  <malus>0</malus>
+                                  <stage class="FillInStage" reference="40"/>
+                                </StageHint>
+                              </hints>
+                              <variableUpdatesOnEnter id="57"/>
+                              <variableUpdatesBeforeCheck id="58"/>
+                              <variableUpdatesAfterCheck id="59"/>
+                              <variableUpdatesOnNormalExit id="60"/>
+                              <variableUpdatesOnRepeat id="61"/>
+                              <variableUpdatesOnSkip id="62"/>
+                              <weight>1</weight>
+                              <orderIndex>4</orderIndex>
+                              <allowSkip>true</allowSkip>
+                              <resources id="63"/>
+                              <rules id="64"/>
+                              <fillInFields id="65">
+                                <FillInField id="66">
+                                  <name>field1</name>
+                                  <orderIndex>0</orderIndex>
+                                  <size>6</size>
+                                  <formularEditorType>NUMBER</formularEditorType>
+                                </FillInField>
+                              </fillInFields>
+                              <dropDownFields id="67"/>
+                              <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                              <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $[var=EX] + [var=anzahl] = [var=sol1]$.</defaultFeedback>
+                              <correctAnswerRules id="68">
+                                <Rule id="69">
+                                  <name>CorrectAnswer1</name>
+                                  <orderIndex>1</orderIndex>
+                                  <validationExpression id="70">
+                                    <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=sol1]-0.0011&amp;&amp;[input=field1]&lt;[var=sol1]+0.0011</code>
+                                    <domain>MATH</domain>
+                                  </validationExpression>
+                                  <points>0</points>
+                                  <terminal>false</terminal>
+                                </Rule>
+                              </correctAnswerRules>
+                              <correctAnswerFeedback>Herzlichen Glückwunsch! Sie haben die Aufgabe gelöst.</correctAnswerFeedback>
+                              <defaultResult>0</defaultResult>
+                            </targetStage>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </skipTransitions>
+                        <stageTransitions id="71">
+                          <StageTransition id="72">
+                            <conditionExpression id="73">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="74">
+                              <code>[meta=stageCurrentResult]&gt;=100</code>
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <targetStage class="FillInStage" reference="40"/>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </stageTransitions>
+                        <hints id="75">
+                          <StageHint id="76">
+                            <stagehint__order>0</stagehint__order>
+                            <text>Definiere Sie sich die Zufallsvariable $X:=\sum_{i=1}^{[var=anzahl]} X_i$.&lt;br /&gt;
+Diese Zufallsvariable gibt die Anzahl aller Fehlk&amp;auml;ufe an.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="77">
+                            <stagehint__order>1</stagehint__order>
+                            <text>Gesucht ist $E(X)$.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="78">
+                            <stagehint__order>2</stagehint__order>
+                            <text>Nutzen Sie Ihr Wissen &amp;uuml;ber Linearkombinationen!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="79">
+                            <stagehint__order>3</stagehint__order>
+                            <text>Und zwar $E(X)=\sum_{i=1}^{[var=anzahl]}E(X_i)$.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="80">
+                            <stagehint__order>4</stagehint__order>
+                            <text>Sie haben in der letzten Frage $E(X_{[var=i]})$ ausgerechnet. Jetzt m&amp;uuml;ssen Sie $E(X_i)$ f&amp;uuml;r alle $i$ zwischen $1$ und $[var=anzahl]$ berechnen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="81">
+                            <stagehint__order>5</stagehint__order>
+                            <text>Dazu nutzen Sie am besten ein Tabellenkalkulationsprogramm wie Excel. Schreiben Sie in eine Spalte die Laufvariable $i$ von $1$ bis $[var=anzahl]$ und in einer anderen k&amp;ouml;nnen Sie die zugeh&amp;ouml;rigen $E(X_i)$ berechnen. Am Ende bilden Sie noch die Summe und Sie erhalten das Ergebnis.</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                        </hints>
+                        <variableUpdatesOnEnter id="82"/>
+                        <variableUpdatesBeforeCheck id="83"/>
+                        <variableUpdatesAfterCheck id="84"/>
+                        <variableUpdatesOnNormalExit id="85"/>
+                        <variableUpdatesOnRepeat id="86"/>
+                        <variableUpdatesOnSkip id="87"/>
+                        <weight>1</weight>
+                        <orderIndex>3</orderIndex>
+                        <allowSkip>true</allowSkip>
+                        <resources id="88"/>
+                        <rules id="89"/>
+                        <fillInFields id="90">
+                          <FillInField id="91">
+                            <name>field1</name>
+                            <orderIndex>0</orderIndex>
+                            <size>6</size>
+                            <formularEditorType>NUMBER</formularEditorType>
+                          </FillInField>
+                        </fillInFields>
+                        <dropDownFields id="92"/>
+                        <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                        <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $[var=EX]$.</defaultFeedback>
+                        <correctAnswerRules id="93">
+                          <Rule id="94">
+                            <name>CorrectAnswer1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="95">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=EX]-0.0011&amp;&amp;[input=field1]&lt;[var=EX]+0.0011</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <points>0</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </correctAnswerRules>
+                        <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                        <defaultResult>0</defaultResult>
+                      </targetStage>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="96">
+                    <StageTransition id="97">
+                      <conditionExpression id="98">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="99">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="32"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="100">
+                    <StageHint id="101">
+                      <stagehint__order>0</stagehint__order>
+                      <text>Gesucht ist also $E(X_{[var=i]})$.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                    <StageHint id="102">
+                      <stagehint__order>1</stagehint__order>
+                      <text>Sie haben in Frage $2$ die Verteilung von $X_{[var=i]}$ bestimmt. Jetzt k&amp;ouml;nnen Sie leicht nachschlagen, was der Erwartungswert dieser Verteilung ist.</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="103"/>
+                  <variableUpdatesBeforeCheck id="104"/>
+                  <variableUpdatesAfterCheck id="105"/>
+                  <variableUpdatesOnNormalExit id="106"/>
+                  <variableUpdatesOnRepeat id="107"/>
+                  <variableUpdatesOnSkip id="108"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="109"/>
+                  <rules id="110"/>
+                  <fillInFields id="111">
+                    <FillInField id="112">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="113"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $E(X_{[var=i]}) = \frac{1-p}{p} = \frac{1-[var=rPXi]}{[var=rPXi]}=[var=EXi]$.</defaultFeedback>
+                  <correctAnswerRules id="114">
+                    <Rule id="115">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="116">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=EXi]-0.0011&amp;&amp;[input=field1]&lt;[var=EXi]+0.0011</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="117">
+              <StageTransition id="118">
+                <conditionExpression id="119">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="120">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="24"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="121">
+              <StageHint id="122">
+                <stagehint__order>0</stagehint__order>
+                <text>Ben&amp;ouml;tigt wird eine Wahrscheinlichkeitsverteilung, bei der Sie $[var=k]$ Misserfolge haben, bis Sie einen Erfolg haben.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="123">
+                <stagehint__order>1</stagehint__order>
+                <text>Es handelt sich um die negative Binomialverteilung.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="124">
+                <stagehint__order>2</stagehint__order>
+                <text>Um den Parameter $p$ zu bestimmen, nutzen Sie Ihr Ergebnis aus Frage $1$. Da Sie die W&amp;#39;keit bestimmen wollen, $[var=k]$ Fehlk&amp;auml;ufe zu machen, bevor Sie die EINE neue Karte erhalten, ist der Parameter $r=1$.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="125">
+                <stagehint__order>3</stagehint__order>
+                <text>In Frage $1$ haben Sie $P(X_{[var=i]}=0)$ berechnet.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="126">
+                <stagehint__order>4</stagehint__order>
+                <text>Jetzt ist $P(X_{[var=i]}=[var=k])$ gesucht.</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="127"/>
+            <variableUpdatesBeforeCheck id="128"/>
+            <variableUpdatesAfterCheck id="129"/>
+            <variableUpdatesOnNormalExit id="130"/>
+            <variableUpdatesOnRepeat id="131"/>
+            <variableUpdatesOnSkip id="132"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="133"/>
+            <rules id="134"/>
+            <fillInFields id="135">
+              <FillInField id="136">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="137"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $P(X_{[var=i]}=[var=k]) = (1-[var=rPXi])^[var=k] \cdot [var=rPXi] = [var=rPXik]$.</defaultFeedback>
+            <correctAnswerRules id="138">
+              <Rule id="139">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="140">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rPXik]-0.0011&amp;&amp;[input=field1]&lt;[var=rPXik]+0.0011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="141">
+        <StageTransition id="142">
+          <conditionExpression id="143">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="144">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="145">
+        <StageHint id="146">
+          <stagehint__order>0</stagehint__order>
+          <text>Vielleicht hilft eine kleine Formalisierung:&lt;br /&gt;
+Sei $X_{[var=i]}$ die Anzahl an Fehlk&amp;auml;ufen (also Karten die Sie bereits besitzen) zwischen der $[var=im1]$. und der $[var=i]$. verschiedenen Karte.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="147">
+          <stagehint__order>1</stagehint__order>
+          <text>Dann ist $X_{[var=i]}=0$ das gesuchte Ereignis.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="148">
+          <stagehint__order>2</stagehint__order>
+          <text>Sie haben schon $[var=im1]$ verschiedene Karten, insgesamt gibt es $[var=anzahl]$. Wie viele haben Sie noch nicht?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="149">
+          <stagehint__order>3</stagehint__order>
+          <text>Wie wahrscheinlich ist es beim nächsten Kauf eine Karte zu erhalten, die Sie noch nicht haben?
+  </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="150"/>
+      <variableUpdatesBeforeCheck id="151"/>
+      <variableUpdatesAfterCheck id="152"/>
+      <variableUpdatesOnNormalExit id="153"/>
+      <variableUpdatesOnRepeat id="154"/>
+      <variableUpdatesOnSkip id="155"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="156"/>
+      <rules id="157"/>
+      <fillInFields id="158">
+        <FillInField id="159">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="160"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $\frac{[var=anzahl]-[var=im1]}{[var=anzahl]}=[var=rPXi]$, da es noch $[var=anzahl]-[var=im1]$ Karten gibt, die Sie noch nicht besitzen von insgesamt $[var=anzahl]$ Karten.</defaultFeedback>
+      <correctAnswerRules id="161">
+        <Rule id="162">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="163">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rPXi]-0.0011&amp;&amp;[input=field1]&lt;[var=rPXi]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+    <FillInStage reference="24"/>
+    <FillInStage reference="32"/>
+    <FillInStage reference="40"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="164">
+    <VariableDeclaration id="165">
+      <name>anzahl</name>
+      <initializationCode id="166">
+        <code>evaluateInR(&apos;sample(20:35, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="167">
+      <name>i</name>
+      <initializationCode id="168">
+        <code>evaluateInR(&apos;sample(5:19, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="169">
+      <name>im1</name>
+      <initializationCode id="170">
+        <code>evaluateInR(&apos;[var=i]-1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="171">
+      <name>PXi</name>
+      <initializationCode id="172">
+        <code>evaluateInR(&apos;([var=anzahl]-[var=i]+1)/([var=anzahl])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="173">
+      <name>rPXi</name>
+      <initializationCode id="174">
+        <code>round([var=PXi], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="175">
+      <name>k</name>
+      <initializationCode id="176">
+        <code>evaluateInR(&apos;sample(1:5, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="177">
+      <name>PXik</name>
+      <initializationCode id="178">
+        <code>evaluateInR(&apos;(1-[var=PXi])^([var=k])*([var=PXi])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="179">
+      <name>rPXik</name>
+      <initializationCode id="180">
+        <code>round([var=PXik], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="181">
+      <name>EXi</name>
+      <initializationCode id="182">
+        <code>evaluateInR(&apos;round((1-[var=PXi])/([var=PXi]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="183">
+      <name>EX</name>
+      <initializationCode id="184">
+        <code>evaluateInR(&apos;round(sum((0:([var=anzahl]-1))/([var=anzahl]:1)), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="185">
+      <name>sol1</name>
+      <initializationCode id="186">
+        <code>evaluateInR(&apos;round(([var=EX]+[var=anzahl]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="187"/>
+  <dynamicMolecules id="188"/>
+  <resultFeedbackMappings id="189"/>
+</Exercise>

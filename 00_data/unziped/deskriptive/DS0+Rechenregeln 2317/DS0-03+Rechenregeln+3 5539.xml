@@ -1,0 +1,259 @@
+<Exercise id="1">
+  <name>DS0-03 Rechenregeln 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \prod_{i=[var=k]}^{[var=l]}[var=$m]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Schreiben Sie Ihr Ergebnis nicht als Bruch sondern als Dezimalzahl und verwenden Sie einen Punkt als Dezimalzeichen.)&lt;/em&gt; &amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>Es gilt $\displaystyle \prod_{i=[var=k]}^{[var=l]}[var=m] = [var=m]^{[var=l]-[var=k]+1} = [var=j]$.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \prod_{i=2}^{[var=o]}(1+\frac{1}{i})$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Schreiben Sie Ihr Ergebnis nicht als Bruch sondern als Dezimalzahl und verwenden Sie einen Punkt als Dezimalzeichen.)&lt;/em&gt; &amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+            <skipMessage>Es gilt $\displaystyle \prod_{i=2}^{[var=o]}(1+\frac{1}{i}) = \frac{[var=o]}{2} + \frac{1}{2} = [var=oo]$</skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>false</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18"/>
+            <stageTransitions id="19">
+              <StageTransition id="20">
+                <conditionExpression id="21">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="22">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="23">
+              <StageHint id="24">
+                <stagehint__order>0</stagehint__order>
+                <text>Benutzen Sie die Formel $\displaystyle \prod_{i=2}^{T}(1+\frac{1}{i}) = \frac{T}{2} + \frac{1}{2}$.</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="25"/>
+            <variableUpdatesBeforeCheck id="26"/>
+            <variableUpdatesAfterCheck id="27"/>
+            <variableUpdatesOnNormalExit id="28"/>
+            <variableUpdatesOnRepeat id="29"/>
+            <variableUpdatesOnSkip id="30"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="31"/>
+            <rules id="32"/>
+            <fillInFields id="33">
+              <FillInField id="34">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>8</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="35"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht richtig!</defaultFeedback>
+            <correctAnswerRules id="36">
+              <Rule id="37">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="38">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[var=oo]==[input=field1]</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="39">
+        <StageTransition id="40">
+          <conditionExpression id="41">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="42">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="43">
+        <StageHint id="44">
+          <stagehint__order>0</stagehint__order>
+          <text>Beachten Sie, dass es sich bei $c=[var=m]$ um eine Konstante handelt, die nicht vom Index $i$ abh&amp;auml;ngt.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="45">
+          <stagehint__order>1</stagehint__order>
+          <text>Benutzen Sie daher die Formel $\displaystyle \prod_{i=k}^n c = c^{n-k+1}$.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="46"/>
+      <variableUpdatesBeforeCheck id="47"/>
+      <variableUpdatesAfterCheck id="48"/>
+      <variableUpdatesOnNormalExit id="49"/>
+      <variableUpdatesOnRepeat id="50"/>
+      <variableUpdatesOnSkip id="51"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="52"/>
+      <rules id="53"/>
+      <fillInFields id="54">
+        <FillInField id="55">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="56"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht richtig!</defaultFeedback>
+      <correctAnswerRules id="57">
+        <Rule id="58">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="59">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[var=j]==[input=field1]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="14"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="60">
+    <VariableDeclaration id="61">
+      <name>i</name>
+      <initializationCode id="62">
+        <code>randomIntegerBetween(2,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>k</name>
+      <initializationCode id="64">
+        <code>randomIntegerBetween(1,99)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>l</name>
+      <initializationCode id="66">
+        <code>[var=i]+[var=k]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>m</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(1,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>j</name>
+      <initializationCode id="70">
+        <code>pow([var=m], [var=l]-[var=k]+1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>o</name>
+      <initializationCode id="72">
+        <code>randomIntegerBetween(3,12)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>oo</name>
+      <initializationCode id="74">
+        <code>[var=o]/2+0.5</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="75"/>
+  <dynamicMolecules id="76"/>
+  <resultFeedbackMappings id="77"/>
+</Exercise>

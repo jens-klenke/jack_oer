@@ -1,0 +1,341 @@
+<Exercise id="1">
+  <name>IS00-01 Schulwissen 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Diese Aufgabe kann ohne Kenntnisse in induktiver Statistik gelöst werden. Sie dient dazu, sich mit JACK vertraut zu machen.
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Welche dieser Zahlen im Vektor ist die gr&amp;ouml;&amp;szlig;te?&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$$\begin{matrix}&lt;br /&gt;&#xd;
+[var=a1] \\&lt;br /&gt;&#xd;
+[var=b1]\\&lt;br /&gt;&#xd;
+[var=c1]\\&lt;br /&gt;&#xd;
+[var=d1]\\&lt;br /&gt;&#xd;
+[var=e1]\\&lt;br /&gt;&#xd;
+\end{matrix}$$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die gr&amp;ouml;&amp;szlig;te Zahl ist:&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;</taskDescription>
+      <skipMessage> Richtig ist $[var=ergebnis1]$. </skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="MCStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Welcher Begriff passt nicht zu den anderen?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;</taskDescription>
+            <skipMessage>Die richtige Antwort ist Kiefer.</skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18"/>
+            <stageTransitions id="19">
+              <StageTransition id="20">
+                <conditionExpression id="21">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="22">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="23">
+              <StageHint id="24">
+                <stagehint__order>0</stagehint__order>
+                <text>Unterscheiden Sie, ob der jeweilige Baum ein Laub- oder Nadelbaum ist.</text>
+                <malus>0</malus>
+                <stage class="MCStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="25"/>
+            <variableUpdatesBeforeCheck id="26"/>
+            <variableUpdatesAfterCheck id="27"/>
+            <variableUpdatesOnNormalExit id="28"/>
+            <variableUpdatesOnRepeat id="29"/>
+            <variableUpdatesOnSkip id="30"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="31"/>
+            <answerOptions id="32">
+              <MCAnswer id="33">
+                <order>0</order>
+                <rule>CORRECT</rule>
+                <text> [var=s1]</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="34">
+                <order>1</order>
+                <rule>WRONG</rule>
+                <text> [var=s2]</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="35">
+                <order>2</order>
+                <rule>WRONG</rule>
+                <text> [var=s3]</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+              <MCAnswer id="36">
+                <order>3</order>
+                <rule>WRONG</rule>
+                <text> [var=s4]</text>
+                <variableName></variableName>
+                <mcstage reference="14"/>
+              </MCAnswer>
+            </answerOptions>
+            <randomize>true</randomize>
+            <singleChoice>false</singleChoice>
+            <correctAnswerFeedback>Korrekt!</correctAnswerFeedback>
+            <defaultFeedback>Leider nicht korrekt.&lt;/br&gt;
+&lt;/br&gt;
+Die richtige Antwort ist Kiefer.</defaultFeedback>
+            <defaultResult>0</defaultResult>
+            <extraFeedbacks id="37"/>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="38">
+        <StageTransition id="39">
+          <conditionExpression id="40">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="41">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="MCStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="42">
+        <StageHint id="43">
+          <stagehint__order>0</stagehint__order>
+          <text>Ordnen Sie die Werte und schauen Sie, welcher der größte ist. </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="44"/>
+      <variableUpdatesBeforeCheck id="45"/>
+      <variableUpdatesAfterCheck id="46"/>
+      <variableUpdatesOnNormalExit id="47"/>
+      <variableUpdatesOnRepeat id="48"/>
+      <variableUpdatesOnSkip id="49"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="50"/>
+      <rules id="51">
+        <Rule id="52">
+          <name>Feedback_1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="53">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]!=[var=ergebnis1]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Schauen Sie nochmal genauer hin!</feedbackText>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </rules>
+      <fillInFields id="54">
+        <FillInField id="55">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>10</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="56"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch. &lt;/br&gt;
+&lt;/br&gt;
+ Richtig ist $[var=ergebnis1]$. </defaultFeedback>
+      <correctAnswerRules id="57">
+        <Rule id="58">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="59">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[var=ergebnis1]==[input=field1]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <MCStage reference="14"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="60">
+    <VariableDeclaration id="61">
+      <name>a</name>
+      <initializationCode id="62">
+        <code>randomIntegerBetween(-100,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>b</name>
+      <initializationCode id="64">
+        <code>randomIntegerBetween(-100,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>c</name>
+      <initializationCode id="66">
+        <code>randomIntegerBetween(-100,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>d</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(-100,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>ee</name>
+      <initializationCode id="70">
+        <code>randomIntegerBetween(-100,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>ergebnis</name>
+      <initializationCode id="72">
+        <code>max(max(max(max([var=a], [var=b]), [var=c]), [var=d]), [var=ee])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>a1</name>
+      <initializationCode id="74">
+        <code>evaluateInR(&apos;[var=a]/10&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>b1</name>
+      <initializationCode id="76">
+        <code>evaluateInR(&apos;[var=b]/10&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>c1</name>
+      <initializationCode id="78">
+        <code>evaluateInR(&apos;[var=c]/10&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>d1</name>
+      <initializationCode id="80">
+        <code>evaluateInR(&apos;[var=d]/10&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>e1</name>
+      <initializationCode id="82">
+        <code>evaluateInR(&apos;[var=ee]/10&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>ergebnis1</name>
+      <initializationCode id="84">
+        <code>evaluateInR(&apos;[var=ergebnis]/10&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>s1</name>
+      <initializationCode id="86">
+        <code>&quot;Kiefer&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>s2</name>
+      <initializationCode id="88">
+        <code>&quot;Eiche&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="89">
+      <name>s3</name>
+      <initializationCode id="90">
+        <code>&quot;Linde&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="91">
+      <name>s4</name>
+      <initializationCode id="92">
+        <code>&quot;Birke&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="93"/>
+  <dynamicMolecules id="94"/>
+  <resultFeedbackMappings id="95"/>
+</Exercise>

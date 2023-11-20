@@ -1,0 +1,509 @@
+<Exercise id="1">
+  <name>DS5-03 Schiefe- und Kurtosisparameter 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>3. Zentralmoment über Momente darstellen
+Schiefeparameter anhand von Momenten berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>4</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <MCStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Welche der Darstellungen des 3. Zentralmoments durch die Anfangsmomente ist korrekt?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;Hinweis:&lt;/em&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \binom{N}{n}=\frac{N\textrm{!}}{n\textrm{!}(N-n)\textrm{!}}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \binom{3}{0}=\frac{3\textrm{!}}{0\textrm{!}(3-0)\textrm{!}}=\frac{6}{6}=1$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \binom{3}{1}=\frac{3\textrm{!}}{1\textrm{!}(3-1)\textrm{!}}=\frac{6}{2}=3$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \binom{3}{2}=\frac{3\textrm{!}}{2\textrm{!}(3-2)\textrm{!}}=\frac{6}{2}=3$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \binom{3}{3}=\frac{3\textrm{!}}{3\textrm{!}(3-3)\textrm{!}}=\frac{6}{6}=1$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;</taskDescription>
+      <skipMessage>$\displaystyle m_3=\binom{3}{0}m(0)_3+\binom{3}{1}m(0)_2(-\bar{x})+\binom{3}{2}m(0)_1\bar{x}^2+\binom{3}{3}(-\bar{x})^3$&lt;br /&gt;
+$\displaystyle 2\bar{x}^3-3\bar{x}m(0)_2+m(0)_3$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Gegeben seien die Anfangsmomente:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$m(0)_1=[var=$am1]$&lt;br /&gt;&#xd;
+$m(0)_2=[var=$am2]$&lt;br /&gt;&#xd;
+$m(0)_3=[var=$am3]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bestimmen Sie das dritte Zentralmoment.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$m_3=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die VIERTE Nachkommastelle und verwenden Sie einen Dezimalpunkt)&lt;/em&gt;</taskDescription>
+            <skipMessage>$m_3=[var=$m3]$</skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18">
+              <StageTransition id="19">
+                <conditionExpression id="20">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="21">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="22">
+              <StageTransition id="23">
+                <conditionExpression id="24">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="25">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="26">
+              <StageHint id="27">
+                <stagehint__order>0</stagehint__order>
+                <text>Alle Zentralmomente lassen sich durch Anfangsmomente darstellen. &amp;Uuml;berlegen Sie, was das f&amp;uuml;r das dritte Zentralmoment bedeutet.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+              <StageHint id="28">
+                <stagehint__order>1</stagehint__order>
+                <text>$m_3=m(0)_3-3m(0)_1m(0)_2+2m(0)_1^3$</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="29"/>
+            <variableUpdatesBeforeCheck id="30"/>
+            <variableUpdatesAfterCheck id="31"/>
+            <variableUpdatesOnNormalExit id="32"/>
+            <variableUpdatesOnRepeat id="33"/>
+            <variableUpdatesOnSkip id="34"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="35"/>
+            <rules id="36"/>
+            <fillInFields id="37">
+              <FillInField id="38">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="39"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht richtig. 
+&lt;br /&gt;
+&lt;br /&gt;
+$m_3=[var=$m3]$</defaultFeedback>
+            <correctAnswerRules id="40">
+              <Rule id="41">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="42">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&lt;[var=m3]*1.005&amp;&amp;[input=field1]&gt;[var=m3]*0.995</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="43">
+        <StageTransition id="44">
+          <conditionExpression id="45">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="46">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="47">
+        <StageHint id="48">
+          <stagehint__order>0</stagehint__order>
+          <text>$\displaystyle m(0)_0=1$&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+        <StageHint id="49">
+          <stagehint__order>1</stagehint__order>
+          <text>$\displaystyle (-\bar{x})^2=\bar{x}^2$&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+        <StageHint id="50">
+          <stagehint__order>2</stagehint__order>
+          <text>$\displaystyle (-\bar{x})^1=-\bar{x}^1$&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+        <StageHint id="51">
+          <stagehint__order>3</stagehint__order>
+          <text> $\displaystyle m(0)_1=\bar{x}$ </text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="52"/>
+      <variableUpdatesBeforeCheck id="53"/>
+      <variableUpdatesAfterCheck id="54"/>
+      <variableUpdatesOnNormalExit id="55"/>
+      <variableUpdatesOnRepeat id="56"/>
+      <variableUpdatesOnSkip id="57"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="58"/>
+      <answerOptions id="59">
+        <MCAnswer id="60">
+          <order>0</order>
+          <rule>CORRECT</rule>
+          <text>&lt;br /&gt;
+$\displaystyle \binom{3}{0}m(0)_3+\binom{3}{1}m(0)_2(-\bar{x})+\binom{3}{2}m(0)_1\bar{x}^2+\binom{3}{3}(-\bar{x})^3$&lt;br /&gt;
+&amp;nbsp;</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="61">
+          <order>1</order>
+          <rule>CORRECT</rule>
+          <text>&lt;br /&gt;
+$\displaystyle 2\bar{x}^3-3\bar{x}m(0)_2+m(0)_3$&lt;br /&gt;
+&amp;nbsp;</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="62">
+          <order>2</order>
+          <rule>WRONG</rule>
+          <text>&lt;br /&gt;
+$\displaystyle m(0)_3-3\bar{x}m(0)_2-3\bar{x}^2$&lt;br /&gt;
+&amp;nbsp;</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="63">
+          <order>3</order>
+          <rule>WRONG</rule>
+          <text>&lt;br /&gt;
+$\displaystyle m(1)_3(-\bar{x})^0+\binom{3}{1}m(1)_2(-\bar{x})+\binom{3}{2}m(1)_1\bar{x}^2+\binom{3}{3}(-\bar{x})^3$&lt;br /&gt;
+&amp;nbsp;</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="64">
+          <order>4</order>
+          <rule>WRONG</rule>
+          <text>&lt;br /&gt;
+$\displaystyle m(0)_3$&lt;br /&gt;
+&amp;nbsp;</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="65">
+          <order>5</order>
+          <rule>WRONG</rule>
+          <text>&lt;br /&gt;
+$\displaystyle 3\bar{x}+3\bar{x}m(0)_3-m(0)_2$&lt;br /&gt;
+&amp;nbsp;</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+      </answerOptions>
+      <randomize>true</randomize>
+      <singleChoice>false</singleChoice>
+      <correctAnswerFeedback> Richtig. </correctAnswerFeedback>
+      <defaultFeedback>  Leider nicht richtig. 
+&lt;br /&gt;
+&lt;br /&gt;
+$\displaystyle m_3=\binom{3}{0}m(0)_3+\binom{3}{1}m(0)_2(-\bar{x})+\binom{3}{2}m(0)_1\bar{x}^2+\binom{3}{3}(-\bar{x})^3$&lt;br /&gt;
+$\displaystyle 2\bar{x}^3-3\bar{x}m(0)_2+m(0)_3$</defaultFeedback>
+      <defaultResult>0</defaultResult>
+      <extraFeedbacks id="66">
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="67">
+          <expression id="68">
+            <code>[input=mcindex_0]&amp;&amp;![input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;![input=mcindex_4]&amp;&amp;![input=mcindex_5]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="69">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>0</result>
+          <feedbackText>  Richtig, allerdings ist noch eine weitere Darstellung korrekt. </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+        <de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback id="70">
+          <expression id="71">
+            <code>![input=mcindex_0]&amp;&amp;[input=mcindex_1]&amp;&amp;![input=mcindex_2]&amp;&amp;![input=mcindex_3]&amp;&amp;![input=mcindex_4]&amp;&amp;![input=mcindex_5]</code>
+            <domain>MATH</domain>
+          </expression>
+          <condition id="72">
+            <code></code>
+            <domain>MATH</domain>
+          </condition>
+          <result>0</result>
+          <feedbackText>  Richtig, allerdings ist noch eine weitere Darstellung korrekt. </feedbackText>
+        </de.uni__due.s3.jack3.entities.stagetypes.mc.MCFeedback>
+      </extraFeedbacks>
+    </MCStage>
+    <FillInStage reference="14"/>
+  </stages>
+  <startStage class="MCStage" reference="6"/>
+  <variableDeclarations id="73">
+    <VariableDeclaration id="74">
+      <name>x1</name>
+      <initializationCode id="75">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="76">
+      <name>x2</name>
+      <initializationCode id="77">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="78">
+      <name>x3</name>
+      <initializationCode id="79">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="80">
+      <name>x4</name>
+      <initializationCode id="81">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="82">
+      <name>x5</name>
+      <initializationCode id="83">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="84">
+      <name>x6</name>
+      <initializationCode id="85">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="86">
+      <name>x7</name>
+      <initializationCode id="87">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="88">
+      <name>x8</name>
+      <initializationCode id="89">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="90">
+      <name>x9</name>
+      <initializationCode id="91">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="92">
+      <name>x10</name>
+      <initializationCode id="93">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="94">
+      <name>x11</name>
+      <initializationCode id="95">
+        <code>randomIntegerBetween(10,20)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="96">
+      <name>x12</name>
+      <initializationCode id="97">
+        <code>randomIntegerBetween(15,20)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="98">
+      <name>x13</name>
+      <initializationCode id="99">
+        <code>randomIntegerBetween(20,30)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="100">
+      <name>x14</name>
+      <initializationCode id="101">
+        <code>randomIntegerBetween(25,33)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="102">
+      <name>x15</name>
+      <initializationCode id="103">
+        <code>randomIntegerBetween(25,33)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="104">
+      <name>x16</name>
+      <initializationCode id="105">
+        <code>randomIntegerBetween(25,33)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="106">
+      <name>am1u</name>
+      <initializationCode id="107">
+        <code>evaluateInR(&apos;([var=x1]+[var=x2]+[var=x3]+[var=x4]+[var=x5]+[var=x6]+[var=x7]+[var=x8]+[var=x9]+[var=x10]+[var=x11]+[var=x12]+[var=x13]+[var=x14]+[var=x15]+[var=x16])/16&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="108">
+      <name>am2u</name>
+      <initializationCode id="109">
+        <code>(pow([var=x1], 2) + pow([var=x2], 2) + pow([var=x3], 2) + pow([var=x4], 2) + pow([var=x5], 2) + pow([var=x6], 2) + pow([var=x7], 2) + pow([var=x8], 2) + pow([var=x9], 2) + pow([var=x10], 2) + pow([var=x11], 2) + pow([var=x12], 2) + pow([var=x13], 2)  + pow([var=x14], 2) + pow([var=x15], 2) + pow([var=x16], 2))/16</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="110">
+      <name>am3u</name>
+      <initializationCode id="111">
+        <code>(pow([var=x1], 3)+pow([var=x2], 3)+pow([var=x3], 3)+pow([var=x4], 3)+pow([var=x5], 3)+pow([var=x6], 3)+pow([var=x7], 3)+pow([var=x8], 3)+pow([var=x9], 3)+pow([var=x10], 3)+pow([var=x11], 3)+pow([var=x12], 3)+pow([var=x13], 3)+pow([var=x14], 3)+pow([var=x15], 3)+pow([var=x16], 3))/16</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="112">
+      <name>am1</name>
+      <initializationCode id="113">
+        <code>round([var=am1u], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="114">
+      <name>am2</name>
+      <initializationCode id="115">
+        <code>round([var=am2u], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="116">
+      <name>am3</name>
+      <initializationCode id="117">
+        <code>round([var=am3u], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="118">
+      <name>m3un</name>
+      <initializationCode id="119">
+        <code>2*pow([var=am1], 3)-3*[var=am1]*[var=am2]+[var=am3]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="120">
+      <name>m3</name>
+      <initializationCode id="121">
+        <code>round([var=m3un], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="122">
+      <name>z3un</name>
+      <initializationCode id="123">
+        <code>evaluateInR(&apos;[var=m3]/(([var=am2]-[var=am1]^2)^(3/2))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="124">
+      <name>z3</name>
+      <initializationCode id="125">
+        <code>round([var=z3un], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="126"/>
+  <dynamicMolecules id="127"/>
+  <resultFeedbackMappings id="128"/>
+</Exercise>

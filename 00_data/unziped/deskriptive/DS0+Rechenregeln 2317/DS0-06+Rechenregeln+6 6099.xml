@@ -1,0 +1,185 @@
+<Exercise id="1">
+  <name>DS0-06 Rechenregeln 6</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\left(e^{[var=x1]} \cdot e^{[var=x2]} \cdot e^{[var=x3]} \cdot e^{[var=x4]} \cdot (ln(e^1))^{-1}\right)\cdot \textrm{exp}([var=x5]-[var=x5]^1)$&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Schreiben Sie Ihr Ergebnis nicht als Bruch sondern als Dezimalzahl und verwenden Sie einen Punkt als Dezimalzeichen.)&lt;/em&gt; &amp;nbsp;&lt;/span&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>Es gilt&lt;br /&gt;
+&lt;br /&gt;
+$\displaystyle \left(e^{[var=x1]} \cdot e^{[var=x2]} \cdot e^{[var=x3]} \cdot e^{[var=x4]} \cdot (ln(e^1))^{-1}\right)\cdot \textrm{exp}([var=x5]-[var=x5]^1)$&lt;br /&gt;
+&lt;br /&gt;
+$\displaystyle = e^{\left( [var=x1]+[var=x2]+[var=x3]+[var=x4] \right)} $&lt;br /&gt;
+&lt;br /&gt;
+$= [var=ER2]$.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14"/>
+      <hints id="15">
+        <StageHint id="16">
+          <stagehint__order>0</stagehint__order>
+          <text> Benutzen Sie die folgenden Rechenregeln 
+		
+		$\displaystyle e^{a} \cdot e^{b} = e^{a+b}$,
+		
+		$\displaystyle x^{0} = 1$,
+		
+		$\displaystyle x^{-y} = \frac{1}{x^y}$,
+		
+		$\displaystyle ln(e^x)= x$. </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="23"/>
+      <rules id="24"/>
+      <fillInFields id="25">
+        <FillInField id="26">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="27"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht richtig!</defaultFeedback>
+      <correctAnswerRules id="28">
+        <Rule id="29">
+          <name>CorrectAnswer2</name>
+          <orderIndex>2</orderIndex>
+          <validationExpression id="30">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;equalsExpr([var=ER2], [input=field1])</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="31">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="32">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[var=ER2]==[input=field1]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="33">
+    <VariableDeclaration id="34">
+      <name>x1</name>
+      <initializationCode id="35">
+        <code>randomIntegerBetween(1,8)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>x2</name>
+      <initializationCode id="37">
+        <code>randomIntegerBetween(1,8)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>x3</name>
+      <initializationCode id="39">
+        <code>randomIntegerBetween(-4,-1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>x4</name>
+      <initializationCode id="41">
+        <code>randomIntegerBetween(-4,-1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>x5</name>
+      <initializationCode id="43">
+        <code>randomIntegerBetween(1,8)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>Val</name>
+      <initializationCode id="45">
+        <code>[var=x1]+[var=x2]+[var=x3]+[var=x4]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>ER</name>
+      <initializationCode id="47">
+        <code>evaluateInR(&apos;exp([var=Val])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>ER2</name>
+      <initializationCode id="49">
+        <code>evaluateInR(&apos;round([var=ER], 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="50"/>
+  <dynamicMolecules id="51"/>
+  <resultFeedbackMappings id="52"/>
+</Exercise>

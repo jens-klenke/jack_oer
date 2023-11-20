@@ -1,0 +1,1019 @@
+<Exercise id="1">
+  <name>IS12-04 Zweidimensionale Zufallsvariablen 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Dichtefunktion, Randdichten, gemischte Verteilungsfunktion, bedingte Dichten
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2"/>
+  <resources id="3"/>
+  <stages id="4">
+    <FillInStage id="5">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Zwei stetige Zufallsvariablen $X$ und $Y$ besitzen die nachstehende, gemeinsame Dichtefunktion: $$f(x,y)= \begin{cases} ax^2y^3 &amp;amp; , \quad 0 &amp;lt; x &amp;lt; y &amp;lt; 1 \\ 0 &amp;amp; , \quad \mbox{sonst. } \end{cases}$$ Bestimmen Sie die Konstante $a$.&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+      <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;</skipMessage>
+      <defaultTransition id="6">
+        <conditionExpression id="7">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="8">
+          <domain>MATH</domain>
+        </stageExpression>
+        <targetStage class="FillInStage" id="9">
+          <internalName>2</internalName>
+          <externalName>Stage 2</externalName>
+          <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ermitteln Sie die Randdichtefunktion f&amp;uuml;r $X$ und $Y$ und bestimmen Sie:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$f_X([var=b1])=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$f_Y([var=b2])=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;fillin2&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin2&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+          <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;</skipMessage>
+          <defaultTransition id="10">
+            <conditionExpression id="11">
+              <domain>MATH</domain>
+            </conditionExpression>
+            <stageExpression id="12">
+              <domain>MATH</domain>
+            </stageExpression>
+            <targetStage class="FillInStage" id="13">
+              <internalName>3</internalName>
+              <externalName>Stage 3</externalName>
+              <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bestimmen Sie die gemeinsame Verteilungsfunktion $F(x,y)$ und berechnen Sie:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$F([var=cx],[var=cy])=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+              <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;</skipMessage>
+              <defaultTransition id="14">
+                <conditionExpression id="15">
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="16">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="17">
+                  <internalName>4</internalName>
+                  <externalName>Stage 4</externalName>
+                  <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ermitteln Sie die bedingte Dichtefunktion $f(x|y)$ und $f(y|x)$ und berechnen Sie:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$f(x=[var=dx1]|y=[var=dy1])=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$f(y=[var=dy2]|x=[var=dx2])=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;fillin2&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin2&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+                  <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;</skipMessage>
+                  <defaultTransition id="18">
+                    <conditionExpression id="19">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="20">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <targetStage class="FillInStage" id="21">
+                      <internalName>5</internalName>
+                      <externalName>Stage 5</externalName>
+                      <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bestimmen Sie die bedingte Verteilungsfunktion $F(x|y)$ und berechnen Sie:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$F(x=[var=ex1]|y=[var=ey1])=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+                      <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;</skipMessage>
+                      <defaultTransition id="22">
+                        <conditionExpression id="23">
+                          <domain>MATH</domain>
+                        </conditionExpression>
+                        <stageExpression id="24">
+                          <domain>MATH</domain>
+                        </stageExpression>
+                        <targetStage class="FillInStage" id="25">
+                          <internalName>6</internalName>
+                          <externalName>Stage 6</externalName>
+                          <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$P([var=fx1] &amp;lt; X &amp;lt; [var=fx2] | y=[var=fy1])=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+                          <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;</skipMessage>
+                          <defaultTransition id="26">
+                            <conditionExpression id="27">
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="28">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <targetStage class="FillInStage" id="29">
+                              <internalName>7</internalName>
+                              <externalName>Stage 7</externalName>
+                              <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$E(X)=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$E(Y)=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin2&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin2&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$E(X^2)=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin3&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin3&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$E(Y^2)=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin4&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin4&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$E(XY)=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin5&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin5&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+                              <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;</skipMessage>
+                              <defaultTransition id="30">
+                                <conditionExpression id="31">
+                                  <domain>MATH</domain>
+                                </conditionExpression>
+                                <stageExpression id="32">
+                                  <domain>MATH</domain>
+                                </stageExpression>
+                                <isRepeat>false</isRepeat>
+                              </defaultTransition>
+                              <skipTransitions id="33"/>
+                              <stageTransitions id="34"/>
+                              <hints id="35"/>
+                              <variableUpdatesOnEnter id="36"/>
+                              <variableUpdatesBeforeCheck id="37"/>
+                              <variableUpdatesAfterCheck id="38"/>
+                              <variableUpdatesOnNormalExit id="39"/>
+                              <variableUpdatesOnRepeat id="40"/>
+                              <variableUpdatesOnSkip id="41"/>
+                              <weight>1</weight>
+                              <orderIndex>6</orderIndex>
+                              <allowSkip>true</allowSkip>
+                              <resources id="42"/>
+                              <rules id="43">
+                                <Rule id="44">
+                                  <name>fillIn1 richtig</name>
+                                  <orderIndex>0</orderIndex>
+                                  <validationExpression id="45">
+                                    <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=gex])
+) &lt;= 0.0011 </code>
+                                    <domain>MATH</domain>
+                                  </validationExpression>
+                                  <feedbackText></feedbackText>
+                                  <points>20</points>
+                                  <terminal>false</terminal>
+                                </Rule>
+                                <Rule id="46">
+                                  <name>fillIn3 richtig</name>
+                                  <orderIndex>2</orderIndex>
+                                  <validationExpression id="47">
+                                    <code>!isEmpty([input=fillin3]) &amp;&amp; isRealNumber([input=fillin3]) &amp;&amp;
+abs(
+([input=fillin3])-([var=gex2])
+) &lt;= 0.0011</code>
+                                    <domain>MATH</domain>
+                                  </validationExpression>
+                                  <feedbackText></feedbackText>
+                                  <points>20</points>
+                                  <terminal>false</terminal>
+                                </Rule>
+                                <Rule id="48">
+                                  <name>fillIn2 richtig</name>
+                                  <orderIndex>1</orderIndex>
+                                  <validationExpression id="49">
+                                    <code>!isEmpty([input=fillin2]) &amp;&amp; isRealNumber([input=fillin2]) &amp;&amp;
+abs(
+([input=fillin2])-([var=gey])
+) &lt;= 0.0011</code>
+                                    <domain>MATH</domain>
+                                  </validationExpression>
+                                  <feedbackText></feedbackText>
+                                  <points>20</points>
+                                  <terminal>false</terminal>
+                                </Rule>
+                                <Rule id="50">
+                                  <name>fillIn4 richtig</name>
+                                  <orderIndex>3</orderIndex>
+                                  <validationExpression id="51">
+                                    <code>!isEmpty([input=fillin4]) &amp;&amp; isRealNumber([input=fillin4]) &amp;&amp;
+abs(
+([input=fillin4])-([var=gey2])
+) &lt;= 0.0011</code>
+                                    <domain>MATH</domain>
+                                  </validationExpression>
+                                  <feedbackText></feedbackText>
+                                  <points>20</points>
+                                  <terminal>false</terminal>
+                                </Rule>
+                                <Rule id="52">
+                                  <name>fillIn5 richtig</name>
+                                  <orderIndex>4</orderIndex>
+                                  <validationExpression id="53">
+                                    <code>!isEmpty([input=fillin5]) &amp;&amp; isRealNumber([input=fillin5]) &amp;&amp;
+abs(
+([input=fillin5])-([var=gexy])
+) &lt;= 0.0011</code>
+                                    <domain>MATH</domain>
+                                  </validationExpression>
+                                  <feedbackText></feedbackText>
+                                  <points>20</points>
+                                  <terminal>false</terminal>
+                                </Rule>
+                              </rules>
+                              <fillInFields id="54">
+                                <FillInField id="55">
+                                  <name>fillin1</name>
+                                  <orderIndex>0</orderIndex>
+                                  <size>10</size>
+                                  <formularEditorType>NUMBER</formularEditorType>
+                                </FillInField>
+                                <FillInField id="56">
+                                  <name>fillin2</name>
+                                  <orderIndex>1</orderIndex>
+                                  <size>10</size>
+                                  <formularEditorType>NUMBER</formularEditorType>
+                                </FillInField>
+                                <FillInField id="57">
+                                  <name>fillin4</name>
+                                  <orderIndex>3</orderIndex>
+                                  <size>10</size>
+                                  <formularEditorType>NUMBER</formularEditorType>
+                                </FillInField>
+                                <FillInField id="58">
+                                  <name>fillin3</name>
+                                  <orderIndex>2</orderIndex>
+                                  <size>10</size>
+                                  <formularEditorType>NUMBER</formularEditorType>
+                                </FillInField>
+                                <FillInField id="59">
+                                  <name>fillin5</name>
+                                  <orderIndex>4</orderIndex>
+                                  <size>10</size>
+                                  <formularEditorType>NUMBER</formularEditorType>
+                                </FillInField>
+                              </fillInFields>
+                              <dropDownFields id="60"/>
+                              <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+                              <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;</defaultFeedback>
+                              <correctAnswerRules id="61">
+                                <Rule id="62">
+                                  <name>Feedback 1</name>
+                                  <orderIndex>1</orderIndex>
+                                  <validationExpression id="63">
+                                    <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=gex])
+) &lt;= 0.0011 &amp;&amp;
+!isEmpty([input=fillin2]) &amp;&amp; isRealNumber([input=fillin2]) &amp;&amp;
+abs(
+([input=fillin2])-([var=gey])
+) &lt;= 0.0011 &amp;&amp;
+!isEmpty([input=fillin3]) &amp;&amp; isRealNumber([input=fillin3]) &amp;&amp;
+abs(
+([input=fillin3])-([var=gex2])
+) &lt;= 0.0011 &amp;&amp;
+!isEmpty([input=fillin4]) &amp;&amp; isRealNumber([input=fillin4]) &amp;&amp;
+abs(
+([input=fillin4])-([var=gey2])
+) &lt;= 0.0011 &amp;&amp;
+!isEmpty([input=fillin5]) &amp;&amp; isRealNumber([input=fillin5]) &amp;&amp;
+abs(
+([input=fillin5])-([var=gexy])
+) &lt;= 0.0011 </code>
+                                    <domain>MATH</domain>
+                                  </validationExpression>
+                                  <points>0</points>
+                                  <terminal>false</terminal>
+                                </Rule>
+                              </correctAnswerRules>
+                              <correctAnswerFeedback>Das Ergebnis ist richtig.</correctAnswerFeedback>
+                              <defaultResult>0</defaultResult>
+                            </targetStage>
+                            <isRepeat>false</isRepeat>
+                          </defaultTransition>
+                          <skipTransitions id="64">
+                            <StageTransition id="65">
+                              <conditionExpression id="66">
+                                <code></code>
+                                <domain>MATH</domain>
+                              </conditionExpression>
+                              <stageExpression id="67">
+                                <domain>MATH</domain>
+                              </stageExpression>
+                              <targetStage class="FillInStage" reference="29"/>
+                              <isRepeat>false</isRepeat>
+                            </StageTransition>
+                          </skipTransitions>
+                          <stageTransitions id="68"/>
+                          <hints id="69"/>
+                          <variableUpdatesOnEnter id="70"/>
+                          <variableUpdatesBeforeCheck id="71"/>
+                          <variableUpdatesAfterCheck id="72"/>
+                          <variableUpdatesOnNormalExit id="73"/>
+                          <variableUpdatesOnRepeat id="74"/>
+                          <variableUpdatesOnSkip id="75"/>
+                          <weight>1</weight>
+                          <orderIndex>5</orderIndex>
+                          <allowSkip>true</allowSkip>
+                          <resources id="76"/>
+                          <rules id="77"/>
+                          <fillInFields id="78">
+                            <FillInField id="79">
+                              <name>fillin1</name>
+                              <orderIndex>0</orderIndex>
+                              <size>10</size>
+                              <formularEditorType>NUMBER</formularEditorType>
+                            </FillInField>
+                          </fillInFields>
+                          <dropDownFields id="80"/>
+                          <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+                          <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;</defaultFeedback>
+                          <correctAnswerRules id="81">
+                            <Rule id="82">
+                              <name>Feedback 1</name>
+                              <orderIndex>1</orderIndex>
+                              <validationExpression id="83">
+                                <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=ansf])
+) &lt;= 0.0011</code>
+                                <domain>MATH</domain>
+                              </validationExpression>
+                              <points>0</points>
+                              <terminal>false</terminal>
+                            </Rule>
+                          </correctAnswerRules>
+                          <correctAnswerFeedback>Das Ergebnis ist richtig.</correctAnswerFeedback>
+                          <defaultResult>0</defaultResult>
+                        </targetStage>
+                        <isRepeat>false</isRepeat>
+                      </defaultTransition>
+                      <skipTransitions id="84">
+                        <StageTransition id="85">
+                          <conditionExpression id="86">
+                            <code></code>
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="87">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <targetStage class="FillInStage" reference="25"/>
+                          <isRepeat>false</isRepeat>
+                        </StageTransition>
+                      </skipTransitions>
+                      <stageTransitions id="88"/>
+                      <hints id="89"/>
+                      <variableUpdatesOnEnter id="90"/>
+                      <variableUpdatesBeforeCheck id="91"/>
+                      <variableUpdatesAfterCheck id="92"/>
+                      <variableUpdatesOnNormalExit id="93"/>
+                      <variableUpdatesOnRepeat id="94"/>
+                      <variableUpdatesOnSkip id="95"/>
+                      <weight>1</weight>
+                      <orderIndex>4</orderIndex>
+                      <allowSkip>true</allowSkip>
+                      <resources id="96"/>
+                      <rules id="97"/>
+                      <fillInFields id="98">
+                        <FillInField id="99">
+                          <name>fillin1</name>
+                          <orderIndex>0</orderIndex>
+                          <size>10</size>
+                          <formularEditorType>NUMBER</formularEditorType>
+                        </FillInField>
+                      </fillInFields>
+                      <dropDownFields id="100"/>
+                      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+                      <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;</defaultFeedback>
+                      <correctAnswerRules id="101">
+                        <Rule id="102">
+                          <name>Feedback 1</name>
+                          <orderIndex>1</orderIndex>
+                          <validationExpression id="103">
+                            <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=anse])
+) &lt;= 0.0011</code>
+                            <domain>MATH</domain>
+                          </validationExpression>
+                          <points>0</points>
+                          <terminal>false</terminal>
+                        </Rule>
+                      </correctAnswerRules>
+                      <correctAnswerFeedback>Das Ergebnis ist richtig.</correctAnswerFeedback>
+                      <defaultResult>0</defaultResult>
+                    </targetStage>
+                    <isRepeat>false</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="104">
+                    <StageTransition id="105">
+                      <conditionExpression id="106">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="107">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="21"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="108"/>
+                  <hints id="109"/>
+                  <variableUpdatesOnEnter id="110"/>
+                  <variableUpdatesBeforeCheck id="111"/>
+                  <variableUpdatesAfterCheck id="112"/>
+                  <variableUpdatesOnNormalExit id="113"/>
+                  <variableUpdatesOnRepeat id="114"/>
+                  <variableUpdatesOnSkip id="115"/>
+                  <weight>1</weight>
+                  <orderIndex>3</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="116"/>
+                  <rules id="117">
+                    <Rule id="118">
+                      <name>fillIn2 richtig</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="119">
+                        <code>!isEmpty([input=fillin2]) &amp;&amp; isRealNumber([input=fillin2]) &amp;&amp;
+abs(
+([input=fillin2])-([var=ansd2])
+) &lt;= 0.0011</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <feedbackText></feedbackText>
+                      <points>50</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                    <Rule id="120">
+                      <name>fillIn1 richtig</name>
+                      <orderIndex>0</orderIndex>
+                      <validationExpression id="121">
+                        <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=ansd1])
+) &lt;= 0.0011</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <feedbackText></feedbackText>
+                      <points>50</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </rules>
+                  <fillInFields id="122">
+                    <FillInField id="123">
+                      <name>fillin1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>10</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                    <FillInField id="124">
+                      <name>fillin2</name>
+                      <orderIndex>1</orderIndex>
+                      <size>10</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="125"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+                  <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;</defaultFeedback>
+                  <correctAnswerRules id="126">
+                    <Rule id="127">
+                      <name>Feedback 1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="128">
+                        <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=ansd1])
+) &lt;= 0.0011 &amp;&amp;
+!isEmpty([input=fillin2]) &amp;&amp; isRealNumber([input=fillin2]) &amp;&amp;
+abs(
+([input=fillin2])-([var=ansd2])
+) &lt;= 0.0011</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Das Ergebnis ist richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </defaultTransition>
+              <skipTransitions id="129">
+                <StageTransition id="130">
+                  <conditionExpression id="131">
+                    <code></code>
+                    <domain>MATH</domain>
+                  </conditionExpression>
+                  <stageExpression id="132">
+                    <domain>MATH</domain>
+                  </stageExpression>
+                  <targetStage class="FillInStage" reference="17"/>
+                  <isRepeat>false</isRepeat>
+                </StageTransition>
+              </skipTransitions>
+              <stageTransitions id="133"/>
+              <hints id="134"/>
+              <variableUpdatesOnEnter id="135"/>
+              <variableUpdatesBeforeCheck id="136"/>
+              <variableUpdatesAfterCheck id="137"/>
+              <variableUpdatesOnNormalExit id="138"/>
+              <variableUpdatesOnRepeat id="139"/>
+              <variableUpdatesOnSkip id="140"/>
+              <weight>1</weight>
+              <orderIndex>2</orderIndex>
+              <allowSkip>true</allowSkip>
+              <resources id="141"/>
+              <rules id="142"/>
+              <fillInFields id="143">
+                <FillInField id="144">
+                  <name>fillin1</name>
+                  <orderIndex>0</orderIndex>
+                  <size>10</size>
+                  <formularEditorType>NUMBER</formularEditorType>
+                </FillInField>
+              </fillInFields>
+              <dropDownFields id="145"/>
+              <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+              <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;</defaultFeedback>
+              <correctAnswerRules id="146">
+                <Rule id="147">
+                  <name>Feedback 1</name>
+                  <orderIndex>1</orderIndex>
+                  <validationExpression id="148">
+                    <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=ansc])
+) &lt;= 0.0011</code>
+                    <domain>MATH</domain>
+                  </validationExpression>
+                  <points>0</points>
+                  <terminal>false</terminal>
+                </Rule>
+              </correctAnswerRules>
+              <correctAnswerFeedback>Das Ergebnis ist richtig.</correctAnswerFeedback>
+              <defaultResult>0</defaultResult>
+            </targetStage>
+            <isRepeat>false</isRepeat>
+          </defaultTransition>
+          <skipTransitions id="149">
+            <StageTransition id="150">
+              <conditionExpression id="151">
+                <code></code>
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="152">
+                <domain>MATH</domain>
+              </stageExpression>
+              <targetStage class="FillInStage" reference="13"/>
+              <isRepeat>false</isRepeat>
+            </StageTransition>
+          </skipTransitions>
+          <stageTransitions id="153"/>
+          <hints id="154">
+            <StageHint id="155">
+              <stagehint__order>0</stagehint__order>
+              <text>$$f_X(x)=\int_x^1 f(x,y)\,dy=\int_x^1 21 x^2y^3\,dy$$
+$$f_Y(y)=\int_0^y f(x,y)\,dx=\int_0^y 21 x^2y^3\,dx$$</text>
+              <malus>0</malus>
+              <stage class="FillInStage" reference="9"/>
+            </StageHint>
+          </hints>
+          <variableUpdatesOnEnter id="156"/>
+          <variableUpdatesBeforeCheck id="157"/>
+          <variableUpdatesAfterCheck id="158"/>
+          <variableUpdatesOnNormalExit id="159"/>
+          <variableUpdatesOnRepeat id="160"/>
+          <variableUpdatesOnSkip id="161"/>
+          <weight>1</weight>
+          <orderIndex>1</orderIndex>
+          <allowSkip>true</allowSkip>
+          <resources id="162"/>
+          <rules id="163"/>
+          <fillInFields id="164">
+            <FillInField id="165">
+              <name>fillin2</name>
+              <orderIndex>1</orderIndex>
+              <size>10</size>
+              <formularEditorType>NUMBER</formularEditorType>
+            </FillInField>
+            <FillInField id="166">
+              <name>fillin1</name>
+              <orderIndex>0</orderIndex>
+              <size>10</size>
+              <formularEditorType>NUMBER</formularEditorType>
+            </FillInField>
+          </fillInFields>
+          <dropDownFields id="167"/>
+          <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+          <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;</defaultFeedback>
+          <correctAnswerRules id="168">
+            <Rule id="169">
+              <name>Feedback 1</name>
+              <orderIndex>1</orderIndex>
+              <validationExpression id="170">
+                <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=ansb1])
+) &lt;= 0.0011 &amp;&amp;
+!isEmpty([input=fillin2]) &amp;&amp; isRealNumber([input=fillin2]) &amp;&amp;
+abs(
+([input=fillin2])-([var=ansb2])
+) &lt;= 0.0011</code>
+                <domain>MATH</domain>
+              </validationExpression>
+              <points>0</points>
+              <terminal>false</terminal>
+            </Rule>
+          </correctAnswerRules>
+          <correctAnswerFeedback>Das Ergebnis ist richtig.</correctAnswerFeedback>
+          <defaultResult>0</defaultResult>
+        </targetStage>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="171">
+        <StageTransition id="172">
+          <conditionExpression id="173">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="174">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="9"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="175"/>
+      <hints id="176">
+        <StageHint id="177">
+          <stagehint__order>0</stagehint__order>
+          <text>Es gilt zu $0 &lt; x &lt; y &lt; 1$ äquivalent: $\text{1. Variante:} \qquad 0 &lt; x &lt; y \wedge 0 &lt; y &lt; 1$ $\text{2. Variante:} \qquad 0 &lt; x &lt; 1 \wedge x &lt; y &lt; 1.$ $$\underbrace{\int_0^1\int_0^y f(x,y)\,dxdy}_{\text{1. Variante}}=\underbrace{\int_0^1\int_x^1 f(x,y)\,dydx}_{\text{2. Variante}}\overset{!}{=}1$$</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="5"/>
+        </StageHint>
+        <StageHint id="178">
+          <stagehint__order>1</stagehint__order>
+          <text>Vorgehensweise nach der 1. Variante (auf die Reihenfolge bei der Integration achten!) $$\int_0^1\int_0^y ax^2y^3\,dxdy =\int_0^1 \frac{1}{3}a{y}^{6}\,dy=\dfrac{1}{21}a\overset{!}{=}1$$ Vorgehensweise nach der 2. Variante (auf die Reihenfolge bei der Integration achten!) $$\int_0^1\int_x^1 ax^2y^3\,dydx =\int_0^1 \dfrac{1}{4}a{x}^{2}\left(1-{x}^{4}\right)\,dx=\dfrac{1}{21}a\overset{!}{=}1$$</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="5"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="179"/>
+      <variableUpdatesBeforeCheck id="180"/>
+      <variableUpdatesAfterCheck id="181"/>
+      <variableUpdatesOnNormalExit id="182"/>
+      <variableUpdatesOnRepeat id="183"/>
+      <variableUpdatesOnSkip id="184"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="185"/>
+      <rules id="186"/>
+      <fillInFields id="187">
+        <FillInField id="188">
+          <name>fillin1</name>
+          <orderIndex>0</orderIndex>
+          <size>10</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="189"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;</defaultFeedback>
+      <correctAnswerRules id="190">
+        <Rule id="191">
+          <name>Feedback 1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="192">
+            <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-21
+) &lt;= 0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Das Ergebnis ist richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="9"/>
+    <FillInStage reference="13"/>
+    <FillInStage reference="17"/>
+    <FillInStage reference="21"/>
+    <FillInStage reference="25"/>
+    <FillInStage reference="29"/>
+    <FillInStage id="193">
+      <internalName>8</internalName>
+      <externalName>Stage 8</externalName>
+      <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bestimmen Sie den Korrelationskoeffizienten $r$:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$r=$&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+      <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;</skipMessage>
+      <defaultTransition id="194">
+        <conditionExpression id="195">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="196">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="197"/>
+      <stageTransitions id="198"/>
+      <hints id="199"/>
+      <variableUpdatesOnEnter id="200"/>
+      <variableUpdatesBeforeCheck id="201"/>
+      <variableUpdatesAfterCheck id="202"/>
+      <variableUpdatesOnNormalExit id="203"/>
+      <variableUpdatesOnRepeat id="204"/>
+      <variableUpdatesOnSkip id="205"/>
+      <weight>1</weight>
+      <orderIndex>7</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="206"/>
+      <rules id="207"/>
+      <fillInFields id="208">
+        <FillInField id="209">
+          <name>fillin1</name>
+          <orderIndex>0</orderIndex>
+          <size>10</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="210"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;</defaultFeedback>
+      <correctAnswerRules id="211">
+        <Rule id="212">
+          <name>Feedback 1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="213">
+            <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-(0.4368)
+) &lt;= 0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Das Ergebnis ist richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="5"/>
+  <variableDeclarations id="214">
+    <VariableDeclaration id="215">
+      <name>b1</name>
+      <initializationCode id="216">
+        <code>round(randomIntegerBetween(10, 91) / 100, 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="217">
+      <name>ansb1</name>
+      <initializationCode id="218">
+        <code>round( (21 / 4) * ([var=b1])^2 * (1 - ([var=b1])^4), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="219">
+      <name>b2</name>
+      <initializationCode id="220">
+        <code>round(randomIntegerBetween(10, 91) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="221">
+      <name>ansb2</name>
+      <initializationCode id="222">
+        <code>round(7 * [var=b2]^6, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="223">
+      <name>cx</name>
+      <initializationCode id="224">
+        <code>round(randomIntegerBetween(5, 46) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="225">
+      <name>cy</name>
+      <initializationCode id="226">
+        <code>round(randomIntegerBetween(47, 91) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="227">
+      <name>ansc</name>
+      <initializationCode id="228">
+        <code>round(-(0.75) * ([var=cx])^7 + 1.75 * ([var=cx])^3 * ([var=cy])^4, 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="229">
+      <name>dx1</name>
+      <initializationCode id="230">
+        <code>round(randomIntegerBetween(5, 46) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="231">
+      <name>dy1</name>
+      <initializationCode id="232">
+        <code>round(randomIntegerBetween(47, 91) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="233">
+      <name>ansd1</name>
+      <initializationCode id="234">
+        <code>round(3 * ([var=dx1])^2 * ([var=dy1])^(-3), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="235">
+      <name>dx2</name>
+      <initializationCode id="236">
+        <code>round(randomIntegerBetween(5, 46) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="237">
+      <name>dy2</name>
+      <initializationCode id="238">
+        <code>round(randomIntegerBetween(47, 91) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="239">
+      <name>ansd2</name>
+      <initializationCode id="240">
+        <code>round((4*([var=dy2])^3) / (1 - ([var=dx2])^4), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="241">
+      <name>ex1</name>
+      <initializationCode id="242">
+        <code>round(randomIntegerBetween(5, 46) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="243">
+      <name>ey1</name>
+      <initializationCode id="244">
+        <code>round(randomIntegerBetween(47, 91) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="245">
+      <name>anse</name>
+      <initializationCode id="246">
+        <code>round(([var=ey1])^(-3) * ([var=ex1])^3, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="247">
+      <name>fx1</name>
+      <initializationCode id="248">
+        <code>round(randomIntegerBetween(5, 26) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="249">
+      <name>fx2</name>
+      <initializationCode id="250">
+        <code>round(randomIntegerBetween(30, 41) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="251">
+      <name>fy1</name>
+      <initializationCode id="252">
+        <code>round(randomIntegerBetween(47, 91) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="253">
+      <name>ansf</name>
+      <initializationCode id="254">
+        <code>round((([var=fx2])^3 * ([var=fy1])^(-3)) - (([var=fx1])^3 * ([var=fy1])^(-3)), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="255">
+      <name>gex</name>
+      <initializationCode id="256">
+        <code>round(21/32, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="257">
+      <name>gey</name>
+      <initializationCode id="258">
+        <code>round(7/8, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="259">
+      <name>gex2</name>
+      <initializationCode id="260">
+        <code>round(7/15, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="261">
+      <name>gey2</name>
+      <initializationCode id="262">
+        <code>round(7/9, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="263">
+      <name>gexy</name>
+      <initializationCode id="264">
+        <code>round(7/12, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="265"/>
+  <dynamicMolecules id="266"/>
+  <resultFeedbackMappings id="267"/>
+</Exercise>

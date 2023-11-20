@@ -1,0 +1,232 @@
+<Exercise id="1">
+  <name>IS03-09 Bedingte Wahrscheinlichkeiten 9</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Satz von Bayes, NSA Aufgabe
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie arbeiten bei der NSA, wollen Terroristen finden und spionieren dazu automatisiert die Konversationen aller B&amp;uuml;rger verschiedener L&amp;auml;nder aus. $[var=Tp]$% der Menschheit seien Terroristen.&lt;br /&gt;&#xd;
+Weil Sie wirklich fast alles &amp;uuml;berwachen, identifiziert Ihr Abh&amp;ouml;rsystem einen Terroristen mit einer Wahrscheinlichkeit von $[var=Suu]$%. Leider schl&amp;auml;gt es jedoch auch in $[var=PFS]$% aller F&amp;auml;lle falschen Alarm, z.B. weil ansonsten harmlose B&amp;uuml;rger gerne sowohl in Afghanistan, Jemen als auch in Syrien Urlaub machen wollen oder aber in Zusammenhang mit einem Fu&amp;szlig;ballspiel etwas achtlos sowohl die Worte &amp;quot;heilig&amp;quot; als auch &amp;quot;Krieg&amp;quot; verwendet haben.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie hoch ist die Wahrscheinlichkeit, dass ein B&amp;uuml;rger tats&amp;auml;chlich ein Terrorist ist, wenn das System angibt, er sei einer? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung: &lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie ihr Ergebnis, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Die Wahrscheinlichkeit, dass ein B&amp;uuml;rger tats&amp;auml;chlich ein Terrorist ist, wenn das System angibt, er sei einer, betr&amp;auml;gt $[var=ansa]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="16">
+        <StageTransition id="17">
+          <conditionExpression id="18">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="19">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="20">
+        <StageHint id="21">
+          <stagehint__order>0</stagehint__order>
+          <text>Verwenden Sie die Formel von Bayes!</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="22"/>
+      <variableUpdatesBeforeCheck id="23"/>
+      <variableUpdatesAfterCheck id="24"/>
+      <variableUpdatesOnNormalExit id="25"/>
+      <variableUpdatesOnRepeat id="26"/>
+      <variableUpdatesOnSkip id="27"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="28"/>
+      <rules id="29"/>
+      <fillInFields id="30">
+        <FillInField id="31">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="32"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Die Wahrscheinlichkeit, dass ein B&amp;uuml;rger tats&amp;auml;chlich ein Terrorist ist, wenn das System angibt, er sei einer, betr&amp;auml;gt $[var=ansa]$.</defaultFeedback>
+      <correctAnswerRules id="33">
+        <Rule id="34">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="35">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ansa]-0.001&amp;&amp;[input=field1]&lt;[var=ansa]+0.001</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="36">
+    <VariableDeclaration id="37">
+      <name>Tu</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(1,9)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>Tpu</name>
+      <initializationCode id="40">
+        <code>([var=Tu])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>Tp</name>
+      <initializationCode id="42">
+        <code>round(([var=Tpu]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>PTU</name>
+      <initializationCode id="44">
+        <code>([var=Tp])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>PT</name>
+      <initializationCode id="46">
+        <code>round(([var=PTU]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>Suu</name>
+      <initializationCode id="48">
+        <code>randomIntegerBetween(91,99)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>Su</name>
+      <initializationCode id="50">
+        <code>([var=Suu])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>S</name>
+      <initializationCode id="52">
+        <code>round(([var=Su]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>FSuu</name>
+      <initializationCode id="54">
+        <code>randomIntegerBetween(1,6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>FSu</name>
+      <initializationCode id="56">
+        <code>([var=FSuu])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>PFS</name>
+      <initializationCode id="58">
+        <code>round(([var=FSu]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>PFSu</name>
+      <initializationCode id="60">
+        <code>([var=PFS])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>FS</name>
+      <initializationCode id="62">
+        <code>round(([var=PFSu]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>ansau</name>
+      <initializationCode id="64">
+        <code>([var=S]*[var=PT])/([var=S]*[var=PT]+[var=FS]*(1-[var=PT]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>ansa</name>
+      <initializationCode id="66">
+        <code>round(([var=ansau]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="67"/>
+  <dynamicMolecules id="68"/>
+  <resultFeedbackMappings id="69"/>
+</Exercise>

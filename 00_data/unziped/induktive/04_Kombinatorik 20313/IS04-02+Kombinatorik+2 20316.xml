@@ -1,0 +1,167 @@
+<Exercise id="1">
+  <name>IS04-02 Kombinatorik 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>deaktiviert - 1.Stage: Kombination mit Wiederholung ohne Beachtung der Reihenfolge
+deaktiviert - 2.Stage: Variation mit Wiederholung mit Beachtung der Reihenfolge
+3.Stage: Kombinationen ohne Wiederholung Reihenfolge unwichtig
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Beim Samstagslotto werden $6$ aus $49$ Kugeln gezogen. Wie viele Ziehungsreihen sind m&amp;ouml;glich?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Es muss der Binomialkoeffizient (Kombinationen ohne Wiederholung) berechnet werden: $\binom{N}{n}=\binom{49}{6}=[var=sol3]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="16">
+        <StageTransition id="17">
+          <conditionExpression id="18">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="19">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="20">
+        <StageHint id="21">
+          <stagehint__order>0</stagehint__order>
+          <text>Ziehen Sie die Gesamtheit oder nur einen Teil daraus? Ist dabei die Reihenfolge der Anordnung relevant?&lt;br /&gt;
+&lt;br /&gt;
+(Es liegt ein weiterer Hinweis vor.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>1</stagehint__order>
+          <text>Sie ziehen $6$ aus insgesamt $49$ möglichen Kugeln, folglich nur aus einem Teil der Gesamtheit. Die Reihenfolge der Kugeln ist dabei unerheblich.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="23"/>
+      <variableUpdatesBeforeCheck id="24"/>
+      <variableUpdatesAfterCheck id="25"/>
+      <variableUpdatesOnNormalExit id="26"/>
+      <variableUpdatesOnRepeat id="27"/>
+      <variableUpdatesOnSkip id="28"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="29"/>
+      <rules id="30"/>
+      <fillInFields id="31">
+        <FillInField id="32">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="33"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Es muss der Binomialkoeffizient (Kombinationen ohne Wiederholung) berechnet werden: $\binom{N}{n}=\binom{49}{6}=[var=sol3]$.</defaultFeedback>
+      <correctAnswerRules id="34">
+        <Rule id="35">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="36">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==[var=sol3]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="37">
+    <VariableDeclaration id="38">
+      <name>st1</name>
+      <initializationCode id="39">
+        <code>evaluateInR(&apos;round(runif(1, 4, 7))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>sol1</name>
+      <initializationCode id="41">
+        <code>evaluateInR(&apos;factorial(3+[var=st1]-1)/(factorial([var=st1])*factorial(2))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>st2</name>
+      <initializationCode id="43">
+        <code>randomIntegerBetween(10,13)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>sol2</name>
+      <initializationCode id="45">
+        <code>pow(3, [var=st2])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>sol3</name>
+      <initializationCode id="47">
+        <code>13983816</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="48"/>
+  <dynamicMolecules id="49"/>
+  <resultFeedbackMappings id="50"/>
+</Exercise>

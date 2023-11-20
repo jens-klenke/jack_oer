@@ -1,0 +1,350 @@
+<Exercise id="1">
+  <name>DS2-05 Eindimensionale Häufigkeitsverteilungen 5</name>
+  <publicDescription></publicDescription>
+  <internalNotes>3 Merkmalsausprägung gegeben, arithmetisches Mittel gegeben, Bestimmung der relativen Häufigkeiten der einzelnen Ausprägungen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>3</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Das metrisch skalierte Merkmal $X$ kann nur die Merkmalswerte $x_1$ = 0, $x_2$ = [var=m2] und $x_3$ = [var=m3] annehmen.&lt;br /&gt;&#xd;
+Weiterhin seien das arithmetische Mittel $\bar{x}$ = [var=amg] und der Wert der empirischen Verteilungsfunktion $H$([var=ang]) = [var=vfg] bekannt.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bestimmen Sie f&amp;uuml;r das Merkmal $X$ die relativen H&amp;auml;ufigkeiten der zugrunde liegenden Klassierung der Daten:&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die zweite Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$h_1$:&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$h_2$:&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$h_3$:&amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>$h_1$:[var=f1g]&lt;br /&gt;
+$h_2$:[var=f2g]&lt;br /&gt;
+$h_3$:[var=f3g]</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>$H([var=$ang])=H([var=$m2])$&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text>$H([var=$ang])=H([var=$m2])=h_1+h_2$&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="21">
+          <stagehint__order>2</stagehint__order>
+          <text>$H([var=$ang])=H([var=$m2])=h_1+h_2=[var=$vfg]$&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>3</stagehint__order>
+          <text>$h_3=1-H([var=$m2])$&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="23">
+          <stagehint__order>4</stagehint__order>
+          <text>$h_3=1-H([var=$m2])=1-[var=$vfg]=[var=$f3g]$&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="24">
+          <stagehint__order>5</stagehint__order>
+          <text>$\bar x=x_1*h_1+x_2*h_2+x_3*h_3$&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="25">
+          <stagehint__order>6</stagehint__order>
+          <text>$0*h_1=0$&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Dies war der letzte Hinweis.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="26"/>
+      <variableUpdatesBeforeCheck id="27"/>
+      <variableUpdatesAfterCheck id="28"/>
+      <variableUpdatesOnNormalExit id="29"/>
+      <variableUpdatesOnRepeat id="30"/>
+      <variableUpdatesOnSkip id="31"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="32"/>
+      <rules id="33"/>
+      <fillInFields id="34">
+        <FillInField id="35">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="36">
+          <name>field3</name>
+          <orderIndex>2</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="37">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="38"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.</defaultFeedback>
+      <correctAnswerRules id="39">
+        <Rule id="40">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="41">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]&gt;[var=f1g]*0.98&amp;&amp;[input=field1]&lt;[var=f1g]*1.02&amp;&amp;[input=field2]&gt;[var=f2g]*0.98&amp;&amp;[input=field2]&lt;[var=f2g]*1.02&amp;&amp;[input=field3]&gt;[var=f3g]*0.98&amp;&amp;[input=field3]&lt;[var=f3g]*1.02</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="42">
+    <VariableDeclaration id="43">
+      <name>ff1</name>
+      <initializationCode id="44">
+        <code>randomIntegerBetween(1,48)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>ff2</name>
+      <initializationCode id="46">
+        <code>randomIntegerBetween(1,48)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>ff3</name>
+      <initializationCode id="48">
+        <code>100-[var=ff1]-[var=ff2]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>f1</name>
+      <initializationCode id="50">
+        <code>[var=ff1]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>f2</name>
+      <initializationCode id="52">
+        <code>[var=ff2]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>f3</name>
+      <initializationCode id="54">
+        <code>[var=ff3]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>m2</name>
+      <initializationCode id="56">
+        <code>randomIntegerBetween(2,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>m3</name>
+      <initializationCode id="58">
+        <code>randomIntegerBetween(6,20)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>am</name>
+      <initializationCode id="60">
+        <code>[var=f2]*[var=m2]+[var=f3]*[var=m3]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>vf</name>
+      <initializationCode id="62">
+        <code>[var=f1]+[var=f2]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>i</name>
+      <initializationCode id="64">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>ABS</name>
+      <initializationCode id="66">
+        <code>getFromList([var=i], list(200,300,400,500,600,700,800))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>mul</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(1,9)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>aang</name>
+      <initializationCode id="70">
+        <code>[var=m2]+(([var=m3]-[var=m2])/10)*[var=mul]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>ah1</name>
+      <initializationCode id="72">
+        <code>[var=f1]*[var=ABS]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>ah2</name>
+      <initializationCode id="74">
+        <code>[var=f2]*[var=ABS]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>ah3</name>
+      <initializationCode id="76">
+        <code>[var=f3]*[var=ABS]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>f1g</name>
+      <initializationCode id="78">
+        <code>round([var=f1], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>ang</name>
+      <initializationCode id="80">
+        <code>round([var=aang], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>f2g</name>
+      <initializationCode id="82">
+        <code>round([var=f2], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>f3g</name>
+      <initializationCode id="84">
+        <code>round([var=f3], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>amg</name>
+      <initializationCode id="86">
+        <code>round([var=am], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>vfg</name>
+      <initializationCode id="88">
+        <code>round([var=vf], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="89"/>
+  <dynamicMolecules id="90"/>
+  <resultFeedbackMappings id="91"/>
+</Exercise>

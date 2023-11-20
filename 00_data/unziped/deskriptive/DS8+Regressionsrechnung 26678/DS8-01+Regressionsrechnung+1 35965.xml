@@ -1,0 +1,520 @@
+<Exercise id="1">
+  <name>DS8-01 Regressionsrechnung 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Scatterplot: Regressionsgerade per Auge fitten
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>1</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie untersuchen die Auswirkung von Rauchen w&amp;auml;hrend der Schwangerschaft auf das Geburtsgewicht von Neugeborenen.&lt;br /&gt;&#xd;
+Dazu haben Sie eine Stichprobe von 10 Frauen, die w&amp;auml;hrend der Schwangerschaft geraucht haben.&lt;br /&gt;&#xd;
+Versuchen Sie mit Hilfe der Slider im Bild die Regressionsfunktion zu finden.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[graph=scatter1]&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:120px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;a =&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;b =&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, ihre Ergebnisse auf zwei Nachkommastellen)&lt;/em&gt;</taskDescription>
+      <skipMessage>$a=[var=agg]$ und $b=[var=bgg]$ [graph=scatter2]</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>$a$ und $b$ sind Sch&amp;auml;tzfunktionen. $a$ gibt den Achsenabschnitt an und $b$ die Steigung der gesch&amp;auml;tzten Gerade.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text>		$a=\bar{y}-b\bar{x}\quad\text{und}\quad b=\frac{\sum_{r=1}^{n}y_{r}x_{r}-n\bar{y}\bar{x}}{\sum_{r=1}^{n}x_{r}^{2}-n\bar{x}^{2}}=\frac{\sum_{r=1}^{n}(y_{r}-\bar{y})(x_{r}-\bar{x})}{\sum_{r=1}^{n}(x_{r}-\bar{x})^{2}}=\frac{s_{xy}}{s_{x}^{2}}$
+	</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="21"/>
+      <variableUpdatesBeforeCheck id="22"/>
+      <variableUpdatesAfterCheck id="23"/>
+      <variableUpdatesOnNormalExit id="24"/>
+      <variableUpdatesOnRepeat id="25"/>
+      <variableUpdatesOnSkip id="26"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="27"/>
+      <rules id="28">
+        <Rule id="29">
+          <name>Feedback_2</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="30">
+            <code>!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field2]&lt;0&amp;&amp;[input=field2]&gt;[var=bgg]-0.08&amp;&amp;[input=field2]&lt;[var=bgg]+0.08</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Super, mit ihrer Wahl f&amp;uuml;r die Steigung $b$ liegen sie fast richtig. Der wahre Wert lautet [var=bgg].&lt;br /&gt;
+&amp;Uuml;berlegen Sie, welcher Wert f&amp;uuml;r $a$ (den Y-Achsenabschnitt) hier Sinn ergeben w&amp;uuml;rde.</feedbackText>
+          <points>50</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="31">
+          <name>Feedback_1</name>
+          <orderIndex>0</orderIndex>
+          <validationExpression id="32">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=agg]-0.1&amp;&amp;[input=field1]&lt;[var=agg]+0.1</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Super, mit ihrer Wahl f&amp;uuml;r den Y-Achsenabschnitt $a$ liegen sie fast richtig. Der genaue Wert lautet [var=agg].&lt;br /&gt;
+&amp;Uuml;berlegen Sie, welcher Wert f&amp;uuml;r $b$ (die Steigung) hier Sinn ergeben w&amp;uuml;rde.</feedbackText>
+          <points>50</points>
+          <terminal>false</terminal>
+        </Rule>
+      </rules>
+      <fillInFields id="33">
+        <FillInField id="34">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="35">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="36"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider sind sowohl $a$, der Y-Achsenabschnitt, als auch $b$, die Steigung, falsch.&lt;br /&gt;
+&lt;br /&gt;
+&amp;Uuml;berlegen Sie, wie die Linie durch die Punktewolke gelegt werden muss, damit die Regression plausibel ist und probieren Sie es erneut.</defaultFeedback>
+      <correctAnswerRules id="37">
+        <Rule id="38">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="39">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field1]&gt;[var=agg]-0.1&amp;&amp;[input=field1]&lt;[var=agg]+0.1&amp;&amp;[input=field2]&gt;[var=bgg]-0.08&amp;&amp;[input=field2]&lt;[var=bgg]+0.08&amp;&amp;[input=field2]&lt;0</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Perfekt.  Die angegebenen Parameter $a$ und $b$ für die Regressionslinie sind plausibel. &lt;/br&gt;
+&lt;/br&gt;
+Die genauen werte für $a$ und $b$ lauten: $a=[var=agg]$ und $b=[var=bgg]$</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="40">
+    <VariableDeclaration id="41">
+      <name>yyy1</name>
+      <initializationCode id="42">
+        <code>randomIntegerBetween(-50,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>yyy2</name>
+      <initializationCode id="44">
+        <code>randomIntegerBetween(-50,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>yyy3</name>
+      <initializationCode id="46">
+        <code>randomIntegerBetween(-50,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>yyy4</name>
+      <initializationCode id="48">
+        <code>randomIntegerBetween(-50,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>yyy5</name>
+      <initializationCode id="50">
+        <code>randomIntegerBetween(-50,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>yyy6</name>
+      <initializationCode id="52">
+        <code>randomIntegerBetween(-50,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>yyy7</name>
+      <initializationCode id="54">
+        <code>randomIntegerBetween(-50,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>yyy8</name>
+      <initializationCode id="56">
+        <code>randomIntegerBetween(-50,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>yyy9</name>
+      <initializationCode id="58">
+        <code>randomIntegerBetween(-50,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>yyy10</name>
+      <initializationCode id="60">
+        <code>randomIntegerBetween(-50,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>yy1</name>
+      <initializationCode id="62">
+        <code>[var=yyy1]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>yy2</name>
+      <initializationCode id="64">
+        <code>[var=yyy2]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>yy3</name>
+      <initializationCode id="66">
+        <code>[var=yyy3]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>yy4</name>
+      <initializationCode id="68">
+        <code>[var=yyy4]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>yy5</name>
+      <initializationCode id="70">
+        <code>[var=yyy5]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>yy6</name>
+      <initializationCode id="72">
+        <code>[var=yyy6]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>yy7</name>
+      <initializationCode id="74">
+        <code>[var=yyy7]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>yy8</name>
+      <initializationCode id="76">
+        <code>[var=yyy8]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>yy9</name>
+      <initializationCode id="78">
+        <code>[var=yyy9]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>yy10</name>
+      <initializationCode id="80">
+        <code>[var=yyy10]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>x1</name>
+      <initializationCode id="82">
+        <code>randomIntegerBetween(1,25)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>x2</name>
+      <initializationCode id="84">
+        <code>randomIntegerBetween(1,25)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>x3</name>
+      <initializationCode id="86">
+        <code>randomIntegerBetween(1,25)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>x4</name>
+      <initializationCode id="88">
+        <code>randomIntegerBetween(1,25)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="89">
+      <name>x5</name>
+      <initializationCode id="90">
+        <code>randomIntegerBetween(1,25)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="91">
+      <name>x6</name>
+      <initializationCode id="92">
+        <code>randomIntegerBetween(1,25)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="93">
+      <name>x7</name>
+      <initializationCode id="94">
+        <code>randomIntegerBetween(1,25)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="95">
+      <name>x8</name>
+      <initializationCode id="96">
+        <code>randomIntegerBetween(1,25)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="97">
+      <name>x9</name>
+      <initializationCode id="98">
+        <code>randomIntegerBetween(1,25)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="99">
+      <name>x10</name>
+      <initializationCode id="100">
+        <code>randomIntegerBetween(1,25)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="101">
+      <name>y1</name>
+      <initializationCode id="102">
+        <code>3.300-0.045*[var=x1]+[var=yy1]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="103">
+      <name>y2</name>
+      <initializationCode id="104">
+        <code>3.300-0.045*[var=x2]+[var=yy2]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="105">
+      <name>y3</name>
+      <initializationCode id="106">
+        <code>3.300-0.045*[var=x3]+[var=yy3]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="107">
+      <name>y4</name>
+      <initializationCode id="108">
+        <code>3.300-0.045*[var=x4]+[var=yy4]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="109">
+      <name>y5</name>
+      <initializationCode id="110">
+        <code>3.300-0.045*[var=x5]+[var=yy5]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="111">
+      <name>y6</name>
+      <initializationCode id="112">
+        <code>3.300-0.045*[var=x6]+[var=yy6]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="113">
+      <name>y7</name>
+      <initializationCode id="114">
+        <code>3.300-0.045*[var=x7]+[var=yy7]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="115">
+      <name>y8</name>
+      <initializationCode id="116">
+        <code>3.300-0.045*[var=x8]+[var=yy8]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="117">
+      <name>y9</name>
+      <initializationCode id="118">
+        <code>3.300-0.045*[var=x9]+[var=yy9]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="119">
+      <name>y10</name>
+      <initializationCode id="120">
+        <code>3.300-0.045*[var=x10]+[var=yy10]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="121">
+      <name>xquer</name>
+      <initializationCode id="122">
+        <code>([var=x1]+[var=x2]+[var=x3]+[var=x4]+[var=x5]+[var=x6]+[var=x7]+[var=x8]+[var=x9]+[var=x10])/10</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="123">
+      <name>yquer</name>
+      <initializationCode id="124">
+        <code>([var=y1]+[var=y2]+[var=y3]+[var=y4]+[var=y5]+[var=y6]+[var=y7]+[var=y8]+[var=y9]+[var=y10])/10</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="125">
+      <name>b</name>
+      <initializationCode id="126">
+        <code>(([var=y1]-[var=yquer])*([var=x1]-[var=xquer])+([var=y2]-[var=yquer])*([var=x2]-[var=xquer])+([var=y3]-[var=yquer])*([var=x3]-[var=xquer])+([var=y4]-[var=yquer])*([var=x4]-[var=xquer])+([var=y5]-[var=yquer])*([var=x5]-[var=xquer])+([var=y6]-[var=yquer])*([var=x6]-[var=xquer])+([var=y7]-[var=yquer])*([var=x7]-[var=xquer])+([var=y8]-[var=yquer])*([var=x8]-[var=xquer])+([var=y9]-[var=yquer])*([var=x9]-[var=xquer])+([var=y10]-[var=yquer])*([var=x10]-[var=xquer]))/(pow([var=x1]-[var=xquer], 2)+pow([var=x2]-[var=xquer], 2)+pow([var=x3]-[var=xquer], 2)+pow([var=x4]-[var=xquer], 2)+pow([var=x5]-[var=xquer], 2)+pow([var=x6]-[var=xquer], 2)+pow([var=x7]-[var=xquer], 2)+pow([var=x8]-[var=xquer], 2)+pow([var=x9]-[var=xquer], 2)+pow([var=x10]-[var=xquer], 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="127">
+      <name>a</name>
+      <initializationCode id="128">
+        <code>[var=yquer]-[var=b]*[var=xquer]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="129">
+      <name>punkt</name>
+      <initializationCode id="130">
+        <code>[var=a]+[var=b]*30</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="131">
+      <name>agg</name>
+      <initializationCode id="132">
+        <code>evaluateInR(&apos;round([var=a], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="133">
+      <name>bgg</name>
+      <initializationCode id="134">
+        <code>evaluateInR(&apos;round([var=b], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="135">
+    <JSXGraph id="136">
+      <name>scatter2</name>
+      <orderIndex>1</orderIndex>
+      <width>600</width>
+      <height>600</height>
+      <text>var board2 = JXG.JSXGraph.initBoard(&apos;scatter2&apos;, {boundingbox: [-1, 3.800, 26, -0.4], axis:true, grid:true});var point1 = board2.createElement(&apos;point&apos;, [[var=x1],[var=y1]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point2 = board2.create(&apos;point&apos;, [[var=x2],[var=y2]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point3 = board2.create(&apos;point&apos;, [[var=x3],[var=y3]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point4 = board2.create(&apos;point&apos;, [[var=x4],[var=y4]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point5 = board2.create(&apos;point&apos;, [[var=x5],[var=y5]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point6 = board2.create(&apos;point&apos;, [[var=x6],[var=y6]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point7 = board2.create(&apos;point&apos;, [[var=x7],[var=y7]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point8 = board2.create(&apos;point&apos;, [[var=x8],[var=y8]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point9 = board2.create(&apos;point&apos;, [[var=x9],[var=y9]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point10 = board2.create(&apos;point&apos;, [[var=x10],[var=y10]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});txt1 = board2.create(&apos;text&apos;,[0.25,0.2, &apos;Durchschnittliche Anzahl konsumierter Zigaretten am Tag während der Schwangerschaft&apos;], {fontSize:15});txt2 = board2.create(&apos;text&apos;,[0.1,3.6, &apos;Geburtsgewicht in kg&apos;], {fontSize:15});var p1 = board2.create(&apos;point&apos;,[0,[var=a]], {name:&apos;&apos;,size:0, strokeColor:&apos;grey&apos;, fillColor:&apos;grey&apos;});var p2 = board2.create(&apos;point&apos;,[30,[var=punkt]], {name:&apos;&apos;,size:0});var li2 = board2.create(&apos;line&apos;,[p1,p2],{straightFirst:false, straightLast:false, strokeWidth:2, dash:2});</text>
+    </JSXGraph>
+    <JSXGraph id="137">
+      <name>scatter1</name>
+      <orderIndex>0</orderIndex>
+      <width>600</width>
+      <height>600</height>
+      <text>var board = JXG.JSXGraph.initBoard(&apos;scatter1&apos;, {boundingbox: [-1, 3.800, 26, -0.4], axis:true, grid:true});var point1 = board.createElement(&apos;point&apos;, [[var=x1],[var=y1]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point2 = board.create(&apos;point&apos;, [[var=x2],[var=y2]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point3 = board.create(&apos;point&apos;, [[var=x3],[var=y3]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point4 = board.create(&apos;point&apos;, [[var=x4],[var=y4]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point5 = board.create(&apos;point&apos;, [[var=x5],[var=y5]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point6 = board.create(&apos;point&apos;, [[var=x6],[var=y6]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point7 = board.create(&apos;point&apos;, [[var=x7],[var=y7]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point8 = board.create(&apos;point&apos;, [[var=x8],[var=y8]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point9 = board.create(&apos;point&apos;, [[var=x9],[var=y9]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point10 = board.create(&apos;point&apos;, [[var=x10],[var=y10]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});txt1 = board.create(&apos;text&apos;,[0.25,0.2, &apos;Durchschnittliche Anzahl konsumierter Zigaretten am Tag während der Schwangerschaft&apos;], {fontSize:15});txt2 = board.create(&apos;text&apos;,[0.1,3.6, &apos;Geburtsgewicht in kg&apos;], {fontSize:15}); var slider1 = board.create(&apos;slider&apos;,[[2,1],[15,1],[1.5,2,4]],{name:&apos;a&apos;,snapWidth:0.001});var slider2 = board.create(&apos;slider&apos;,[[2,0.7],[15,0.7],[-0.1,0,0.05]],{name:&apos;b&apos;,snapWidth:0.001});var p1 = board.create(&apos;point&apos;,[0, function(){return slider1.Value();}], {name:&apos;&apos;,size:0, strokeColor:&apos;grey&apos;, fillColor:&apos;grey&apos;});var graph = board.create(&apos;functiongraph&apos;,[function(x){return slider2.Value() * x + slider1.Value();}]);</text>
+    </JSXGraph>
+  </jSXGraphs>
+  <dynamicMolecules id="138"/>
+  <resultFeedbackMappings id="139"/>
+</Exercise>

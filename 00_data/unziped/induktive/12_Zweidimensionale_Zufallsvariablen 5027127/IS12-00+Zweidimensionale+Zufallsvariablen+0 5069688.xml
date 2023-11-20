@@ -1,0 +1,1176 @@
+<Exercise id="1">
+  <name>IS12-00 Zweidimensionale Zufallsvariablen 0</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Zweidimensionale ZV, Rennrad Gewinnspiel
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bei einem Radrennen veranstaltet ein Sponsor eine Verlosung eines Rennrads. Verlost wird das Rennrad unter jenen Tippenden, die die Rennsiegerin richtig tippen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die nachfolgende Tabelle zeigt die Fahrerin ($i$) mit der Siegeswahrscheinlichkeit&amp;nbsp;($p_i$) und die Anzahl der Tippenden, die auf Fahrerin $i$ tippen ($Y_i$).&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table align=&quot;center&quot; border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; height=&quot;110&quot; width=&quot;420&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;$i$&lt;/strong&gt;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;$p_i$&lt;/strong&gt;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;$Y_i$&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$1$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=x_1,latex]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=y_1,latex]$&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$2$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=x_2,latex]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=y_2,latex]$&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$3$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=x_3,latex]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=y_3,latex]$&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bestimmen Sie die Fahrerin mit der h&amp;ouml;chsten Siegeswahrscheinlichkeit f&amp;uuml;r das Rennen. Bestimmen Sie ferner die Fahrerin, welche die Wahrscheinlichkeit bei der Verlosung das Fahrrad zu gewinnen maximiert und berechnen Sie diese.&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;height:10px;width:680px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Fahrerin mit der h&amp;ouml;chsten Siegeswahrscheinlichkeit:&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;select name=&quot;dropdown1&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown1&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Maximale Wahrscheinlichkeit das Fahrrad zu gewinnen beim Setzen auf:&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;select name=&quot;dropdown2&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown2&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Maximale Wahrscheinlichkeit das Fahrrad zu gewinnen:&amp;nbsp;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die &lt;b&gt;vierte&amp;nbsp;&lt;/b&gt;Nachkommastelle.)&lt;/em&gt;&#xd;
+&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&amp;nbsp;</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <targetStage class="RStage" id="10">
+          <internalName>2</internalName>
+          <externalName>Stage 2</externalName>
+          <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie die Korrelation zwischen der Siegeswahrscheinlichkeit der Fahrerinnen und der Wahrscheinlichkeit, das Fahrrad zu gewinnen, wenn Fahrerin $i$ das Rennen gewonnen hat.</taskDescription>
+          <skipMessage></skipMessage>
+          <defaultTransition id="11">
+            <conditionExpression id="12">
+              <domain>MATH</domain>
+            </conditionExpression>
+            <stageExpression id="13">
+              <domain>MATH</domain>
+            </stageExpression>
+            <targetStage class="FillInStage" id="14">
+              <internalName>3</internalName>
+              <externalName>Stage 3</externalName>
+              <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+Berechnen Sie jeweils die Anzahl der Tipps, die auf jede Fahrerin entfallen m&amp;uuml;ssten, damit alle Tippenden die gleiche Wahrscheinlichkeit haben das Fahrrad zu gewinnen. Nehmen Sie f&amp;uuml;r die Siegeswahrscheinlichkeit ($p_i$) der Fahrerinnen die Werte aus &lt;em&gt;Stage 1&lt;/em&gt; und gehen Sie davon aus, dass insgesamt $[var=number_tips]$ Personen einen Tipp abgeben.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table align=&quot;center&quot; border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; height=&quot;110&quot; width=&quot;420&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;$i$&lt;/strong&gt;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;$p_i$&lt;/strong&gt;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;$Y^{neu}_i$&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$1$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=x_1,latex]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$2$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=x_2,latex]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin2&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin2&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$3$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=x_3,latex]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin3&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin3&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf &lt;b&gt;ganze Zahlen&lt;/b&gt;. Es stellt kein Problem dar, wenn die Summe der drei Ergebnisse rundungsbedingt leicht von $[var=number_tips]$ abweicht&lt;/em&gt;&lt;em&gt;)&lt;/em&gt;&#xd;
+&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+              <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;</skipMessage>
+              <defaultTransition id="15">
+                <conditionExpression id="16">
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="17">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </defaultTransition>
+              <skipTransitions id="18"/>
+              <stageTransitions id="19"/>
+              <hints id="20"/>
+              <variableUpdatesOnEnter id="21"/>
+              <variableUpdatesBeforeCheck id="22"/>
+              <variableUpdatesAfterCheck id="23"/>
+              <variableUpdatesOnNormalExit id="24"/>
+              <variableUpdatesOnRepeat id="25"/>
+              <variableUpdatesOnSkip id="26"/>
+              <weight>1</weight>
+              <orderIndex>2</orderIndex>
+              <allowSkip>true</allowSkip>
+              <resources id="27"/>
+              <rules id="28">
+                <Rule id="29">
+                  <name>fillin2 richtig</name>
+                  <orderIndex>2</orderIndex>
+                  <validationExpression id="30">
+                    <code>!isEmpty([input=fillin2]) &amp;&amp; 
+isRealNumber([input=fillin2]) &amp;&amp;
+abs(
+([input=fillin2])-([var=y2_new])
+) &lt;= 0.0011</code>
+                    <domain>MATH</domain>
+                  </validationExpression>
+                  <feedbackText>Sie haben die Variable $Y_2^{new}$ richtig berechnet.&lt;br /&gt;
+&amp;nbsp;</feedbackText>
+                  <points>33</points>
+                  <terminal>false</terminal>
+                </Rule>
+                <Rule id="31">
+                  <name>fillin1 richtig</name>
+                  <orderIndex>1</orderIndex>
+                  <validationExpression id="32">
+                    <code>!isEmpty([input=fillin1]) &amp;&amp; 
+isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=y1_new])
+) &lt;= 0.0011</code>
+                    <domain>MATH</domain>
+                  </validationExpression>
+                  <feedbackText>Sie haben die Variable $Y_1^{new}$ richtig berechnet.&lt;br /&gt;
+&amp;nbsp;</feedbackText>
+                  <points>33</points>
+                  <terminal>false</terminal>
+                </Rule>
+                <Rule id="33">
+                  <name>fillin3 richtig</name>
+                  <orderIndex>3</orderIndex>
+                  <validationExpression id="34">
+                    <code>!isEmpty([input=fillin3]) &amp;&amp; 
+isRealNumber([input=fillin3]) &amp;&amp;
+abs(
+([input=fillin3])-([var=y3_new])
+) &lt;= 0.0011</code>
+                    <domain>MATH</domain>
+                  </validationExpression>
+                  <feedbackText>Sie haben die Variable $Y_3^{new}$ richtig berechnet.&lt;br /&gt;
+&amp;nbsp;</feedbackText>
+                  <points>33</points>
+                  <terminal>false</terminal>
+                </Rule>
+                <Rule id="35">
+                  <name>Lösungsweg</name>
+                  <orderIndex>0</orderIndex>
+                  <validationExpression id="36">
+                    <code>isEmpty([input=fillin1]) || !isEmpty([input=fillin1])</code>
+                    <domain>MATH</domain>
+                  </validationExpression>
+                  <feedbackText>L&amp;ouml;sungsweg:&lt;br /&gt;
+&lt;br /&gt;
+Die Wahrscheinlichkeit das Fahrrad zu gewinnen soll f&amp;uuml;r alle $[var=number_tips]$ Tippenden gleich hoch sein.&lt;br /&gt;
+Mit der Beziehung,&lt;br /&gt;
+&lt;br /&gt;
+$P \big( \{ \text{&amp;quot;Fahrrad gewinnen&amp;quot;} \} \big) = P \big( \{\text{&amp;quot;Fahrerin gewinnt&amp;quot;} \} \cap \{ \text{&amp;quot;Los gezogen&amp;quot;} \} \big)$&lt;br /&gt;
+$= P \big(\{ \text{&amp;quot;Los gezogen&amp;quot;} \} | \{ \text{&amp;quot;Fahrerin gewinnt&amp;quot;} \} \big)&amp;nbsp;&amp;nbsp;\cdot P\big(\{&amp;nbsp;&amp;nbsp;\text{&amp;quot;Fahrerin gewinnt&amp;quot;} \}\big)$&lt;br /&gt;
+&lt;br /&gt;
+aus Stage 1 folgt somit: $$p_1 \cdot \dfrac{1}{Y_1^{neu}} = p_2 \cdot \dfrac{1}{Y_2^{neu}} = p_3 \cdot \dfrac{1}{Y_3^{neu}}$$&lt;br /&gt;
+Der weitere L&amp;ouml;sungsweg bezieht sich auf den Fall&amp;nbsp;$p_[var=equal_prob_index1]=p_[var=equal_prob_index2]$.&lt;br /&gt;
+(Die F&amp;auml;lle $p_[var=equal_prob_index1] = p_[var=solution_stage1a]$ und $p_[var=equal_prob_index2] = p_[var=solution_stage1a]$ sind analog dazu).&lt;br /&gt;
+&lt;br /&gt;
+Aus $p_[var=equal_prob_index1] = p_[var=equal_prob_index2]$ und $p_[var=equal_prob_index1] \cdot \dfrac{1}{Y_[var=equal_prob_index1]^{neu}} = p_[var=equal_prob_index2] \cdot \dfrac{1}{Y_[var=equal_prob_index2]^{neu}}$ folgt $Y_[var=equal_prob_index1]^{neu} = Y_[var=equal_prob_index2]^{neu}$.&lt;br /&gt;
+&lt;br /&gt;
+Es l&amp;auml;sst sich folgendes Gleichungssystem aufstellen:&lt;br /&gt;
+&lt;br /&gt;
+$\begin{array}{ll}&lt;br /&gt;
+(I) &amp;amp; p_[var=equal_prob_index1] \cdot \dfrac{1}{Y_[var=equal_prob_index1]^{neu}} = p_[var=solution_stage1a] \cdot \dfrac{1}{Y_[var=solution_stage1a]^{neu}} \\&lt;br /&gt;
+(II) &amp;amp; Y_1^{neu} + Y_2^{neu} + Y_3^{neu} = [var=number_tips] \\&lt;br /&gt;
+(III) &amp;amp; p_1 + p_2 + p_3 = 1 \\&lt;br /&gt;
+\end{array}$&lt;br /&gt;
+&lt;br /&gt;
+$\Leftrightarrow$&lt;br /&gt;
+&lt;br /&gt;
+$\begin{array}{ll}&lt;br /&gt;
+(I) &amp;amp; Y_[var=solution_stage1a]^{neu} = Y_[var=equal_prob_index1]^{neu} \cdot \dfrac{p_[var=solution_stage1a]}{p_[var=equal_prob_index1]} \\&lt;br /&gt;
+(II) &amp;amp; 2 \cdot Y_[var=equal_prob_index1]^{neu} + Y_[var=solution_stage1a]^{neu} = [var=number_tips] \\&lt;br /&gt;
+(III) &amp;amp; 2 \cdot p_[var=equal_prob_index1] + p_[var=solution_stage1a] = 1 \\&lt;br /&gt;
+\end{array}$&lt;br /&gt;
+&lt;br /&gt;
+$(I)$ eingesetzt in $(II)$ ergibt:&lt;br /&gt;
+&lt;br /&gt;
+$ 2 \cdot Y_[var=equal_prob_index1]^{neu} + Y_[var=equal_prob_index1]^{neu} \cdot \dfrac{p_[var=solution_stage1a]}{p_1} = [var=number_tips] $&lt;br /&gt;
+&lt;br /&gt;
+$\Leftrightarrow$&lt;br /&gt;
+&lt;br /&gt;
+$ Y_[var=equal_prob_index1]^{neu} \cdot (2 + \dfrac{p_[var=solution_stage1a]}{p_[var=equal_prob_index1]}) = [var=number_tips] $&lt;br /&gt;
+&lt;br /&gt;
+$\Leftrightarrow$&lt;br /&gt;
+&lt;br /&gt;
+$ Y_[var=equal_prob_index1]^{neu}&amp;nbsp;&amp;nbsp;= \dfrac{[var=number_tips]}{2 + \dfrac{p_[var=solution_stage1a]}{p_[var=equal_prob_index1]}} $&lt;br /&gt;
+&lt;br /&gt;
+Setzt man noch $(III)/p_[var=equal_prob_index1]$ ein erh&amp;auml;lt man:&lt;br /&gt;
+&lt;br /&gt;
+$Y_[var=equal_prob_index1]^{neu} = [var=number_tips] \cdot p_[var=equal_prob_index1]$&lt;br /&gt;
+&lt;br /&gt;
+und damit allgemein&lt;br /&gt;
+&lt;br /&gt;
+$Y_i^{neu} = [var=number_tips] \cdot p_i$</feedbackText>
+                  <points>0</points>
+                  <terminal>false</terminal>
+                </Rule>
+              </rules>
+              <fillInFields id="37">
+                <FillInField id="38">
+                  <name>fillin2</name>
+                  <orderIndex>1</orderIndex>
+                  <size>10</size>
+                  <formularEditorType>NUMBER</formularEditorType>
+                </FillInField>
+                <FillInField id="39">
+                  <name>fillin1</name>
+                  <orderIndex>0</orderIndex>
+                  <size>10</size>
+                  <formularEditorType>NUMBER</formularEditorType>
+                </FillInField>
+                <FillInField id="40">
+                  <name>fillin3</name>
+                  <orderIndex>2</orderIndex>
+                  <size>10</size>
+                  <formularEditorType>NUMBER</formularEditorType>
+                </FillInField>
+              </fillInFields>
+              <dropDownFields id="41"/>
+              <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+              <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&amp;nbsp;</defaultFeedback>
+              <correctAnswerRules id="42">
+                <Rule id="43">
+                  <name>Feedback 1</name>
+                  <orderIndex>1</orderIndex>
+                  <validationExpression id="44">
+                    <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=y1_new])
+) &lt;= 1 &amp;&amp;
+
+!isEmpty([input=fillin2]) &amp;&amp; isRealNumber([input=fillin2]) &amp;&amp;
+abs(
+([input=fillin2])-([var=y2_new])
+) &lt;= 1 &amp;&amp;
+
+!isEmpty([input=fillin3]) &amp;&amp; isRealNumber([input=fillin3]) &amp;&amp;
+abs(
+([input=fillin3])-([var=y3_new])
+) &lt;= 1</code>
+                    <domain>MATH</domain>
+                  </validationExpression>
+                  <points>0</points>
+                  <terminal>false</terminal>
+                </Rule>
+              </correctAnswerRules>
+              <correctAnswerFeedback>Das Ergebnis ist richtig.&lt;br /&gt;
+&amp;nbsp;</correctAnswerFeedback>
+              <defaultResult>0</defaultResult>
+            </targetStage>
+            <isRepeat>false</isRepeat>
+          </defaultTransition>
+          <skipTransitions id="45">
+            <StageTransition id="46">
+              <conditionExpression id="47">
+                <code></code>
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="48">
+                <domain>MATH</domain>
+              </stageExpression>
+              <targetStage class="FillInStage" reference="14"/>
+              <isRepeat>false</isRepeat>
+            </StageTransition>
+          </skipTransitions>
+          <stageTransitions id="49"/>
+          <hints id="50"/>
+          <variableUpdatesOnEnter id="51"/>
+          <variableUpdatesBeforeCheck id="52"/>
+          <variableUpdatesAfterCheck id="53"/>
+          <variableUpdatesOnNormalExit id="54"/>
+          <variableUpdatesOnRepeat id="55"/>
+          <variableUpdatesOnSkip id="56"/>
+          <weight>1</weight>
+          <orderIndex>1</orderIndex>
+          <allowSkip>true</allowSkip>
+          <resources id="57"/>
+          <initialCode>p &lt;- c([var=x_1], [var=x_2], [var=x_3])
+Y &lt;- c([var=y_1], [var=y_2], [var=y_3])</initialCode>
+          <finalResultComputationString></finalResultComputationString>
+          <testCasetuples id="58">
+            <TestCaseTuple id="59">
+              <testCases id="60">
+                <DynamicRTestCase id="61">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Numerisches Ergebnis</name>
+                  <feedbackIfFailed>Num. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <postCode></postCode>
+                  <expectedOutput>[var=DSol_stage2]</expectedOutput>
+                  <postprocessingFunction></postprocessingFunction>
+                  <tolerance>-4</tolerance>
+                </DynamicRTestCase>
+                <StaticRTestCase id="62">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="63">
+                    <RGReQLQuery id="64">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="65">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="66">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+                <StaticRTestCase id="67">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="68">
+                    <RGReQLQuery id="69">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="70">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="71">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+                <StaticRTestCase id="72">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="73">
+                    <RGReQLQuery id="74">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="75">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="76">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+              </testCases>
+              <checkerConfiguration id="77">
+                <name></name>
+                <isActive>true</isActive>
+                <hasVisibleResult>false</hasVisibleResult>
+                <hasVisibleFeedback>false</hasVisibleFeedback>
+                <isAsync>true</isAsync>
+                <weight>1</weight>
+                <persistentReference>5163689</persistentReference>
+              </checkerConfiguration>
+            </TestCaseTuple>
+            <TestCaseTuple id="78">
+              <testCases id="79">
+                <DynamicRTestCase id="80">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Numerisches Ergebnis</name>
+                  <feedbackIfFailed>Num. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <postCode></postCode>
+                  <expectedOutput>[var=DSol_stage2]</expectedOutput>
+                  <postprocessingFunction></postprocessingFunction>
+                  <tolerance>-4</tolerance>
+                </DynamicRTestCase>
+                <StaticRTestCase id="81">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="82">
+                    <RGReQLQuery id="83">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="84">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="85">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+                <StaticRTestCase id="86">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="87">
+                    <RGReQLQuery id="88">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="89">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="90">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+                <StaticRTestCase id="91">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="92">
+                    <RGReQLQuery id="93">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="94">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="95">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+              </testCases>
+              <checkerConfiguration id="96">
+                <name></name>
+                <isActive>true</isActive>
+                <hasVisibleResult>false</hasVisibleResult>
+                <hasVisibleFeedback>false</hasVisibleFeedback>
+                <isAsync>true</isAsync>
+                <weight>1</weight>
+                <persistentReference>5163689</persistentReference>
+              </checkerConfiguration>
+            </TestCaseTuple>
+            <TestCaseTuple id="97">
+              <testCases id="98">
+                <DynamicRTestCase id="99">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Numerisches Ergebnis</name>
+                  <feedbackIfFailed>Num. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <postCode></postCode>
+                  <expectedOutput>[var=DSol_stage2]</expectedOutput>
+                  <postprocessingFunction></postprocessingFunction>
+                  <tolerance>-4</tolerance>
+                </DynamicRTestCase>
+                <StaticRTestCase id="100">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="101">
+                    <RGReQLQuery id="102">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="103">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="104">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+                <StaticRTestCase id="105">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="106">
+                    <RGReQLQuery id="107">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="108">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="109">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+                <StaticRTestCase id="110">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="111">
+                    <RGReQLQuery id="112">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="113">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="114">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+              </testCases>
+              <checkerConfiguration id="115">
+                <name></name>
+                <isActive>true</isActive>
+                <hasVisibleResult>false</hasVisibleResult>
+                <hasVisibleFeedback>false</hasVisibleFeedback>
+                <isAsync>true</isAsync>
+                <weight>1</weight>
+                <persistentReference>5163689</persistentReference>
+              </checkerConfiguration>
+            </TestCaseTuple>
+            <TestCaseTuple id="116">
+              <testCases id="117">
+                <DynamicRTestCase id="118">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Numerisches Ergebnis</name>
+                  <feedbackIfFailed>Num. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <postCode></postCode>
+                  <expectedOutput>[var=DSol_stage2]</expectedOutput>
+                  <postprocessingFunction></postprocessingFunction>
+                  <tolerance>-4</tolerance>
+                </DynamicRTestCase>
+                <StaticRTestCase id="119">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="120">
+                    <RGReQLQuery id="121">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="122">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="123">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+                <StaticRTestCase id="124">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="125">
+                    <RGReQLQuery id="126">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="127">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="128">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+                <StaticRTestCase id="129">
+                  <points>50</points>
+                  <pointsMode>GAIN</pointsMode>
+                  <name>Functioncall</name>
+                  <feedbackIfFailed>Stat. Fehler</feedbackIfFailed>
+                  <ruleMode>PRESENCE</ruleMode>
+                  <queries class="linked-list" id="130">
+                    <RGReQLQuery id="131">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;var&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="132">
+                      <query>from fun1,fun2:V{FunctionCall}     with
+                fun1.name=&quot;cov&quot; and
+                fun2.name=&quot;sd&quot;
+        report 0 end</query>
+                    </RGReQLQuery>
+                    <RGReQLQuery id="133">
+                      <query>from fun:V{FunctionCall}     with
+                fun.name=&quot;cor&quot; 
+        report 0 end</query>
+                    </RGReQLQuery>
+                  </queries>
+                </StaticRTestCase>
+              </testCases>
+              <checkerConfiguration id="134">
+                <name></name>
+                <isActive>true</isActive>
+                <hasVisibleResult>false</hasVisibleResult>
+                <hasVisibleFeedback>false</hasVisibleFeedback>
+                <isAsync>true</isAsync>
+                <weight>1</weight>
+                <persistentReference>5163689</persistentReference>
+              </checkerConfiguration>
+            </TestCaseTuple>
+          </testCasetuples>
+        </targetStage>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="135">
+        <StageTransition id="136">
+          <conditionExpression id="137">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="138">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="RStage" reference="10"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="139"/>
+      <hints id="140"/>
+      <variableUpdatesOnEnter id="141"/>
+      <variableUpdatesBeforeCheck id="142"/>
+      <variableUpdatesAfterCheck id="143"/>
+      <variableUpdatesOnNormalExit id="144"/>
+      <variableUpdatesOnRepeat id="145"/>
+      <variableUpdatesOnSkip id="146"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="147"/>
+      <rules id="148">
+        <Rule id="149">
+          <name>Lösungsweg</name>
+          <orderIndex>0</orderIndex>
+          <validationExpression id="150">
+            <code>isEmpty([input=fillin1]) || !isEmpty([input=fillin1])</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>&lt;u&gt;L&amp;ouml;sungsweg&lt;/u&gt;:&lt;br /&gt;
+&lt;br /&gt;
+Fahrerin $[var=solution_stage1a]$ hat die h&amp;ouml;chste Gewinnwahrscheinlichkeit, dies kann einfach aus der Tabelle abgelesen werden.&lt;br /&gt;
+&lt;br /&gt;
+$P \big( \{ \text{&amp;quot;Fahrrad gewinnen&amp;quot;} \} \big) = P \big( \{\text{&amp;quot;Fahrerin gewinnt&amp;quot;} \} \cap \{ \text{&amp;quot;Los gezogen&amp;quot;} \} \big)$&lt;br /&gt;
+$= P \big(\{ \text{&amp;quot;Los gezogen&amp;quot;} \} | \{ \text{&amp;quot;Fahrerin gewinnt&amp;quot;} \} \big)&amp;nbsp; \cdot P\big(\{&amp;nbsp; \text{&amp;quot;Fahrerin gewinnt&amp;quot;} \}\big)$&lt;br /&gt;
+&lt;br /&gt;
+$ P\big(\{&amp;nbsp; \text{&amp;quot;Fahrerin gewinnt&amp;quot;} \}\big)$ ist die Zufallsvariable $p$.&lt;br /&gt;
+$P \big(\{ \text{&amp;quot;Los gezogen&amp;quot;} \} | \{ \text{&amp;quot;Fahrerin gewinnt&amp;quot;} \} \big)$ ist die Zufallsvariable $\frac{1}{Y}$.&lt;br /&gt;
+&lt;br /&gt;
+Die Fahrerin, welche die Wahrscheinlichkeit das Fahrrad zu gewinnen maximiert, kann mit dem folgenden $\verb|R|$-Code berechnet werden:&lt;br /&gt;
+&lt;br /&gt;
+$\verb|which.max|(c([var=x_1], [var=x_2], [var=x_3])*(1/c([var=y_1], [var=y_2], [var=y_3]))) = [var=solution_stage1b]$&lt;br /&gt;
+&lt;br /&gt;
+Somit maximiert der Tipp auf Fahrerin $[var=solution_stage1b]$ Ihre Wahrscheinlichkeit das Fahrrad zu gewinnen. Die maximale Wahrscheinlichkeit wird analog berechnet:&lt;br /&gt;
+&lt;br /&gt;
+$\verb|max|(c([var=x_1], [var=x_2], [var=x_3])*(1/c([var=y_1], [var=y_2], [var=y_3]))) = [var=solution_stage1c,latex,decimals=4]$&lt;br /&gt;
+&amp;nbsp;</feedbackText>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="151">
+          <name>dropdown2 right</name>
+          <orderIndex>2</orderIndex>
+          <validationExpression id="152">
+            <code>[input=dropdown2]==([var=solution_stage1b]-1)</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben die Fahrerin korrekt ausgew&amp;auml;hlt, welche Ihre Wahrscheinlichkeit maximiert das Fahrrad zu gewinnen.</feedbackText>
+          <points>33</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="153">
+          <name>dropdown1 right</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="154">
+            <code>[input=dropdown1]==([var=solution_stage1a]-1)</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben die Fahrerin mit der h&amp;ouml;chsten Siegeswahrscheinlichkeit korrekt ausgew&amp;auml;hlt.</feedbackText>
+          <points>33</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="155">
+          <name>fillin1 right</name>
+          <orderIndex>3</orderIndex>
+          <validationExpression id="156">
+            <code>!isEmpty([input=fillin1]) &amp;&amp; 
+isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=solution_stage1c])
+) &lt;= 0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben die maximale Wahrscheinlichkeit das Fahrrad zu gewinnen korrekt berechnet.</feedbackText>
+          <points>33</points>
+          <terminal>false</terminal>
+        </Rule>
+      </rules>
+      <fillInFields id="157">
+        <FillInField id="158">
+          <name>fillin1</name>
+          <orderIndex>0</orderIndex>
+          <size>10</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="159">
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="160">
+          <name>dropdown2</name>
+          <orderIndex>1</orderIndex>
+          <randomize>false</randomize>
+          <items id="161">
+            <string>Fahrerin 1</string>
+            <string>Fahrerin 2</string>
+            <string>Fahrerin 3</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="162">
+          <name>dropdown1</name>
+          <orderIndex>0</orderIndex>
+          <randomize>false</randomize>
+          <items id="163">
+            <string>Fahrerin 1</string>
+            <string>Fahrerin 2</string>
+            <string>Fahrerin 3</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+      </dropDownFields>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;&lt;br /&gt;
+&amp;nbsp;</defaultFeedback>
+      <correctAnswerRules id="164">
+        <Rule id="165">
+          <name>Feedback 1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="166">
+            <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+[input=dropdown1]==([var=solution_stage1a]-1) &amp;&amp;
+[input=dropdown2]==([var=solution_stage1b]-1) &amp;&amp;
+abs(
+([input=fillin1])-([var=solution_stage1c])
+) &lt;= 0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Das Ergebnis ist richtig.&lt;br /&gt;
+&amp;nbsp;</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <RStage reference="10"/>
+    <FillInStage reference="14"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="167">
+    <VariableDeclaration id="168">
+      <name>prob1</name>
+      <initializationCode id="169">
+        <code>getRandomFromList(
+list(
+0.4,
+0.5,
+0.6,
+0.7,
+0.8
+)
+)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="170">
+      <name>prob2</name>
+      <initializationCode id="171">
+        <code>(1 - ([var=prob1]))/2</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="172">
+      <name>prob3</name>
+      <initializationCode id="173">
+        <code>(1 - ([var=prob1]))/2</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="174">
+      <name>seed</name>
+      <initializationCode id="175">
+        <code>randomIntegerBetween(1000,9999)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="176">
+      <name>index1</name>
+      <initializationCode id="177">
+        <code>evaluateInR(&apos;
+set.seed([var=seed])
+sample(c(0,1,2))[1]
+&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="178">
+      <name>index2</name>
+      <initializationCode id="179">
+        <code>evaluateInR(&apos;
+set.seed([var=seed])
+sample(c(0,1,2))[2]
+&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="180">
+      <name>index3</name>
+      <initializationCode id="181">
+        <code>evaluateInR(&apos;
+set.seed([var=seed])
+sample(c(0,1,2))[3]
+&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="182">
+      <name>x_1</name>
+      <initializationCode id="183">
+        <code>getFromList([var=index1],
+list([var=prob1],[var=prob2],[var=prob3])
+)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="184">
+      <name>x_2</name>
+      <initializationCode id="185">
+        <code>getFromList([var=index2],
+list([var=prob1],[var=prob2],[var=prob3])
+)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="186">
+      <name>x_3</name>
+      <initializationCode id="187">
+        <code>getFromList([var=index3],
+list([var=prob1],[var=prob2],[var=prob3])
+)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="188">
+      <name>prep1</name>
+      <initializationCode id="189">
+        <code>randomIntegerBetween(30,40)*10</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="190">
+      <name>prep2</name>
+      <initializationCode id="191">
+        <code>randomIntegerBetween(1,10)*10</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="192">
+      <name>prep3</name>
+      <initializationCode id="193">
+        <code>randomIntegerBetween(1,10)*10 + 5</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="194">
+      <name>y_1</name>
+      <initializationCode id="195">
+        <code>getFromList([var=index1],
+list([var=prep1],[var=prep2],[var=prep3])
+)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="196">
+      <name>y_2</name>
+      <initializationCode id="197">
+        <code>getFromList([var=index2],
+list([var=prep1],[var=prep2],[var=prep3])
+)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="198">
+      <name>y_3</name>
+      <initializationCode id="199">
+        <code>getFromList([var=index3],
+list([var=prep1],[var=prep2],[var=prep3])
+)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="200">
+      <name>solution_stage1a</name>
+      <initializationCode id="201">
+        <code>evaluateInR(&apos;
+
+which.max(
+c([var=x_1], [var=x_2], [var=x_3])
+)
+
+&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="202">
+      <name>equal_prob_index1</name>
+      <initializationCode id="203">
+        <code>ifthenelse([var=solution_stage1a]!=1,1,2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="204">
+      <name>equal_prob_index2</name>
+      <initializationCode id="205">
+        <code>ifthenelse([var=solution_stage1a]!=3,3,2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="206">
+      <name>solution_stage1b</name>
+      <initializationCode id="207">
+        <code>evaluateInR(&apos;
+
+which.max(
+c([var=x_1], [var=x_2], [var=x_3])*
+c([var=y_1], [var=y_2], [var=y_3])^(-1)
+)
+
+&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="208">
+      <name>solution_stage1c</name>
+      <initializationCode id="209">
+        <code>evaluateInR(&apos;
+
+max(
+c([var=x_1], [var=x_2], [var=x_3])*
+c([var=y_1], [var=y_2], [var=y_3])^(-1)
+)
+
+&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="210">
+      <name>DSol_stage2</name>
+      <initializationCode id="211">
+        <code>evaluateInR(&apos;
+
+cor(
+c([var=x_1], [var=x_2], [var=x_3]),
+c([var=y_1], [var=y_2], [var=y_3])^(-1)
+)
+
+&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="212">
+      <name>number_tips</name>
+      <initializationCode id="213">
+        <code>1000</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="214">
+      <name>y1_new</name>
+      <initializationCode id="215">
+        <code>[var=x_1]*[var=number_tips]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="216">
+      <name>y2_new</name>
+      <initializationCode id="217">
+        <code>[var=x_2]*[var=number_tips]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="218">
+      <name>y3_new</name>
+      <initializationCode id="219">
+        <code>[var=x_3]*[var=number_tips]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="220"/>
+  <dynamicMolecules id="221"/>
+  <resultFeedbackMappings id="222"/>
+</Exercise>

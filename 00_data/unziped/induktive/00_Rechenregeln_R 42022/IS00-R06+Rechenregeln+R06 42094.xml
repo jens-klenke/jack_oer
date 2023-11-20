@@ -1,0 +1,156 @@
+<Exercise id="1">
+  <name>IS00-R06 Rechenregeln R06</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Einen Vektor erstellen + Variable zuweisen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nachdem Sie in Aufgabe 4 bereits einen numerischen Wert einer Variablen zugewiesen haben, wollen wir nun einen Vektor (streng genommen war auch der der numerische Wert in Aufgabe 4 ein einzeiliger Vektor) einer Variablen zuweisen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Erstellen Sie dazu &lt;strong&gt;manuell&lt;/strong&gt; einen Vektor, der alle Zahlen von $1$ bis $10$ aufsteigend enth&amp;auml;lt und weisen Sie diesen Vektor der Variablen $\verb|zahlen|$ zu.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Vektoren k&amp;ouml;nnen Sie mit dem $\verb|c()|$-Befehl erstellen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Einen Vektor k&amp;ouml;nnen Sie mit Hilfe von $\verb|&amp;lt;-|$ einer Variablen zuordnen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Achten Sie auch darauf, dass sie die Variable $\verb|zahlen|$ und nicht anders nennen. Beachten Sie in dem Kontext zudem, dass R &quot;case sensitive&quot; ist, also zwischen Groß- und Kleinschreibung unterscheidet.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode></initialCode>
+      <finalResultComputationString>#{c42097}</finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+&amp;Uuml;berlegen Sie noch einmal, wie sie Variablen Werte zuweisen k&amp;ouml;nnen. Benutzen Sie dazu $\verb|&lt;-|$. Achten Sie auch darauf, dass Sie die Variable $\verb|zahlen|$ nennen und nicht anders.
+</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>		from cc:V{FunctionCall}, lao:V{LeftAssignmentOperator}, n1,n2,n3,n4,n5,n6,n7,n8,n9,n10:V{NumericLiteral}, v:V{Variable}, rh:E{RightHandSide}, lh:E{LeftHandSide}, pl:V{ParameterList}, e1,e2,e3,e4,e5,e6,e7,e8,e9,e10:E{Parameter} with 
+		lao -- lh -&gt; v and
+                v.name=&quot;zahlen&quot; and
+                lao -- rh -&gt; cc and
+                cc.name=&quot;c&quot; and
+                cc --&gt; pl and
+                pl -- e1 -&gt; n1 and
+                pl -- e2 -&gt; n2 and
+                pl -- e3 -&gt; n3 and
+                pl -- e4 -&gt; n4 and
+                pl -- e5 -&gt; n5 and
+                pl -- e6 -&gt; n6 and
+                pl -- e7 -&gt; n7 and
+                pl -- e8 -&gt; n8 and
+                pl -- e9 -&gt; n9 and
+                pl -- e10 -&gt; n10 and
+		e1.position = 0 and
+		e2.position = 1 and
+		e3.position = 2 and
+		e4.position = 3 and
+		e5.position = 4 and
+		e6.position = 5 and
+		e7.position = 6 and
+		e8.position = 7 and
+		e9.position = 8 and
+		e10.position = 9 and
+                n1.value=1 and
+                n2.value=2 and
+                n3.value=3 and
+                n4.value=4 and
+                n5.value=5 and
+                n6.value=6 and
+                n7.value=7 and
+                n8.value=8 and
+                n9.value=9 and
+                n10.value=10
+		report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42097</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="30">
+    <VariableDeclaration id="31">
+      <name>num</name>
+      <initializationCode id="32">
+        <code>1</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="33"/>
+  <dynamicMolecules id="34"/>
+  <resultFeedbackMappings id="35"/>
+</Exercise>

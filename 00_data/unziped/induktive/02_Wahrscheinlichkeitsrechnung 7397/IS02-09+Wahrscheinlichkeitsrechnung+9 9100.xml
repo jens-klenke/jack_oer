@@ -1,0 +1,166 @@
+<Exercise id="1">
+  <name>IS02-09 Wahrscheinlichkeitsrechnung 9</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Tennisspiel
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie sind begeisteter Tennisspieler. Ihr Freund (F) bietet ihnen einen Kasten Bier, wenn Sie in einem Spiel mit drei S&amp;auml;tzen mindestens zwei S&amp;auml;tze hintereinander gewinnen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Dabei k&amp;ouml;nnen Sie aus zwei Optionen w&amp;auml;hlen:&lt;br /&gt;&#xd;
+[FCF] - Sie spielen&amp;nbsp;den ersten und den dritten Satz gegen ihren Freund und den zweiten Satz gegen den Clubmeister (C).&amp;nbsp;&lt;br /&gt;&#xd;
+[CFC] - Sie spielen&amp;nbsp;den ersten und den dritten Satz gegen den Clubmeister und den zweiten Satz gegen ihren Freund.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Der Clubmeister spielt dabei st&amp;auml;rker als ihr Freund.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Welche der Optionen w&amp;auml;hlen Sie?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&amp;nbsp;&lt;select name=&quot;field1&quot;&gt;&lt;option value=&quot;0&quot;&gt;field1&lt;/option&gt;&lt;/select&gt;&amp;nbsp;</taskDescription>
+      <skipMessage>Die richtige L&amp;ouml;sung ist: CFC</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>Bezeichne $f$ die Wahrscheinlichkeit gegen ihren Freund zu gewinnen (W) und $c$ die Wahrscheinlichkeit gegen den Clubmeister zu gewinnen. Bezeichne (L) den Verlust des Satzes. Nun gewinnen Sie den Kasten Bier wenn Sie mindestens zwei S&amp;auml;tze hintereinander gewinnen also:&lt;br /&gt;
+&lt;br /&gt;
+Option FCF:&amp;nbsp;&lt;br /&gt;
+&lt;br /&gt;
+$\begin{pmatrix}&lt;br /&gt;
+\textrm{F} &amp;amp; \textrm{C} &amp;amp; \textrm{F} &amp;amp; \textrm{Wahrscheinlichkeit} \\&lt;br /&gt;
+\hline&lt;br /&gt;
+\\&lt;br /&gt;
+\textrm{W} &amp;amp; \textrm{W} &amp;amp; \textrm{W} &amp;amp; fcf \\&lt;br /&gt;
+\textrm{W} &amp;amp; \textrm{W} &amp;amp; \textrm{L} &amp;amp; fc(1-f) \\&lt;br /&gt;
+\textrm{L} &amp;amp; \textrm{W} &amp;amp; \textrm{W} &amp;amp; (1-f)cf \\&lt;br /&gt;
+\end{pmatrix} \\$&amp;nbsp;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Option CFC:&amp;nbsp;&lt;br /&gt;
+&lt;br /&gt;
+$\begin{pmatrix}&lt;br /&gt;
+\textrm{C} &amp;amp; \textrm{F} &amp;amp; \textrm{C} &amp;amp; \textrm{Wahrscheinlichkeit} \\&lt;br /&gt;
+\hline&lt;br /&gt;
+\\&lt;br /&gt;
+\textrm{W} &amp;amp; \textrm{W} &amp;amp; \textrm{W} &amp;amp; cfc \\&lt;br /&gt;
+\textrm{W} &amp;amp; \textrm{W} &amp;amp; \textrm{L} &amp;amp; cf(1-c) \\&lt;br /&gt;
+\textrm{L} &amp;amp; \textrm{W} &amp;amp; \textrm{W} &amp;amp; (1-c)fc \\&lt;br /&gt;
+\end{pmatrix}$&amp;nbsp;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text>Aufgrund der Annahme gilt: $f&gt;c$.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="21"/>
+      <variableUpdatesBeforeCheck id="22"/>
+      <variableUpdatesAfterCheck id="23"/>
+      <variableUpdatesOnNormalExit id="24"/>
+      <variableUpdatesOnRepeat id="25"/>
+      <variableUpdatesOnSkip id="26"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="27"/>
+      <rules id="28"/>
+      <fillInFields id="29"/>
+      <dropDownFields id="30">
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="31">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <randomize>true</randomize>
+          <items id="32">
+            <string>FCF</string>
+            <string>CFC</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+      </dropDownFields>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Die richtige L&amp;ouml;sung ist: CFC</defaultFeedback>
+      <correctAnswerRules id="33">
+        <Rule id="34">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="35">
+            <code>[input=field1]==1</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.&amp;nbsp;</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="36">
+    <VariableDeclaration id="37">
+      <name>x1uu</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(5,400)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="39"/>
+  <dynamicMolecules id="40"/>
+  <resultFeedbackMappings id="41"/>
+</Exercise>

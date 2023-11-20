@@ -1,0 +1,330 @@
+<Exercise id="1">
+  <name>IS06-04 Verteilungen diskreter Zufallsvariablen 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Robin Hood Aufgabe:
+1.Stage: negative Binomialverteilung mit r=1 
+2.Stage: negative Bin, mit r=3
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>3</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Robin Hood trifft sein Ziel mit einer Wahrscheinlichkeit von $p=[var=m]$.&lt;br /&gt;&#xd;
+Mit welcher Wahrscheinlichkeit trifft er zum ersten Mal beim dritten Schuss? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Es gilt: $P(X=2)=p(1-p)^2 = [var=m]\cdot (1-[var=m])^2 = [var=ansa].$&lt;br /&gt;
+$\verb|dnbinom(2, 1, [var=m])|$ = $[var=ansa]$ bzw. $\verb|dgeom(2, [var=m])|$ = $[var=ansa]$.&lt;br /&gt;
+Mit einer Wahrscheinlichkeit von $[var=ansa]$ trifft Robin Hood erst im dritten Versuch zum ersten Mal sein Ziel.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <targetStage class="FillInStage" id="12">
+          <internalName>2</internalName>
+          <externalName>Stage 2</externalName>
+          <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie wahrscheinlich ist es, dass er beim $5$. Schuss zum $3$. Mal trifft?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+          <skipMessage>$X$: Anzahl der Misserfolge bis zum $3$-ten Erfolg.&lt;br /&gt;
+$X$: $NB(3;[var=m])$, $r=3$, $x=2$ $\Rightarrow \quad P(X=2) = \begin{pmatrix} 2+3-1\\ 3-1 \end{pmatrix} \cdot [var=m]^3 \cdot (1-[var=m])^2 = [var=ansb]$.&lt;br /&gt;
+$\verb|dnbinom(2, 3, [var=m])|$ = $[var=ansb]$.&lt;br /&gt;
+Mit einer Wahrscheinlichkeit von $[var=ansb]$ trifft Robin Hood beim $5.$ Schuss zum $3.$ Mal.</skipMessage>
+          <defaultTransition id="13">
+            <conditionExpression id="14">
+              <domain>MATH</domain>
+            </conditionExpression>
+            <stageExpression id="15">
+              <domain>MATH</domain>
+            </stageExpression>
+            <isRepeat>false</isRepeat>
+          </defaultTransition>
+          <skipTransitions id="16">
+            <StageTransition id="17">
+              <conditionExpression id="18">
+                <code></code>
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>false</isRepeat>
+            </StageTransition>
+          </skipTransitions>
+          <stageTransitions id="20">
+            <StageTransition id="21">
+              <conditionExpression id="22">
+                <code></code>
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="23">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>false</isRepeat>
+            </StageTransition>
+          </stageTransitions>
+          <hints id="24">
+            <StageHint id="25">
+              <stagehint__order>0</stagehint__order>
+              <text>Es handelt sich um die negative Binomialverteilung. $X$ ist definiert als die Anzahl der Misserfolge bis zum $3.$ Treffer. Was sind in diesem Fall die Parameter $p$ und $r$?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+              <malus>0</malus>
+              <stage class="FillInStage" reference="12"/>
+            </StageHint>
+            <StageHint id="26">
+              <stagehint__order>1</stagehint__order>
+              <text>Es gilt $p=[var=m]$ und $r=3$. Welche Wahrscheinlichkeit ist gesucht?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+              <malus>0</malus>
+              <stage class="FillInStage" reference="12"/>
+            </StageHint>
+            <StageHint id="27">
+              <stagehint__order>2</stagehint__order>
+              <text>Es ist wieder $P(X=2)$ gesucht. (Es soll genau zwei Misserfolge geben, bevor Robin Hood drei mal trifft, also beim 5. Schuss zum dritten mal trifft.)&lt;br /&gt;
+Berechnen Sie diese Wahrscheinlichkeit anhand der Wahrscheinlichkeitsfunktion der negativen Binomialverteilung.&lt;br /&gt;
+Die Berechnung &amp;uuml;ber R sieht wie folgt aus:&lt;br /&gt;
+$\verb|dnbinom(x, size, prob)|$ mit $x=2$, $size=3$ und $p=[var=m]$</text>
+              <malus>0</malus>
+              <stage class="FillInStage" reference="12"/>
+            </StageHint>
+          </hints>
+          <variableUpdatesOnEnter id="28"/>
+          <variableUpdatesBeforeCheck id="29"/>
+          <variableUpdatesAfterCheck id="30"/>
+          <variableUpdatesOnNormalExit id="31"/>
+          <variableUpdatesOnRepeat id="32"/>
+          <variableUpdatesOnSkip id="33"/>
+          <weight>1</weight>
+          <orderIndex>1</orderIndex>
+          <allowSkip>true</allowSkip>
+          <resources id="34"/>
+          <rules id="35"/>
+          <fillInFields id="36">
+            <FillInField id="37">
+              <name>field1</name>
+              <orderIndex>0</orderIndex>
+              <size>6</size>
+              <formularEditorType>NUMBER</formularEditorType>
+            </FillInField>
+          </fillInFields>
+          <dropDownFields id="38"/>
+          <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+          <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$X$: Anzahl der Misserfolge bis zum $3$-ten Erfolg.&lt;br /&gt;
+$X$: $NB(3;[var=m])$, $r=3$, $x=2$ $\Rightarrow \quad P(X=2) = \begin{pmatrix} 2+3-1\\ 3-1 \end{pmatrix} \cdot [var=m]^3 \cdot (1-[var=m])^2 = [var=ansb]$.&lt;br /&gt;
+$\verb|dnbinom(2, 3, [var=m])|$ = $[var=ansb]$.&lt;br /&gt;
+Mit einer Wahrscheinlichkeit von $[var=ansb]$ trifft Robin Hood beim $5.$ Schuss zu</defaultFeedback>
+          <correctAnswerRules id="39">
+            <Rule id="40">
+              <name>CorrectAnswer1</name>
+              <orderIndex>1</orderIndex>
+              <validationExpression id="41">
+                <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ansb]-0.0011&amp;&amp;[input=field1]&lt;[var=ansb]+0.0011</code>
+                <domain>MATH</domain>
+              </validationExpression>
+              <points>0</points>
+              <terminal>false</terminal>
+            </Rule>
+          </correctAnswerRules>
+          <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+          <defaultResult>0</defaultResult>
+        </targetStage>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="42">
+        <StageTransition id="43">
+          <conditionExpression id="44">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="45">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="12"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="46">
+        <StageTransition id="47">
+          <conditionExpression id="48">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="49">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="12"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="50">
+        <StageHint id="51">
+          <stagehint__order>0</stagehint__order>
+          <text>&amp;Uuml;erlegen Sie, welche Verteilung Sie vorliegen haben.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="52">
+          <stagehint__order>1</stagehint__order>
+          <text>Es handelt sich um die geometrische Verteilung, welche einen Spezialfall der negativen Binomialverteilung darstellt. $X$ ist definiert als die Anzahl der Misserfolge bis zum $1.$ Treffer. Was sind in diesem Fall die Parameter $p$ und $r$?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="53">
+          <stagehint__order>2</stagehint__order>
+          <text>Es gilt $p=[var=m]$ und $r=1$. (Bei der geometrischen Verteilung gilt immer $r=1$)&lt;br /&gt;
+Welche Wahrscheinlichkeit ist gesucht?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="54">
+          <stagehint__order>3</stagehint__order>
+          <text>Es ist $P(X=2)$ gesucht. (Es soll genau zwei Misserfolge geben, bevor Robin Hood beim dritten mal trifft.)&lt;br /&gt;
+Berechnen Sie diese Wahrscheinlichkeit anhand der Wahrscheinlichkeitsfunktion der geometrischen Verteilung:&lt;br /&gt;
+$P(X=x)=p \cdot (1-p)^x$.&lt;br /&gt;
+Die Berechnung &amp;uuml;ber R sieht wie folgt aus:&lt;br /&gt;
+$\verb|dnbinom(x, size, prob)|$ mit $x=2$, $size=1$ und $p=[var=m]$.&lt;br /&gt;
+Sie k&amp;ouml;nnen auch direkt die geometrische Verteilung &amp;uuml;ber R nutzen:&lt;br /&gt;
+$\verb|dgeom(x, prob)|$ mit $x=2$ und $p=[var=m]$</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="55"/>
+      <variableUpdatesBeforeCheck id="56"/>
+      <variableUpdatesAfterCheck id="57"/>
+      <variableUpdatesOnNormalExit id="58"/>
+      <variableUpdatesOnRepeat id="59"/>
+      <variableUpdatesOnSkip id="60"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="61"/>
+      <rules id="62"/>
+      <fillInFields id="63">
+        <FillInField id="64">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="65"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Es gilt: $P(X=2)=p(1-p)^2 = [var=m]\cdot (1-[var=m])^2 = [var=ansa].$&lt;br /&gt;
+$\verb|dnbinom(2, 1, [var=m])|$ = $[var=ansa]$ bzw. $\verb|dgeom(2, [var=m])|$ = $[var=ansa]$.&lt;br /&gt;
+Mit einer Wahrscheinlichkeit von $[var=ansa]$ trifft Robin Hood erst im dritten Versuch zum ersten Mal sein Ziel.</defaultFeedback>
+      <correctAnswerRules id="66">
+        <Rule id="67">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="68">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ansa]-0.0011&amp;&amp;[input=field1]&lt;[var=ansa]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="12"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="69">
+    <VariableDeclaration id="70">
+      <name>m1</name>
+      <initializationCode id="71">
+        <code>evaluateInR(&apos;sample(70:98, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="72">
+      <name>m2</name>
+      <initializationCode id="73">
+        <code>([var=m1])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="74">
+      <name>m</name>
+      <initializationCode id="75">
+        <code>round(([var=m2]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="76">
+      <name>ansau</name>
+      <initializationCode id="77">
+        <code>([var=m])*(1-([var=m]))*(1-([var=m]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="78">
+      <name>ansa</name>
+      <initializationCode id="79">
+        <code>evaluateInR(&apos;round(([var=ansau]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="80">
+      <name>ansbu</name>
+      <initializationCode id="81">
+        <code>6*([var=m])*([var=m])*([var=m])*(1-([var=m]))*(1-([var=m]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="82">
+      <name>ansb</name>
+      <initializationCode id="83">
+        <code>evaluateInR(&apos;round(([var=ansbu]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="84"/>
+  <dynamicMolecules id="85"/>
+  <resultFeedbackMappings id="86"/>
+</Exercise>

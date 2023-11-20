@@ -1,0 +1,186 @@
+<Exercise id="1">
+  <name>IS09-R02 Schätztheorie 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>ML-Methode anwenden
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">c2V0LnNlZWQoW3Zhcj1zXSkNCm1sLmZ1bmMgPC0gZnVuY3Rpb24oc2FtcGxlKXsNCiAgbWwgPC0gZnVuY3Rpb24obiwgeCl7DQogICAgc3VtKGR0KHgsIGRmID0gbiwgbG9nID0gVFJVRSkpDQogIH0NCiAgc21wbF9pbnR2YWwgPC0gYygwLCAxMCkNCiAgcmV0dXJuKG9wdGltaXplKGYgPSBtbCwgeD1zYW1wbGUsIGludGVydmFsID0gc21wbF9pbnR2YWwsIG1heGltdW0gPSBUUlVFKSkNCn0=</content>
+      <uploadTimestamp>2022-05-11T11:23:49.371805</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sei $X$ eine Zufallsvariable mit $X\sim t([var=df])$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Generieren Sie eine t-Verteilte Stichprobe von $X$ mit $[var=n]$ Beobachtungen. Nutzen sie daf&amp;uuml;r die Funktion $\verb|rt()|$. F&amp;uuml;r eine t-Verteilung existiert keine geschlossene L&amp;ouml;sung des Maximum-Likelihood-Sch&amp;auml;tzers, daher wollen wir mithilfe von R eine numerische L&amp;ouml;sung finden. Mithilfe der gegebenen Funktion $\verb|ml.func()|$ l&amp;auml;sst sich die Anzahl der Freiheitsgrade einer unbekannten t-Verteilung auf Grundlage einer Stichprobe mithilfe der Maximimum-Likelihood-Methode sch&amp;auml;tzen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sch&amp;auml;tzen Sie die Anzahl der Freiheitsgrade von $X$ mithilfe Ihrer selbstgenerierten Stichprobe. Welchen Wert erwarten Sie?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>In der $\verb|ml.func()|$-Funktion wird die Summe der Wahrscheinlichkeitsdichtefunktion, die wir dem zu untersuchenden Sample unterstellen, als Funktion in Abh&amp;auml;ngigkeit der Anzahl der Freiheitsgrade gespeichert. Die Stichprobe wird in die Dichtefunktion eingesetzt und mithilfe der $\verb|optimize()|$-Funktion wird anhand der freien Variable das Maximum gefunden.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Die Funktion $\verb|ml.func(sample)|$ steht im Workspace bereit. Der Vektor $\verb|sample|$ soll die Stichprobe beinhalten, die Sie mit $\verb|rt|$ erzeugen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="17">
+          <stagehint__order>2</stagehint__order>
+          <text>Die vorhandene t-Verteilung hat $[var=df]$ Freiheitsgrade. </text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="18"/>
+      <variableUpdatesBeforeCheck id="19"/>
+      <variableUpdatesAfterCheck id="20"/>
+      <variableUpdatesOnNormalExit id="21"/>
+      <variableUpdatesOnRepeat id="22"/>
+      <variableUpdatesOnSkip id="23"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="24"/>
+      <initialCode>set.seed([var=s])
+ml.func &lt;- function(sample){
+  ml &lt;- function(n, x){
+    sum(dt(x, df = n, log = TRUE))
+  }
+  smpl_intval &lt;- c(0, 10)
+  return(optimize(f = ml, x=sample, interval = smpl_intval, maximum = TRUE))
+}</initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="25">
+        <TestCaseTuple id="26">
+          <testCases id="27">
+            <StaticRTestCase id="28">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Achten Sie darauf, dass Sie die $\verb|rt()|$- und $\verb|ml.func()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="29">
+                <RGReQLQuery id="30">
+                  <query>      from rt, ml:V{FunctionCall} with
+      rt.name=&quot;rt&quot; and
+      ml.name=&quot;ml.func&quot;
+      report 0 end
+    </query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>44038</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="32">
+          <testCases id="33">
+            <DynamicRTestCase id="34">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}
+      ml.func &lt;- function(n,d, s){
+        set.seed(s)
+        sample &lt;- rt(n,d)
+        ml &lt;- function(d, x){
+          sum(dt(x, df = d, log = TRUE))
+        }
+        smpl_intval &lt;- c(0,10)
+        return(optimize(f = ml, x=sample, interval = smpl_intval, maximum = TRUE))
+      }
+  </postCode>
+              <expectedOutput>ml.func([var=n],[var=df],[var=s])</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="35">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>44039</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="36">
+    <VariableDeclaration id="37">
+      <name>n</name>
+      <initializationCode id="38">
+        <code>evaluateInR(&apos;round(runif(1, 1500, 2000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>df</name>
+      <initializationCode id="40">
+        <code>evaluateInR(&apos;round(runif(1, 2, 5))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>s</name>
+      <initializationCode id="42">
+        <code>evaluateInR(&apos;round(runif(1, 1, 1000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="43"/>
+  <dynamicMolecules id="44"/>
+  <resultFeedbackMappings id="45"/>
+</Exercise>

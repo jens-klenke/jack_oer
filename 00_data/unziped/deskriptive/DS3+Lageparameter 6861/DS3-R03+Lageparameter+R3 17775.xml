@@ -1,0 +1,204 @@
+<Exercise id="1">
+  <name>DS3-R03 Lageparameter R3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Alpha-getrimmtes arithmetisches Mittel berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2"/>
+  <resources id="3">
+    <ExerciseResource id="4">
+      <content id="5">ZWlua29tbWVuIDwtIGMoMzUsNTYsMjgsNjksNzUsNjQsNzU0Niw2Nyw1NCwzNik=</content>
+      <uploadTimestamp>2022-03-02T16:24:36.396343</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="6">
+    <RStage id="7">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nachdem Sie in der vorherigen Aufgabe das durchschnittliche Einkommen von 10 repr&amp;auml;sentativ ausgew&amp;auml;hlten Personen berechnet haben, mussten Sie feststellen, dass das arithmetische Mittel sehr sensibel auf Ausrei&amp;szlig;er reagiert.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie f&amp;uuml;r die selben Personen erneut das durchschnittliche Einkommen, benutzen Sie nun aber eine robustere Berechnungsweise f&amp;uuml;r das arithmetische Mittel.&lt;br /&gt;&#xd;
+Nehmen Sie dazu an, dass $\alpha=0.1$. Die Variable $\verb|einkommen|$ steht weiterhin zur Verf&amp;uuml;gung.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="8">
+        <conditionExpression id="9">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="10">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="11"/>
+      <stageTransitions id="12"/>
+      <hints id="13">
+        <StageHint id="14">
+          <stagehint__order>0</stagehint__order>
+          <text>Der Befehl f&amp;uuml;r das arithmetische Mittel lautet $\verb|mean()|$.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>1</stagehint__order>
+          <text>$\alpha$ k&amp;ouml;nnen Sie &amp;uuml;ber den Parameter $\verb|trim|$ innerhalb der $\verb|mean()|$-Funktion festlegen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode>einkommen &lt;- c([var=x1], [var=x2], [var=x3], [var=x4], [var=x5], [var=x6], [var=x7], [var=x8], [var=x9], [var=x10])</initialCode>
+      <finalResultComputationString>min(#{c17780},#{c17779})</finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $\verb|mean|$-Funktion und achten Sie darauf, dass Sie die vordefinierte Variable $\verb|einkommen|$ benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>		from mean:V{FunctionCall}, eink:V{Variable}  with 
+                mean.name=&quot;mean&quot; and
+                mean --&gt;* eink and
+                eink.name=&quot;einkommen&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>17779</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $\verb|mean()|$-Funktion und achten Sie darauf, dass Sie $\alpha$ spezifizieren.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>mean(c([var=x1], [var=x2], [var=x3], [var=x4], [var=x5], [var=x6], [var=x7], [var=x8], [var=x9], [var=x10]),trim=0.1)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>17780</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="7"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>x1</name>
+      <initializationCode id="36">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="37">
+      <name>x2</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>x3</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>x4</name>
+      <initializationCode id="42">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>x5</name>
+      <initializationCode id="44">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>x6</name>
+      <initializationCode id="46">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>x7</name>
+      <initializationCode id="48">
+        <code>randomIntegerBetween(3000,8000)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>x8</name>
+      <initializationCode id="50">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>x9</name>
+      <initializationCode id="52">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>x10</name>
+      <initializationCode id="54">
+        <code>randomIntegerBetween(20,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="55"/>
+  <dynamicMolecules id="56"/>
+  <resultFeedbackMappings id="57"/>
+</Exercise>

@@ -1,0 +1,242 @@
+<Exercise id="1">
+  <name>IS11-R02 Hypothesentest 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Zweiseitiger t-Test
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">YWtrdXMgPC0gYyhbdmFyPXgxXSxbdmFyPXgyXSxbdmFyPXgzXSxbdmFyPXg0XSxbdmFyPXg1XSxbdmFyPXg2XSxbdmFyPXg3XSxbdmFyPXg4XSxbdmFyPXg5XSxbdmFyPXgxMF0p</content>
+      <uploadTimestamp>2022-05-11T11:24:29.069914</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ein Smartphone-Hersteller garantiert seinen Kunden eine Akkulaufzeit von $[var=mu]$ Stunden. Die Akkulaufzeit $X$ sei dabei in der Grundgesamtheit normalverteilt mit unbekannter Varianz $\sigma^2$. Eine Stichprobe mit Akkulaufzeiten von $10$ Smartphones ist Ihnen (im Vektor $\verb|akkus|$) gegeben.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Testen Sie mit Hilfe der Stichprobe, ob die Garantie des Herstellers plausibel erscheint. Nehmen Sie dazu ein Signifikanzniveau von $[var=signiv]\%$ an und nutzen Sie die Funktion $\verb|t.test()|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Zun&amp;auml;chst sollten Sie sich klarmachen, um welche Art von Test es sich handelt.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis verf&amp;uuml;gbar.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Es handelt sich um einen beidseitigen Test, d.h. $H_0:\mu=\mu_0$. Innerhalb der Funktion $\verb|t.test()|$ ist diese Testart bereits standardm&amp;auml;&amp;szlig;ig &amp;uuml;ber das Argument $\verb|alternative|$ festgelegt, sodass Sie diesbez&amp;uuml;glich nichts spezifieren m&amp;uuml;ssen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis verf&amp;uuml;gbar.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="17">
+          <stagehint__order>2</stagehint__order>
+          <text>Allerdings sollten Sie mit Hilfe der Argumente $\verb|mu|$ und $\verb|conf.level|$ die Nullhypothese sowie das Konfidenzniveau festlegen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="18"/>
+      <variableUpdatesBeforeCheck id="19"/>
+      <variableUpdatesAfterCheck id="20"/>
+      <variableUpdatesOnNormalExit id="21"/>
+      <variableUpdatesOnRepeat id="22"/>
+      <variableUpdatesOnSkip id="23"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="24"/>
+      <initialCode>akkus &lt;- c([var=x1],[var=x2],[var=x3],[var=x4],[var=x5],[var=x6],[var=x7],[var=x8],[var=x9],[var=x10])</initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="25">
+        <TestCaseTuple id="26">
+          <testCases id="27">
+            <StaticRTestCase id="28">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+
+Achten Sie darauf, dass Sie die $\verb|t.test()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="29">
+                <RGReQLQuery id="30">
+                  <query>      from tt:V{FunctionCall} with
+      tt.name=&quot;t.test&quot;
+      report 0 end
+    </query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>44134</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="32">
+          <testCases id="33">
+            <DynamicRTestCase id="34">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}
+      otto &lt;- function(x, muu, alpha, chr){
+        tmp &lt;- t.test(x,alternative=&quot;two.sided&quot;,mu=muu, conf.level=alpha)
+        tmp[[9]] &lt;- chr
+        return(tmp)
+      }
+  </postCode>
+              <expectedOutput>otto(c([var=x1],[var=x2],[var=x3],[var=x4],[var=x5],[var=x6],[var=x7],[var=x8],[var=x9],[var=x10]),[var=mu], [var=alpha], &quot;akkus&quot;)</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="35">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>44135</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="36">
+    <VariableDeclaration id="37">
+      <name>x1</name>
+      <initializationCode id="38">
+        <code>evaluateInR(&apos;round(runif(1, 8, 14), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>x2</name>
+      <initializationCode id="40">
+        <code>evaluateInR(&apos;round(runif(1, 8, 14), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>x3</name>
+      <initializationCode id="42">
+        <code>evaluateInR(&apos;round(runif(1, 6, 12), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>x4</name>
+      <initializationCode id="44">
+        <code>evaluateInR(&apos;round(runif(1, 6, 12), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>x5</name>
+      <initializationCode id="46">
+        <code>evaluateInR(&apos;round(runif(1, 6, 12), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>x6</name>
+      <initializationCode id="48">
+        <code>evaluateInR(&apos;round(runif(1, 6, 12), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>x7</name>
+      <initializationCode id="50">
+        <code>evaluateInR(&apos;round(runif(1, 8, 14), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>x8</name>
+      <initializationCode id="52">
+        <code>evaluateInR(&apos;round(runif(1, 8, 14), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>x9</name>
+      <initializationCode id="54">
+        <code>evaluateInR(&apos;round(runif(1, 8, 14), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>x10</name>
+      <initializationCode id="56">
+        <code>evaluateInR(&apos;round(runif(1, 6, 12), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>mu</name>
+      <initializationCode id="58">
+        <code>evaluateInR(&apos;round(runif(1, 16, 24))/2&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>alpha</name>
+      <initializationCode id="60">
+        <code>evaluateInR(&apos;round(runif(1, 0.9, 0.99), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>signiv</name>
+      <initializationCode id="62">
+        <code>evaluateInR(&apos;round((1-[var=alpha])*100)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="63"/>
+  <dynamicMolecules id="64"/>
+  <resultFeedbackMappings id="65"/>
+</Exercise>

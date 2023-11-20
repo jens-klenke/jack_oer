@@ -1,0 +1,155 @@
+<Exercise id="1">
+  <name>IS00-R07 Rechenregeln R07</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Sequenz aus Aufgabe 6 mit seq()-Befehl oder &quot;:&quot;-Operator erstellen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Versuchen Sie nun die gleiche Zahlenfolge aus der vorherigen Aufgabe (Zahlen von 1 bis 10) schneller und damit effizienter zu erzeugen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Schreiben Sie die L&amp;ouml;sung daher diesmal &lt;strong&gt;nicht &lt;/strong&gt;manuell in einen Vektor. Speichern Sie das Ergebnis in der Variablen $\verb|zahlen|$ ab.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Sie k&amp;ouml;nnen Sequenzen in R mit dem $\verb|:|$-Operator oder der $\verb|seq()|$-Funktion erzeugen. Bei der $\verb|seq()|$-Funktion brauchen Sie nur zwei Parameter anzugeben.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Legen Sie bei beiden Möglichkeiten jeweils den Start- und Endpunkt fest (Sie können beim $\verb|seq()|$-Befehl zusätzlich noch die Abstände zwischen den jeweiligen Zahlen festlegen, müssen Sie aber nicht, da die Default-Einstellung hier bereits 1 ist, also $\verb|by=1|$).</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="15"/>
+      <variableUpdatesBeforeCheck id="16"/>
+      <variableUpdatesAfterCheck id="17"/>
+      <variableUpdatesOnNormalExit id="18"/>
+      <variableUpdatesOnRepeat id="19"/>
+      <variableUpdatesOnSkip id="20"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="21"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="22">
+        <TestCaseTuple id="23">
+          <testCases id="24">
+            <StaticRTestCase id="25">
+              <points>75</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Achten Sie darauf, dass Sie den Vektor einer Variablen namens $\verb|zahlen|$ zuweisen und den $\verb|seq()|$-Befehl benutzen.
+</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="26">
+                <RGReQLQuery id="27">
+                  <query>		from sequ:V{SequenceOperator}, n1,n2:V{NumericLiteral}, lao:V{LeftAssignmentOperator}, v:V{Variable}, lh:E{LeftHandSide}, rh:E{RightHandSide}, e1,e2:E{Expression} with 
+		lao -- lh -&gt; v and
+                v.name=&quot;zahlen&quot; and
+                lao -- rh -&gt; sequ and
+                sequ -- e1 -&gt; n1 and
+                sequ -- e2 -&gt; n2 and
+                e1.position  &lt; e2.position and
+                n1.value=1 and
+                n2.value=10
+		report 0 end</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="28">
+                  <query>		from seq:V{FunctionCall}, lao:V{LeftAssignmentOperator}, v:V{Variable}, lh:E{LeftHandSide}, rh:E{RightHandSide} with 
+                lao -- lh -&gt; v and
+                v.name=&quot;zahlen&quot; and
+                lao -- rh -&gt; seq and
+                seq.name=&quot;seq&quot;
+		report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <name></name>
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42111</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>25</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>Ergebnis</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Ihre Eingabe sollte 1 2 3 4 5 6 7 8 9 10 liefern.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>1:10</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <name></name>
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42113</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>num</name>
+      <initializationCode id="36">
+        <code>randomIntegerBetween(5,15)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="37"/>
+  <dynamicMolecules id="38"/>
+  <resultFeedbackMappings id="39"/>
+</Exercise>

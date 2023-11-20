@@ -1,0 +1,1508 @@
+<Exercise id="1">
+  <name>IS03-10 Bedingte Wahrscheinlichkeiten 10</name>
+  <publicDescription></publicDescription>
+  <internalNotes>http://www.r-bloggers.com/an-idiot-learns-bayesian-analysis-part-3/
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In einer Stadt gibt es nur Autos in zwei verschiedenen Farben. $[var=$guu]$% der Autos sind gr&amp;uuml;n und $[var=$buu]$% der Autos sind blau. Es gab einen Unfall mit Fahrerflucht. Ein Zeuge sagt, dass das Auto, welches in den Unfall verwickelt war, blau war. Ein Gericht pr&amp;uuml;ft die Glaubw&amp;uuml;rdigkeit der Zeugenaussage durch Experimente mit Testpersonen am Tatort und kommt zu der Erkenntnis, dass $[var=Auu]$% der Testpersonen korrekte Aussagen machen k&amp;ouml;nnen. Um die Wahrscheinlichkeit zu berechnen, dass das Auto blau war, gegeben die Zeugenaussage, soll zun&amp;auml;chst folgende Tabelle ausgef&amp;uuml;llt werden:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:500px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;Auto ist gr&amp;uuml;n&lt;/td&gt;&#xd;
+			&lt;td&gt;Auto ist blau&lt;/td&gt;&#xd;
+			&lt;td&gt;Randwahrscheinlichkeit&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Zeuge liegt richtig&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Zeuge liegt falsch&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field4&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field4&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field5&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field5&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field6&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field6&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Randwahrscheinlichkeit&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field7&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field7&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field8&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field8&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;1&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>$$\begin{matrix}&lt;br /&gt;
+&amp;amp; \textrm{Auto ist gr&amp;uuml;n} &amp;amp; \textrm{Auto ist blau} &amp;amp; \textrm{Randwahrscheinlichkeit} \\&lt;br /&gt;
+\hline&lt;br /&gt;
+\textrm{Zeuge liegt richtig} &amp;amp; [var=a11] &amp;amp; [var=a12] &amp;amp; [var=A] \\&lt;br /&gt;
+\textrm{Zeuge liegt falsch} &amp;amp; [var=a21] &amp;amp; [var=a22] &amp;amp; [var=iA] \\&lt;br /&gt;
+\textrm{Randwahrscheinlichkeit} &amp;amp; [var=g] &amp;amp; [var=b] &amp;amp; 1 \\&lt;br /&gt;
+\end{matrix}$$</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Weiterhin soll auch folgende Tabelle ausgef&amp;uuml;llt werden:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:500px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;Auto ist gr&amp;uuml;n&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;Auto ist blau&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;Randwahrscheinlichkeit&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Zeuge sagt gr&amp;uuml;n&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Zeuge sagt blau&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field4&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field4&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field5&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field5&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field6&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field6&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Randwahrscheinlichkeit&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field7&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field7&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field8&quot; size=&quot;3&quot; type=&quot;text&quot; value=&quot;field8&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;1&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+            <skipMessage>$$\begin{matrix}&lt;br /&gt;
+&amp;amp; \textrm{Auto ist gr&amp;uuml;n} &amp;amp; \textrm{Auto ist blau} &amp;amp; \textrm{Randwahrscheinlichkeit} \\&lt;br /&gt;
+\hline&lt;br /&gt;
+\textrm{Zeuge sagt gr&amp;uuml;n} &amp;amp; [var=b11] &amp;amp; [var=b12] &amp;amp; [var=b13] \\&lt;br /&gt;
+\textrm{Zeuge sagt blau} &amp;amp; [var=b21] &amp;amp; [var=b22] &amp;amp; [var=b23] \\&lt;br /&gt;
+\textrm{Randwahrscheinlichkeit} &amp;amp; [var=g] &amp;amp; [var=b] &amp;amp; 1 \\&lt;br /&gt;
+\end{matrix}$$</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="24">
+                  <internalName>3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Benutzen Sie eine (oder beide) der beiden Tabellen, um die Wahrscheinlichkeit zu berechnen, dass das Auto blau war, gegeben die Zeugenaussage.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie ihr Ergebnis, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+                  <skipMessage>Die Wahrscheinlichkeit, dass das Auto blau war, gegeben die Zeugenaussage, betr&amp;auml;gt $[var=ansc]$.</skipMessage>
+                  <defaultTransition id="25">
+                    <conditionExpression id="26">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="27">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="28">
+                    <StageTransition id="29">
+                      <conditionExpression id="30">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="31">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" id="32">
+                        <internalName>4</internalName>
+                        <externalName>Stage 4</externalName>
+                        <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Dass die Wahrscheinlichkeit, dass ein blaues Auto in den Unfall verwickelt war, trotz der Zeugenaussage, kleiner als $50$% ist, ist auf den ersten Blick nicht intuitiv.&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; m&amp;uuml;sste die Glaubw&amp;uuml;rdigkeit der Zeugenaussage sein, so dass die Wahrscheinlichkeit, dass ein blaues Auto in den Unfall verwickelt war, zumindest $50$% betr&amp;auml;gt?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie ihr Ergebnis, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+                        <skipMessage>Die Wahrscheinlichkeit, dass ein blaues Auto in den Unfall verwickelt war, betr&amp;auml;gt $50$%, wenn die Glaubw&amp;uuml;rdigkeit der Zeugenaussage gleich dem Anteil der gr&amp;uuml;nen Autos entspricht, also $[var=g]$.</skipMessage>
+                        <defaultTransition id="33">
+                          <conditionExpression id="34">
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="35">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>true</isRepeat>
+                        </defaultTransition>
+                        <skipTransitions id="36">
+                          <StageTransition id="37">
+                            <conditionExpression id="38">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="39">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <targetStage class="FillInStage" id="40">
+                              <internalName>5</internalName>
+                              <externalName>Stage 5</externalName>
+                              <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; m&amp;uuml;sste die Glaubw&amp;uuml;rdigkeit der Zeugenaussage sein, so dass die Wahrscheinlichkeit, dass ein blaues Auto in den Unfall verwickelt war, $[var=quu]$% betr&amp;auml;gt?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie ihr Ergebnis, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+                              <skipMessage>Die Glaubw&amp;uuml;rdigkeit der Zeugenaussage m&amp;uuml;sste $[var=A_ges]$ betragen, so dass die Wahrscheinlichkeit, dass ein blaues Auto in den Unfall verwickelt war $[var=quu]$% betr&amp;auml;gt.</skipMessage>
+                              <defaultTransition id="41">
+                                <conditionExpression id="42">
+                                  <domain>MATH</domain>
+                                </conditionExpression>
+                                <stageExpression id="43">
+                                  <domain>MATH</domain>
+                                </stageExpression>
+                                <isRepeat>true</isRepeat>
+                              </defaultTransition>
+                              <skipTransitions id="44">
+                                <StageTransition id="45">
+                                  <conditionExpression id="46">
+                                    <code></code>
+                                    <domain>MATH</domain>
+                                  </conditionExpression>
+                                  <stageExpression id="47">
+                                    <domain>MATH</domain>
+                                  </stageExpression>
+                                  <isRepeat>false</isRepeat>
+                                </StageTransition>
+                              </skipTransitions>
+                              <stageTransitions id="48">
+                                <StageTransition id="49">
+                                  <conditionExpression id="50">
+                                    <code></code>
+                                    <domain>MATH</domain>
+                                  </conditionExpression>
+                                  <stageExpression id="51">
+                                    <code>[meta=stageCurrentResult]&gt;=100</code>
+                                    <domain>MATH</domain>
+                                  </stageExpression>
+                                  <isRepeat>false</isRepeat>
+                                </StageTransition>
+                              </stageTransitions>
+                              <hints id="52">
+                                <StageHint id="53">
+                                  <stagehint__order>0</stagehint__order>
+                                  <text>    Nutzen Sie die Hinweise aus Aufgabe 4 und setzen Sie die Gleichung gleich $[var=quu]$%
+    </text>
+                                  <malus>0</malus>
+                                  <stage class="FillInStage" reference="40"/>
+                                </StageHint>
+                              </hints>
+                              <variableUpdatesOnEnter id="54"/>
+                              <variableUpdatesBeforeCheck id="55"/>
+                              <variableUpdatesAfterCheck id="56"/>
+                              <variableUpdatesOnNormalExit id="57"/>
+                              <variableUpdatesOnRepeat id="58"/>
+                              <variableUpdatesOnSkip id="59"/>
+                              <weight>1</weight>
+                              <orderIndex>4</orderIndex>
+                              <allowSkip>true</allowSkip>
+                              <resources id="60"/>
+                              <rules id="61"/>
+                              <fillInFields id="62">
+                                <FillInField id="63">
+                                  <name>field1</name>
+                                  <orderIndex>0</orderIndex>
+                                  <size>6</size>
+                                  <formularEditorType>NUMBER</formularEditorType>
+                                </FillInField>
+                              </fillInFields>
+                              <dropDownFields id="64"/>
+                              <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                              <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Die Glaubw&amp;uuml;rdigkeit der Zeugenaussage m&amp;uuml;sste $[var=A_ges]$ betragen, so dass die Wahrscheinlichkeit, dass ein blaues Auto in den Unfall verwickelt war $[var=quu]$% betr&amp;auml;gt.</defaultFeedback>
+                              <correctAnswerRules id="65">
+                                <Rule id="66">
+                                  <name>CorrectAnswer1</name>
+                                  <orderIndex>1</orderIndex>
+                                  <validationExpression id="67">
+                                    <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=A_ges]-0.001&amp;&amp;[input=field1]&lt;[var=A_ges]+0.001</code>
+                                    <domain>MATH</domain>
+                                  </validationExpression>
+                                  <points>0</points>
+                                  <terminal>false</terminal>
+                                </Rule>
+                              </correctAnswerRules>
+                              <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                              <defaultResult>0</defaultResult>
+                            </targetStage>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </skipTransitions>
+                        <stageTransitions id="68">
+                          <StageTransition id="69">
+                            <conditionExpression id="70">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="71">
+                              <code>[meta=stageCurrentResult]&gt;=100</code>
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <targetStage class="FillInStage" reference="40"/>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </stageTransitions>
+                        <hints id="72">
+                          <StageHint id="73">
+                            <stagehint__order>0</stagehint__order>
+                            <text>Sie m&amp;uuml;ssen eine Gleichung aufstellen und diese gleich $0.5$ setzen.&lt;br /&gt;
+Dabei m&amp;uuml;ssen Sie jedoch beachten, dass sich die Zeugenrichtigkeit aus Frage 1 mit $[var=Auu]$% &amp;auml;ndern muss.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="74">
+                            <stagehint__order>1</stagehint__order>
+                            <text>Stellen Sie die Gleichung nach x um:&lt;br /&gt;
+$\frac{[var=buu]\% \cdot x}{[var=guu]\% \cdot (1-x)+[var=buu]\% \cdot x} = 0.5$</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                        </hints>
+                        <variableUpdatesOnEnter id="75"/>
+                        <variableUpdatesBeforeCheck id="76"/>
+                        <variableUpdatesAfterCheck id="77"/>
+                        <variableUpdatesOnNormalExit id="78"/>
+                        <variableUpdatesOnRepeat id="79"/>
+                        <variableUpdatesOnSkip id="80"/>
+                        <weight>1</weight>
+                        <orderIndex>3</orderIndex>
+                        <allowSkip>true</allowSkip>
+                        <resources id="81"/>
+                        <rules id="82"/>
+                        <fillInFields id="83">
+                          <FillInField id="84">
+                            <name>field1</name>
+                            <orderIndex>0</orderIndex>
+                            <size>6</size>
+                            <formularEditorType>NUMBER</formularEditorType>
+                          </FillInField>
+                        </fillInFields>
+                        <dropDownFields id="85"/>
+                        <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                        <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Die Wahrscheinlichkeit, dass ein blaues Auto in den Unfall verwickelt war, betr&amp;auml;gt $50$%, wenn die Glaubw&amp;uuml;rdigkeit der Zeugenaussage gleich dem Anteil der gr&amp;uuml;nen Autos entspricht, also $[var=g]$.</defaultFeedback>
+                        <correctAnswerRules id="86">
+                          <Rule id="87">
+                            <name>CorrectAnswer1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="88">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==[var=g]</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <points>0</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </correctAnswerRules>
+                        <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                        <defaultResult>0</defaultResult>
+                      </targetStage>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="89">
+                    <StageTransition id="90">
+                      <conditionExpression id="91">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="92">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="32"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="93">
+                    <StageHint id="94">
+                      <stagehint__order>0</stagehint__order>
+                      <text>Nutzen Sie den Satz von Bayes.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                    <StageHint id="95">
+                      <stagehint__order>1</stagehint__order>
+                      <text>Sei $B$ das Auto ist blau und $Z_b$ dass der Zeuge blau sagt. Dann gilt: $P(B|Z_b)=\frac{P(Z_b|B)\cdot P(B)}{P(Z_b)}=\frac{P(Z_b\cap B)}{P(Z_b)}$.</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="96"/>
+                  <variableUpdatesBeforeCheck id="97"/>
+                  <variableUpdatesAfterCheck id="98"/>
+                  <variableUpdatesOnNormalExit id="99"/>
+                  <variableUpdatesOnRepeat id="100"/>
+                  <variableUpdatesOnSkip id="101"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="102"/>
+                  <rules id="103"/>
+                  <fillInFields id="104">
+                    <FillInField id="105">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="106"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Die Wahrscheinlichkeit, dass das Auto blau war, gegeben die Zeugenaussage, betr&amp;auml;gt $[var=ansc]$.</defaultFeedback>
+                  <correctAnswerRules id="107">
+                    <Rule id="108">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="109">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ansc]-0.001&amp;&amp;[input=field1]&lt;[var=ansc]+0.001</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="110">
+              <StageTransition id="111">
+                <conditionExpression id="112">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="113">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="24"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="114">
+              <StageHint id="115">
+                <stagehint__order>0</stagehint__order>
+                <text>Sie k&amp;ouml;nnen mit den Angaben aus Frage 1 auch diese Tabelle ausf&amp;uuml;llen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="116">
+                <stagehint__order>1</stagehint__order>
+                <text>Zeuge liegt richtig und Auto ist gr&amp;uuml;n, impliziert, dass der Zeuge gr&amp;uuml;n sagt und das Auto gr&amp;uuml;n ist.&lt;br /&gt;
+Zeuge liegt falsch und Auto ist gr&amp;uuml;n, impliziert, dass der Zeuge blau sagt und das Auto gr&amp;uuml;n ist. Zeuge liegt richtig und Auto ist blau, impliziert, dass der Zeuge blau sagt und das Auto blau ist. Zeuge liegt falsch und Auto ist blau, impliziert, dass der Zeuge gr&amp;uuml;n sagt und das Auto blau ist.</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="117"/>
+            <variableUpdatesBeforeCheck id="118">
+              <VariableUpdate id="119">
+                <variableReference id="120">
+                  <name>Stage_2_Rule_1</name>
+                  <initializationCode id="121">
+                    <code>&quot;filled later by update&quot;</code>
+                    <domain>MATH</domain>
+                  </initializationCode>
+                </variableReference>
+                <updateCode id="122">
+                  <code>equalsExpr([input=field1], [var=b11])||equalsExpr([input=field1], [var=b11]+0.0001)||equalsExpr([input=field1], [var=b11]-0.0001)</code>
+                  <domain>MATH</domain>
+                </updateCode>
+              </VariableUpdate>
+              <VariableUpdate id="123">
+                <variableReference id="124">
+                  <name>Stage_2_Rule_2</name>
+                  <initializationCode id="125">
+                    <code>&quot;filled later by update&quot;</code>
+                    <domain>MATH</domain>
+                  </initializationCode>
+                </variableReference>
+                <updateCode id="126">
+                  <code>equalsExpr([input=field2], [var=b12])||equalsExpr([input=field2], [var=b12]+0.0001)||equalsExpr([input=field2], [var=b12]-0.0001)</code>
+                  <domain>MATH</domain>
+                </updateCode>
+              </VariableUpdate>
+              <VariableUpdate id="127">
+                <variableReference id="128">
+                  <name>Stage_2_Rule_3</name>
+                  <initializationCode id="129">
+                    <code>&quot;filled later by update&quot;</code>
+                    <domain>MATH</domain>
+                  </initializationCode>
+                </variableReference>
+                <updateCode id="130">
+                  <code>equalsExpr([input=field3], [var=b13])||equalsExpr([input=field3], [var=b13]+0.0001)||equalsExpr([input=field3], [var=b13]-0.0001)</code>
+                  <domain>MATH</domain>
+                </updateCode>
+              </VariableUpdate>
+              <VariableUpdate id="131">
+                <variableReference id="132">
+                  <name>Stage_2_Rule_4</name>
+                  <initializationCode id="133">
+                    <code>&quot;filled later by update&quot;</code>
+                    <domain>MATH</domain>
+                  </initializationCode>
+                </variableReference>
+                <updateCode id="134">
+                  <code>equalsExpr([input=field4], [var=b21])||equalsExpr([input=field4], [var=b21]+0.0001)||equalsExpr([input=field4], [var=b21]-0.0001)</code>
+                  <domain>MATH</domain>
+                </updateCode>
+              </VariableUpdate>
+              <VariableUpdate id="135">
+                <variableReference id="136">
+                  <name>Stage_2_Rule_5</name>
+                  <initializationCode id="137">
+                    <code>&quot;filled later by update&quot;</code>
+                    <domain>MATH</domain>
+                  </initializationCode>
+                </variableReference>
+                <updateCode id="138">
+                  <code>equalsExpr([input=field5], [var=b22])||equalsExpr([input=field5], [var=b22]+0.0001)||equalsExpr([input=field5], [var=b22]-0.0001)</code>
+                  <domain>MATH</domain>
+                </updateCode>
+              </VariableUpdate>
+              <VariableUpdate id="139">
+                <variableReference id="140">
+                  <name>Stage_2_Rule_5</name>
+                  <initializationCode id="141">
+                    <code>&quot;filled later by update&quot;</code>
+                    <domain>MATH</domain>
+                  </initializationCode>
+                </variableReference>
+                <updateCode id="142">
+                  <code>equalsExpr([input=field6], [var=b23])||equalsExpr([input=field6], [var=b23]+0.0001)||equalsExpr([input=field6], [var=b23]-0.0001)</code>
+                  <domain>MATH</domain>
+                </updateCode>
+              </VariableUpdate>
+              <VariableUpdate id="143">
+                <variableReference id="144">
+                  <name>Stage_2_Rule_7</name>
+                  <initializationCode id="145">
+                    <code>&quot;filled later by update&quot;</code>
+                    <domain>MATH</domain>
+                  </initializationCode>
+                </variableReference>
+                <updateCode id="146">
+                  <code>equalsExpr([input=field7], [var=g])</code>
+                  <domain>MATH</domain>
+                </updateCode>
+              </VariableUpdate>
+              <VariableUpdate id="147">
+                <variableReference id="148">
+                  <name>Stage_2_Rule_8</name>
+                  <initializationCode id="149">
+                    <code>&quot;filled later by update&quot;</code>
+                    <domain>MATH</domain>
+                  </initializationCode>
+                </variableReference>
+                <updateCode id="150">
+                  <code>equalsExpr([input=field8], [var=b])</code>
+                  <domain>MATH</domain>
+                </updateCode>
+              </VariableUpdate>
+            </variableUpdatesBeforeCheck>
+            <variableUpdatesAfterCheck id="151"/>
+            <variableUpdatesOnNormalExit id="152"/>
+            <variableUpdatesOnRepeat id="153"/>
+            <variableUpdatesOnSkip id="154"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="155"/>
+            <rules id="156">
+              <Rule id="157">
+                <name>Feedback_9</name>
+                <orderIndex>9</orderIndex>
+                <validationExpression id="158">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_2_Rule_1],[var=Stage_2_Rule_2],[var=Stage_2_Rule_3],[var=Stage_2_Rule_4],[var=Stage_2_Rule_5],[var=Stage_2_Rule_5],[var=Stage_2_Rule_7],[var=Stage_2_Rule_8]),0)</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <feedbackText>Sie haben bei 8 Eingabefeldern einen Fehler gemacht</feedbackText>
+                <points>-100</points>
+                <terminal>false</terminal>
+              </Rule>
+              <Rule id="159">
+                <name>Feedback_8</name>
+                <orderIndex>8</orderIndex>
+                <validationExpression id="160">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_2_Rule_1],[var=Stage_2_Rule_2],[var=Stage_2_Rule_3],[var=Stage_2_Rule_4],[var=Stage_2_Rule_5],[var=Stage_2_Rule_5],[var=Stage_2_Rule_7],[var=Stage_2_Rule_8]),1)</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <feedbackText>Sie haben bei 7 Eingabefeldern einen Fehler gemacht</feedbackText>
+                <points>-88</points>
+                <terminal>false</terminal>
+              </Rule>
+              <Rule id="161">
+                <name>Feedback_7</name>
+                <orderIndex>7</orderIndex>
+                <validationExpression id="162">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_2_Rule_1],[var=Stage_2_Rule_2],[var=Stage_2_Rule_3],[var=Stage_2_Rule_4],[var=Stage_2_Rule_5],[var=Stage_2_Rule_5],[var=Stage_2_Rule_7],[var=Stage_2_Rule_8]),2)</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <feedbackText>Sie haben bei 6 Eingabefeldern einen Fehler gemacht</feedbackText>
+                <points>-75</points>
+                <terminal>false</terminal>
+              </Rule>
+              <Rule id="163">
+                <name>Feedback_6</name>
+                <orderIndex>6</orderIndex>
+                <validationExpression id="164">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_2_Rule_1],[var=Stage_2_Rule_2],[var=Stage_2_Rule_3],[var=Stage_2_Rule_4],[var=Stage_2_Rule_5],[var=Stage_2_Rule_5],[var=Stage_2_Rule_7],[var=Stage_2_Rule_8]),3)</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <feedbackText>Sie haben bei 5 Eingabefeldern einen Fehler gemacht</feedbackText>
+                <points>-63</points>
+                <terminal>false</terminal>
+              </Rule>
+              <Rule id="165">
+                <name>Feedback_5</name>
+                <orderIndex>5</orderIndex>
+                <validationExpression id="166">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_2_Rule_1],[var=Stage_2_Rule_2],[var=Stage_2_Rule_3],[var=Stage_2_Rule_4],[var=Stage_2_Rule_5],[var=Stage_2_Rule_5],[var=Stage_2_Rule_7],[var=Stage_2_Rule_8]),4)</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <feedbackText>Sie haben bei 4 Eingabefeldern einen Fehler gemacht</feedbackText>
+                <points>-50</points>
+                <terminal>false</terminal>
+              </Rule>
+              <Rule id="167">
+                <name>Feedback_4</name>
+                <orderIndex>4</orderIndex>
+                <validationExpression id="168">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_2_Rule_1],[var=Stage_2_Rule_2],[var=Stage_2_Rule_3],[var=Stage_2_Rule_4],[var=Stage_2_Rule_5],[var=Stage_2_Rule_5],[var=Stage_2_Rule_7],[var=Stage_2_Rule_8]),5)</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <feedbackText>Sie haben bei 3 Eingabefeldern einen Fehler gemacht</feedbackText>
+                <points>-38</points>
+                <terminal>false</terminal>
+              </Rule>
+              <Rule id="169">
+                <name>Feedback_3</name>
+                <orderIndex>3</orderIndex>
+                <validationExpression id="170">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_2_Rule_1],[var=Stage_2_Rule_2],[var=Stage_2_Rule_3],[var=Stage_2_Rule_4],[var=Stage_2_Rule_5],[var=Stage_2_Rule_5],[var=Stage_2_Rule_7],[var=Stage_2_Rule_8]),6)</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <feedbackText>Sie haben bei 2 Eingabefeldern einen Fehler gemacht</feedbackText>
+                <points>-25</points>
+                <terminal>false</terminal>
+              </Rule>
+              <Rule id="171">
+                <name>Feedback_2</name>
+                <orderIndex>2</orderIndex>
+                <validationExpression id="172">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_2_Rule_1],[var=Stage_2_Rule_2],[var=Stage_2_Rule_3],[var=Stage_2_Rule_4],[var=Stage_2_Rule_5],[var=Stage_2_Rule_5],[var=Stage_2_Rule_7],[var=Stage_2_Rule_8]),7)</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <feedbackText>Sie haben bei 1 Eingabefeldern einen Fehler gemacht</feedbackText>
+                <points>-13</points>
+                <terminal>false</terminal>
+              </Rule>
+              <Rule id="173">
+                <name>Ruleviolation Base 100 Points</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="174">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;true()</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <feedbackText></feedbackText>
+                <points>100</points>
+                <terminal>false</terminal>
+              </Rule>
+            </rules>
+            <fillInFields id="175">
+              <FillInField id="176">
+                <name>field3</name>
+                <orderIndex>2</orderIndex>
+                <size>3</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+              <FillInField id="177">
+                <name>field2</name>
+                <orderIndex>1</orderIndex>
+                <size>3</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+              <FillInField id="178">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>3</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+              <FillInField id="179">
+                <name>field8</name>
+                <orderIndex>7</orderIndex>
+                <size>3</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+              <FillInField id="180">
+                <name>field7</name>
+                <orderIndex>6</orderIndex>
+                <size>3</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+              <FillInField id="181">
+                <name>field6</name>
+                <orderIndex>5</orderIndex>
+                <size>3</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+              <FillInField id="182">
+                <name>field5</name>
+                <orderIndex>4</orderIndex>
+                <size>3</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+              <FillInField id="183">
+                <name>field4</name>
+                <orderIndex>3</orderIndex>
+                <size>3</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="184"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$$\begin{matrix}&lt;br /&gt;
+&amp;amp; \textrm{Auto ist gr&amp;uuml;n} &amp;amp; \textrm{Auto ist blau} &amp;amp; \textrm{Randwahrscheinlichkeit} \\&lt;br /&gt;
+\hline&lt;br /&gt;
+\textrm{Zeuge sagt gr&amp;uuml;n} &amp;amp; [var=b11] &amp;amp; [var=b12] &amp;amp; [var=b13] \\&lt;br /&gt;
+\textrm{Zeuge sagt blau} &amp;amp; [var=b21] &amp;amp; [var=b22] &amp;amp; [var=b23] \\&lt;br /&gt;
+\textrm{Randwahrscheinlichkeit} &amp;amp; [var=g] &amp;amp; [var=b] &amp;amp; 1 \\&lt;br /&gt;
+\end{matrix}$$</defaultFeedback>
+            <correctAnswerRules id="185">
+              <Rule id="186">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="187">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;[var=Stage_2_Rule_1]&amp;&amp;[var=Stage_2_Rule_2]&amp;&amp;[var=Stage_2_Rule_3]&amp;&amp;[var=Stage_2_Rule_4]&amp;&amp;[var=Stage_2_Rule_5]&amp;&amp;[var=Stage_2_Rule_5]&amp;&amp;[var=Stage_2_Rule_7]&amp;&amp;[var=Stage_2_Rule_8]</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="188">
+        <StageTransition id="189">
+          <conditionExpression id="190">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="191">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="192">
+        <StageHint id="193">
+          <stagehint__order>0</stagehint__order>
+          <text>Aus der Aufgabenstellung k&amp;ouml;nnen Sie zun&amp;auml;chst die Randwahrscheinlichkeiten ermitteln.&lt;br /&gt;
+Sie wissen, dass $[var=guu]$% der Autos gr&amp;uuml;n und $[var=buu]$% der Autos blau sind.&lt;br /&gt;
+Weiterhin wissen Sie, dass $[var=Auu]$% der Zeugenaussagen richtig sind.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;br /&gt;
+&amp;nbsp;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="194">
+          <stagehint__order>1</stagehint__order>
+          <text>    Nutzen Sie die Eigenschaft, dass die Zeugenaussagen und die Farbe der Autos unabhängig voneinander sind
+    </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="195"/>
+      <variableUpdatesBeforeCheck id="196">
+        <VariableUpdate id="197">
+          <variableReference id="198">
+            <name>Stage_1_Rule_1</name>
+            <initializationCode id="199">
+              <code>&quot;filled later by update&quot;</code>
+              <domain>MATH</domain>
+            </initializationCode>
+          </variableReference>
+          <updateCode id="200">
+            <code>equalsExpr([input=field1], [var=a11])||equalsExpr([input=field1], [var=a11]+0.0001)||equalsExpr([input=field1], [var=a11]-0.0001)</code>
+            <domain>MATH</domain>
+          </updateCode>
+        </VariableUpdate>
+        <VariableUpdate id="201">
+          <variableReference id="202">
+            <name>Stage_1_Rule_2</name>
+            <initializationCode id="203">
+              <code>&quot;filled later by update&quot;</code>
+              <domain>MATH</domain>
+            </initializationCode>
+          </variableReference>
+          <updateCode id="204">
+            <code>equalsExpr([input=field2], [var=a12])||equalsExpr([input=field2], [var=a12]+0.0001)||equalsExpr([input=field2], [var=a12]-0.0001)</code>
+            <domain>MATH</domain>
+          </updateCode>
+        </VariableUpdate>
+        <VariableUpdate id="205">
+          <variableReference id="206">
+            <name>Stage_1_Rule_3</name>
+            <initializationCode id="207">
+              <code>&quot;filled later by update&quot;</code>
+              <domain>MATH</domain>
+            </initializationCode>
+          </variableReference>
+          <updateCode id="208">
+            <code>equalsExpr([input=field3], [var=A])</code>
+            <domain>MATH</domain>
+          </updateCode>
+        </VariableUpdate>
+        <VariableUpdate id="209">
+          <variableReference id="210">
+            <name>Stage_1_Rule_4</name>
+            <initializationCode id="211">
+              <code>&quot;filled later by update&quot;</code>
+              <domain>MATH</domain>
+            </initializationCode>
+          </variableReference>
+          <updateCode id="212">
+            <code>equalsExpr([input=field4], [var=a21])||equalsExpr([input=field4], [var=a21]+0.0001)||equalsExpr([input=field4], [var=a21]-0.0001)</code>
+            <domain>MATH</domain>
+          </updateCode>
+        </VariableUpdate>
+        <VariableUpdate id="213">
+          <variableReference id="214">
+            <name>Stage_1_Rule_5</name>
+            <initializationCode id="215">
+              <code>&quot;filled later by update&quot;</code>
+              <domain>MATH</domain>
+            </initializationCode>
+          </variableReference>
+          <updateCode id="216">
+            <code>equalsExpr([input=field5], [var=a22])||equalsExpr([input=field5], [var=a22]+0.0001)||equalsExpr([input=field5], [var=a22]-0.0001)</code>
+            <domain>MATH</domain>
+          </updateCode>
+        </VariableUpdate>
+        <VariableUpdate id="217">
+          <variableReference id="218">
+            <name>Stage_1_Rule_6</name>
+            <initializationCode id="219">
+              <code>&quot;filled later by update&quot;</code>
+              <domain>MATH</domain>
+            </initializationCode>
+          </variableReference>
+          <updateCode id="220">
+            <code>equalsExpr([input=field6], [var=iA])</code>
+            <domain>MATH</domain>
+          </updateCode>
+        </VariableUpdate>
+        <VariableUpdate id="221">
+          <variableReference id="222">
+            <name>Stage_1_Rule_7</name>
+            <initializationCode id="223">
+              <code>&quot;filled later by update&quot;</code>
+              <domain>MATH</domain>
+            </initializationCode>
+          </variableReference>
+          <updateCode id="224">
+            <code>equalsExpr([input=field7], [var=g])</code>
+            <domain>MATH</domain>
+          </updateCode>
+        </VariableUpdate>
+        <VariableUpdate id="225">
+          <variableReference id="226">
+            <name>Stage_1_Rule_8</name>
+            <initializationCode id="227">
+              <code>&quot;filled later by update&quot;</code>
+              <domain>MATH</domain>
+            </initializationCode>
+          </variableReference>
+          <updateCode id="228">
+            <code>equalsExpr([input=field8], [var=b])</code>
+            <domain>MATH</domain>
+          </updateCode>
+        </VariableUpdate>
+      </variableUpdatesBeforeCheck>
+      <variableUpdatesAfterCheck id="229"/>
+      <variableUpdatesOnNormalExit id="230"/>
+      <variableUpdatesOnRepeat id="231"/>
+      <variableUpdatesOnSkip id="232"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="233"/>
+      <rules id="234">
+        <Rule id="235">
+          <name>Feedback_4</name>
+          <orderIndex>4</orderIndex>
+          <validationExpression id="236">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_1_Rule_1],[var=Stage_1_Rule_2],[var=Stage_1_Rule_3],[var=Stage_1_Rule_4],[var=Stage_1_Rule_5],[var=Stage_1_Rule_6],[var=Stage_1_Rule_7],[var=Stage_1_Rule_8]),5)</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben bei 3 Eingabefeldern einen Fehler gemacht</feedbackText>
+          <points>-38</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="237">
+          <name>Feedback_3</name>
+          <orderIndex>3</orderIndex>
+          <validationExpression id="238">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_1_Rule_1],[var=Stage_1_Rule_2],[var=Stage_1_Rule_3],[var=Stage_1_Rule_4],[var=Stage_1_Rule_5],[var=Stage_1_Rule_6],[var=Stage_1_Rule_7],[var=Stage_1_Rule_8]),6)</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben bei 2 Eingabefeldern einen Fehler gemacht</feedbackText>
+          <points>-25</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="239">
+          <name>Feedback_2</name>
+          <orderIndex>2</orderIndex>
+          <validationExpression id="240">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_1_Rule_1],[var=Stage_1_Rule_2],[var=Stage_1_Rule_3],[var=Stage_1_Rule_4],[var=Stage_1_Rule_5],[var=Stage_1_Rule_6],[var=Stage_1_Rule_7],[var=Stage_1_Rule_8]),7)</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben bei 1 Eingabefeldern einen Fehler gemacht</feedbackText>
+          <points>-13</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="241">
+          <name>Ruleviolation Base 100 Points</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="242">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;true()</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText></feedbackText>
+          <points>100</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="243">
+          <name>Feedback_9</name>
+          <orderIndex>9</orderIndex>
+          <validationExpression id="244">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_1_Rule_1],[var=Stage_1_Rule_2],[var=Stage_1_Rule_3],[var=Stage_1_Rule_4],[var=Stage_1_Rule_5],[var=Stage_1_Rule_6],[var=Stage_1_Rule_7],[var=Stage_1_Rule_8]),0)</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben bei 8 Eingabefeldern einen Fehler gemacht</feedbackText>
+          <points>-100</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="245">
+          <name>Feedback_8</name>
+          <orderIndex>8</orderIndex>
+          <validationExpression id="246">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_1_Rule_1],[var=Stage_1_Rule_2],[var=Stage_1_Rule_3],[var=Stage_1_Rule_4],[var=Stage_1_Rule_5],[var=Stage_1_Rule_6],[var=Stage_1_Rule_7],[var=Stage_1_Rule_8]),1)</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben bei 7 Eingabefeldern einen Fehler gemacht</feedbackText>
+          <points>-88</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="247">
+          <name>Feedback_7</name>
+          <orderIndex>7</orderIndex>
+          <validationExpression id="248">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_1_Rule_1],[var=Stage_1_Rule_2],[var=Stage_1_Rule_3],[var=Stage_1_Rule_4],[var=Stage_1_Rule_5],[var=Stage_1_Rule_6],[var=Stage_1_Rule_7],[var=Stage_1_Rule_8]),2)</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben bei 6 Eingabefeldern einen Fehler gemacht</feedbackText>
+          <points>-75</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="249">
+          <name>Feedback_6</name>
+          <orderIndex>6</orderIndex>
+          <validationExpression id="250">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_1_Rule_1],[var=Stage_1_Rule_2],[var=Stage_1_Rule_3],[var=Stage_1_Rule_4],[var=Stage_1_Rule_5],[var=Stage_1_Rule_6],[var=Stage_1_Rule_7],[var=Stage_1_Rule_8]),3)</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben bei 5 Eingabefeldern einen Fehler gemacht</feedbackText>
+          <points>-63</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="251">
+          <name>Feedback_5</name>
+          <orderIndex>5</orderIndex>
+          <validationExpression id="252">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;equals(countTrue([var=Stage_1_Rule_1],[var=Stage_1_Rule_2],[var=Stage_1_Rule_3],[var=Stage_1_Rule_4],[var=Stage_1_Rule_5],[var=Stage_1_Rule_6],[var=Stage_1_Rule_7],[var=Stage_1_Rule_8]),4)</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben bei 4 Eingabefeldern einen Fehler gemacht</feedbackText>
+          <points>-50</points>
+          <terminal>false</terminal>
+        </Rule>
+      </rules>
+      <fillInFields id="253">
+        <FillInField id="254">
+          <name>field8</name>
+          <orderIndex>7</orderIndex>
+          <size>3</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="255">
+          <name>field7</name>
+          <orderIndex>6</orderIndex>
+          <size>3</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="256">
+          <name>field6</name>
+          <orderIndex>5</orderIndex>
+          <size>3</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="257">
+          <name>field5</name>
+          <orderIndex>4</orderIndex>
+          <size>3</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="258">
+          <name>field4</name>
+          <orderIndex>3</orderIndex>
+          <size>3</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="259">
+          <name>field3</name>
+          <orderIndex>2</orderIndex>
+          <size>3</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="260">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>3</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="261">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>3</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="262"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+$$\begin{matrix}&lt;br /&gt;
+&amp;amp; \textrm{Auto ist gr&amp;uuml;n} &amp;amp; \textrm{Auto ist blau} &amp;amp; \textrm{Randwahrscheinlichkeit} \\&lt;br /&gt;
+\hline&lt;br /&gt;
+\textrm{Zeuge liegt richtig} &amp;amp; [var=a11] &amp;amp; [var=a12] &amp;amp; [var=A] \\&lt;br /&gt;
+\textrm{Zeuge liegt falsch} &amp;amp; [var=a21] &amp;amp; [var=a22] &amp;amp; [var=iA] \\&lt;br /&gt;
+\textrm{Randwahrscheinlichkeit} &amp;amp; [var=g] &amp;amp; [var=b] &amp;amp; 1 \\&lt;br /&gt;
+\end{matrix}$$</defaultFeedback>
+      <correctAnswerRules id="263">
+        <Rule id="264">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="265">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;!isEmpty([input=field5])&amp;&amp;isRealNumber([input=field5])&amp;&amp;!isEmpty([input=field6])&amp;&amp;isRealNumber([input=field6])&amp;&amp;!isEmpty([input=field7])&amp;&amp;isRealNumber([input=field7])&amp;&amp;!isEmpty([input=field8])&amp;&amp;isRealNumber([input=field8])&amp;&amp;[var=Stage_1_Rule_1]&amp;&amp;[var=Stage_1_Rule_2]&amp;&amp;[var=Stage_1_Rule_3]&amp;&amp;[var=Stage_1_Rule_4]&amp;&amp;[var=Stage_1_Rule_5]&amp;&amp;[var=Stage_1_Rule_6]&amp;&amp;[var=Stage_1_Rule_7]&amp;&amp;[var=Stage_1_Rule_8]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Die Antwort ist richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+    <FillInStage reference="24"/>
+    <FillInStage reference="32"/>
+    <FillInStage reference="40"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="266">
+    <VariableDeclaration id="267">
+      <name>guu</name>
+      <initializationCode id="268">
+        <code>randomIntegerBetween(82,89)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="269">
+      <name>gu</name>
+      <initializationCode id="270">
+        <code>([var=guu])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="271">
+      <name>g</name>
+      <initializationCode id="272">
+        <code>round(([var=gu]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="273">
+      <name>buu</name>
+      <initializationCode id="274">
+        <code>100-([var=guu])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="275">
+      <name>bu</name>
+      <initializationCode id="276">
+        <code>([var=buu])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="277">
+      <name>b</name>
+      <initializationCode id="278">
+        <code>round(([var=bu]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="279">
+      <name>Auu</name>
+      <initializationCode id="280">
+        <code>randomIntegerBetween(70,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="281">
+      <name>Au</name>
+      <initializationCode id="282">
+        <code>([var=Auu])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="283">
+      <name>A</name>
+      <initializationCode id="284">
+        <code>round(([var=Au]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="285">
+      <name>iAu</name>
+      <initializationCode id="286">
+        <code>1-([var=A])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="287">
+      <name>iA</name>
+      <initializationCode id="288">
+        <code>round(([var=iAu]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="289">
+      <name>a11u</name>
+      <initializationCode id="290">
+        <code>([var=A])*([var=g])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="291">
+      <name>a11</name>
+      <initializationCode id="292">
+        <code>round(([var=a11u]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="293">
+      <name>a12u</name>
+      <initializationCode id="294">
+        <code>([var=A])*([var=b])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="295">
+      <name>a12</name>
+      <initializationCode id="296">
+        <code>round(([var=a12u]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="297">
+      <name>a21u</name>
+      <initializationCode id="298">
+        <code>(1-([var=A]))*([var=g])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="299">
+      <name>a21</name>
+      <initializationCode id="300">
+        <code>round(([var=a21u]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="301">
+      <name>a22u</name>
+      <initializationCode id="302">
+        <code>(1-([var=A]))*([var=b])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="303">
+      <name>a22</name>
+      <initializationCode id="304">
+        <code>round(([var=a22u]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="305">
+      <name>b23u</name>
+      <initializationCode id="306">
+        <code>([var=A])*([var=b])+(1-([var=A]))*([var=g])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="307">
+      <name>b23</name>
+      <initializationCode id="308">
+        <code>round(([var=b23u]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="309">
+      <name>b13u</name>
+      <initializationCode id="310">
+        <code>1-([var=b23u])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="311">
+      <name>b13</name>
+      <initializationCode id="312">
+        <code>round(([var=b13u]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="313">
+      <name>b11u</name>
+      <initializationCode id="314">
+        <code>([var=g])*([var=A])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="315">
+      <name>b11</name>
+      <initializationCode id="316">
+        <code>round(([var=b11u]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="317">
+      <name>b21u</name>
+      <initializationCode id="318">
+        <code>([var=g])*(1-([var=A]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="319">
+      <name>b21</name>
+      <initializationCode id="320">
+        <code>round(([var=b21u]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="321">
+      <name>b12u</name>
+      <initializationCode id="322">
+        <code>([var=b])*(1-([var=A]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="323">
+      <name>b12</name>
+      <initializationCode id="324">
+        <code>round(([var=b12u]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="325">
+      <name>b22u</name>
+      <initializationCode id="326">
+        <code>([var=b])*([var=A])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="327">
+      <name>b22</name>
+      <initializationCode id="328">
+        <code>round(([var=b22u]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="329">
+      <name>anscu</name>
+      <initializationCode id="330">
+        <code>([var=a12u])/(([var=a12u])+([var=a21u]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="331">
+      <name>ansc</name>
+      <initializationCode id="332">
+        <code>round(([var=anscu]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="333">
+      <name>quu</name>
+      <initializationCode id="334">
+        <code>randomIntegerBetween(51,89)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="335">
+      <name>qu</name>
+      <initializationCode id="336">
+        <code>([var=quu])/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="337">
+      <name>q</name>
+      <initializationCode id="338">
+        <code>round(([var=qu]), 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="339">
+      <name>A_gesu</name>
+      <initializationCode id="340">
+        <code>(([var=q])*([var=g]))/(2*([var=q])*([var=g])-([var=q])+1-([var=g]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="341">
+      <name>A_ges</name>
+      <initializationCode id="342">
+        <code>round(([var=A_gesu]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="343">
+      <name>Stage_1_Rule_1</name>
+      <initializationCode id="344">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="345">
+      <name>Stage_1_Rule_2</name>
+      <initializationCode id="346">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="347">
+      <name>Stage_1_Rule_3</name>
+      <initializationCode id="348">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="349">
+      <name>Stage_1_Rule_4</name>
+      <initializationCode id="350">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="351">
+      <name>Stage_1_Rule_5</name>
+      <initializationCode id="352">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="353">
+      <name>Stage_1_Rule_6</name>
+      <initializationCode id="354">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="355">
+      <name>Stage_1_Rule_7</name>
+      <initializationCode id="356">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="357">
+      <name>Stage_1_Rule_8</name>
+      <initializationCode id="358">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="359">
+      <name>Stage_2_Rule_1</name>
+      <initializationCode id="360">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="361">
+      <name>Stage_2_Rule_2</name>
+      <initializationCode id="362">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="363">
+      <name>Stage_2_Rule_3</name>
+      <initializationCode id="364">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="365">
+      <name>Stage_2_Rule_4</name>
+      <initializationCode id="366">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="367">
+      <name>Stage_2_Rule_5</name>
+      <initializationCode id="368">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="369">
+      <name>Stage_2_Rule_5</name>
+      <initializationCode id="370">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="371">
+      <name>Stage_2_Rule_7</name>
+      <initializationCode id="372">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="373">
+      <name>Stage_2_Rule_8</name>
+      <initializationCode id="374">
+        <code>&quot;filled later by update&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="375"/>
+  <dynamicMolecules id="376"/>
+  <resultFeedbackMappings id="377"/>
+</Exercise>

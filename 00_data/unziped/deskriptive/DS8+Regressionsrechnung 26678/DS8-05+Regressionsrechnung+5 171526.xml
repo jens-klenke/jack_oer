@@ -1,0 +1,1389 @@
+<Exercise id="1">
+  <name>DS8-05 Regressionsrechnung 5</name>
+  <publicDescription></publicDescription>
+  <internalNotes>1. Stage: Regressionsgerade berechnen bei gegebenen Summen
+2. Stage: R^2 berechnen
+3. Stage: Prognose
+4. Stage: Umkehrregression
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>3</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bei einer Befragung von $n=50$ Haushalten wurden das monatliche Nettoeinkommen $X$, sowie die monatlichen Ausgaben f&amp;uuml;r Freizeitbesch&amp;auml;ftigung $Y$ erhoben. Es ergaben sich folgende Summen (in Euro):&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{50}x_i = [var=xi,latex]$&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{50}x^2_i = [var=xisq,latex]$&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{50}y_i = [var=yi,latex]$&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{50}y^2_i = [var=yisq,latex]$&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{50}x_i(x_i-y_i) = [var=sumpro,latex]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie aus diesen Angaben nach der Methode der kleinsten Quadrate die Koeffizienten $a$ und $b$ der linearen Einfachregression von $Y$ auf $X$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung&lt;/strong&gt;:&lt;br /&gt;&#xd;
+$\space$&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:120px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$a=$&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$b=$&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt. Innerhalb Ihrer Rechnungen d&amp;uuml;rfen Sie mit auf die vierte Nachkommastelle gerundeten Werten weiterrechnen.)&amp;nbsp;&lt;/em&gt;&lt;/span&gt;&#xd;
+&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>$a=[var=ag,latex]$&lt;br /&gt;
+$b=[var=bg,latex]$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="14">
+            <internalName>2</internalName>
+            <externalName>stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&lt;br /&gt;&#xd;
+Berechnen Sie das Bestimmtheitsma&amp;szlig; $R^2$ .&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung&lt;/strong&gt;:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$R^2=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&lt;/span&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+            <skipMessage>     $R^2=[var=rsqrg,latex]$
+
+   </skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18">
+              <StageTransition id="19">
+                <conditionExpression id="20">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="21">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="22">
+                  <internalName>3</internalName>
+                  <externalName>stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung&lt;/strong&gt;:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Prognostizieren Sie anhand der berechneten Regression die monatlichen Ausgaben eines Haushalts f&amp;uuml;r Freizeitbesch&amp;auml;ftigung, der ein monatliches Nettoeinkommen von $[var=Eink,latex]$ Euro hat.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;(&lt;em&gt;Runden Sie, falls n&amp;ouml;tig, auf den vollen Euro-Betrag.)&lt;/em&gt;&lt;/span&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+                  <skipMessage>     Bei einem Nettoeinkommen von  $[var=Eink,latex]$ Euro ergibt sich für die geschätzten Ausgaben $\hat{y}=[var=Prognoseg,latex]$
+
+   </skipMessage>
+                  <defaultTransition id="23">
+                    <conditionExpression id="24">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="25">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="26">
+                    <StageTransition id="27">
+                      <conditionExpression id="28">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="29">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" id="30">
+                        <internalName>4</internalName>
+                        <externalName>stage 4</externalName>
+                        <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie die Koeffizienten $a_1$ und $b_1$ der Umkehrregression.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:120px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$a_1=$&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;$b_1=$&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt. Innerhalb Ihrer Rechnungen d&amp;uuml;rfen Sie mit auf die vierte Nachkommastelle gerundeten Werten weiterrechnen.)&amp;nbsp;&lt;/em&gt;&lt;/span&gt;&#xd;
+&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+                        <skipMessage>$a_1=[var=a1g,latex]$&lt;br /&gt;
+$b_1=[var=b1g,latex]$</skipMessage>
+                        <defaultTransition id="31">
+                          <conditionExpression id="32">
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="33">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>true</isRepeat>
+                        </defaultTransition>
+                        <skipTransitions id="34">
+                          <StageTransition id="35">
+                            <conditionExpression id="36">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="37">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </skipTransitions>
+                        <stageTransitions id="38">
+                          <StageTransition id="39">
+                            <conditionExpression id="40">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="41">
+                              <code>[meta=stageCurrentResult]&gt;=100</code>
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </stageTransitions>
+                        <hints id="42">
+                          <StageHint id="43">
+                            <stagehint__order>0</stagehint__order>
+                            <text>      $a_{1}=\bar{x}-b_{1}\bar{y}$
+      $b_{1}=\frac{\sum_{r=1}^{n}(x_{r}-\bar{x})(y_{r}-\bar{y})}{\sum_{r=1}^{n}(y_{r}-\bar{y})^{2}}=\frac{s_{xy}}{s_{y}^{2}}$
+
+    </text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="30"/>
+                          </StageHint>
+                        </hints>
+                        <variableUpdatesOnEnter id="44"/>
+                        <variableUpdatesBeforeCheck id="45"/>
+                        <variableUpdatesAfterCheck id="46"/>
+                        <variableUpdatesOnNormalExit id="47"/>
+                        <variableUpdatesOnRepeat id="48"/>
+                        <variableUpdatesOnSkip id="49"/>
+                        <weight>1</weight>
+                        <orderIndex>3</orderIndex>
+                        <allowSkip>true</allowSkip>
+                        <resources id="50"/>
+                        <rules id="51">
+                          <Rule id="52">
+                            <name>Feedback_2</name>
+                            <orderIndex>2</orderIndex>
+                            <validationExpression id="53">
+                              <code>!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;
+[input=field2]&gt;[var=b1g]-0.11&amp;&amp;[input=field2]&lt;[var=b1g]+0.11</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <feedbackText> $b_1$ korrekt.</feedbackText>
+                            <points>50</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                          <Rule id="54">
+                            <name>Feedback_1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="55">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;
+[input=field1]&gt;[var=a1g]-0.11&amp;&amp;[input=field1]&lt;[var=a1g]+0.11</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <feedbackText> $a_1$ korrekt.</feedbackText>
+                            <points>50</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </rules>
+                        <fillInFields id="56">
+                          <FillInField id="57">
+                            <name>field1</name>
+                            <orderIndex>0</orderIndex>
+                            <size>6</size>
+                            <formularEditorType>NONE</formularEditorType>
+                          </FillInField>
+                          <FillInField id="58">
+                            <name>field2</name>
+                            <orderIndex>1</orderIndex>
+                            <size>6</size>
+                            <formularEditorType>NONE</formularEditorType>
+                          </FillInField>
+                        </fillInFields>
+                        <dropDownFields id="59"/>
+                        <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+                        <defaultFeedback>Leider nicht korrekt.</defaultFeedback>
+                        <correctAnswerRules id="60">
+                          <Rule id="61">
+                            <name>CorrectAnswer1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="62">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;
+!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;
+[input=field1]&gt;[var=a1g]-0.11&amp;&amp;[input=field1]&lt;[var=a1g]+0.11&amp;&amp;[input=field2]&gt;[var=b1g]-0.11&amp;&amp;[input=field2]&lt;[var=b1g]+0.11</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <points>0</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </correctAnswerRules>
+                        <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                        <defaultResult>0</defaultResult>
+                      </targetStage>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="63">
+                    <StageTransition id="64">
+                      <conditionExpression id="65">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="66">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="30"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="67">
+                    <StageHint id="68">
+                      <stagehint__order>0</stagehint__order>
+                      <text>      $\hat{y}=a+b*x$
+
+    </text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="22"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="69"/>
+                  <variableUpdatesBeforeCheck id="70"/>
+                  <variableUpdatesAfterCheck id="71"/>
+                  <variableUpdatesOnNormalExit id="72"/>
+                  <variableUpdatesOnRepeat id="73"/>
+                  <variableUpdatesOnSkip id="74"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="75"/>
+                  <rules id="76"/>
+                  <fillInFields id="77">
+                    <FillInField id="78">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>8</size>
+                      <formularEditorType>NONE</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="79"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+                  <defaultFeedback>Leider nicht korrekt.</defaultFeedback>
+                  <correctAnswerRules id="80">
+                    <Rule id="81">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="82">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;
+[input=field1]&gt;[var=Prognoseg]-3&amp;&amp;[input=field1]&lt;[var=Prognoseg]+3</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="83">
+              <StageTransition id="84">
+                <conditionExpression id="85">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="86">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="22"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="87">
+              <StageHint id="88">
+                <stagehint__order>0</stagehint__order>
+                <text>      $R^2=r^2_{XY}=\frac{s^2_{XY}}{s^2_Xs^2_Y}$
+
+    </text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="89"/>
+            <variableUpdatesBeforeCheck id="90"/>
+            <variableUpdatesAfterCheck id="91"/>
+            <variableUpdatesOnNormalExit id="92"/>
+            <variableUpdatesOnRepeat id="93"/>
+            <variableUpdatesOnSkip id="94"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="95"/>
+            <rules id="96"/>
+            <fillInFields id="97">
+              <FillInField id="98">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NONE</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="99"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.</defaultFeedback>
+            <correctAnswerRules id="100">
+              <Rule id="101">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="102">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;
+[input=field1]&gt;[var=rsqrg]-0.11&amp;&amp;[input=field1]&lt;[var=rsqrg]+0.11</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="103">
+        <StageTransition id="104">
+          <conditionExpression id="105">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="106">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="107">
+        <StageHint id="108">
+          <stagehint__order>0</stagehint__order>
+          <text>      $\displaystyle \sum_{i=1}^{50}x_iy_i = \displaystyle \sum_{i=1}^{50}x^2_i - \displaystyle \sum_{i=1}^{50}x_i(x_i-y_i)$
+
+    </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="109"/>
+      <variableUpdatesBeforeCheck id="110"/>
+      <variableUpdatesAfterCheck id="111"/>
+      <variableUpdatesOnNormalExit id="112"/>
+      <variableUpdatesOnRepeat id="113"/>
+      <variableUpdatesOnSkip id="114"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="115"/>
+      <rules id="116">
+        <Rule id="117">
+          <name>Feedback_1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="118">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ag]-0.11&amp;&amp;[input=field1]&lt;[var=ag]+0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText> $a$ korrekt.</feedbackText>
+          <points>50</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="119">
+          <name>Feedback_2</name>
+          <orderIndex>2</orderIndex>
+          <validationExpression id="120">
+            <code>!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field2]&gt;[var=bg]-0.11&amp;&amp;[input=field2]&lt;[var=bg]+0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText> $b$ korrekt.</feedbackText>
+          <points>50</points>
+          <terminal>false</terminal>
+        </Rule>
+      </rules>
+      <fillInFields id="121">
+        <FillInField id="122">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NONE</formularEditorType>
+        </FillInField>
+        <FillInField id="123">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NONE</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="124"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.</defaultFeedback>
+      <correctAnswerRules id="125">
+        <Rule id="126">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="127">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field1]&gt;[var=ag]-0.11&amp;&amp;[input=field1]&lt;[var=ag]+0.11&amp;&amp;[input=field2]&gt;[var=bg]-0.11&amp;&amp;[input=field2]&lt;[var=bg]+0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="14"/>
+    <FillInStage reference="22"/>
+    <FillInStage reference="30"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="128">
+    <VariableDeclaration id="129">
+      <name>x1</name>
+      <initializationCode id="130">
+        <code>randomIntegerBetween(600,1001)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="131">
+      <name>x2</name>
+      <initializationCode id="132">
+        <code>randomIntegerBetween(600,1001)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="133">
+      <name>x3</name>
+      <initializationCode id="134">
+        <code>randomIntegerBetween(600,1001)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="135">
+      <name>x4</name>
+      <initializationCode id="136">
+        <code>randomIntegerBetween(600,1001)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="137">
+      <name>x5</name>
+      <initializationCode id="138">
+        <code>randomIntegerBetween(600,1001)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="139">
+      <name>x6</name>
+      <initializationCode id="140">
+        <code>randomIntegerBetween(600,1001)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="141">
+      <name>x7</name>
+      <initializationCode id="142">
+        <code>randomIntegerBetween(600,1001)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="143">
+      <name>x8</name>
+      <initializationCode id="144">
+        <code>randomIntegerBetween(600,1001)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="145">
+      <name>x9</name>
+      <initializationCode id="146">
+        <code>randomIntegerBetween(600,1001)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="147">
+      <name>x10</name>
+      <initializationCode id="148">
+        <code>randomIntegerBetween(600,1001)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="149">
+      <name>x11</name>
+      <initializationCode id="150">
+        <code>randomIntegerBetween(800,1201)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="151">
+      <name>x12</name>
+      <initializationCode id="152">
+        <code>randomIntegerBetween(800,1201)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="153">
+      <name>x13</name>
+      <initializationCode id="154">
+        <code>randomIntegerBetween(800,1201)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="155">
+      <name>x14</name>
+      <initializationCode id="156">
+        <code>randomIntegerBetween(800,1201)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="157">
+      <name>x15</name>
+      <initializationCode id="158">
+        <code>randomIntegerBetween(800,1201)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="159">
+      <name>x16</name>
+      <initializationCode id="160">
+        <code>randomIntegerBetween(800,1201)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="161">
+      <name>x17</name>
+      <initializationCode id="162">
+        <code>randomIntegerBetween(800,1201)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="163">
+      <name>x18</name>
+      <initializationCode id="164">
+        <code>randomIntegerBetween(800,1201)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="165">
+      <name>x19</name>
+      <initializationCode id="166">
+        <code>randomIntegerBetween(800,1201)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="167">
+      <name>x20</name>
+      <initializationCode id="168">
+        <code>randomIntegerBetween(800,1201)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="169">
+      <name>x21</name>
+      <initializationCode id="170">
+        <code>randomIntegerBetween(1000,1401)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="171">
+      <name>x22</name>
+      <initializationCode id="172">
+        <code>randomIntegerBetween(1000,1401)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="173">
+      <name>x23</name>
+      <initializationCode id="174">
+        <code>randomIntegerBetween(1000,1401)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="175">
+      <name>x24</name>
+      <initializationCode id="176">
+        <code>randomIntegerBetween(1000,1401)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="177">
+      <name>x25</name>
+      <initializationCode id="178">
+        <code>randomIntegerBetween(1000,1401)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="179">
+      <name>x26</name>
+      <initializationCode id="180">
+        <code>randomIntegerBetween(1000,1401)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="181">
+      <name>x27</name>
+      <initializationCode id="182">
+        <code>randomIntegerBetween(1000,1401)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="183">
+      <name>x28</name>
+      <initializationCode id="184">
+        <code>randomIntegerBetween(1000,1401)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="185">
+      <name>x29</name>
+      <initializationCode id="186">
+        <code>randomIntegerBetween(1000,1401)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="187">
+      <name>x30</name>
+      <initializationCode id="188">
+        <code>randomIntegerBetween(1000,1401)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="189">
+      <name>x31</name>
+      <initializationCode id="190">
+        <code>randomIntegerBetween(1200,1601)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="191">
+      <name>x32</name>
+      <initializationCode id="192">
+        <code>randomIntegerBetween(1200,1601)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="193">
+      <name>x33</name>
+      <initializationCode id="194">
+        <code>randomIntegerBetween(1200,1601)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="195">
+      <name>x34</name>
+      <initializationCode id="196">
+        <code>randomIntegerBetween(1200,1601)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="197">
+      <name>x35</name>
+      <initializationCode id="198">
+        <code>randomIntegerBetween(1200,1601)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="199">
+      <name>x36</name>
+      <initializationCode id="200">
+        <code>randomIntegerBetween(1200,1601)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="201">
+      <name>x37</name>
+      <initializationCode id="202">
+        <code>randomIntegerBetween(1200,1601)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="203">
+      <name>x38</name>
+      <initializationCode id="204">
+        <code>randomIntegerBetween(1200,1601)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="205">
+      <name>x39</name>
+      <initializationCode id="206">
+        <code>randomIntegerBetween(1200,1601)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="207">
+      <name>x40</name>
+      <initializationCode id="208">
+        <code>randomIntegerBetween(1200,1601)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="209">
+      <name>x41</name>
+      <initializationCode id="210">
+        <code>randomIntegerBetween(1400,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="211">
+      <name>x42</name>
+      <initializationCode id="212">
+        <code>randomIntegerBetween(1400,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="213">
+      <name>x43</name>
+      <initializationCode id="214">
+        <code>randomIntegerBetween(1400,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="215">
+      <name>x44</name>
+      <initializationCode id="216">
+        <code>randomIntegerBetween(1400,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="217">
+      <name>x45</name>
+      <initializationCode id="218">
+        <code>randomIntegerBetween(1400,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="219">
+      <name>x46</name>
+      <initializationCode id="220">
+        <code>randomIntegerBetween(1400,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="221">
+      <name>x47</name>
+      <initializationCode id="222">
+        <code>randomIntegerBetween(1400,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="223">
+      <name>x48</name>
+      <initializationCode id="224">
+        <code>randomIntegerBetween(1400,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="225">
+      <name>x49</name>
+      <initializationCode id="226">
+        <code>randomIntegerBetween(1400,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="227">
+      <name>x50</name>
+      <initializationCode id="228">
+        <code>randomIntegerBetween(1400,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="229">
+      <name>y1</name>
+      <initializationCode id="230">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="231">
+      <name>y2</name>
+      <initializationCode id="232">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="233">
+      <name>y3</name>
+      <initializationCode id="234">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="235">
+      <name>y4</name>
+      <initializationCode id="236">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="237">
+      <name>y5</name>
+      <initializationCode id="238">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="239">
+      <name>y6</name>
+      <initializationCode id="240">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="241">
+      <name>y7</name>
+      <initializationCode id="242">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="243">
+      <name>y8</name>
+      <initializationCode id="244">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="245">
+      <name>y9</name>
+      <initializationCode id="246">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="247">
+      <name>y10</name>
+      <initializationCode id="248">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="249">
+      <name>y11</name>
+      <initializationCode id="250">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="251">
+      <name>y12</name>
+      <initializationCode id="252">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="253">
+      <name>y13</name>
+      <initializationCode id="254">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="255">
+      <name>y14</name>
+      <initializationCode id="256">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="257">
+      <name>y15</name>
+      <initializationCode id="258">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="259">
+      <name>y16</name>
+      <initializationCode id="260">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="261">
+      <name>y17</name>
+      <initializationCode id="262">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="263">
+      <name>y18</name>
+      <initializationCode id="264">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="265">
+      <name>y19</name>
+      <initializationCode id="266">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="267">
+      <name>y20</name>
+      <initializationCode id="268">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="269">
+      <name>y21</name>
+      <initializationCode id="270">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="271">
+      <name>y22</name>
+      <initializationCode id="272">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="273">
+      <name>y23</name>
+      <initializationCode id="274">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="275">
+      <name>y24</name>
+      <initializationCode id="276">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="277">
+      <name>y25</name>
+      <initializationCode id="278">
+        <code>randomIntegerBetween(100,151)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="279">
+      <name>y26</name>
+      <initializationCode id="280">
+        <code>randomIntegerBetween(100,351)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="281">
+      <name>y27</name>
+      <initializationCode id="282">
+        <code>randomIntegerBetween(100,351)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="283">
+      <name>y28</name>
+      <initializationCode id="284">
+        <code>randomIntegerBetween(100,351)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="285">
+      <name>y29</name>
+      <initializationCode id="286">
+        <code>randomIntegerBetween(100,351)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="287">
+      <name>y30</name>
+      <initializationCode id="288">
+        <code>randomIntegerBetween(100,351)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="289">
+      <name>y31</name>
+      <initializationCode id="290">
+        <code>randomIntegerBetween(100,501)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="291">
+      <name>y32</name>
+      <initializationCode id="292">
+        <code>randomIntegerBetween(100,501)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="293">
+      <name>y33</name>
+      <initializationCode id="294">
+        <code>randomIntegerBetween(100,501)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="295">
+      <name>y34</name>
+      <initializationCode id="296">
+        <code>randomIntegerBetween(100,501)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="297">
+      <name>y35</name>
+      <initializationCode id="298">
+        <code>randomIntegerBetween(100,501)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="299">
+      <name>y36</name>
+      <initializationCode id="300">
+        <code>randomIntegerBetween(100,501)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="301">
+      <name>y37</name>
+      <initializationCode id="302">
+        <code>randomIntegerBetween(100,501)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="303">
+      <name>y38</name>
+      <initializationCode id="304">
+        <code>randomIntegerBetween(100,501)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="305">
+      <name>y39</name>
+      <initializationCode id="306">
+        <code>randomIntegerBetween(100,501)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="307">
+      <name>y40</name>
+      <initializationCode id="308">
+        <code>randomIntegerBetween(100,501)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="309">
+      <name>y41</name>
+      <initializationCode id="310">
+        <code>randomIntegerBetween(300,801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="311">
+      <name>y42</name>
+      <initializationCode id="312">
+        <code>randomIntegerBetween(300,801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="313">
+      <name>y43</name>
+      <initializationCode id="314">
+        <code>randomIntegerBetween(300,801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="315">
+      <name>y44</name>
+      <initializationCode id="316">
+        <code>randomIntegerBetween(300,801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="317">
+      <name>y45</name>
+      <initializationCode id="318">
+        <code>randomIntegerBetween(300,801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="319">
+      <name>y46</name>
+      <initializationCode id="320">
+        <code>randomIntegerBetween(300,801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="321">
+      <name>y47</name>
+      <initializationCode id="322">
+        <code>randomIntegerBetween(300,801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="323">
+      <name>y48</name>
+      <initializationCode id="324">
+        <code>randomIntegerBetween(300,801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="325">
+      <name>y49</name>
+      <initializationCode id="326">
+        <code>randomIntegerBetween(300,801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="327">
+      <name>y50</name>
+      <initializationCode id="328">
+        <code>randomIntegerBetween(300,801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="329">
+      <name>Eink</name>
+      <initializationCode id="330">
+        <code>randomIntegerBetween(600,1801)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="331">
+      <name>xi</name>
+      <initializationCode id="332">
+        <code>[var=x1]+[var=x2]+[var=x3]+[var=x4]+[var=x5]+[var=x6]+[var=x7]+[var=x8]+[var=x9]+[var=x10]+[var=x11]+[var=x12]+[var=x13]+[var=x14]+[var=x15]+[var=x16]+[var=x17]+[var=x18]+[var=x19]+[var=x20]+[var=x21]+[var=x22]+[var=x23]+[var=x24]+[var=x25]+[var=x26]+[var=x27]+[var=x28]+[var=x29]+[var=x30]+[var=x31]+[var=x32]+[var=x33]+[var=x34]+[var=x35]+[var=x36]+[var=x37]+[var=x38]+[var=x39]+[var=x40]+[var=x41]+[var=x42]+[var=x43]+[var=x44]+[var=x45]+[var=x46]+[var=x47]+[var=x48]+[var=x49]+[var=x50]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="333">
+      <name>yi</name>
+      <initializationCode id="334">
+        <code>[var=y1]+[var=y2]+[var=y3]+[var=y4]+[var=y5]+[var=y6]+[var=y7]+[var=y8]+[var=y9]+[var=y10]+[var=y11]+[var=y12]+[var=y13]+[var=y14]+[var=y15]+[var=y16]+[var=y17]+[var=y18]+[var=y19]+[var=y20]+[var=y21]+[var=y22]+[var=y23]+[var=y24]+[var=y25]+[var=y26]+[var=y27]+[var=y28]+[var=y29]+[var=y30]+[var=y31]+[var=y32]+[var=y33]+[var=y34]+[var=y35]+[var=y36]+[var=y37]+[var=y38]+[var=y39]+[var=y40]+[var=y41]+[var=y42]+[var=y43]+[var=y44]+[var=y45]+[var=y46]+[var=y47]+[var=y48]+[var=y49]+[var=y50]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="335">
+      <name>xisq</name>
+      <initializationCode id="336">
+        <code>pow([var=x1], 2)+pow([var=x2], 2)+pow([var=x3], 2)+pow([var=x4], 2)+pow([var=x5], 2)+pow([var=x6], 2)+pow([var=x7], 2)+pow([var=x8], 2)+pow([var=x9], 2)+pow([var=x10], 2)+pow([var=x11], 2)+pow([var=x12], 2)+pow([var=x13], 2)+pow([var=x14], 2)+pow([var=x15], 2)+pow([var=x16], 2)+pow([var=x17], 2)+pow([var=x18], 2)+pow([var=x19], 2)+pow([var=x20], 2)+pow([var=x21], 2)+pow([var=x22], 2)+pow([var=x23], 2)+pow([var=x24], 2)+pow([var=x25], 2)+pow([var=x26], 2)+pow([var=x27], 2)+pow([var=x28], 2)+pow([var=x29], 2)+pow([var=x30], 2)+pow([var=x31], 2)+pow([var=x32], 2)+pow([var=x33], 2)+pow([var=x34], 2)+pow([var=x35], 2)+pow([var=x36], 2)+pow([var=x37], 2)+pow([var=x38], 2)+pow([var=x39], 2)+pow([var=x40], 2)+pow([var=x41], 2)+pow([var=x42], 2)+pow([var=x43], 2)+pow([var=x44], 2)+pow([var=x45], 2)+pow([var=x46], 2)+pow([var=x47], 2)+pow([var=x48], 2)+pow([var=x49], 2)+pow([var=x50], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="337">
+      <name>yisq</name>
+      <initializationCode id="338">
+        <code>pow([var=y1], 2)+pow([var=y2], 2)+pow([var=y3], 2)+pow([var=y4], 2)+pow([var=y5], 2)+pow([var=y6], 2)+pow([var=y7], 2)+pow([var=y8], 2)+pow([var=y9], 2)+pow([var=y10], 2)+pow([var=y11], 2)+pow([var=y12], 2)+pow([var=y13], 2)+pow([var=y14], 2)+pow([var=y15], 2)+pow([var=y16], 2)+pow([var=y17], 2)+pow([var=y18], 2)+pow([var=y19], 2)+pow([var=y20], 2)+pow([var=y21], 2)+pow([var=y22], 2)+pow([var=y23], 2)+pow([var=y24], 2)+pow([var=y25], 2)+pow([var=y26], 2)+pow([var=y27], 2)+pow([var=y28], 2)+pow([var=y29], 2)+pow([var=y30], 2)+pow([var=y31], 2)+pow([var=y32], 2)+pow([var=y33], 2)+pow([var=y34], 2)+pow([var=y35], 2)+pow([var=y36], 2)+pow([var=y37], 2)+pow([var=y38], 2)+pow([var=y39], 2)+pow([var=y40], 2)+pow([var=y41], 2)+pow([var=y42], 2)+pow([var=y43], 2)+pow([var=y44], 2)+pow([var=y45], 2)+pow([var=y46], 2)+pow([var=y47], 2)+pow([var=y48], 2)+pow([var=y49], 2)+pow([var=y50], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="339">
+      <name>sumpro</name>
+      <initializationCode id="340">
+        <code>[var=x1]*([var=x1]-[var=y1])+[var=x2]*([var=x2]-[var=y2])+[var=x3]*([var=x3]-[var=y3])+[var=x4]*([var=x4]-[var=y4])+[var=x5]*([var=x5]-[var=y5])+[var=x6]*([var=x6]-[var=y6])+[var=x7]*([var=x7]-[var=y7])+[var=x8]*([var=x8]-[var=y8])+[var=x9]*([var=x9]-[var=y9])+[var=x10]*([var=x10]-[var=y10])+[var=x11]*([var=x11]-[var=y11])+[var=x12]*([var=x12]-[var=y12])+[var=x13]*([var=x13]-[var=y13])+[var=x14]*([var=x14]-[var=y14])+[var=x15]*([var=x15]-[var=y15])+[var=x16]*([var=x16]-[var=y16])+[var=x17]*([var=x17]-[var=y17])+[var=x18]*([var=x18]-[var=y18])+[var=x19]*([var=x19]-[var=y19])+[var=x20]*([var=x20]-[var=y20])+[var=x21]*([var=x21]-[var=y21])+[var=x22]*([var=x22]-[var=y22])+[var=x23]*([var=x23]-[var=y23])+[var=x24]*([var=x24]-[var=y24])+[var=x25]*([var=x25]-[var=y25])+[var=x26]*([var=x26]-[var=y26])+[var=x27]*([var=x27]-[var=y27])+[var=x28]*([var=x28]-[var=y28])+[var=x29]*([var=x29]-[var=y29])+[var=x30]*([var=x30]-[var=y30])+[var=x31]*([var=x31]-[var=y31])+[var=x32]*([var=x32]-[var=y32])+[var=x33]*([var=x33]-[var=y33])+[var=x34]*([var=x34]-[var=y34])+[var=x35]*([var=x35]-[var=y35])+[var=x36]*([var=x36]-[var=y36])+[var=x37]*([var=x37]-[var=y37])+[var=x38]*([var=x38]-[var=y38])+[var=x39]*([var=x39]-[var=y39])+[var=x40]*([var=x40]-[var=y40])+[var=x41]*([var=x41]-[var=y41])+[var=x42]*([var=x42]-[var=y42])+[var=x43]*([var=x43]-[var=y43])+[var=x44]*([var=x44]-[var=y44])+[var=x45]*([var=x45]-[var=y45])+[var=x46]*([var=x46]-[var=y46])+[var=x47]*([var=x47]-[var=y47])+[var=x48]*([var=x48]-[var=y48])+[var=x49]*([var=x49]-[var=y49])+[var=x50]*([var=x50]-[var=y50])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="341">
+      <name>xiyi</name>
+      <initializationCode id="342">
+        <code>[var=xisq]-[var=sumpro]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="343">
+      <name>xquer</name>
+      <initializationCode id="344">
+        <code>[var=xi]/50</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="345">
+      <name>s2x</name>
+      <initializationCode id="346">
+        <code>[var=xisq]/50-pow([var=xquer], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="347">
+      <name>yquer</name>
+      <initializationCode id="348">
+        <code>[var=yi]/50</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="349">
+      <name>s2y</name>
+      <initializationCode id="350">
+        <code>[var=yisq]/50-pow([var=yquer], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="351">
+      <name>sxy</name>
+      <initializationCode id="352">
+        <code>[var=xiyi]/50-[var=xquer]*[var=yquer]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="353">
+      <name>b</name>
+      <initializationCode id="354">
+        <code>[var=sxy]/[var=s2x]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="355">
+      <name>bg</name>
+      <initializationCode id="356">
+        <code>round([var=b], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="357">
+      <name>a</name>
+      <initializationCode id="358">
+        <code>[var=yquer]-[var=bg]*[var=xquer]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="359">
+      <name>ag</name>
+      <initializationCode id="360">
+        <code>round([var=a], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="361">
+      <name>rsqr</name>
+      <initializationCode id="362">
+        <code>pow([var=sxy], 2)/([var=s2x]*[var=s2y])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="363">
+      <name>rsqrg</name>
+      <initializationCode id="364">
+        <code>round([var=rsqr], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="365">
+      <name>Prognose</name>
+      <initializationCode id="366">
+        <code>[var=ag]+[var=bg]*[var=Eink]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="367">
+      <name>Prognoseg</name>
+      <initializationCode id="368">
+        <code>round([var=Prognose])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="369">
+      <name>b1</name>
+      <initializationCode id="370">
+        <code>[var=sxy]/[var=s2y]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="371">
+      <name>a1</name>
+      <initializationCode id="372">
+        <code>[var=xquer]-[var=b1]*[var=yquer]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="373">
+      <name>b1g</name>
+      <initializationCode id="374">
+        <code>round([var=b1], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="375">
+      <name>a1g</name>
+      <initializationCode id="376">
+        <code>round([var=a1], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="377"/>
+  <dynamicMolecules id="378"/>
+  <resultFeedbackMappings id="379"/>
+</Exercise>

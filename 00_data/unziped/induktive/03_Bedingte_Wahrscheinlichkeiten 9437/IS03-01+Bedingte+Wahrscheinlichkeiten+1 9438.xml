@@ -1,0 +1,336 @@
+<Exercise id="1">
+  <name>IS03-01 Bedingte Wahrscheinlichkeiten 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Wetteraufgabe: S1: Satz d. t. W&apos;keit, S2: Satz v. Bayes
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>4</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Im Mittel sagt der Wetterbericht f&amp;uuml;r den kommenden Tag zu $[var=gutper]$% sch&amp;ouml;nes und zu $[var=schlechtper]$% schlechtes Wetter voraus; die Trefferquote liegt f&amp;uuml;r die Voraussage &amp;quot;sch&amp;ouml;n&amp;quot; bei $[var=treffgutper]$%. Die Voraussage &amp;quot;schlecht&amp;quot; ist zu $[var=treffschlechtper]$% falsch. Bestimmen Sie die Wahrscheinlichkeit, dass am n&amp;auml;chsten Tag sch&amp;ouml;nes Wetter ist.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Es gilt: $P(B) = P(B|A)\cdot P(A) + P(B|\bar A)\cdot P(\bar A) = [var=rsol1]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Trotz sch&amp;ouml;nen Wetters ist Ihr Kumpel nicht zum verabredeten Fallschirmsprung erschienen mit der Begr&amp;uuml;ndung, der gestrige Wetterbericht w&amp;auml;re schlecht gewesen. Sie haben den Wetterbericht gestern nicht gesehen und fragen sich mit welcher Wahrscheinlichkeit hat Ihr Kumpel gelogen. &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung: &lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+            <skipMessage>Richtig ist $P(A|B) = \frac{P(B|A)\cdot P(A)}{P(B)} = [var=rsol4]$</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="24">
+              <StageTransition id="25">
+                <conditionExpression id="26">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="27">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="28">
+              <StageHint id="29">
+                <stagehint__order>0</stagehint__order>
+                <text>Benutzen Sie den Satz von Bayes, Sie wissen schlie&amp;szlig;lich, dass heute gutes Wetter ist; Sie wissen nur nicht wie der Wetterbericht gestern war.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="30">
+                <stagehint__order>1</stagehint__order>
+                <text>Gesucht ist also die W&amp;#39;keit, dass der Wetterbericht gutes Wetter vorausgesagt hat, mit dem Wissen, dass heute gutes Wetter ist. (In diesem Fall hat ihr Freund also gelogen, da er behauptet, der Wetterbericht h&amp;auml;tte schlechtes Wetter vorausgesagt.)&lt;br /&gt;
+Gesucht: $P(A|B)$ mit der Notation aus Frage 1.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="31">
+                <stagehint__order>2</stagehint__order>
+                <text>Mit dem Satz von Bayes gilt: $P(A|B) = \frac{P(B|A)\cdot P(A)}{P(B)}$.&lt;br /&gt;
+Diese W&amp;#39;keiten sind alle aus der 1. Frage bereits bekannt und m&amp;uuml;ssen nur noch eingesetzt werden.</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="32"/>
+            <variableUpdatesBeforeCheck id="33"/>
+            <variableUpdatesAfterCheck id="34"/>
+            <variableUpdatesOnNormalExit id="35"/>
+            <variableUpdatesOnRepeat id="36"/>
+            <variableUpdatesOnSkip id="37"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="38"/>
+            <rules id="39"/>
+            <fillInFields id="40">
+              <FillInField id="41">
+                <name>field1</name>
+                <orderIndex>1</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="42"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.</defaultFeedback>
+            <correctAnswerRules id="43">
+              <Rule id="44">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="45">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rsol4]-0.0011&amp;&amp;[input=field1]&lt;[var=rsol4]+0.0011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="46">
+        <StageTransition id="47">
+          <conditionExpression id="48">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="49">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="50">
+        <StageHint id="51">
+          <stagehint__order>0</stagehint__order>
+          <text>Benutzen Sie den Satz der totalen Wahrscheinlichkeit!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="52">
+          <stagehint__order>1</stagehint__order>
+          <text>Notieren Sie sich die einzelnen Ereignisse.&lt;br /&gt;
+Zum Beispiel ist $A$: &amp;quot;Wetterbericht sagt Wetter ist gut.&amp;quot; und dementsprechend $\bar A$: &amp;quot;Wetterbericht sagt Wetter ist schlecht.&amp;quot;&lt;br /&gt;
+Die Wahrscheinlichkeiten f&amp;uuml;r diese beiden Ereignisse kennen Sie.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="53">
+          <stagehint__order>2</stagehint__order>
+          <text>Es gilt: $A$: &amp;quot;Wetterbericht sagt Wetter ist gut.&amp;quot; und dementsprechend $\bar A$: &amp;quot;Wetterbericht sagt Wetter ist schlecht.&amp;quot; und weiterhin $B$: &amp;quot;Wetter ist gut.&amp;quot; und $\bar B$: &amp;quot;Wetter ist schlecht.&amp;quot; mit $P(A) = [var=gut]$ und $P(\bar A) = [var=schlecht]$ und $P(B|A) = [var=treffgut] \quad \Rightarrow \quad P(\bar B|A) = 1 - [var=treffgut]$ und $P(B|\bar A) = [var=treffschlecht] \quad \Rightarrow \quad P(\bar B|\bar A) = 1 - [var=treffschlecht]$</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="54"/>
+      <variableUpdatesBeforeCheck id="55"/>
+      <variableUpdatesAfterCheck id="56"/>
+      <variableUpdatesOnNormalExit id="57"/>
+      <variableUpdatesOnRepeat id="58"/>
+      <variableUpdatesOnSkip id="59"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="60"/>
+      <rules id="61"/>
+      <fillInFields id="62">
+        <FillInField id="63">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="64"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Es gilt: $P(B) = P(B|A)\cdot P(A) + P(B|\bar A)\cdot P(\bar A) = [var=rsol1]$.</defaultFeedback>
+      <correctAnswerRules id="65">
+        <Rule id="66">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="67">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rsol1]-0.0011&amp;&amp;[input=field1]&lt;[var=rsol1]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="68">
+    <VariableDeclaration id="69">
+      <name>gutper</name>
+      <initializationCode id="70">
+        <code>randomIntegerBetween(50,80)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>treffgutper</name>
+      <initializationCode id="72">
+        <code>randomIntegerBetween(60,95)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>schlechtper</name>
+      <initializationCode id="74">
+        <code>100-([var=gutper])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>treffschlechtper</name>
+      <initializationCode id="76">
+        <code>randomIntegerBetween(1,30)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>gut</name>
+      <initializationCode id="78">
+        <code>evaluateInR(&apos;([var=gutper])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>schlecht</name>
+      <initializationCode id="80">
+        <code>evaluateInR(&apos;([var=schlechtper])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>treffgut</name>
+      <initializationCode id="82">
+        <code>evaluateInR(&apos;([var=treffgutper])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>treffschlecht</name>
+      <initializationCode id="84">
+        <code>evaluateInR(&apos;([var=treffschlechtper])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>sol1</name>
+      <initializationCode id="86">
+        <code>evaluateInR(&apos;([var=gut])*([var=treffgut])+([var=schlecht])*([var=treffschlecht])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>rsol1</name>
+      <initializationCode id="88">
+        <code>evaluateInR(&apos;round(([var=sol1]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="89">
+      <name>sol4</name>
+      <initializationCode id="90">
+        <code>evaluateInR(&apos;([var=treffgut])*([var=gut])/([var=sol1])&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="91">
+      <name>rsol4</name>
+      <initializationCode id="92">
+        <code>evaluateInR(&apos;round(([var=sol4]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="93"/>
+  <dynamicMolecules id="94"/>
+  <resultFeedbackMappings id="95"/>
+</Exercise>

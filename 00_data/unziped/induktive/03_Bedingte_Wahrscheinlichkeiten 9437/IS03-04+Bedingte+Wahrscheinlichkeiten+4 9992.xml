@@ -1,0 +1,981 @@
+<Exercise id="1">
+  <name>IS03-04 Bedingte Wahrscheinlichkeiten 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Zweimaliger Münzwurf
+1.Stage: W&apos;keit Kopf im ersten Wurf
+2.Stage: W&apos;keit Kopf im zweiten Wurf
+3.Stage: W&apos;keit Kopf im ersten und zweiten Wurf
+4.Stage: W&apos;keit Kopf im ersten unter der Bedingung Kopf im zweiten Wurf
+5.Stage: W&apos;keit Kopf im zweiten unter der Bedingung Kopf im ersten Wurf
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nach der zehnmaligen Durchf&amp;uuml;hrung des Zufallsexperiments &amp;quot;zweimaliges Werfen einer fairen M&amp;uuml;nze&amp;quot; erh&amp;auml;lt man folgendes Resultat:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\begin{matrix}&lt;br /&gt;&#xd;
+\text{Versuch} &amp;amp; 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 &amp;amp; 8 &amp;amp; 9 &amp;amp; 10 \\&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+\text{1. Wurf} &amp;amp; [var=a1] &amp;amp; [var=b1] &amp;amp; [var=c1] &amp;amp; [var=d1] &amp;amp; [var=e1] &amp;amp; [var=f1] &amp;amp; [var=g1] &amp;amp; [var=h1] &amp;amp; [var=i1] &amp;amp; [var=j1] \\&lt;br /&gt;&#xd;
+\text{2. Wurf} &amp;amp; [var=a2] &amp;amp; [var=b2] &amp;amp; [var=c2] &amp;amp; [var=d2] &amp;amp; [var=e2] &amp;amp; [var=f2] &amp;amp; [var=g2] &amp;amp; [var=h2] &amp;amp; [var=i2] &amp;amp; [var=j2]&lt;br /&gt;&#xd;
+\end{matrix}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ereignis $A$: K = Kopf beim 1. Wurf, Ereignis $B$: K = Kopf beim 2. Wurf.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie folgende Wahrscheinlichkeit: $P(A) = \&amp;gt; $&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Die Wahrscheinlichkeit betr&amp;auml;gt $P(A)=[var=sol1]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nach der zehnmaligen Durchf&amp;uuml;hrung des Zufallsexperiments &amp;quot;zweimaliges Werfen einer fairen M&amp;uuml;nze&amp;quot; erh&amp;auml;lt man folgendes Resultat:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\begin{matrix}&lt;br /&gt;&#xd;
+\text{Versuch} &amp;amp; 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 &amp;amp; 8 &amp;amp; 9 &amp;amp; 10 \\&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+\text{1. Wurf} &amp;amp; [var=a1] &amp;amp; [var=b1] &amp;amp; [var=c1] &amp;amp; [var=d1] &amp;amp; [var=e1] &amp;amp; [var=f1] &amp;amp; [var=g1] &amp;amp; [var=h1] &amp;amp; [var=i1] &amp;amp; [var=j1] \\&lt;br /&gt;&#xd;
+\text{2. Wurf} &amp;amp; [var=a2] &amp;amp; [var=b2] &amp;amp; [var=c2] &amp;amp; [var=d2] &amp;amp; [var=e2] &amp;amp; [var=f2] &amp;amp; [var=g2] &amp;amp; [var=h2] &amp;amp; [var=i2] &amp;amp; [var=j2]&lt;br /&gt;&#xd;
+\end{matrix}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ereignis $A$: K = Kopf beim 1. Wurf, Ereignis $B$: K = Kopf beim 2. Wurf&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie folgende Wahrscheinlichkeit: $P(B) = \&amp;gt; $&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+            <skipMessage>Die Wahrscheinlichkeit betr&amp;auml;gt $P(B)=[var=sol2]$.</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="24">
+                  <internalName>3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nach der zehnmaligen Durchf&amp;uuml;hrung des Zufallsexperiments &amp;quot;zweimaliges Werfen einer fairen M&amp;uuml;nze&amp;quot; erh&amp;auml;lt man folgendes Resultat:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\begin{matrix}&lt;br /&gt;&#xd;
+\text{Versuch} &amp;amp; 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 &amp;amp; 8 &amp;amp; 9 &amp;amp; 10 \\&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+\text{1. Wurf} &amp;amp; [var=a1] &amp;amp; [var=b1] &amp;amp; [var=c1] &amp;amp; [var=d1] &amp;amp; [var=e1] &amp;amp; [var=f1] &amp;amp; [var=g1] &amp;amp; [var=h1] &amp;amp; [var=i1] &amp;amp; [var=j1] \\&lt;br /&gt;&#xd;
+\text{2. Wurf} &amp;amp; [var=a2] &amp;amp; [var=b2] &amp;amp; [var=c2] &amp;amp; [var=d2] &amp;amp; [var=e2] &amp;amp; [var=f2] &amp;amp; [var=g2] &amp;amp; [var=h2] &amp;amp; [var=i2] &amp;amp; [var=j2]&lt;br /&gt;&#xd;
+\end{matrix}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ereignis $A$: K = Kopf beim 1. Wurf, Ereignis $B$: K = Kopf beim 2. Wurf&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie folgende Wahrscheinlichkeit: $P(A\cap B) = \&amp;gt; $&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                  <skipMessage>Die Wahrscheinlichkeit betr&amp;auml;gt $P(A\cap B)=[var=sol3]$.</skipMessage>
+                  <defaultTransition id="25">
+                    <conditionExpression id="26">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="27">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="28">
+                    <StageTransition id="29">
+                      <conditionExpression id="30">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="31">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" id="32">
+                        <internalName>4</internalName>
+                        <externalName>Stage 4</externalName>
+                        <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nach der zehnmaligen Durchf&amp;uuml;hrung des Zufallsexperiments &amp;quot;zweimaliges Werfen einer fairen M&amp;uuml;nze&amp;quot; erh&amp;auml;lt man folgendes Resultat:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\begin{matrix}&lt;br /&gt;&#xd;
+\text{Versuch} &amp;amp; 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 &amp;amp; 8 &amp;amp; 9 &amp;amp; 10 \\&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+\text{1. Wurf} &amp;amp; [var=a1] &amp;amp; [var=b1] &amp;amp; [var=c1] &amp;amp; [var=d1] &amp;amp; [var=e1] &amp;amp; [var=f1] &amp;amp; [var=g1] &amp;amp; [var=h1] &amp;amp; [var=i1] &amp;amp; [var=j1] \\&lt;br /&gt;&#xd;
+\text{2. Wurf} &amp;amp; [var=a2] &amp;amp; [var=b2] &amp;amp; [var=c2] &amp;amp; [var=d2] &amp;amp; [var=e2] &amp;amp; [var=f2] &amp;amp; [var=g2] &amp;amp; [var=h2] &amp;amp; [var=i2] &amp;amp; [var=j2]&lt;br /&gt;&#xd;
+\end{matrix}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ereignis $A$: K = Kopf beim 1. Wurf, Ereignis $B$: K = Kopf beim 2. Wurf&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie folgende Wahrscheinlichkeit: $P(A|B) = \&amp;gt; $&amp;nbsp;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                        <skipMessage>Die Wahrscheinlichkeit betr&amp;auml;gt $P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{0.25}{0.5}=[var=sol4]$.</skipMessage>
+                        <defaultTransition id="33">
+                          <conditionExpression id="34">
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="35">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>true</isRepeat>
+                        </defaultTransition>
+                        <skipTransitions id="36">
+                          <StageTransition id="37">
+                            <conditionExpression id="38">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="39">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <targetStage class="FillInStage" id="40">
+                              <internalName>5</internalName>
+                              <externalName>Stage 5</externalName>
+                              <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nach der zehnmaligen Durchf&amp;uuml;hrung des Zufallsexperiments &amp;quot;zweimaliges Werfen einer fairen M&amp;uuml;nze&amp;quot; erh&amp;auml;lt man folgendes Resultat:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\begin{matrix}&lt;br /&gt;&#xd;
+\text{Versuch} &amp;amp; 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 &amp;amp; 8 &amp;amp; 9 &amp;amp; 10 \\&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+\text{1. Wurf} &amp;amp; [var=a1] &amp;amp; [var=b1] &amp;amp; [var=c1] &amp;amp; [var=d1] &amp;amp; [var=e1] &amp;amp; [var=f1] &amp;amp; [var=g1] &amp;amp; [var=h1] &amp;amp; [var=i1] &amp;amp; [var=j1] \\&lt;br /&gt;&#xd;
+\text{2. Wurf} &amp;amp; [var=a2] &amp;amp; [var=b2] &amp;amp; [var=c2] &amp;amp; [var=d2] &amp;amp; [var=e2] &amp;amp; [var=f2] &amp;amp; [var=g2] &amp;amp; [var=h2] &amp;amp; [var=i2] &amp;amp; [var=j2]&lt;br /&gt;&#xd;
+\end{matrix}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Ereignis $A$: K = Kopf beim 1. Wurf, Ereignis $B$: K = Kopf beim 2. Wurf&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie folgende Wahrscheinlichkeit: $P(B|A) = \&amp;gt; $&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                              <skipMessage>Die Wahrscheinlichkeit betr&amp;auml;gt $P(B|A)=\frac{P(B\cap A)}{P(A)}=\frac{0.25}{0.5}=[var=sol5]$.</skipMessage>
+                              <defaultTransition id="41">
+                                <conditionExpression id="42">
+                                  <domain>MATH</domain>
+                                </conditionExpression>
+                                <stageExpression id="43">
+                                  <domain>MATH</domain>
+                                </stageExpression>
+                                <isRepeat>true</isRepeat>
+                              </defaultTransition>
+                              <skipTransitions id="44">
+                                <StageTransition id="45">
+                                  <conditionExpression id="46">
+                                    <code></code>
+                                    <domain>MATH</domain>
+                                  </conditionExpression>
+                                  <stageExpression id="47">
+                                    <domain>MATH</domain>
+                                  </stageExpression>
+                                  <isRepeat>false</isRepeat>
+                                </StageTransition>
+                              </skipTransitions>
+                              <stageTransitions id="48">
+                                <StageTransition id="49">
+                                  <conditionExpression id="50">
+                                    <code></code>
+                                    <domain>MATH</domain>
+                                  </conditionExpression>
+                                  <stageExpression id="51">
+                                    <code>[meta=stageCurrentResult]&gt;=100</code>
+                                    <domain>MATH</domain>
+                                  </stageExpression>
+                                  <isRepeat>false</isRepeat>
+                                </StageTransition>
+                              </stageTransitions>
+                              <hints id="52">
+                                <StageHint id="53">
+                                  <stagehint__order>0</stagehint__order>
+                                  <text>Sie können diese Aufgabe analog zu Frage 4 lösen.
+	</text>
+                                  <malus>0</malus>
+                                  <stage class="FillInStage" reference="40"/>
+                                </StageHint>
+                              </hints>
+                              <variableUpdatesOnEnter id="54"/>
+                              <variableUpdatesBeforeCheck id="55"/>
+                              <variableUpdatesAfterCheck id="56"/>
+                              <variableUpdatesOnNormalExit id="57"/>
+                              <variableUpdatesOnRepeat id="58"/>
+                              <variableUpdatesOnSkip id="59"/>
+                              <weight>1</weight>
+                              <orderIndex>4</orderIndex>
+                              <allowSkip>true</allowSkip>
+                              <resources id="60"/>
+                              <rules id="61"/>
+                              <fillInFields id="62">
+                                <FillInField id="63">
+                                  <name>field1</name>
+                                  <orderIndex>0</orderIndex>
+                                  <size>6</size>
+                                  <formularEditorType>NUMBER</formularEditorType>
+                                </FillInField>
+                              </fillInFields>
+                              <dropDownFields id="64"/>
+                              <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                              <defaultFeedback>Leider falsch!</defaultFeedback>
+                              <correctAnswerRules id="65">
+                                <Rule id="66">
+                                  <name>CorrectAnswer1</name>
+                                  <orderIndex>1</orderIndex>
+                                  <validationExpression id="67">
+                                    <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==[var=sol5]</code>
+                                    <domain>MATH</domain>
+                                  </validationExpression>
+                                  <points>0</points>
+                                  <terminal>false</terminal>
+                                </Rule>
+                              </correctAnswerRules>
+                              <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+                              <defaultResult>0</defaultResult>
+                            </targetStage>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </skipTransitions>
+                        <stageTransitions id="68">
+                          <StageTransition id="69">
+                            <conditionExpression id="70">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="71">
+                              <code>[meta=stageCurrentResult]&gt;=100</code>
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <targetStage class="FillInStage" reference="40"/>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </stageTransitions>
+                        <hints id="72">
+                          <StageHint id="73">
+                            <stagehint__order>0</stagehint__order>
+                            <text>$P(A|B)=\frac{P(A\cap B)}{P(B)}$&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="74">
+                            <stagehint__order>1</stagehint__order>
+                            <text>Sie bedingen nun auf den Fall, dass Kopf im zweiten Wurf kam.
+</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                        </hints>
+                        <variableUpdatesOnEnter id="75"/>
+                        <variableUpdatesBeforeCheck id="76"/>
+                        <variableUpdatesAfterCheck id="77"/>
+                        <variableUpdatesOnNormalExit id="78"/>
+                        <variableUpdatesOnRepeat id="79"/>
+                        <variableUpdatesOnSkip id="80"/>
+                        <weight>1</weight>
+                        <orderIndex>3</orderIndex>
+                        <allowSkip>true</allowSkip>
+                        <resources id="81"/>
+                        <rules id="82"/>
+                        <fillInFields id="83">
+                          <FillInField id="84">
+                            <name>field1</name>
+                            <orderIndex>0</orderIndex>
+                            <size>6</size>
+                            <formularEditorType>NUMBER</formularEditorType>
+                          </FillInField>
+                        </fillInFields>
+                        <dropDownFields id="85"/>
+                        <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                        <defaultFeedback>Leider falsch!</defaultFeedback>
+                        <correctAnswerRules id="86">
+                          <Rule id="87">
+                            <name>CorrectAnswer1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="88">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==[var=sol4]</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <points>0</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </correctAnswerRules>
+                        <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+                        <defaultResult>0</defaultResult>
+                      </targetStage>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="89">
+                    <StageTransition id="90">
+                      <conditionExpression id="91">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="92">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="32"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="93">
+                    <StageHint id="94">
+                      <stagehint__order>0</stagehint__order>
+                      <text>Aus welchen Teilereignissen bestehen $A$ und $B$ jeweils? Was ist der Durchschnitt dieser?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                    <StageHint id="95">
+                      <stagehint__order>1</stagehint__order>
+                      <text>Ereignis $A$ ist Kopf im ersten Wurf, Ereignis $B$ ist Kopf beim zweiten Wurf.&lt;br /&gt;
+Der Schnitt $A~\cap~B$ ist also Kopf im ersten $\textbf{und}$ zweiten Wurf.</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="96"/>
+                  <variableUpdatesBeforeCheck id="97"/>
+                  <variableUpdatesAfterCheck id="98"/>
+                  <variableUpdatesOnNormalExit id="99"/>
+                  <variableUpdatesOnRepeat id="100"/>
+                  <variableUpdatesOnSkip id="101"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="102"/>
+                  <rules id="103"/>
+                  <fillInFields id="104">
+                    <FillInField id="105">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="106"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider falsch!</defaultFeedback>
+                  <correctAnswerRules id="107">
+                    <Rule id="108">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="109">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==[var=sol3]</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="110">
+              <StageTransition id="111">
+                <conditionExpression id="112">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="113">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="24"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="114">
+              <StageHint id="115">
+                <stagehint__order>0</stagehint__order>
+                <text>Die gesuchte Wahrscheinlichkeit können Sie analog zu Frage 1 berechnen.
+</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="116"/>
+            <variableUpdatesBeforeCheck id="117"/>
+            <variableUpdatesAfterCheck id="118"/>
+            <variableUpdatesOnNormalExit id="119"/>
+            <variableUpdatesOnRepeat id="120"/>
+            <variableUpdatesOnSkip id="121"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="122"/>
+            <rules id="123"/>
+            <fillInFields id="124">
+              <FillInField id="125">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="126"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider falsch!</defaultFeedback>
+            <correctAnswerRules id="127">
+              <Rule id="128">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="129">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==[var=sol2]</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="130">
+        <StageTransition id="131">
+          <conditionExpression id="132">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="133">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="134">
+        <StageHint id="135">
+          <stagehint__order>0</stagehint__order>
+          <text>Beachten Sie, dass die Münze fair ist.
+</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="136"/>
+      <variableUpdatesBeforeCheck id="137"/>
+      <variableUpdatesAfterCheck id="138"/>
+      <variableUpdatesOnNormalExit id="139"/>
+      <variableUpdatesOnRepeat id="140"/>
+      <variableUpdatesOnSkip id="141"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="142"/>
+      <rules id="143"/>
+      <fillInFields id="144">
+        <FillInField id="145">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="146"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch!</defaultFeedback>
+      <correctAnswerRules id="147">
+        <Rule id="148">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="149">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==[var=sol1]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+    <FillInStage reference="24"/>
+    <FillInStage reference="32"/>
+    <FillInStage reference="40"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="150">
+    <VariableDeclaration id="151">
+      <name>w1</name>
+      <initializationCode id="152">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="153">
+      <name>w2</name>
+      <initializationCode id="154">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="155">
+      <name>w3</name>
+      <initializationCode id="156">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="157">
+      <name>w4</name>
+      <initializationCode id="158">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="159">
+      <name>w5</name>
+      <initializationCode id="160">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="161">
+      <name>w6</name>
+      <initializationCode id="162">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="163">
+      <name>w7</name>
+      <initializationCode id="164">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="165">
+      <name>w8</name>
+      <initializationCode id="166">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="167">
+      <name>w9</name>
+      <initializationCode id="168">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="169">
+      <name>w10</name>
+      <initializationCode id="170">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="171">
+      <name>w11</name>
+      <initializationCode id="172">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="173">
+      <name>w12</name>
+      <initializationCode id="174">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="175">
+      <name>w13</name>
+      <initializationCode id="176">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="177">
+      <name>w14</name>
+      <initializationCode id="178">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="179">
+      <name>w15</name>
+      <initializationCode id="180">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="181">
+      <name>w16</name>
+      <initializationCode id="182">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="183">
+      <name>w17</name>
+      <initializationCode id="184">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="185">
+      <name>w18</name>
+      <initializationCode id="186">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="187">
+      <name>w19</name>
+      <initializationCode id="188">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="189">
+      <name>w20</name>
+      <initializationCode id="190">
+        <code>evaluateInR(&apos;sample(0:1, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="191">
+      <name>kk1</name>
+      <initializationCode id="192">
+        <code>ifthenelse([var=w1]+[var=w2]==2, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="193">
+      <name>kk2</name>
+      <initializationCode id="194">
+        <code>ifthenelse([var=w3]+[var=w4]==2, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="195">
+      <name>kk3</name>
+      <initializationCode id="196">
+        <code>ifthenelse([var=w5]+[var=w6]==2, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="197">
+      <name>kk4</name>
+      <initializationCode id="198">
+        <code>ifthenelse([var=w7]+[var=w8]==2, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="199">
+      <name>kk5</name>
+      <initializationCode id="200">
+        <code>ifthenelse([var=w9]+[var=w10]==2, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="201">
+      <name>kk6</name>
+      <initializationCode id="202">
+        <code>ifthenelse([var=w11]+[var=w12]==2, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="203">
+      <name>kk7</name>
+      <initializationCode id="204">
+        <code>ifthenelse([var=w13]+[var=w14]==2, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="205">
+      <name>kk8</name>
+      <initializationCode id="206">
+        <code>ifthenelse([var=w15]+[var=w16]==2, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="207">
+      <name>kk9</name>
+      <initializationCode id="208">
+        <code>ifthenelse([var=w17]+[var=w18]==2, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="209">
+      <name>kk10</name>
+      <initializationCode id="210">
+        <code>ifthenelse([var=w19]+[var=w20]==2, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="211">
+      <name>kk</name>
+      <initializationCode id="212">
+        <code>[var=kk1]+[var=kk2]+[var=kk3]+[var=kk4]+[var=kk5]+[var=kk6]+[var=kk7]+[var=kk8]+[var=kk9]+[var=kk10]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="213">
+      <name>a1</name>
+      <initializationCode id="214">
+        <code>getFromList([var=w1], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="215">
+      <name>a2</name>
+      <initializationCode id="216">
+        <code>getFromList([var=w2], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="217">
+      <name>b1</name>
+      <initializationCode id="218">
+        <code>getFromList([var=w3], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="219">
+      <name>b2</name>
+      <initializationCode id="220">
+        <code>getFromList([var=w4], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="221">
+      <name>c1</name>
+      <initializationCode id="222">
+        <code>getFromList([var=w5], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="223">
+      <name>c2</name>
+      <initializationCode id="224">
+        <code>getFromList([var=w6], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="225">
+      <name>d1</name>
+      <initializationCode id="226">
+        <code>getFromList([var=w7], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="227">
+      <name>d2</name>
+      <initializationCode id="228">
+        <code>getFromList([var=w8], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="229">
+      <name>e1</name>
+      <initializationCode id="230">
+        <code>getFromList([var=w9], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="231">
+      <name>e2</name>
+      <initializationCode id="232">
+        <code>getFromList([var=w10], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="233">
+      <name>f1</name>
+      <initializationCode id="234">
+        <code>getFromList([var=w11], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="235">
+      <name>f2</name>
+      <initializationCode id="236">
+        <code>getFromList([var=w12], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="237">
+      <name>g1</name>
+      <initializationCode id="238">
+        <code>getFromList([var=w13], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="239">
+      <name>g2</name>
+      <initializationCode id="240">
+        <code>getFromList([var=w14], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="241">
+      <name>h1</name>
+      <initializationCode id="242">
+        <code>getFromList([var=w15], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="243">
+      <name>h2</name>
+      <initializationCode id="244">
+        <code>getFromList([var=w16], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="245">
+      <name>i1</name>
+      <initializationCode id="246">
+        <code>getFromList([var=w17], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="247">
+      <name>i2</name>
+      <initializationCode id="248">
+        <code>getFromList([var=w18], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="249">
+      <name>j1</name>
+      <initializationCode id="250">
+        <code>getFromList([var=w19], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="251">
+      <name>j2</name>
+      <initializationCode id="252">
+        <code>getFromList([var=w20], list(&apos;Z&apos;,&apos;K&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="253">
+      <name>k1</name>
+      <initializationCode id="254">
+        <code>[var=w1]+[var=w3]+[var=w5]+[var=w7]+[var=w9]+[var=w11]+[var=w13]+[var=w15]+[var=w17]+[var=w19]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="255">
+      <name>k2</name>
+      <initializationCode id="256">
+        <code>[var=w2]+[var=w4]+[var=w6]+[var=w8]+[var=w10]+[var=w12]+[var=w14]+[var=w16]+[var=w18]+[var=w20]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="257">
+      <name>sol1</name>
+      <initializationCode id="258">
+        <code>evaluateInR(&apos;0.5&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="259">
+      <name>sol2</name>
+      <initializationCode id="260">
+        <code>evaluateInR(&apos;0.5&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="261">
+      <name>sol3</name>
+      <initializationCode id="262">
+        <code>evaluateInR(&apos;0.25&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="263">
+      <name>sol4</name>
+      <initializationCode id="264">
+        <code>evaluateInR(&apos;0.5&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="265">
+      <name>sol5</name>
+      <initializationCode id="266">
+        <code>evaluateInR(&apos;0.5&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="267"/>
+  <dynamicMolecules id="268"/>
+  <resultFeedbackMappings id="269"/>
+</Exercise>

@@ -1,0 +1,616 @@
+<Exercise id="1">
+  <name>DS1-01 Grundzüge der Datenerhebung 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Merkmalscharacteristik
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>1</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Charakterisieren Sie, ob es sich bei den folgenden Merkmalen um qualitativ, quantiativ oder ordinal Merkmale handelt.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichungen:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=Grundgesamtheit1] = &amp;nbsp;&amp;nbsp;&lt;select name=&quot;dropdown1&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown1&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=Grundgesamtheit2] = &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;select name=&quot;dropdown2&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown2&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=Grundgesamtheit3] = &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;select name=&quot;dropdown3&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown3&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=Grundgesamtheit4] = &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;select name=&quot;dropdown4&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown4&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&amp;nbsp;</taskDescription>
+      <skipMessage>[var=Grundgesamtheit1] ist &lt;strong&gt;[var=q1][var=qq1][var=o1]&lt;/strong&gt;.&lt;br /&gt;
+[var=Grundgesamtheit2] ist&lt;strong&gt; [var=q2][var=qq2][var=o2]&lt;/strong&gt;.&lt;br /&gt;
+[var=Grundgesamtheit3] ist&lt;strong&gt; [var=q3][var=qq3][var=o3]&lt;/strong&gt;.&lt;br /&gt;
+[var=Grundgesamtheit4] ist &lt;strong&gt;[var=q4][var=qq4][var=o4]&lt;/strong&gt;.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Charakterisieren Sie, ob es sich bei den folgenden Merkmalen um diskret oder stetig Merkmale handelt. F&amp;uuml;r quasi-stetige Merkmale w&amp;auml;hlen Sie hier auch stetig aus.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichungen:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=bGrundgesamtheit1] = &amp;nbsp;&amp;nbsp;&lt;select name=&quot;dropdown1&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown1&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=bGrundgesamtheit2] = &amp;nbsp; &lt;select name=&quot;dropdown2&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown2&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=bGrundgesamtheit3] =&amp;nbsp;&amp;nbsp; &lt;select name=&quot;dropdown3&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown3&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=bGrundgesamtheit4] = &amp;nbsp;&amp;nbsp;&lt;select name=&quot;dropdown4&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown4&lt;/option&gt;&lt;/select&gt;&amp;nbsp;</taskDescription>
+            <skipMessage></skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18">
+              <StageTransition id="19">
+                <conditionExpression id="20">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="21">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="22">
+              <StageTransition id="23">
+                <conditionExpression id="24">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="25">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="26">
+              <StageHint id="27">
+                <stagehint__order>0</stagehint__order>
+                <text>Diskrete Merkmale weisen nur endlich viele oder abz&amp;auml;hlbar unendlich viele Merkmalsauspr&amp;auml;gungen auf.&lt;br /&gt;
+Stetige Merkmale k&amp;ouml;nnen theoretisch jeden beliebigen reellen Wert in einem Intervall annehmen und k&amp;ouml;nnen damit &amp;uuml;berabz&amp;auml;hlbar viele Auspr&amp;auml;gungen aufweisen.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Dies war der erste und letzte Hinweis.)&lt;/em&gt;</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="28"/>
+            <variableUpdatesBeforeCheck id="29"/>
+            <variableUpdatesAfterCheck id="30"/>
+            <variableUpdatesOnNormalExit id="31"/>
+            <variableUpdatesOnRepeat id="32"/>
+            <variableUpdatesOnSkip id="33"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="34"/>
+            <rules id="35"/>
+            <fillInFields id="36"/>
+            <dropDownFields id="37">
+              <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="38">
+                <name>dropdown1</name>
+                <orderIndex>0</orderIndex>
+                <randomize>false</randomize>
+                <items id="39">
+                  <string>diskret</string>
+                  <string>stetig</string>
+                </items>
+              </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+              <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="40">
+                <name>dropdown2</name>
+                <orderIndex>1</orderIndex>
+                <randomize>false</randomize>
+                <items id="41">
+                  <string>diskret</string>
+                  <string>stetig</string>
+                </items>
+              </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+              <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="42">
+                <name>dropdown3</name>
+                <orderIndex>2</orderIndex>
+                <randomize>false</randomize>
+                <items id="43">
+                  <string>diskret</string>
+                  <string>stetig</string>
+                </items>
+              </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+              <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="44">
+                <name>dropdown4</name>
+                <orderIndex>3</orderIndex>
+                <randomize>false</randomize>
+                <items id="45">
+                  <string>diskret</string>
+                  <string>stetig</string>
+                </items>
+              </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+            </dropDownFields>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt! Sie haben in mindestens einem Feld einen Fehler gemacht.</defaultFeedback>
+            <correctAnswerRules id="46">
+              <Rule id="47">
+                <name>Feedback 1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="48">
+                  <code>[input=dropdown1]=[var=ss1]&amp;&amp;[input=dropdown2]=[var=ss2]&amp;&amp;[input=dropdown3]=[var=ss3]&amp;&amp;[input=dropdown4]=[var=ss4]</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="49">
+        <StageTransition id="50">
+          <conditionExpression id="51">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="52">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="53">
+        <StageHint id="54">
+          <stagehint__order>0</stagehint__order>
+          <text>Als qualitative Merkmale bezeichnet man Merkmale, deren Auspr&amp;auml;gungen keinen mathematischen Wert annehmen, sondern lediglich Kategorien zugeordnet werden k&amp;ouml;nnen.&lt;br /&gt;
+&lt;br /&gt;
+Mit quantitativen Merkmalen kann man rechnen, d.h. es kann zum Beispiel ein Mittelwert angegeben werden. Ordniale Merkmale lassen sich in eine Rangordnung bringen.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Dies war der erste und letzte Hinweis.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="55"/>
+      <variableUpdatesBeforeCheck id="56"/>
+      <variableUpdatesAfterCheck id="57"/>
+      <variableUpdatesOnNormalExit id="58"/>
+      <variableUpdatesOnRepeat id="59"/>
+      <variableUpdatesOnSkip id="60"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="61"/>
+      <rules id="62"/>
+      <fillInFields id="63"/>
+      <dropDownFields id="64">
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="65">
+          <name>dropdown1</name>
+          <orderIndex>0</orderIndex>
+          <randomize>false</randomize>
+          <items id="66">
+            <string>qualitativ</string>
+            <string>quantitativ</string>
+            <string>ordinal</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="67">
+          <name>dropdown2</name>
+          <orderIndex>1</orderIndex>
+          <randomize>false</randomize>
+          <items id="68">
+            <string>qualitativ</string>
+            <string>quantitativ</string>
+            <string>ordinal</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="69">
+          <name>dropdown3</name>
+          <orderIndex>2</orderIndex>
+          <randomize>false</randomize>
+          <items id="70">
+            <string>qualitativ</string>
+            <string>quantitativ</string>
+            <string>ordinal</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="71">
+          <name>dropdown4</name>
+          <orderIndex>3</orderIndex>
+          <randomize>false</randomize>
+          <items id="72">
+            <string>qualitativ</string>
+            <string>quantitativ</string>
+            <string>ordinal</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+      </dropDownFields>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>Leider falsch! Sie haben in mindestens einem Feld einen Fehler gemacht.</defaultFeedback>
+      <correctAnswerRules id="73">
+        <Rule id="74">
+          <name>Feedback 1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="75">
+            <code>[input=dropdown1]==[var=antwort_11] &amp;&amp; [input=dropdown2]==[var=antwort_12] &amp;&amp; [input=dropdown3]==[var=antwort_13] &amp;&amp; [input=dropdown4]==[var=antwort_14]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="14"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="76">
+    <VariableDeclaration id="77">
+      <name>i</name>
+      <initializationCode id="78">
+        <code>randomIntegerBetween(0,23)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>Grundgesamtheit1</name>
+      <initializationCode id="80">
+        <code>getFromList([var=i],list(&apos;Lebensalter&apos;,&apos;Temperatur&apos;,&apos;Preis&apos;,&apos;Gewicht&apos;,&apos;Einkommen&apos;,&apos;Volumen&apos;,&apos;Augenzahl beim Würfeln&apos;,&apos;Staatsangehörigkeit&apos;,&apos;Familienstand&apos;,&apos;Güteklasse&apos;,&apos;Steuerklasse&apos;,&apos;Umsatz pro Monat&apos;,&apos;Niederschlagsmenge&apos;,&apos;Kursgewinn pro Aktie&apos;,&apos;Länge von Schrauben&apos;,&apos;Bücherbestand einer Bibliothek&apos;,&apos;Blutgruppe&apos;,&apos;sozialer Status&apos;,&apos;Postleitzahlen&apos;,&apos;Lottozahlen&apos;,&apos;Augenfarbe&apos;,&apos;Haarfarbe&apos;,&apos;Hautfarbe&apos;,&apos;Tumorstadium&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>Grundgesamtheit2</name>
+      <initializationCode id="82">
+        <code>chooseFromComplement(list(&apos;Lebensalter&apos;,&apos;Temperatur&apos;,&apos;Preis&apos;,&apos;Gewicht&apos;,&apos;Einkommen&apos;,&apos;Volumen&apos;,&apos;Augenzahl beim Würfeln&apos;,&apos;Staatsangehörigkeit&apos;,&apos;Familienstand&apos;,&apos;Güteklasse&apos;,&apos;Steuerklasse&apos;,&apos;Umsatz pro Monat&apos;,&apos;Niederschlagsmenge&apos;,&apos;Kursgewinn pro Aktie&apos;,&apos;Länge von Schrauben&apos;,&apos;Bücherbestand einer Bibliothek&apos;,&apos;Blutgruppe&apos;,&apos;sozialer Status&apos;,&apos;Postleitzahlen&apos;,&apos;Lottozahlen&apos;,&apos;Augenfarbe&apos;,&apos;Haarfarbe&apos;,&apos;Hautfarbe&apos;,&apos;Tumorstadium&apos;), list([var=Grundgesamtheit1]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>Grundgesamtheit3</name>
+      <initializationCode id="84">
+        <code>chooseFromComplement(list(&apos;Lebensalter&apos;,&apos;Temperatur&apos;,&apos;Preis&apos;,&apos;Gewicht&apos;,&apos;Einkommen&apos;,&apos;Volumen&apos;,&apos;Augenzahl beim Würfeln&apos;,&apos;Staatsangehörigkeit&apos;,&apos;Familienstand&apos;,&apos;Güteklasse&apos;,&apos;Steuerklasse&apos;,&apos;Umsatz pro Monat&apos;,&apos;Niederschlagsmenge&apos;,&apos;Kursgewinn pro Aktie&apos;,&apos;Länge von Schrauben&apos;,&apos;Bücherbestand einer Bibliothek&apos;,&apos;Blutgruppe&apos;,&apos;sozialer Status&apos;,&apos;Postleitzahlen&apos;,&apos;Lottozahlen&apos;,&apos;Augenfarbe&apos;,&apos;Haarfarbe&apos;,&apos;Hautfarbe&apos;,&apos;Tumorstadium&apos;), list([var=Grundgesamtheit1],[var=Grundgesamtheit2]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>Grundgesamtheit4</name>
+      <initializationCode id="86">
+        <code>chooseFromComplement(list(&apos;Lebensalter&apos;,&apos;Temperatur&apos;,&apos;Preis&apos;,&apos;Gewicht&apos;,&apos;Einkommen&apos;,&apos;Volumen&apos;,&apos;Augenzahl beim Würfeln&apos;,&apos;Staatsangehörigkeit&apos;,&apos;Familienstand&apos;,&apos;Güteklasse&apos;,&apos;Steuerklasse&apos;,&apos;Umsatz pro Monat&apos;,&apos;Niederschlagsmenge&apos;,&apos;Kursgewinn pro Aktie&apos;,&apos;Länge von Schrauben&apos;,&apos;Bücherbestand einer Bibliothek&apos;,&apos;Blutgruppe&apos;,&apos;sozialer Status&apos;,&apos;Postleitzahlen&apos;,&apos;Lottozahlen&apos;,&apos;Augenfarbe&apos;,&apos;Haarfarbe&apos;,&apos;Hautfarbe&apos;,&apos;Tumorstadium&apos;), list([var=Grundgesamtheit1],[var=Grundgesamtheit2],[var=Grundgesamtheit3]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>j</name>
+      <initializationCode id="88">
+        <code>randomIntegerBetween(0,11)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="89">
+      <name>bGrundgesamtheit1</name>
+      <initializationCode id="90">
+        <code>getFromList([var=j], list(&apos;Lebensalter&apos;,&apos;Temperatur&apos;,&apos;Preis&apos;,&apos;Gewicht&apos;,&apos;Einkommen&apos;,&apos;Volumen&apos;,&apos;Augenzahl beim Würfeln&apos;,&apos;Umsatz pro Monat&apos;,&apos;Niederschlagsmenge&apos;,&apos;Kursgewinn pro Aktie&apos;,&apos;Länge von Schrauben&apos;,&apos;Bücherbestand einer Bibliothek&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="91">
+      <name>bGrundgesamtheit2</name>
+      <initializationCode id="92">
+        <code>chooseFromComplement(list(&apos;Lebensalter&apos;,&apos;Temperatur&apos;,&apos;Preis&apos;,&apos;Gewicht&apos;,&apos;Einkommen&apos;,&apos;Volumen&apos;,&apos;Augenzahl beim Würfeln&apos;,&apos;Umsatz pro Monat&apos;,&apos;Niederschlagsmenge&apos;,&apos;Kursgewinn pro Aktie&apos;,&apos;Länge von Schrauben&apos;,&apos;Bücherbestand einer Bibliothek&apos;), list([var=bGrundgesamtheit1]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="93">
+      <name>bGrundgesamtheit3</name>
+      <initializationCode id="94">
+        <code>chooseFromComplement(list(&apos;Lebensalter&apos;,&apos;Temperatur&apos;,&apos;Preis&apos;,&apos;Gewicht&apos;,&apos;Einkommen&apos;,&apos;Volumen&apos;,&apos;Augenzahl beim Würfeln&apos;,&apos;Umsatz pro Monat&apos;,&apos;Niederschlagsmenge&apos;,&apos;Kursgewinn pro Aktie&apos;,&apos;Länge von Schrauben&apos;,&apos;Bücherbestand einer Bibliothek&apos;), list([var=bGrundgesamtheit1],[var=bGrundgesamtheit2]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="95">
+      <name>bGrundgesamtheit4</name>
+      <initializationCode id="96">
+        <code>chooseFromComplement(list(&apos;Lebensalter&apos;,&apos;Temperatur&apos;,&apos;Preis&apos;,&apos;Gewicht&apos;,&apos;Einkommen&apos;,&apos;Volumen&apos;,&apos;Augenzahl beim Würfeln&apos;,&apos;Umsatz pro Monat&apos;,&apos;Niederschlagsmenge&apos;,&apos;Kursgewinn pro Aktie&apos;,&apos;Länge von Schrauben&apos;,&apos;Bücherbestand einer Bibliothek&apos;), list([var=bGrundgesamtheit1],[var=bGrundgesamtheit2],[var=bGrundgesamtheit3]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="97">
+      <name>l11</name>
+      <initializationCode id="98">
+        <code>ifthenelse(equals([var=Grundgesamtheit1], &quot;Staatsangehörigkeit&quot;)||equals([var=Grundgesamtheit1], &quot;Familienstand&quot;)||equals([var=Grundgesamtheit1], &quot;Blutgruppe&quot;)||equals([var=Grundgesamtheit1], &quot;Postleitzahlen&quot;)||equals([var=Grundgesamtheit1], &quot;Lottozahlen&quot;)||equals([var=Grundgesamtheit1], &quot;Augenfarbe&quot;)||equals([var=Grundgesamtheit1], &quot;Haarfarbe&quot;)||equals([var=Grundgesamtheit1], &quot;Hautfarbe&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="99">
+      <name>l21</name>
+      <initializationCode id="100">
+        <code>ifthenelse(equals([var=Grundgesamtheit2], &quot;Staatsangehörigkeit&quot;)||equals([var=Grundgesamtheit2], &quot;Familienstand&quot;)||equals([var=Grundgesamtheit2], &quot;Blutgruppe&quot;)||equals([var=Grundgesamtheit2], &quot;Postleitzahlen&quot;)||equals([var=Grundgesamtheit2], &quot;Lottozahlen&quot;)||equals([var=Grundgesamtheit2], &quot;Augenfarbe&quot;)||equals([var=Grundgesamtheit2], &quot;Haarfarbe&quot;)||equals([var=Grundgesamtheit2], &quot;Hautfarbe&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="101">
+      <name>l31</name>
+      <initializationCode id="102">
+        <code>ifthenelse(equals([var=Grundgesamtheit3], &quot;Staatsangehörigkeit&quot;)||equals([var=Grundgesamtheit3], &quot;Familienstand&quot;)||equals([var=Grundgesamtheit3], &quot;Blutgruppe&quot;)||equals([var=Grundgesamtheit3], &quot;Postleitzahlen&quot;)||equals([var=Grundgesamtheit3], &quot;Lottozahlen&quot;)||equals([var=Grundgesamtheit3], &quot;Augenfarbe&quot;)||equals([var=Grundgesamtheit3], &quot;Haarfarbe&quot;)||equals([var=Grundgesamtheit3], &quot;Hautfarbe&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="103">
+      <name>l41</name>
+      <initializationCode id="104">
+        <code>ifthenelse(equals([var=Grundgesamtheit4], &quot;Staatsangehörigkeit&quot;)||equals([var=Grundgesamtheit4], &quot;Familienstand&quot;)||equals([var=Grundgesamtheit4], &quot;Blutgruppe&quot;)||equals([var=Grundgesamtheit4], &quot;Postleitzahlen&quot;)||equals([var=Grundgesamtheit4], &quot;Lottozahlen&quot;)||equals([var=Grundgesamtheit4], &quot;Augenfarbe&quot;)||equals([var=Grundgesamtheit4], &quot;Haarfarbe&quot;)||equals([var=Grundgesamtheit4], &quot;Hautfarbe&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="105">
+      <name>l12</name>
+      <initializationCode id="106">
+        <code>ifthenelse(equals([var=l11], 1)||equals([var=Grundgesamtheit1], &quot;Güteklasse&quot;)||equals([var=Grundgesamtheit1], &quot;Steuerklasse&quot;)||equals([var=Grundgesamtheit1], &quot;sozialer Status&quot;)||equals([var=Grundgesamtheit1], &quot;Tumorstadium&quot;), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="107">
+      <name>l22</name>
+      <initializationCode id="108">
+        <code>ifthenelse(equals([var=l21], 1)||equals([var=Grundgesamtheit2], &quot;Güteklasse&quot;)||equals([var=Grundgesamtheit2], &quot;Steuerklasse&quot;)||equals([var=Grundgesamtheit2], &quot;sozialer Status&quot;)||equals([var=Grundgesamtheit2], &quot;Tumorstadium&quot;), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="109">
+      <name>l32</name>
+      <initializationCode id="110">
+        <code>ifthenelse(equals([var=l31], 1)||equals([var=Grundgesamtheit3], &quot;Güteklasse&quot;)||equals([var=Grundgesamtheit3], &quot;Steuerklasse&quot;)||equals([var=Grundgesamtheit3], &quot;sozialer Status&quot;)||equals([var=Grundgesamtheit3], &quot;Tumorstadium&quot;), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="111">
+      <name>l42</name>
+      <initializationCode id="112">
+        <code>ifthenelse(equals([var=l41], 1)||equals([var=Grundgesamtheit4], &quot;Güteklasse&quot;)||equals([var=Grundgesamtheit4], &quot;Steuerklasse&quot;)||equals([var=Grundgesamtheit4], &quot;sozialer Status&quot;)||equals([var=Grundgesamtheit4], &quot;Tumorstadium&quot;), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="113">
+      <name>l13</name>
+      <initializationCode id="114">
+        <code>ifthenelse(equals([var=l12], 1)||equals([var=l11], 1), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="115">
+      <name>l23</name>
+      <initializationCode id="116">
+        <code>ifthenelse(equals([var=l22], 1)||equals([var=l21], 1), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="117">
+      <name>l33</name>
+      <initializationCode id="118">
+        <code>ifthenelse(equals([var=l32], 1)||equals([var=l31], 1), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="119">
+      <name>l43</name>
+      <initializationCode id="120">
+        <code>ifthenelse(equals([var=l42], 1)||equals([var=l41], 1), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="121">
+      <name>q1</name>
+      <initializationCode id="122">
+        <code>ifthenelse(equals([var=l11], 1), &quot;qualitativ&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="123">
+      <name>q2</name>
+      <initializationCode id="124">
+        <code>ifthenelse(equals([var=l21], 1), &quot;qualitativ&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="125">
+      <name>q3</name>
+      <initializationCode id="126">
+        <code>ifthenelse(equals([var=l31], 1), &quot;qualitativ&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="127">
+      <name>q4</name>
+      <initializationCode id="128">
+        <code>ifthenelse(equals([var=l41], 1), &quot;qualitativ&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="129">
+      <name>qq1</name>
+      <initializationCode id="130">
+        <code>ifthenelse(equals([var=l12], 1), &quot;quantitativ&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="131">
+      <name>qq2</name>
+      <initializationCode id="132">
+        <code>ifthenelse(equals([var=l22], 1), &quot;quantitativ&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="133">
+      <name>qq3</name>
+      <initializationCode id="134">
+        <code>ifthenelse(equals([var=l32], 1), &quot;quantitativ&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="135">
+      <name>qq4</name>
+      <initializationCode id="136">
+        <code>ifthenelse(equals([var=l42], 1), &quot;quantitativ&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="137">
+      <name>o1</name>
+      <initializationCode id="138">
+        <code>ifthenelse(equals([var=l13], 1), &quot;ordinal&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="139">
+      <name>o2</name>
+      <initializationCode id="140">
+        <code>ifthenelse(equals([var=l23], 1), &quot;ordinal&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="141">
+      <name>o3</name>
+      <initializationCode id="142">
+        <code>ifthenelse(equals([var=l33], 1), &quot;ordinal&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="143">
+      <name>o4</name>
+      <initializationCode id="144">
+        <code>ifthenelse(equals([var=l43], 1), &quot;ordinal&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="145">
+      <name>p1</name>
+      <initializationCode id="146">
+        <code>ifthenelse(equals([var=bGrundgesamtheit1], &quot;Augenzahl beim Würfeln&quot;)||equals([var=bGrundgesamtheit1], &quot;Staatsangehörigkeit&quot;)||equals([var=bGrundgesamtheit1], &quot;Familienstand&quot;)||equals([var=bGrundgesamtheit1], &quot;Güteklasse&quot;)||equals([var=bGrundgesamtheit1], &quot;Steuerklasse&quot;)||equals([var=bGrundgesamtheit1], &quot;Bücherbestand einer Bibliothek&quot;)||equals([var=bGrundgesamtheit1], &quot;Blutgruppe&quot;)||equals([var=bGrundgesamtheit1], &quot;sozialer Status&quot;)||equals([var=bGrundgesamtheit1], &quot;Postleitzahlen&quot;)||equals([var=bGrundgesamtheit1], &quot;Lottozahlen&quot;), 10, 01)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="147">
+      <name>p2</name>
+      <initializationCode id="148">
+        <code>ifthenelse(equals([var=bGrundgesamtheit2], &quot;Augenzahl beim Würfeln&quot;)||equals([var=bGrundgesamtheit2], &quot;Staatsangehörigkeit&quot;)||equals([var=bGrundgesamtheit2], &quot;Familienstand&quot;)||equals([var=bGrundgesamtheit2], &quot;Güteklasse&quot;)||equals([var=bGrundgesamtheit2], &quot;Steuerklasse&quot;)||equals([var=bGrundgesamtheit2], &quot;Bücherbestand einer Bibliothek&quot;)||equals([var=bGrundgesamtheit2], &quot;Blutgruppe&quot;)||equals([var=bGrundgesamtheit2], &quot;sozialer Status&quot;)||equals([var=bGrundgesamtheit2], &quot;Postleitzahlen&quot;)||equals([var=bGrundgesamtheit2], &quot;Lottozahlen&quot;), 10, 01)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="149">
+      <name>p3</name>
+      <initializationCode id="150">
+        <code>ifthenelse(equals([var=bGrundgesamtheit3], &quot;Augenzahl beim Würfeln&quot;)||equals([var=bGrundgesamtheit3], &quot;Staatsangehörigkeit&quot;)||equals([var=bGrundgesamtheit3], &quot;Familienstand&quot;)||equals([var=bGrundgesamtheit3], &quot;Güteklasse&quot;)||equals([var=bGrundgesamtheit3], &quot;Steuerklasse&quot;)||equals([var=bGrundgesamtheit3], &quot;Bücherbestand einer Bibliothek&quot;)||equals([var=bGrundgesamtheit3], &quot;Blutgruppe&quot;)||equals([var=bGrundgesamtheit3], &quot;sozialer Status&quot;)||equals([var=bGrundgesamtheit3], &quot;Postleitzahlen&quot;)||equals([var=bGrundgesamtheit3], &quot;Lottozahlen&quot;), 10, 01)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="151">
+      <name>p4</name>
+      <initializationCode id="152">
+        <code>ifthenelse(equals([var=bGrundgesamtheit4], &quot;Augenzahl beim Würfeln&quot;)||equals([var=bGrundgesamtheit4], &quot;Staatsangehörigkeit&quot;)||equals([var=bGrundgesamtheit4], &quot;Familienstand&quot;)||equals([var=bGrundgesamtheit4], &quot;Güteklasse&quot;)||equals([var=bGrundgesamtheit4], &quot;Steuerklasse&quot;)||equals([var=bGrundgesamtheit4], &quot;Bücherbestand einer Bibliothek&quot;)||equals([var=bGrundgesamtheit4], &quot;Blutgruppe&quot;)||equals([var=bGrundgesamtheit4], &quot;sozialer Status&quot;)||equals([var=bGrundgesamtheit4], &quot;Postleitzahlen&quot;)||equals([var=bGrundgesamtheit4], &quot;Lottozahlen&quot;), 10, 01)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="153">
+      <name>ss1</name>
+      <initializationCode id="154">
+        <code>ifthenelse(equals([var=bGrundgesamtheit1], &quot;Augenzahl beim Würfeln&quot;)||equals([var=bGrundgesamtheit1], &quot;Staatsangehörigkeit&quot;)||equals([var=bGrundgesamtheit1], &quot;Familienstand&quot;)||equals([var=bGrundgesamtheit1], &quot;Güteklasse&quot;)||equals([var=bGrundgesamtheit1], &quot;Steuerklasse&quot;)||equals([var=bGrundgesamtheit1], &quot;Bücherbestand einer Bibliothek&quot;)||equals([var=bGrundgesamtheit1], &quot;Blutgruppe&quot;)||equals([var=bGrundgesamtheit1], &quot;sozialer Status&quot;)||equals([var=bGrundgesamtheit1], &quot;Postleitzahlen&quot;)||equals([var=bGrundgesamtheit1], &quot;Lottozahlen&quot;), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="155">
+      <name>ss2</name>
+      <initializationCode id="156">
+        <code>ifthenelse(equals([var=bGrundgesamtheit2], &quot;Augenzahl beim Würfeln&quot;)||equals([var=bGrundgesamtheit2], &quot;Staatsangehörigkeit&quot;)||equals([var=bGrundgesamtheit2], &quot;Familienstand&quot;)||equals([var=bGrundgesamtheit2], &quot;Güteklasse&quot;)||equals([var=bGrundgesamtheit2], &quot;Steuerklasse&quot;)||equals([var=bGrundgesamtheit2], &quot;Bücherbestand einer Bibliothek&quot;)||equals([var=bGrundgesamtheit2], &quot;Blutgruppe&quot;)||equals([var=bGrundgesamtheit2], &quot;sozialer Status&quot;)||equals([var=bGrundgesamtheit2], &quot;Postleitzahlen&quot;)||equals([var=bGrundgesamtheit2], &quot;Lottozahlen&quot;), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="157">
+      <name>ss3</name>
+      <initializationCode id="158">
+        <code>ifthenelse(equals([var=bGrundgesamtheit3], &quot;Augenzahl beim Würfeln&quot;)||equals([var=bGrundgesamtheit3], &quot;Staatsangehörigkeit&quot;)||equals([var=bGrundgesamtheit3], &quot;Familienstand&quot;)||equals([var=bGrundgesamtheit3], &quot;Güteklasse&quot;)||equals([var=bGrundgesamtheit3], &quot;Steuerklasse&quot;)||equals([var=bGrundgesamtheit3], &quot;Bücherbestand einer Bibliothek&quot;)||equals([var=bGrundgesamtheit3], &quot;Blutgruppe&quot;)||equals([var=bGrundgesamtheit3], &quot;sozialer Status&quot;)||equals([var=bGrundgesamtheit3], &quot;Postleitzahlen&quot;)||equals([var=bGrundgesamtheit3], &quot;Lottozahlen&quot;), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="159">
+      <name>ss4</name>
+      <initializationCode id="160">
+        <code>ifthenelse(equals([var=bGrundgesamtheit4], &quot;Augenzahl beim Würfeln&quot;)||equals([var=bGrundgesamtheit4], &quot;Staatsangehörigkeit&quot;)||equals([var=bGrundgesamtheit4], &quot;Familienstand&quot;)||equals([var=bGrundgesamtheit4], &quot;Güteklasse&quot;)||equals([var=bGrundgesamtheit4], &quot;Steuerklasse&quot;)||equals([var=bGrundgesamtheit4], &quot;Bücherbestand einer Bibliothek&quot;)||equals([var=bGrundgesamtheit4], &quot;Blutgruppe&quot;)||equals([var=bGrundgesamtheit4], &quot;sozialer Status&quot;)||equals([var=bGrundgesamtheit4], &quot;Postleitzahlen&quot;)||equals([var=bGrundgesamtheit4], &quot;Lottozahlen&quot;), 0, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="161">
+      <name>antwort_11</name>
+      <initializationCode id="162">
+        <code>ifthenelse(equals([var=q1], &quot;qualitativ&quot;), 0, ifthenelse(equals([var=qq1], &quot;quantitativ&quot;), 1, 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="163">
+      <name>antwort_12</name>
+      <initializationCode id="164">
+        <code>ifthenelse(equals([var=q2], &quot;qualitativ&quot;), 0, ifthenelse(equals([var=qq2], &quot;quantitativ&quot;), 1, 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="165">
+      <name>antwort_13</name>
+      <initializationCode id="166">
+        <code>ifthenelse(equals([var=q3], &quot;qualitativ&quot;), 0, ifthenelse(equals([var=qq3], &quot;quantitativ&quot;), 1, 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="167">
+      <name>antwort_14</name>
+      <initializationCode id="168">
+        <code>ifthenelse(equals([var=q4], &quot;qualitativ&quot;), 0, ifthenelse(equals([var=qq4], &quot;quantitativ&quot;), 1, 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="169"/>
+  <dynamicMolecules id="170"/>
+  <resultFeedbackMappings id="171"/>
+</Exercise>

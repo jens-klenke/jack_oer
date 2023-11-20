@@ -1,0 +1,250 @@
+<Exercise id="1">
+  <name>IS10-R01 Konfidenzintervalle 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Konfidenzintervall aufstellen (mit t.test())
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">Z2VoYWx0IDwtIGMoW3Zhcj14MV0sW3Zhcj14Ml0sW3Zhcj14M10sW3Zhcj14NF0sW3Zhcj14NV0sW3Zhcj14Nl0sW3Zhcj14N10sW3Zhcj14OF0sW3Zhcj14OV0sW3Zhcj14MTBdLFt2YXI9eDExXSxbdmFyPXgxMl0sW3Zhcj14MTNdLFt2YXI9eDE0XSxbdmFyPXgxNV0p</content>
+      <uploadTimestamp>2022-05-11T11:24:10.113362</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$15$ Berufst&amp;auml;tige wurden nach ihrem monatlichen Nettoeinkommen befragt. Die entsprechenden Ergebnisse sind bereits in der Variable $\verb|gehalt|$ erfasst worden.&lt;br /&gt;&#xd;
+Stellen Sie von dieser Stichprobe ausgehend das $[var=conf]$-Konfidenzintervall f&amp;uuml;r das erwartete monatliche Nettoeinkommen $\mu$ eines Berufst&amp;auml;tigen auf.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Hinweis: Die Funktion $\verb|t.test()|$ erzeugt eine Liste mit mehreren Unterobjekten, u.a. dem Konfindenzintervall $\verb|conf.int|$. Allgemein k&amp;ouml;nnen Sie &amp;uuml;ber $\verb|Funktion()|\$\verb|Unterobjektname|$ darauf zugreifen.)&lt;/em&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Der Funktion $\verb|t.test(x,conf.level=0.95)|$ m&amp;uuml;ssen Sie neben der Stichprobe $\verb|x|$ auch das zu verwendende Konfidenzniveau $\verb|conf.level|$ (Standardwert ist hier $0.95$) &amp;uuml;bergeben.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Greifen Sie anschließend mit dem $\$$-Operator auf das Unterobjekt $\verb|conf.int|$ zu.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode>gehalt &lt;- c([var=x1],[var=x2],[var=x3],[var=x4],[var=x5],[var=x6],[var=x7],[var=x8],[var=x9],[var=x10],[var=x11],[var=x12],[var=x13],[var=x14],[var=x15])</initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+Achten Sie darauf, dass Sie die $\verb|t.test()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>      from ttest:V{FunctionCall} with
+      ttest.name=&quot;t.test&quot;
+      report 0 end
+    </query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="30">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>44087</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="31">
+          <testCases id="32">
+            <DynamicRTestCase id="33">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}
+  </postCode>
+              <expectedOutput>t.test(c([var=x1],[var=x2],[var=x3],[var=x4],[var=x5],[var=x6],[var=x7],[var=x8],[var=x9],[var=x10],[var=x11],[var=x12],[var=x13],[var=x14],[var=x15]),conf.level=[var=conf])$conf.int</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="34">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>44088</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="35">
+    <VariableDeclaration id="36">
+      <name>x1</name>
+      <initializationCode id="37">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>x2</name>
+      <initializationCode id="39">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>x3</name>
+      <initializationCode id="41">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>x4</name>
+      <initializationCode id="43">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>x5</name>
+      <initializationCode id="45">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>x6</name>
+      <initializationCode id="47">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>x7</name>
+      <initializationCode id="49">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>x8</name>
+      <initializationCode id="51">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>x9</name>
+      <initializationCode id="53">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>x10</name>
+      <initializationCode id="55">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="56">
+      <name>x11</name>
+      <initializationCode id="57">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="58">
+      <name>x12</name>
+      <initializationCode id="59">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="60">
+      <name>x13</name>
+      <initializationCode id="61">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="62">
+      <name>x14</name>
+      <initializationCode id="63">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="64">
+      <name>x15</name>
+      <initializationCode id="65">
+        <code>evaluateInR(&apos;round(runif(1, 500, 5000))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="66">
+      <name>conf</name>
+      <initializationCode id="67">
+        <code>evaluateInR(&apos;round(runif(1, 0.9, 0.999), 3)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="68"/>
+  <dynamicMolecules id="69"/>
+  <resultFeedbackMappings id="70"/>
+</Exercise>

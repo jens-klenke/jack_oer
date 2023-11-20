@@ -1,0 +1,211 @@
+<Exercise id="1">
+  <name>IS00-R10 Rechenregeln R10</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Transformation Celsius/Fahrenheit, Celsius randomisiert - Verwendung von Variable x ?
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">Y2Vsc2l1c19lc3Nlbl8yMDE1IDwtIGMoW3Zhcj14MV0sW3Zhcj14Ml0sW3Zhcj14M10sW3Zhcj14NF0sW3Zhcj14NV0sW3Zhcj14Nl0sW3Zhcj14N10sW3Zhcj14OF0sW3Zhcj14OV0sW3Zhcj14MTBdLFt2YXI9eDExXSxbdmFyPXgxMl0p</content>
+      <uploadTimestamp>2022-05-10T10:29:46.631514</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In den folgenden Aufgaben wollen wir uns anschauen, wie verschiedenste Rechenoperationen mit Vektoren in R durchgef&amp;uuml;hrt werden k&amp;ouml;nnen.&lt;br /&gt;&#xd;
+In dieser Aufgabe haben Sie zun&amp;auml;chst die monatlichen Durchschnittstemperaturen des Jahres 2015 f&amp;uuml;r Essen bekommen. Diese sind in der Variablen $\verb|celsius|$_$\verb|essen|$_$\verb|2015|$ abgespeichert. Allerdings wollen Sie die Daten auch Ihrem amerikanischen Freund in New York &amp;uuml;bermitteln. Damit dieser die Werte sinnvoll interpretieren kann, sollten Sie diese jedoch von Grad Celsius in Grad Fahrenheit umrechnen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Transformieren Sie daher die gegebenen Daten in Grad Fahrenheit. Benutzen Sie dazu den bereits vordefinierten Vektor $\verb|celsius|$_$\verb|essen|$_$\verb|2015|$ und speichern Sie das Ergebnis in dem Vektor $\verb|fahrenheit|$_$\verb|essen|$_$\verb|2015|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Hinweis: $^{\circ}F=32+1.8 ^{\circ}C$)&lt;/em&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Elementare Rechenoperationen (wie etwa Addition oder Multiplikation) werden auf den ganzen Vektor angewandt.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Beachten Sie die entsprechende Transformation!</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode>celsius_essen_2015 &lt;- c([var=x1],[var=x2],[var=x3],[var=x4],[var=x5],[var=x6],[var=x7],[var=x8],[var=x9],[var=x10],[var=x11],[var=x12])</initialCode>
+      <finalResultComputationString>#{c42166}</finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Achten Sie darauf, dass Sie die Variable $\verb|fahrenheit|$_$\verb|essen|$_$\verb|2015|$ nennen und die Variable $\verb|celsius|$_$\verb|essen|$_$\verb|2015|$ benutzen. Beachten Sie auï¿½erdem die angegebene Transformation!
+</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>		from lao:V{LeftAssignmentOperator}, n1,n2:V{NumericLiteral}, add:V{AddOperator}, mul:V{MulOperator}, cel,fah:V{Variable}, e1:E{LeftHandSide}, e2:E{RightHandSide} with 
+                lao -- e1 -&gt; fah and
+                fah.name=&quot;fahrenheit_essen_2015&quot; and
+                lao -- e2 -&gt; add and
+                add --&gt; n1 and
+                n1.value=32 and
+                add --&gt; mul and
+                mul --&gt; n2 and
+                n2.value=1.8 and
+                mul --&gt; cel and
+                cel.name=&quot;celsius_essen_2015&quot;
+		report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="30">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42166</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="31">
+    <VariableDeclaration id="32">
+      <name>x1</name>
+      <initializationCode id="33">
+        <code>evaluateInR(&apos;round(runif(1, 2.5, 5), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="34">
+      <name>x2</name>
+      <initializationCode id="35">
+        <code>evaluateInR(&apos;round(runif(1, 3.5, 6), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>x3</name>
+      <initializationCode id="37">
+        <code>evaluateInR(&apos;round(runif(1, 6.5, 9.5), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>x4</name>
+      <initializationCode id="39">
+        <code>evaluateInR(&apos;round(runif(1, 10.5, 13.5), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>x5</name>
+      <initializationCode id="41">
+        <code>evaluateInR(&apos;round(runif(1, 15.5, 19), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>x6</name>
+      <initializationCode id="43">
+        <code>evaluateInR(&apos;round(runif(1, 18.5, 22), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>x7</name>
+      <initializationCode id="45">
+        <code>evaluateInR(&apos;round(runif(1, 20, 23.5), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>x8</name>
+      <initializationCode id="47">
+        <code>evaluateInR(&apos;round(runif(1, 20, 23.5), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>x9</name>
+      <initializationCode id="49">
+        <code>evaluateInR(&apos;round(runif(1, 17, 20.5), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>x10</name>
+      <initializationCode id="51">
+        <code>evaluateInR(&apos;round(runif(1, 12.5, 16), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>x11</name>
+      <initializationCode id="53">
+        <code>evaluateInR(&apos;round(runif(1, 6.5, 10), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>x12</name>
+      <initializationCode id="55">
+        <code>evaluateInR(&apos;round(runif(1, 3.5, 7), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="56"/>
+  <dynamicMolecules id="57"/>
+  <resultFeedbackMappings id="58"/>
+</Exercise>

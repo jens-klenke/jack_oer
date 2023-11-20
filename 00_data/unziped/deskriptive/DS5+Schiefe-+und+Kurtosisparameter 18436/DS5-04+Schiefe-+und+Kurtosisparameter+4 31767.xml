@@ -1,0 +1,294 @@
+<Exercise id="1">
+  <name>DS5-04 Schiefe- und Kurtosisparameter 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Fechnersche Lageregel mit gegebenen Parametern anwenden
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <MCStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Eine Erhebung bez&amp;uuml;glich der Kaltmieten von 3-Zimmer Wohnungen in Essen ergab die folgenden Ma&amp;szlig;zahlen in Euro:&lt;br /&gt;&#xd;
+$$\begin{matrix}&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+\textrm{Arithmetisches Mittel} \enspace &amp;amp; [var=Am] \\&lt;br /&gt;&#xd;
+\textrm{Median} \enspace &amp;amp; [var=Med] \\&lt;br /&gt;&#xd;
+\textrm{Modus} \enspace &amp;amp; [var=Mod] \\&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+\end{matrix}$$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wenden Sie die Fechnersche Lageregel an. Welche der folgenden Aussagen trifft zu?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;</taskDescription>
+      <skipMessage> 
+	[var=l1]&lt;br /&gt;
+	[var=l2]&lt;br /&gt;
+	[var=l3]&lt;br /&gt;
+	[var=l4]&lt;br /&gt;
+	[var=l5]&lt;br /&gt;
+	</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>Bei schiefen Verteilungen stimmen $x_{\text{Med}}$, $x_{M}$ und $\bar{x}$ nicht überein. Nach der $\textbf{Fechner&apos;schen Lageregel}$ lässt sich aus ihrer Ordnung auf die Art der 
+		Schiefe schließen. $x_{\text{Med}}$ liegt dann zwischen $x_{M}$ und $\bar{x}$. $\bar{x}$ liegt wegen seiner Schwerpunkteigenschaft stets im auslaufenden Teil der Verteilung. 
+		</text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="20"/>
+      <variableUpdatesBeforeCheck id="21"/>
+      <variableUpdatesAfterCheck id="22"/>
+      <variableUpdatesOnNormalExit id="23"/>
+      <variableUpdatesOnRepeat id="24"/>
+      <variableUpdatesOnSkip id="25"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="26"/>
+      <answerOptions id="27">
+        <MCAnswer id="28">
+          <order>0</order>
+          <rule>VARIABLE</rule>
+          <text> Die Verteilung ist linkssteil</text>
+          <variableName>p1</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="29">
+          <order>1</order>
+          <rule>VARIABLE</rule>
+          <text> Die Verteilung ist rechtssteil</text>
+          <variableName>p2</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="30">
+          <order>2</order>
+          <rule>VARIABLE</rule>
+          <text> Die Verteilung ist linksschief</text>
+          <variableName>p3</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="31">
+          <order>3</order>
+          <rule>VARIABLE</rule>
+          <text> Die Verteilung ist rechtsschief</text>
+          <variableName>p4</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="32">
+          <order>4</order>
+          <rule>VARIABLE</rule>
+          <text> Die Verteilung ist symmetrisch</text>
+          <variableName>p5</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+      </answerOptions>
+      <randomize>true</randomize>
+      <singleChoice>false</singleChoice>
+      <correctAnswerFeedback> Richtig. </correctAnswerFeedback>
+      <defaultFeedback>  Leider nicht richtig. 
+&lt;br /&gt;
+&lt;br /&gt;
+	[var=l1]&lt;br /&gt;
+	[var=l2]&lt;br /&gt;
+	[var=l3]&lt;br /&gt;
+	[var=l4]&lt;br /&gt;
+	[var=l5]</defaultFeedback>
+      <defaultResult>0</defaultResult>
+      <extraFeedbacks id="33"/>
+    </MCStage>
+  </stages>
+  <startStage class="MCStage" reference="6"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>P</name>
+      <initializationCode id="36">
+        <code>randomIntegerBetween(1,100)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="37">
+      <name>x1</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(300,379)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>Med</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(380,399)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>x3</name>
+      <initializationCode id="42">
+        <code>randomIntegerBetween(400,430)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>Schiefe2</name>
+      <initializationCode id="44">
+        <code>ifthenelse([var=P]&lt;46, 1, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>Schiefe1</name>
+      <initializationCode id="46">
+        <code>ifthenelse([var=P]&lt;91, [var=Schiefe2], 3)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>Mod2</name>
+      <initializationCode id="48">
+        <code>ifthenelse(equals([var=Schiefe1], 1), [var=x1], [var=x3])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>Mod</name>
+      <initializationCode id="50">
+        <code>ifthenelse(equals([var=Schiefe1], 3), [var=Med], [var=Mod2])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>Am2</name>
+      <initializationCode id="52">
+        <code>ifthenelse(equals([var=Schiefe1], 1), [var=x3], [var=x1])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>Am</name>
+      <initializationCode id="54">
+        <code>ifthenelse(equals([var=Schiefe1], 3), [var=Med], [var=Am2])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>p1</name>
+      <initializationCode id="56">
+        <code>ifthenelse(equals([var=Schiefe1], 1), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>p2</name>
+      <initializationCode id="58">
+        <code>ifthenelse(equals([var=Schiefe1], 2), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>p3</name>
+      <initializationCode id="60">
+        <code>ifthenelse(equals([var=Schiefe1], 2), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>p4</name>
+      <initializationCode id="62">
+        <code>ifthenelse(equals([var=Schiefe1], 1), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>p5</name>
+      <initializationCode id="64">
+        <code>ifthenelse(equals([var=Schiefe1], 3), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>l1</name>
+      <initializationCode id="66">
+        <code>ifthenelse(equals([var=p1], 1), &quot;Die Verteilung ist linkssteil&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>l2</name>
+      <initializationCode id="68">
+        <code>ifthenelse(equals([var=p2], 1), &quot;Die Verteilung ist rechtssteil&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>l3</name>
+      <initializationCode id="70">
+        <code>ifthenelse(equals([var=p3], 1), &quot;Die Verteilung ist linksschief&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>l4</name>
+      <initializationCode id="72">
+        <code>ifthenelse(equals([var=p4], 1), &quot;Die Verteilung ist rechtsschief&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>l5</name>
+      <initializationCode id="74">
+        <code>ifthenelse(equals([var=p5], 1), &quot;Die Verteilung ist symmetrisch&quot;, &quot;&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="75"/>
+  <dynamicMolecules id="76"/>
+  <resultFeedbackMappings id="77"/>
+</Exercise>

@@ -1,0 +1,113 @@
+<Exercise id="1">
+  <name>IS00-R15 Rechenregeln R15</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Länge eines Vektors mit Hilfe des length()-Befehls berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">aGlucnVuZGUgPC0gYyg0LDgsMTMsNyw0LDQsNCwzLDQsMiw0LDMsMiwyLDEsMywzKQ0KcnVlY2tydW5kZSA8LSBjKDIsMiw0LDIsMSwxLDEsMiwzLDUsMywzLDIsMiwxLDEsMSkNCnNhaXNvbiA8LSBjKGhpbnJ1bmRlLHJ1ZWNrcnVuZGUpDQo=</content>
+      <uploadTimestamp>2022-05-10T10:29:46.590798</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nachdem Sie in der letzten Aufgabe beide Vektoren zu einem Vektor zusammengef&amp;uuml;hrt haben, ist es nun an der Zeit zu &amp;uuml;berpr&amp;uuml;fen, ob ihr Vektor auch die zu erwartende L&amp;auml;nge hat.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&amp;Uuml;berpr&amp;uuml;fen Sie dies mit dem entsprechenden Befehl in R. Haben Sie das Ergebnis erwartet?&lt;br /&gt;&#xd;
+Die Variablen der letzten Aufgabe (einschlie&amp;szlig;lich der Variablen $\verb|saison|$) stehen bereits im Environment zur Verf&amp;uuml;gung und m&amp;uuml;ssen nicht neu definiert werden.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Hinweis: Eine Bundesliga-Saison hat 34 Spieltage.)&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Sie können sich die Länge eines Vektors mit Hilfe des $\verb|length()|$-Befehl ausgeben lassen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode>hinrunde &lt;- c(4,8,13,7,4,4,4,3,4,2,4,3,2,2,1,3,3)
+rueckrunde &lt;- c(2,2,4,2,1,1,1,2,3,5,3,3,2,2,1,1,1)
+saison &lt;- c(hinrunde,rueckrunde)</initialCode>
+      <finalResultComputationString>#{c42132}</finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Benutzen Sie die $\verb|length()|$-Funktion.
+    </feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>		from len:V{FunctionCall}, sai:V{Variable} with 
+                len --&gt;* sai and
+                len.name=&quot;length&quot; and
+                sai.name=&quot;saison&quot;
+		report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42132</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="30"/>
+  <jSXGraphs id="31"/>
+  <dynamicMolecules id="32"/>
+  <resultFeedbackMappings id="33"/>
+</Exercise>

@@ -1,0 +1,198 @@
+<Exercise id="1">
+  <name>IS06-12 Verteilungen diskreter Zufallsvariablen 12</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Schwaches Gesetz der großen Zahlen, Kugelurne
+Wofür sind ant1, ant2 und ansa
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In einer Kugelurne befinden sich 100 Kugeln. Der Anteil roter Kugeln sei $\pi$ und ist Ihnen leider nicht bekannt.&lt;br /&gt;&#xd;
+Sie haben die M&amp;ouml;glichkeit [var=zmz] Kugeln mit Zur&amp;uuml;cklegen zu ziehen oder aber nur [var=zoz] Kugeln, wenn Sie nicht zur&amp;uuml;cklegen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+F&amp;uuml;r welche Variante w&amp;uuml;rden Sie sich entscheiden, wenn sie $\pi$ m&amp;ouml;glichst genau sch&amp;auml;tzen m&amp;ouml;chten?&lt;br /&gt;&#xd;
+(Begr&amp;uuml;nden Sie Ihre Entscheidung numerisch)&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Es ist besser &amp;nbsp;&lt;select name=&quot;field1&quot;&gt;&lt;option value=&quot;0&quot;&gt;field1&lt;/option&gt;&lt;/select&gt;&amp;nbsp; zu ziehen.</taskDescription>
+      <skipMessage>    Es ist besser [var=ant1] Kugeln [var=ant2] Zurücklegen zu ziehen.
+  </skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>Das Ziel sollte sein, eine m&amp;ouml;glichst kleine Varianz in der Sch&amp;auml;tzung zu haben.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text>      Ziehen mit Zurücklegen $\rightarrow$ Binomialverteilung
+      Ziehen ohne Zurücklegen $\rightarrow$ Hypergeometrische V.
+
+
+    </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="21"/>
+      <variableUpdatesBeforeCheck id="22"/>
+      <variableUpdatesAfterCheck id="23"/>
+      <variableUpdatesOnNormalExit id="24"/>
+      <variableUpdatesOnRepeat id="25"/>
+      <variableUpdatesOnSkip id="26"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="27"/>
+      <rules id="28"/>
+      <fillInFields id="29"/>
+      <dropDownFields id="30">
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="31">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <randomize>false</randomize>
+          <items id="32">
+            <string>[var=zoz] Kugeln ohne Zurücklegen</string>
+            <string>[var=zmz] Kugeln mit Zurücklegen</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+      </dropDownFields>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.</defaultFeedback>
+      <correctAnswerRules id="33">
+        <Rule id="34">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="35">
+            <code>[input=field1]==[var=ant]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="36">
+    <VariableDeclaration id="37">
+      <name>zoz</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(30,40)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>zmz</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(40,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>m2</name>
+      <initializationCode id="42">
+        <code>99/(100-([var=zoz]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>m3</name>
+      <initializationCode id="44">
+        <code>([var=zoz])/([var=zmz])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>m</name>
+      <initializationCode id="46">
+        <code>([var=m3])*([var=m2])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>ant</name>
+      <initializationCode id="48">
+        <code>ifthenelse([var=m]&lt;1, 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>ant1</name>
+      <initializationCode id="50">
+        <code>ifthenelse([var=m]&lt;1, [var=zmz], [var=zoz])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>ant2</name>
+      <initializationCode id="52">
+        <code>ifthenelse([var=m]&lt;1, &quot;mit&quot;, &quot;ohne&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>ansa</name>
+      <initializationCode id="54">
+        <code>round(([var=m])*10000.0)/10000.0</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="55"/>
+  <dynamicMolecules id="56"/>
+  <resultFeedbackMappings id="57"/>
+</Exercise>

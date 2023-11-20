@@ -1,0 +1,508 @@
+<Exercise id="1">
+  <name>IS06-15 Verteilungen diskreter Zufallsvariablen 15</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Memory-Aufgabe
+1. Stage: W´keit bei N Paaren ein Paar zu ziehen
+2. Stage: Erwartungswert der Züge bis zum ersten Paar
+3. Stage: W´keit bei N Paaren ein weiteres Paar zu ziehen
+4. Stage: durchschnittliche Dauer eines Memory-Spiels, wenn sich beide Spieler nichts merken und nur raten (Summe der Erwartungswerte)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In dieser Aufgabe wollen wir herausfinden, wie lange im Schnitt ein Memory-Spiel dauert, wenn beide Spieler sich nichts merken und nur raten.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Dazu berechnen Sie zun&amp;auml;chst die Wahrscheinlichkeit bei $N = [var=N]$ Paaren, genau ein Paar zu ziehen. &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Nachdem Sie eine Karte aufgedeckt haben, haben Sie noch $2N-1$ verdeckt liegende Karten. Dementsprechend ist die gesuchte Wahrscheinlichkeit: $\frac{1}{2N-1}=\frac{1}{2\cdot [var=N]-1}=[var=sol1]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie viele Z&amp;uuml;ge brauchen Sie im Durchschnitt bis Sie das erste Paar ziehen? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+            <skipMessage>Es ist hier nicht (wie &amp;uuml;blich) nach der Anzahl der Misserfolge bis zum ersten Erfolg (erstes Paar) gefragt sondern nach der Anzahl der Bernoulliversuche, die notwendig sind um einen Erfolg zu haben. Demzufolge ist zwar die geometrische Verteilung heranzuziehen, der entsprechende Erwartungswert l&amp;auml;sst sich aber wie folgt berechnen: $E(X)=\frac{1}{p}=\frac{1}{\frac{1}{2N-1}}=2N-1=[var=RestKarten]$</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="24">
+                  <internalName>3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, nachdem Sie bereits ein Paar gezogen haben, ein weiteres Paar zu ziehen? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                  <skipMessage>Nachdem Sie eine Karte aufgedeckt haben, haben Sie noch $2N-3$ verdeckt liegende Karten. Dementsprechend ist die gesuchte Wahrscheinlichkeit: $\frac{1}{2N-3}=\frac{1}{2\cdot [var=N]-3}=[var=sol2]$.</skipMessage>
+                  <defaultTransition id="25">
+                    <conditionExpression id="26">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="27">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="28">
+                    <StageTransition id="29">
+                      <conditionExpression id="30">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="31">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" id="32">
+                        <internalName>4</internalName>
+                        <externalName>Stage 4</externalName>
+                        <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie nun die Anzahl an Z&amp;uuml;gen, die ein Memory-Spiel im Durchschnitt dauert. &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                        <skipMessage>Die richtige L&amp;ouml;sung lautet: $[var=sol3]$.</skipMessage>
+                        <defaultTransition id="33">
+                          <conditionExpression id="34">
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="35">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>true</isRepeat>
+                        </defaultTransition>
+                        <skipTransitions id="36">
+                          <StageTransition id="37">
+                            <conditionExpression id="38">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="39">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </skipTransitions>
+                        <stageTransitions id="40">
+                          <StageTransition id="41">
+                            <conditionExpression id="42">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="43">
+                              <code>[meta=stageCurrentResult]&gt;=100</code>
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </stageTransitions>
+                        <hints id="44">
+                          <StageHint id="45">
+                            <stagehint__order>0</stagehint__order>
+                            <text>Sie m&amp;uuml;ssen die Summe der Erwartungswerte der einzelnen Z&amp;uuml;ge berechnen. Versuchen Sie diese Summe allgemein aufzuschreiben und dann zu vereinfachen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="46">
+                            <stagehint__order>1</stagehint__order>
+                            <text>$E(\text{Anzahl der Z&amp;uuml;ge f&amp;uuml;r }N\text{ Paare})=\sum\limits_{j=1}^N E(\text{Anzahl der Z&amp;uuml;ge f&amp;uuml;r das }j\text{te Paar})$.&lt;br /&gt;
+Aus Frage 2 wissen Sie: $E(\text{Anzahl der Z&amp;uuml;ge f&amp;uuml;r das }1\text{ste Paar})=2N-1$.&lt;br /&gt;
+F&amp;uuml;r das zweite Paar ergibt sich dann: $E(\text{Anzahl der Z&amp;uuml;ge f&amp;uuml;r das }2\text{te Paar})=2N-2-1$. Allgemein: $\sum\limits_{j=1}^N E(\text{Anzahl der Z&amp;uuml;ge f&amp;uuml;r das }j\text{te Paar})=\sum\limits_{j=1}^N 2N-2(j-1)-1$. Versuchen Sie diesen Ausdruck nun weiter zu vereinfachen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="47">
+                            <stagehint__order>2</stagehint__order>
+                            <text>Unter Anwendung von Summenregeln vereinfacht sich der Ausdruck wie folgt:
+
+$\sum\limits_{j=1}^N 2N-2(j-1)-1=2N^2+N-2\frac{N(N+1)}{2}=N^2$.
+
+Nun müssen Sie nur noch entsprechend einsetzen.</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                        </hints>
+                        <variableUpdatesOnEnter id="48"/>
+                        <variableUpdatesBeforeCheck id="49"/>
+                        <variableUpdatesAfterCheck id="50"/>
+                        <variableUpdatesOnNormalExit id="51"/>
+                        <variableUpdatesOnRepeat id="52"/>
+                        <variableUpdatesOnSkip id="53"/>
+                        <weight>1</weight>
+                        <orderIndex>3</orderIndex>
+                        <allowSkip>true</allowSkip>
+                        <resources id="54"/>
+                        <rules id="55"/>
+                        <fillInFields id="56">
+                          <FillInField id="57">
+                            <name>field1</name>
+                            <orderIndex>0</orderIndex>
+                            <size>6</size>
+                            <formularEditorType>NUMBER</formularEditorType>
+                          </FillInField>
+                        </fillInFields>
+                        <dropDownFields id="58"/>
+                        <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                        <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Die richtige L&amp;ouml;sung lautet: $[var=sol3]$.</defaultFeedback>
+                        <correctAnswerRules id="59">
+                          <Rule id="60">
+                            <name>CorrectAnswer1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="61">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=sol3]-0.0011&amp;&amp;[input=field1]&lt;[var=sol3]+0.0011</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <points>0</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </correctAnswerRules>
+                        <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                        <defaultResult>0</defaultResult>
+                      </targetStage>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="62">
+                    <StageTransition id="63">
+                      <conditionExpression id="64">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="65">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="32"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="66">
+                    <StageHint id="67">
+                      <stagehint__order>0</stagehint__order>
+                      <text>&amp;Uuml;berlegen Sie nun wieder, wie viele Karten Sie noch zur Verf&amp;uuml;gung haben nachdem sie eine Karte aufgedeckt haben.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                    <StageHint id="68">
+                      <stagehint__order>1</stagehint__order>
+                      <text>Da bereits ein Paar gezogen wurde, fallen $2$ Karten weg. Also bleiben, nachdem eine Karte aufgedeckt wurde, noch $2N-3$ Karten übrig.</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="69"/>
+                  <variableUpdatesBeforeCheck id="70"/>
+                  <variableUpdatesAfterCheck id="71"/>
+                  <variableUpdatesOnNormalExit id="72"/>
+                  <variableUpdatesOnRepeat id="73"/>
+                  <variableUpdatesOnSkip id="74"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="75"/>
+                  <rules id="76"/>
+                  <fillInFields id="77">
+                    <FillInField id="78">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="79"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Nachdem Sie eine Karte aufgedeckt haben, haben Sie noch $2N-3$ verdeckt liegende Karten. Dementsprechend ist die gesuchte Wahrscheinlichkeit: $\frac{1}{2N-3}=\frac{1}{2\cdot [var=N]-3}=[var=sol2]$.</defaultFeedback>
+                  <correctAnswerRules id="80">
+                    <Rule id="81">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="82">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=sol2]-0.0011&amp;&amp;[input=field1]&lt;[var=sol2]+0.0011</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="83">
+              <StageTransition id="84">
+                <conditionExpression id="85">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="86">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="24"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="87">
+              <StageHint id="88">
+                <stagehint__order>0</stagehint__order>
+                <text>&amp;Uuml;berlegen Sie sich zun&amp;auml;chst, welche Verteilung f&amp;uuml;r die vorliegende Situation angebracht ist.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="89">
+                <stagehint__order>1</stagehint__order>
+                <text>Berechnen Sie dann den Erwartungswert dieser Verteilung.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="90">
+                <stagehint__order>2</stagehint__order>
+                <text> Es ist hier nicht (wie üblich) nach der Anzahl der Misserfolge bis zum ersten Erfolg (erstes Paar) gefragt sondern nach der Anzahl der Bernoulliversuche, die notwendig sind um einen Erfolg zu haben. Demzufolge ist zwar die geometrische
+    Verteilung heranzuziehen, der entsprechende Erwartungswert lässt sich aber wie folgt berechnen:
+
+    $E(X)=\frac{1}{p}.$</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="91"/>
+            <variableUpdatesBeforeCheck id="92"/>
+            <variableUpdatesAfterCheck id="93"/>
+            <variableUpdatesOnNormalExit id="94"/>
+            <variableUpdatesOnRepeat id="95"/>
+            <variableUpdatesOnSkip id="96"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="97"/>
+            <rules id="98"/>
+            <fillInFields id="99">
+              <FillInField id="100">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="101"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Es ist hier nicht (wie &amp;uuml;blich) nach der Anzahl der Misserfolge bis zum ersten Erfolg (erstes Paar) gefragt sondern nach der Anzahl der Bernoulliversuche, die notwendig sind um einen Erfolg zu haben. Demzufolge ist zwar die geometrische Verteilung heranzuziehen, der entsprechende Erwartungswert l&amp;auml;sst sich aber wie folgt berechnen: $E(X)=\frac{1}{p}=\frac{1}{\frac{1}{2N-1}}=2N-1=[var=RestKarten]$</defaultFeedback>
+            <correctAnswerRules id="102">
+              <Rule id="103">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="104">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=RestKarten]-0.0011&amp;&amp;[input=field1]&lt;[var=RestKarten]+0.0011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="105">
+        <StageTransition id="106">
+          <conditionExpression id="107">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="108">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="109">
+        <StageHint id="110">
+          <stagehint__order>0</stagehint__order>
+          <text>      Überlegen Sie zunächst, wie viele Karten sie noch zur Verfügung haben nachdem sie eine Karte aufgedeckt haben.
+	  
+    </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="111"/>
+      <variableUpdatesBeforeCheck id="112"/>
+      <variableUpdatesAfterCheck id="113"/>
+      <variableUpdatesOnNormalExit id="114"/>
+      <variableUpdatesOnRepeat id="115"/>
+      <variableUpdatesOnSkip id="116"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="117"/>
+      <rules id="118"/>
+      <fillInFields id="119">
+        <FillInField id="120">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="121"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Nachdem Sie eine Karte aufgedeckt haben, haben Sie noch $2N-1$ verdeckt liegende Karten. Dementsprechend ist die gesuchte Wahrscheinlichkeit: $\frac{1}{2N-1}=\frac{1}{2\cdot [var=N]-1}=[var=sol1]$.</defaultFeedback>
+      <correctAnswerRules id="122">
+        <Rule id="123">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="124">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=sol1]-0.0011&amp;&amp;[input=field1]&lt;[var=sol1]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+    <FillInStage reference="24"/>
+    <FillInStage reference="32"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="125">
+    <VariableDeclaration id="126">
+      <name>N</name>
+      <initializationCode id="127">
+        <code>evaluateInR(&apos;sample(10:30, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="128">
+      <name>RestKarten</name>
+      <initializationCode id="129">
+        <code>2*[var=N]-1</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="130">
+      <name>RestKarten2</name>
+      <initializationCode id="131">
+        <code>2*[var=N]-3</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="132">
+      <name>sol1</name>
+      <initializationCode id="133">
+        <code>evaluateInR(&apos;round(1/[var=RestKarten], 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="134">
+      <name>sol2</name>
+      <initializationCode id="135">
+        <code>evaluateInR(&apos;round(1/[var=RestKarten2], 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="136">
+      <name>sol3</name>
+      <initializationCode id="137">
+        <code>evaluateInR(&apos;([var=N])^2&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="138"/>
+  <dynamicMolecules id="139"/>
+  <resultFeedbackMappings id="140"/>
+</Exercise>

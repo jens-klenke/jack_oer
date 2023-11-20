@@ -1,0 +1,208 @@
+<Exercise id="1">
+  <name>DS3-R04 Lageparameter R4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Geometrisches Mittel berechnen (BIP)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2"/>
+  <resources id="3">
+    <ExerciseResource id="4">
+      <content id="5">QklQIDwtIGMoMS4wMTksMC45OSwxLjAyNSwxLjAxNywxLjAwOCwxLjAxOCwxLjAyLDEuMDIsMS4wMywxLjAxNywxLDAuOTkzLDEuMDEyLDEuMDA3LDEuMDM3LDEuMDMzLDEuMDExLDAuOTQ0LDEuMDQxLDEuMDM3LDEuMDA1LDEuMDA1LDEuMDE2LDEuMDE3KQ==</content>
+      <uploadTimestamp>2022-03-02T16:24:36.404664</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="6">
+    <RStage id="7">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie das durchschnittliche BIP-Wachstum f&amp;uuml;r die Jahre $2009-2021$ f&amp;uuml;r Deutschland.&lt;br /&gt;&#xd;
+Die entsprechenden Wachstumsfaktoren sind bereits in der Variablen $\verb|BIP|$ vordefiniert.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="8">
+        <conditionExpression id="9">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="10">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="11"/>
+      <stageTransitions id="12"/>
+      <hints id="13">
+        <StageHint id="14">
+          <stagehint__order>0</stagehint__order>
+          <text>Benutzen Sie d&amp;iacute;e Funktion $\verb|geometric.mean()|$.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="15"/>
+      <variableUpdatesBeforeCheck id="16"/>
+      <variableUpdatesAfterCheck id="17"/>
+      <variableUpdatesOnNormalExit id="18"/>
+      <variableUpdatesOnRepeat id="19"/>
+      <variableUpdatesOnSkip id="20"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="21"/>
+      <initialCode>BIP &lt;- c([var=x1], [var=x2], [var=x3], [var=x4], [var=x5], [var=x6], [var=x7], [var=x8], [var=x9], [var=x11], [var=x11], [var=x12])</initialCode>
+      <finalResultComputationString>min(#{c17815},#{c17814})</finalResultComputationString>
+      <testCasetuples id="22">
+        <TestCaseTuple id="23">
+          <testCases id="24">
+            <StaticRTestCase id="25">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $\verb|geometric.mean|$-Funktion und achten Sie darauf, dass Sie die vordefinierte Variable $\verb|BIP|$ benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="26">
+                <RGReQLQuery id="27">
+                  <query>		from geom:V{FunctionCall}, bip:V{Variable}  with 
+                geom.name=&quot;geometric.mean&quot; and
+                geom --&gt;* bip and
+                bip.name=&quot;BIP&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="28">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>17814</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="29">
+          <testCases id="30">
+            <DynamicRTestCase id="31">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $\verb|geometric.mean()|$-Funktion.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>geometric.mean(c([var=x1], [var=x2], [var=x3], [var=x4], [var=x5], [var=x6], [var=x7], [var=x8], [var=x9], [var=x11], [var=x11], [var=x12]))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="32">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>17815</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="7"/>
+  <variableDeclarations id="33">
+    <VariableDeclaration id="34">
+      <name>x1</name>
+      <initializationCode id="35">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>x2</name>
+      <initializationCode id="37">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>x3</name>
+      <initializationCode id="39">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>x4</name>
+      <initializationCode id="41">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>x5</name>
+      <initializationCode id="43">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>x6</name>
+      <initializationCode id="45">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>x7</name>
+      <initializationCode id="47">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>x8</name>
+      <initializationCode id="49">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>x9</name>
+      <initializationCode id="51">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>x10</name>
+      <initializationCode id="53">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>x11</name>
+      <initializationCode id="55">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="56">
+      <name>x12</name>
+      <initializationCode id="57">
+        <code>evaluateInR(&apos;round(runif(1,1,5),1)/100+1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="58"/>
+  <dynamicMolecules id="59"/>
+  <resultFeedbackMappings id="60"/>
+</Exercise>

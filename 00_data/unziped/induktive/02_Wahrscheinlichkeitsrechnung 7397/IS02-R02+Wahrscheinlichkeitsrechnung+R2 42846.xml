@@ -1,0 +1,198 @@
+<Exercise id="1">
+  <name>IS02-R02 Wahrscheinlichkeitsrechnung R2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Satz der totalen Wahrscheinlichkeit
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">YmV6aXJrIDwtIGMoW3Zhcj1iZXppcmsxXSxbdmFyPWJlemlyazJdKSAgICAgICANCnJlc3VsdCA8LSBjKFt2YXI9cmVzMV0sW3Zhcj1yZXMyXSk=</content>
+      <uploadTimestamp>2022-05-10T11:51:00.691024</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+F&amp;uuml;r Kommunalwahlen wird eine Stadt in 2 Bezirke aufgeteilt. Der Anteil der W&amp;auml;hler in den jeweiligen Bezirken ist in der Variablen $\verb|bezirk|$ gespeichert. Der Anteil der Stimmen f&amp;uuml;r den B&amp;uuml;rgermeister im jeweiligen Bezirk ist in der Variablen $\verb|result|$ gespeichert (Bezirk 1 $\Rightarrow [var=bezirk1p]$% der W&amp;auml;hler $\Rightarrow [var=res1p]$% der Stimmen).&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie viele Stimmen hat der B&amp;uuml;rgermeister insgesamt bekommen?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Erinnern sie sich an den Satz der totalen Wahrscheinlichkeit.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Durch eine $\verb|*|$-Verkn&amp;uuml;pfung zweier Vektoren werden die jeweiligen Elemente der Vektoren miteinander multipliziert. Mit der Funktion $\verb|sum()|$ k&amp;ouml;nnen sie alle Elemente eines Vektors aufsummieren.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Der Satz der totalen Wahrscheinlichkeit lautet:&lt;br /&gt;
+$P(B)=\sum_{j=1}^n P (B\mid A_j)\cdot P(A_j)$.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode>bezirk &lt;- c([var=bezirk1],[var=bezirk2])       
+result &lt;- c([var=res1],[var=res2])</initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+
+Achten Sie darauf, die $\verb|sum()|$ oder $\verb|crossprod()|$-Funktion zu nutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>      from sum, psum:V{FunctionCall} with
+      sum.name=&quot;sum&quot; or
+      psum.name=&quot;crossprod&quot;
+      report 0 end
+    </query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="30">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42850</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="31">
+          <testCases id="32">
+            <DynamicRTestCase id="33">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>sum(c([var=bezirk1],[var=bezirk2])*c([var=res1],[var=res2]))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="34">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42851</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="35">
+    <VariableDeclaration id="36">
+      <name>bezirk1</name>
+      <initializationCode id="37">
+        <code>evaluateInR(&apos;round(runif(1, 0.4, 0.6), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>bezirk2</name>
+      <initializationCode id="39">
+        <code>evaluateInR(&apos;round(1-[var=bezirk1], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>res1</name>
+      <initializationCode id="41">
+        <code>evaluateInR(&apos;round(runif(1, 0.2, 0.5), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>res2</name>
+      <initializationCode id="43">
+        <code>evaluateInR(&apos;round(runif(1, 0.4, 0.8), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>bezirk1p</name>
+      <initializationCode id="45">
+        <code>evaluateInR(&apos;round([var=bezirk1]*100, 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>bezirk2p</name>
+      <initializationCode id="47">
+        <code>evaluateInR(&apos;round([var=bezirk2]*100, 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>res1p</name>
+      <initializationCode id="49">
+        <code>evaluateInR(&apos;round([var=res1]*100, 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>res2p</name>
+      <initializationCode id="51">
+        <code>evaluateInR(&apos;round([var=res2]*100, 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="52"/>
+  <dynamicMolecules id="53"/>
+  <resultFeedbackMappings id="54"/>
+</Exercise>

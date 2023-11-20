@@ -1,0 +1,174 @@
+<Exercise id="1">
+  <name>IS00-R05 Rechenregeln R05</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Pi auf vier Nachkommastellen runden
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Hat man Dezimalzahlen vorliegen, kann es sinnvoll sein diese zu runden, da man ansonsten eine sehr lange Zahl hat, die sehr schnell un&amp;uuml;bersichtlich werden kann. Manchmal ist es sogar so, dass man Dezimalzahlen runden muss, weil das Aufschreiben aller Nachkommastellen schlichtweg unm&amp;ouml;glich ist.&amp;nbsp;Ein Beispiel daf&amp;uuml;r ist die ber&amp;uuml;hmte Kreiszahl $\pi$, welche unendlich viele Nachkommastellen hat.&amp;nbsp;Hier ist es unumg&amp;auml;nglich, sie approximativ zu runden.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Runden Sie nun bitte selber die oben angesprochene Zahl $\pi\approx[var=pii]$ mit Hilfe von R auf vier Nachkommastellen (Hinweis: $\pi$ steht standardm&amp;auml;&amp;szlig;ig in R zur Verf&amp;uuml;gung und kann mit $\verb|pi|$ aufgerufen werden.)&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Code testen&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.).&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Sie k&amp;ouml;nnen Zahlen in R mit der $\verb|round()|$-Funktion runden.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Geben Sie zuerst die zu rundende Zahl, danach die Nachkommastellen an.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="15"/>
+      <variableUpdatesBeforeCheck id="16"/>
+      <variableUpdatesAfterCheck id="17"/>
+      <variableUpdatesOnNormalExit id="18"/>
+      <variableUpdatesOnRepeat id="19"/>
+      <variableUpdatesOnSkip id="20"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="21"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="22">
+        <TestCaseTuple id="23">
+          <testCases id="24">
+            <StaticRTestCase id="25">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+
+Benutzen Sie die $\verb|round()|$-Funktion und geben Sie die Anzahl der Nachkommastellen als Parameter innerhalb der Funktion an.
+</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="26">
+                <RGReQLQuery id="27">
+                  <query>		from r:V{FunctionCall}, pi:V{Variable}, n:V{NumericLiteral}, parl:V{ParameterList}, e1,e2:E{Parameter} with 
+                r.name=&quot;round&quot; and
+		r --&gt; parl and
+                parl -- e1 -&gt; pi and
+                parl -- e2 -&gt; n and
+                e1.position = 0 and
+                e2.position = 1 and
+                pi.name=&quot;pi&quot; and
+                n.value=4
+		report 0 end
+		</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="28">
+                  <query>from r:V{FunctionCall}, eq:V{LeftAssignmentOperator3}, pi,dig:V{Variable}, n:V{NumericLiteral}, parl:V{ParameterList}, lh:E{LeftHandSide}, rh:E{RightHandSide} with 
+                r.name=&quot;round&quot; and
+        r --&gt; parl and
+                parl --&gt; pi and
+                parl --&gt; eq and
+                pi.name=&quot;pi&quot; and
+                eq -- lh -&gt; dig and
+                eq -- rh -&gt; n and
+                dig.name=&quot;digits&quot; and
+                n.value=4
+        report 0 end
+</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="29">
+                  <query>from r:V{FunctionCall}, eq:V{LeftAssignmentOperator3}, x,pi:V{Variable}, n:V{NumericLiteral}, parl:V{ParameterList}, e1,e2:E{Parameter}, lh:E{LeftHandSide}, rh:E{RightHandSide} with 
+                r.name=&quot;round&quot; and
+        r --&gt; parl and
+                parl -- e1 -&gt; eq and
+                parl -- e2 -&gt; n and
+                e1.position = 0 and
+                e2.position = 1 and
+                eq -- lh -&gt; x and
+                x.name=&quot;x&quot; and
+                eq -- rh -&gt; pi and
+                pi.name=&quot;pi&quot; and
+                n.value=4
+        report 0 end
+</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="30">
+                  <query>from r:V{FunctionCall}, eq1,eq2:V{LeftAssignmentOperator3}, x,pi,dig:V{Variable}, n:V{NumericLiteral}, parl:V{ParameterList}, lh1,lh2:E{LeftHandSide}, rh1,rh2:E{RightHandSide} with 
+                r.name=&quot;round&quot; and
+        r --&gt; parl and
+                parl --&gt; eq1 and
+                parl --&gt; eq2 and
+                eq1 -- lh1 -&gt; x and
+                x.name=&quot;x&quot; and
+                eq1 -- rh1 -&gt; pi and
+                pi.name=&quot;pi&quot; and
+                eq2 -- lh2 -&gt; dig and
+                dig.name=&quot;digits&quot; and
+                eq2 -- rh2 -&gt; n and
+                n.value=4
+        report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>42045</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="32">
+    <VariableDeclaration id="33">
+      <name>pii</name>
+      <initializationCode id="34">
+        <code>evaluateInR(&apos;round(pi,8)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="35">
+      <name>sol</name>
+      <initializationCode id="36">
+        <code>evaluateInR(&apos;round(pi,4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="37"/>
+  <dynamicMolecules id="38"/>
+  <resultFeedbackMappings id="39"/>
+</Exercise>

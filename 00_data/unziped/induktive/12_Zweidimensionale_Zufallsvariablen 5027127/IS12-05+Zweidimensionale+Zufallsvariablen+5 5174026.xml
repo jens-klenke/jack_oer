@@ -1,0 +1,171 @@
+<Exercise id="1">
+  <name>IS12-05 Zweidimensionale Zufallsvariablen 5</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Biv. PDF, Randdichte, E, Kovarianz
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2"/>
+  <resources id="3"/>
+  <stages id="4">
+    <FillInStage id="5">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Es sei die zweidimensionale Dichtefunktion von $X,Y$ gegeben durch \begin{align*} f_{X,Y}(x,y)=\frac{1}{2\pi\sqrt{1-[var=rho]^2}}\exp\left(-\frac{1}{2(1-[var=rho]^2)}(x^2-2\cdot [var=rho]\cdot x\cdot y+y^2)\right) \end{align*} Bestimmen Sie die Randdichte $f_X(x)$.&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$f_X([var=frage1])=$:&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+      <skipMessage>&lt;u&gt;&lt;strong&gt;Die Stage wurde durch &amp;Uuml;berspringen verlassen.&lt;/strong&gt;&lt;/u&gt;</skipMessage>
+      <defaultTransition id="6">
+        <conditionExpression id="7">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="8">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="9"/>
+      <stageTransitions id="10"/>
+      <hints id="11">
+        <StageHint id="12">
+          <stagehint__order>0</stagehint__order>
+          <text>Benutzen Sie $\int_{-\infty}^{\infty}\exp\left(-\frac{z^2}{2a}\right)\mathrm{d}z=\sqrt{2\pi a}$. (Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="5"/>
+        </StageHint>
+        <StageHint id="13">
+          <stagehint__order>1</stagehint__order>
+          <text>Quadratische Ergänzung: $a^2-2\cdot a\cdot b=a^2 -2\cdot a\cdot b+b^2-b^2=(a-b)^2-b^2$</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="5"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="14"/>
+      <variableUpdatesBeforeCheck id="15"/>
+      <variableUpdatesAfterCheck id="16"/>
+      <variableUpdatesOnNormalExit id="17"/>
+      <variableUpdatesOnRepeat id="18"/>
+      <variableUpdatesOnSkip id="19"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="20"/>
+      <rules id="21"/>
+      <fillInFields id="22">
+        <FillInField id="23">
+          <name>fillin1</name>
+          <orderIndex>0</orderIndex>
+          <size>10</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="24"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>&lt;u&gt;&lt;strong&gt;Das Ergebnis ist falsch.&lt;/strong&gt;&lt;/u&gt;</defaultFeedback>
+      <correctAnswerRules id="25">
+        <Rule id="26">
+          <name>Feedback 1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="27">
+            <code>!isEmpty([input=fillin1]) &amp;&amp; isRealNumber([input=fillin1]) &amp;&amp;
+abs(
+([input=fillin1])-([var=sol1])
+) &lt;= 0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Das Ergebnis ist richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage id="28">
+      <internalName>2</internalName>
+      <externalName>Stage 2</externalName>
+      <taskDescription>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:675px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sind $X$ und $Y$ abhängig oder unabhängig? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;$f_X([var=frage1])=$:&amp;nbsp;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;input name=&quot;fillin1&quot; size=&quot;10&quot; type=&quot;text&quot; value=&quot;fillin1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="29">
+        <conditionExpression id="30">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="31">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="32"/>
+      <stageTransitions id="33"/>
+      <hints id="34"/>
+      <variableUpdatesOnEnter id="35"/>
+      <variableUpdatesBeforeCheck id="36"/>
+      <variableUpdatesAfterCheck id="37"/>
+      <variableUpdatesOnNormalExit id="38"/>
+      <variableUpdatesOnRepeat id="39"/>
+      <variableUpdatesOnSkip id="40"/>
+      <weight>1</weight>
+      <orderIndex>1</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="41"/>
+      <rules id="42"/>
+      <fillInFields id="43"/>
+      <dropDownFields id="44"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback></defaultFeedback>
+      <correctAnswerRules id="45"/>
+      <correctAnswerFeedback></correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="5"/>
+  <variableDeclarations id="46">
+    <VariableDeclaration id="47">
+      <name>rho</name>
+      <initializationCode id="48">
+        <code>round(randomIntegerBetween(10, 91) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>frage1</name>
+      <initializationCode id="50">
+        <code>round(randomIntegerBetween(50, 201) / 100, 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>sol1</name>
+      <initializationCode id="52">
+        <code>round(dnorm([var=frage1]), 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="53"/>
+  <dynamicMolecules id="54"/>
+  <resultFeedbackMappings id="55"/>
+</Exercise>

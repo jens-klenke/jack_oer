@@ -1,0 +1,226 @@
+<Exercise id="1">
+  <name>DS3-R07 Lageparameter R7</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Harmonisches Mittel berechnen (KGV Portfolio)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2"/>
+  <resources id="3">
+    <ExerciseResource id="4">
+      <content id="5">S0dWIDwtIGMoW3Zhcj14MV0sW3Zhcj14Ml0sW3Zhcj14M10sW3Zhcj14NF0sW3Zhcj14NV0pDQppbnZlc3RtZW50IDwtIGMoW3Zhcj1pMV0sW3Zhcj1pMl0sW3Zhcj1pM10sW3Zhcj1pNF0sW3Zhcj1pNV0pDQo=</content>
+      <uploadTimestamp>2022-03-02T16:24:36.499519</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="6">
+    <RStage id="7">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Finanzwirtschaftliche Entwicklungen an der B&amp;ouml;rse zwingen Sie nun dazu, ihr Portfolio anzupassen.&lt;br /&gt;&#xd;
+Zwar behalten Sie alle $5$ Positionen in Ihrem Portfolio, allerdings &amp;auml;ndern Sie den Anteil jeder Position am Portfolio.&lt;br /&gt;&#xd;
+Das jeweils investierte Kapital pro Position (in Mio. $\$$) finden Sie im Vektor $\verb|investment|$.&lt;br /&gt;&#xd;
+Das KGV jeder Position hat sich aufgrund der Entwicklungen ebenfalls ge&amp;auml;ndert. Die aktualisierten KGV finden Sie wieder im Vektor $\verb|KGV|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie das KGV des Portfolios, diesmal allerdings ohne die Funktion $\verb|harmonic.mean()|$ zu benutzen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="8">
+        <conditionExpression id="9">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="10">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="11"/>
+      <stageTransitions id="12"/>
+      <hints id="13">
+        <StageHint id="14">
+          <stagehint__order>0</stagehint__order>
+          <text>Machen Sie sich zun&amp;auml;chst noch einmal klar, wie die Formel f&amp;uuml;r das harmonische Mittel aussieht.&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>1</stagehint__order>
+          <text>$\bar x_H=\frac{n}{\sum_{i=1}^m \frac{n_i}{x_i}}$&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>2</stagehint__order>
+          <text>$n$ ist gem&amp;auml;&amp;szlig; Aufgabenstellung bekannt und die $n_i$ sowie $x_i$ liegen Ihnen in Vektorform vor.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+        <StageHint id="17">
+          <stagehint__order>3</stagehint__order>
+          <text>Um die Summe &amp;uuml;ber einen Vektor zu bilden, k&amp;ouml;nnen Sie die Funktion $\verb|sum()|$ benutzen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="18"/>
+      <variableUpdatesBeforeCheck id="19"/>
+      <variableUpdatesAfterCheck id="20"/>
+      <variableUpdatesOnNormalExit id="21"/>
+      <variableUpdatesOnRepeat id="22"/>
+      <variableUpdatesOnSkip id="23"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="24"/>
+      <initialCode>KGV &lt;- c([var=x1], [var=x2], [var=x3], [var=x4], [var=x5])
+investment &lt;- c([var=i1], [var=i2], [var=i3], [var=i4], [var=i5])
+</initialCode>
+      <finalResultComputationString>min(#{c17884},#{c17883})</finalResultComputationString>
+      <testCasetuples id="25">
+        <TestCaseTuple id="26">
+          <testCases id="27">
+            <StaticRTestCase id="28">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Schauen Sie sich nochmal die Formel an und benutzen Sie die vordefinierten Variablen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="29">
+                <RGReQLQuery id="30">
+                  <query>		from sum:V{FunctionCall}, kgv,inv:V{Variable}  with 
+                sum.name=&quot;sum&quot; and
+                sum --&gt;* kgv and
+                sum --&gt;* inv and
+                kgv.name=&quot;KGV&quot; and
+                inv.name=&quot;investment&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>17883</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="32">
+          <testCases id="33">
+            <DynamicRTestCase id="34">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Schauen Sie sich bei Bedarf nochmal die Formel für das harmonische Mittel an.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>100/sum(c(22.5,12.5,12.5,30,22.5)/c([var=x1],[var=x2],[var=x3],[var=x4],[var=x5]))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="35">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>17884</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="7"/>
+  <variableDeclarations id="36">
+    <VariableDeclaration id="37">
+      <name>x1</name>
+      <initializationCode id="38">
+        <code>evaluateInR(&apos;round(runif(1, 80, 90), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>x2</name>
+      <initializationCode id="40">
+        <code>evaluateInR(&apos;round(runif(1, 10, 15), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>x3</name>
+      <initializationCode id="42">
+        <code>evaluateInR(&apos;round(runif(1, 80, 100), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>x4</name>
+      <initializationCode id="44">
+        <code>evaluateInR(&apos;round(runif(1, 70, 90), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>x5</name>
+      <initializationCode id="46">
+        <code>evaluateInR(&apos;round(runif(1, 20, 30), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>i1</name>
+      <initializationCode id="48">
+        <code>22.5</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>i2</name>
+      <initializationCode id="50">
+        <code>12.5</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>i3</name>
+      <initializationCode id="52">
+        <code>12.5</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>i4</name>
+      <initializationCode id="54">
+        <code>30</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>i5</name>
+      <initializationCode id="56">
+        <code>22.5</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="57"/>
+  <dynamicMolecules id="58"/>
+  <resultFeedbackMappings id="59"/>
+</Exercise>

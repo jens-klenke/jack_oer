@@ -1,0 +1,757 @@
+<Exercise id="1">
+  <name>IS02-04 Wahrscheinlichkeitsrechnung 4 </name>
+  <publicDescription></publicDescription>
+  <internalNotes>Lostrommelaufgabe
+1.Stage: W&apos;keit für Ziehen aus Trommel B
+2.Stage: W&apos;keit für Gewinn in Trommel B
+3.Stage: W&apos;keit für Trommel B UND Gewinn
+4.Stage: W&apos;keit, nichts zu gewinnen.
+5.Stage: bedingte W&apos;keit berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>3</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+Auf einer Werbeveranstaltung wird folgendes Gl&amp;uuml;cksspiel durchgef&amp;uuml;hrt. Ein Kandidat zieht zuerst ein Los aus einer gr&amp;uuml;nen Urne, um die Lotterietrommel zu bestimmen, aus der er anschlie&amp;szlig;end ein Los ziehen darf, mit dem er zu seinem Gewinn kommen kann.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In der gr&amp;uuml;nen Urne sind $[var=A]$ Lose f&amp;uuml;r die Trommel A, $[var=B]$ Lose f&amp;uuml;r die Trommel B und $[var=C]$ Lose f&amp;uuml;r die Trommel C.&lt;br /&gt;&#xd;
+Die Gewinne sind wie folgt auf die 3 Trommeln verteilt:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+A enth&amp;auml;lt $[var=GA]$ Gewinn(e), B $[var=GB]$ und C $[var=GC]$ Gewinne.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In den Trommeln befinden sich insgesamt jeweils $10$ Lose.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass der Kandidat aus der Lostrommel B ziehen darf?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; $P(B) =$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>Die Wahrscheinlichkeit, dass der Kandidat aus der Lostrommel B ziehen darf betr&amp;auml;gt $\frac{[var=B]}{[var=Urne]} = [var=ansag]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass der Kandidat einen Gewinn erh&amp;auml;lt, wenn er aus Trommel B zieht?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; $P(G|B) =$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+            <skipMessage>Die Wahrscheinlichkeit, dass der Kandidat einen Gewinn erh&amp;auml;lt, wenn er aus Trommel B zieht, betr&amp;auml;gt $\frac{[var=GB]}{10} =[var=ansbg]$.</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="24">
+                  <internalName>3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass der Kandidat aus der Lostrommel B zieht und einen Gewinn erh&amp;auml;lt?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; $P(B\cap G) =$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+                  <skipMessage>Die Wahrscheinlichkeit, dass der Kandidat aus der Lostrommel B zieht und einen Gewinn erh&amp;auml;lt, betr&amp;auml;gt $\frac{[var=GB]}{10} \cdot \frac{[var=B]}{[var=Urne]} = [var=anscg]$.</skipMessage>
+                  <defaultTransition id="25">
+                    <conditionExpression id="26">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="27">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="28">
+                    <StageTransition id="29">
+                      <conditionExpression id="30">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="31">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" id="32">
+                        <internalName>4</internalName>
+                        <externalName>Stage 4</externalName>
+                        <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass der Kandidat bei dem Spiel &amp;uuml;berhaupt keinen Gewinn bekommt?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; $P(\bar{G}) =$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+                        <skipMessage>Die Wahrscheinlichkeit, dass der Kandidat bei dem Spiel &amp;uuml;berhaupt keinen Gewinn bekommt, betr&amp;auml;gt $\frac{[var=A]}{[var=Urne]}\frac{10-[var=GA]}{10}+\frac{[var=B]}{[var=Urne]}\frac{10-[var=GB]}{10}+\frac{[var=C]}{[var=Urne]}\frac{10-[var=GC]}{10} = [var=ansdg]$.</skipMessage>
+                        <defaultTransition id="33">
+                          <conditionExpression id="34">
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="35">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>true</isRepeat>
+                        </defaultTransition>
+                        <skipTransitions id="36">
+                          <StageTransition id="37">
+                            <conditionExpression id="38">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="39">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <targetStage class="FillInStage" id="40">
+                              <internalName>5</internalName>
+                              <externalName>Stage 5</externalName>
+                              <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass wenn der Kandidat einen Gewinn erhalten hat, diesen aus der Trommel B gezogen hat?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; $P(B|G) =$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+                              <skipMessage>Die Wahrscheinlichkeit, dass wenn der Kandidat einen Gewinn erhalten hat, diesen aus der Trommel B gezogen hat, betr&amp;auml;gt $\frac{[var=anscg]}{1-[var=ansdg]} = [var=anseg]$.</skipMessage>
+                              <defaultTransition id="41">
+                                <conditionExpression id="42">
+                                  <domain>MATH</domain>
+                                </conditionExpression>
+                                <stageExpression id="43">
+                                  <domain>MATH</domain>
+                                </stageExpression>
+                                <isRepeat>true</isRepeat>
+                              </defaultTransition>
+                              <skipTransitions id="44">
+                                <StageTransition id="45">
+                                  <conditionExpression id="46">
+                                    <code></code>
+                                    <domain>MATH</domain>
+                                  </conditionExpression>
+                                  <stageExpression id="47">
+                                    <domain>MATH</domain>
+                                  </stageExpression>
+                                  <isRepeat>false</isRepeat>
+                                </StageTransition>
+                              </skipTransitions>
+                              <stageTransitions id="48">
+                                <StageTransition id="49">
+                                  <conditionExpression id="50">
+                                    <code></code>
+                                    <domain>MATH</domain>
+                                  </conditionExpression>
+                                  <stageExpression id="51">
+                                    <code>[meta=stageCurrentResult]&gt;=100</code>
+                                    <domain>MATH</domain>
+                                  </stageExpression>
+                                  <isRepeat>false</isRepeat>
+                                </StageTransition>
+                              </stageTransitions>
+                              <hints id="52">
+                                <StageHint id="53">
+                                  <stagehint__order>0</stagehint__order>
+                                  <text>Betrachten Sie erneut die Formel f&amp;uuml;r die bedingte Wahrscheinlichkeit.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                                  <malus>0</malus>
+                                  <stage class="FillInStage" reference="40"/>
+                                </StageHint>
+                                <StageHint id="54">
+                                  <stagehint__order>1</stagehint__order>
+                                  <text>Die bedingte Wahrscheinlichkeit errechnet sich durch: $P(B|G)=\dfrac{P(B\cap G)}{P(G)}$.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                                  <malus>0</malus>
+                                  <stage class="FillInStage" reference="40"/>
+                                </StageHint>
+                                <StageHint id="55">
+                                  <stagehint__order>2</stagehint__order>
+                                  <text>Die Wahrscheinlichkeit $P(B\cap G)$ ist bekannt aus Aufgabenteil 3.&lt;br /&gt;
+&lt;br /&gt;
+Wie berechnet man die Wahrscheinlichkeit $P(G)$?&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                                  <malus>0</malus>
+                                  <stage class="FillInStage" reference="40"/>
+                                </StageHint>
+                                <StageHint id="56">
+                                  <stagehint__order>3</stagehint__order>
+                                  <text>$P(G) = 1 - P(\bar{G})$, wobei $P(\bar{G})$ bekannt ist aus Aufgabenteil 4.&lt;br /&gt;
+Nun brauchen Sie Z&amp;auml;hler und Nenner nur noch einsetzen und haben die gesuchte Wahrscheinlichkeit berechnet.</text>
+                                  <malus>0</malus>
+                                  <stage class="FillInStage" reference="40"/>
+                                </StageHint>
+                              </hints>
+                              <variableUpdatesOnEnter id="57"/>
+                              <variableUpdatesBeforeCheck id="58"/>
+                              <variableUpdatesAfterCheck id="59"/>
+                              <variableUpdatesOnNormalExit id="60"/>
+                              <variableUpdatesOnRepeat id="61"/>
+                              <variableUpdatesOnSkip id="62"/>
+                              <weight>1</weight>
+                              <orderIndex>4</orderIndex>
+                              <allowSkip>true</allowSkip>
+                              <resources id="63"/>
+                              <rules id="64"/>
+                              <fillInFields id="65">
+                                <FillInField id="66">
+                                  <name>field1</name>
+                                  <orderIndex>0</orderIndex>
+                                  <size>6</size>
+                                  <formularEditorType>NUMBER</formularEditorType>
+                                </FillInField>
+                              </fillInFields>
+                              <dropDownFields id="67"/>
+                              <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                              <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Die Wahrscheinlichkeit, dass wenn der Kandidat einen Gewinn erhalten hat, diesen aus der Trommel B gezogen hat, betr&amp;amp;auml;gt $\frac{[var=anscg]}{1-[var=ansdg]} = [var=anseg]$.</defaultFeedback>
+                              <correctAnswerRules id="68">
+                                <Rule id="69">
+                                  <name>CorrectAnswer1</name>
+                                  <orderIndex>1</orderIndex>
+                                  <validationExpression id="70">
+                                    <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=anseg]-0.021&amp;&amp;[input=field1]&lt;[var=anseg]+0.021</code>
+                                    <domain>MATH</domain>
+                                  </validationExpression>
+                                  <points>0</points>
+                                  <terminal>false</terminal>
+                                </Rule>
+                              </correctAnswerRules>
+                              <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                              <defaultResult>0</defaultResult>
+                            </targetStage>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </skipTransitions>
+                        <stageTransitions id="71">
+                          <StageTransition id="72">
+                            <conditionExpression id="73">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="74">
+                              <code>[meta=stageCurrentResult]&gt;=100</code>
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <targetStage class="FillInStage" reference="40"/>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </stageTransitions>
+                        <hints id="75">
+                          <StageHint id="76">
+                            <stagehint__order>0</stagehint__order>
+                            <text>Betrachten Sie den Satz der totalen Wahrscheinlichkeit.&lt;br /&gt;
+&lt;br /&gt;
+Da wir in dieser Aufgabe die Wahrscheinlichkeiten bedingt auf die einzelnen Urnen kennen, l&amp;auml;sst sich die gesuchte Wahrscheinlichkeit auf bedingte Wahrscheinlichkeiten zur&amp;uuml;ckf&amp;uuml;hren.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="77">
+                            <stagehint__order>1</stagehint__order>
+                            <text>Mit dem Satz von der totalen Wahrscheinlichkeit ergibt sich:&lt;br /&gt;
+$P(\bar{G})=P(\bar{G}|A)P(A) + P(\bar{G}|B)P(B) + P(\bar{G}|C)P(C)$&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="78">
+                            <stagehint__order>2</stagehint__order>
+                            <text>Die Wahrscheinlichkeiten f&amp;uuml;r das Ziehen aus Urne $A$, $B$ oder $C$ kann man analog zu Frage 1 berechnen.&lt;br /&gt;
+&lt;br /&gt;
+Die Wahrscheinlichkeiten f&amp;uuml;r KEINEN Gewinn in den einzelnen Urnen kann man analog zu Frage 2 berechnen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                          <StageHint id="79">
+                            <stagehint__order>3</stagehint__order>
+                            <text>F&amp;uuml;r Urne B ergab sich aus Frage 1:&lt;br /&gt;
+$P(B) = \frac{[var=B]}{[var=Urne]}$.&lt;br /&gt;
+&lt;br /&gt;
+Analog berechnet sich:&lt;br /&gt;
+$P(\bar{G}|B) = \frac{10-[var=GB]}{10}$, da sich in der Urne $[var=GB]$ Gewinnlose und daher $10 - [var=GB]$ Nieten befinden.</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="32"/>
+                          </StageHint>
+                        </hints>
+                        <variableUpdatesOnEnter id="80"/>
+                        <variableUpdatesBeforeCheck id="81"/>
+                        <variableUpdatesAfterCheck id="82"/>
+                        <variableUpdatesOnNormalExit id="83"/>
+                        <variableUpdatesOnRepeat id="84"/>
+                        <variableUpdatesOnSkip id="85"/>
+                        <weight>1</weight>
+                        <orderIndex>3</orderIndex>
+                        <allowSkip>true</allowSkip>
+                        <resources id="86"/>
+                        <rules id="87"/>
+                        <fillInFields id="88">
+                          <FillInField id="89">
+                            <name>field1</name>
+                            <orderIndex>0</orderIndex>
+                            <size>6</size>
+                            <formularEditorType>NUMBER</formularEditorType>
+                          </FillInField>
+                        </fillInFields>
+                        <dropDownFields id="90"/>
+                        <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                        <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Die Wahrscheinlichkeit, dass der Kandidat bei dem Spiel &amp;uuml;berhaupt keinen Gewinn bekommt, betr&amp;auml;gt $\frac{[var=A]}{[var=Urne]}\frac{10-[var=GA]}{10}+\frac{[var=B]}{[var=Urne]}\frac{10-[var=GB]}{10}+\frac{[var=C]}{[var=Urne]}\frac{10-[var=GC]}{10} = [var=ansdg]$.</defaultFeedback>
+                        <correctAnswerRules id="91">
+                          <Rule id="92">
+                            <name>CorrectAnswer1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="93">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ansdg]-0.021&amp;&amp;[input=field1]&lt;[var=ansdg]+0.021</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <points>0</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </correctAnswerRules>
+                        <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                        <defaultResult>0</defaultResult>
+                      </targetStage>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="94">
+                    <StageTransition id="95">
+                      <conditionExpression id="96">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="97">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="32"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="98">
+                    <StageHint id="99">
+                      <stagehint__order>0</stagehint__order>
+                      <text>Gesucht ist also die Wahrscheinlichkeit f&amp;uuml;r die Schnittmenge der beiden Ereignisse &amp;quot;Ziehen aus Trommel B&amp;quot; und &amp;quot;Ziehen eines Gewinns&amp;quot;.&lt;br /&gt;
+&lt;br /&gt;
+Betrachten Sie dazu die Formel f&amp;uuml;r bedingte Wahrscheinlichkeiten.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                    <StageHint id="100">
+                      <stagehint__order>1</stagehint__order>
+                      <text>$P(G|B) = \frac{P(B\cap G)}{P(B)}$.&lt;br /&gt;
+&lt;br /&gt;
+&amp;Uuml;berlegen Sie, wie diese Gleichung nach der gesuchten Wahrscheinlichkeit umstellbar ist und ob die verwendeten Wahrscheinlichkeiten bekannt sind.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                    <StageHint id="101">
+                      <stagehint__order>2</stagehint__order>
+                      <text>$P(B\cap G) = P(G|B) \cdot P(B)$.&lt;br /&gt;
+&lt;br /&gt;
+$P(G|B)$ ist bereits aus Frage 2 bekannt, $P(B)$ ist aus Frage 1 bekannt.</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="24"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="102"/>
+                  <variableUpdatesBeforeCheck id="103"/>
+                  <variableUpdatesAfterCheck id="104"/>
+                  <variableUpdatesOnNormalExit id="105"/>
+                  <variableUpdatesOnRepeat id="106"/>
+                  <variableUpdatesOnSkip id="107"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="108"/>
+                  <rules id="109"/>
+                  <fillInFields id="110">
+                    <FillInField id="111">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="112"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Die Wahrscheinlichkeit, dass der Kandidat aus der Lostrommel B zieht und einen Gewinn erh&amp;auml;lt, betr&amp;auml;gt $\frac{[var=GB]}{10} \cdot \frac{[var=B]}{[var=Urne]} = [var=anscg]$.</defaultFeedback>
+                  <correctAnswerRules id="113">
+                    <Rule id="114">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="115">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=anscg]-0.021&amp;&amp;[input=field1]&lt;[var=anscg]+0.021</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="116">
+              <StageTransition id="117">
+                <conditionExpression id="118">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="119">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="24"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="120">
+              <StageHint id="121">
+                <stagehint__order>0</stagehint__order>
+                <text>Es wird nun ausschlie&amp;szlig;lich Trommel B betrachtet, da eine auf die Trommel B bedingte Wahrscheinlichkeit gesucht ist.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="122">
+                <stagehint__order>1</stagehint__order>
+                <text>&amp;Uuml;berlegen Sie, wieviele g&amp;uuml;nstige Ausg&amp;auml;nge f&amp;uuml;r das betrachtete Ereignis und wieviele Ausg&amp;auml;nge insgesamt vorliegen und wenden Sie dann erneut die Laplace-W&amp;#39;keit an.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="123">
+                <stagehint__order>2</stagehint__order>
+                <text>In Urne B befinden sich insgesamt $10$ Lose, davon sind genau $[var=GB]$ Gewinnlose.</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="124"/>
+            <variableUpdatesBeforeCheck id="125"/>
+            <variableUpdatesAfterCheck id="126"/>
+            <variableUpdatesOnNormalExit id="127"/>
+            <variableUpdatesOnRepeat id="128"/>
+            <variableUpdatesOnSkip id="129"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="130"/>
+            <rules id="131"/>
+            <fillInFields id="132">
+              <FillInField id="133">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="134"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Die Wahrscheinlichkeit, dass der Kandidat einen Gewinn erh&amp;auml;lt, wenn er aus Trommel B zieht, betr&amp;auml;gt $\frac{[var=GB]}{10} =[var=ansbg]$.</defaultFeedback>
+            <correctAnswerRules id="135">
+              <Rule id="136">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="137">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ansbg]-0.011&amp;&amp;[input=field1]&lt;[var=ansbg]+0.011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="138">
+        <StageTransition id="139">
+          <conditionExpression id="140">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="141">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="142">
+        <StageHint id="143">
+          <stagehint__order>0</stagehint__order>
+          <text>Schauen Sie sich noch einmal den Begriff der Laplace-Wahrscheinlichkeit an.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="144">
+          <stagehint__order>1</stagehint__order>
+          <text>In der Urne befinden sich insgesammt $[var=$Urne]$ Lose, wovon $[var=$B]$ zum Ziehen aus Lostrommel B berechtigen.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="145">
+          <stagehint__order>2</stagehint__order>
+          <text>Die Anzahl aller Kugeln in der Urne sind also alle m&amp;ouml;glichen Ausg&amp;auml;nge des Zufallsexperiments: $|\Omega| = [var=Urne]$.&lt;br /&gt;
+&lt;br /&gt;
+Die Anzahl der Kugeln f&amp;uuml;r Lostrommel B in der Urne sind also alle g&amp;uuml;nstigen Ausg&amp;auml;nge des Zufallsexperiments: $|B| = [var=B]$.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="146"/>
+      <variableUpdatesBeforeCheck id="147"/>
+      <variableUpdatesAfterCheck id="148"/>
+      <variableUpdatesOnNormalExit id="149"/>
+      <variableUpdatesOnRepeat id="150"/>
+      <variableUpdatesOnSkip id="151"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="152"/>
+      <rules id="153"/>
+      <fillInFields id="154">
+        <FillInField id="155">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="156"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Die Wahrscheinlichkeit, dass der Kandidat aus der Lostrommel B ziehen darf betr&amp;amp;auml;gt $\frac{[var=B]}{[var=Urne]} = [var=ansag]$.</defaultFeedback>
+      <correctAnswerRules id="157">
+        <Rule id="158">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="159">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=ansag]-0.011&amp;&amp;[input=field1]&lt;[var=ansag]+0.011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+    <FillInStage reference="24"/>
+    <FillInStage reference="32"/>
+    <FillInStage reference="40"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="160">
+    <VariableDeclaration id="161">
+      <name>A</name>
+      <initializationCode id="162">
+        <code>randomIntegerBetween(4,7)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="163">
+      <name>B</name>
+      <initializationCode id="164">
+        <code>randomIntegerBetween(3,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="165">
+      <name>C</name>
+      <initializationCode id="166">
+        <code>randomIntegerBetween(1,3)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="167">
+      <name>GA</name>
+      <initializationCode id="168">
+        <code>randomIntegerBetween(1,2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="169">
+      <name>GB</name>
+      <initializationCode id="170">
+        <code>randomIntegerBetween(2,4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="171">
+      <name>GC</name>
+      <initializationCode id="172">
+        <code>randomIntegerBetween(3,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="173">
+      <name>Urne</name>
+      <initializationCode id="174">
+        <code>([var=A])+([var=B])+([var=C])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="175">
+      <name>ansa</name>
+      <initializationCode id="176">
+        <code>([var=B])/([var=Urne])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="177">
+      <name>ansag</name>
+      <initializationCode id="178">
+        <code>round([var=ansa], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="179">
+      <name>ansb</name>
+      <initializationCode id="180">
+        <code>([var=GB])/10</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="181">
+      <name>ansbg</name>
+      <initializationCode id="182">
+        <code>round([var=ansb], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="183">
+      <name>ansc</name>
+      <initializationCode id="184">
+        <code>([var=ansa])*([var=ansb])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="185">
+      <name>anscg</name>
+      <initializationCode id="186">
+        <code>round([var=ansc], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="187">
+      <name>ansd</name>
+      <initializationCode id="188">
+        <code>(([var=A])/([var=Urne]))*(1-(([var=GA])/10))+(([var=B])/([var=Urne]))*(1-(([var=GB])/10))+(([var=C])/([var=Urne]))*(1-(([var=GC])/10))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="189">
+      <name>ansdg</name>
+      <initializationCode id="190">
+        <code>round([var=ansd], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="191">
+      <name>anse</name>
+      <initializationCode id="192">
+        <code>([var=ansc])/(1-([var=ansd]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="193">
+      <name>anseg</name>
+      <initializationCode id="194">
+        <code>round([var=anse], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="195"/>
+  <dynamicMolecules id="196"/>
+  <resultFeedbackMappings id="197"/>
+</Exercise>

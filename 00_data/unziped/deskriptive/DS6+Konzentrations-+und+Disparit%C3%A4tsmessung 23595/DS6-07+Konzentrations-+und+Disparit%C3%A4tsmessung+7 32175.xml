@@ -1,0 +1,275 @@
+<Exercise id="1">
+  <name>DS6-07 Konzentrations- und Disparitätsmessung 7</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Punkte der Lorenzkurve aus Text bestimmen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>4</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+In einem Land verf&amp;uuml;gen die 50% verm&amp;ouml;gensschw&amp;auml;chsten Haushalte &amp;uuml;ber [var=un50]% des gesamten Nettoverm&amp;ouml;gens, w&amp;auml;hrend die verm&amp;ouml;gensst&amp;auml;rksten 20% der Haushalte [var=ob20]% des gesamten Nettoverm&amp;ouml;gens auf sich vereinen.&amp;nbsp;Auf das oberste Zehntel entfallen allein [var=ob10]% des gesamten Nettoverm&amp;ouml;gens.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Vervollst&amp;auml;ndigen Sie die auf der Lorenzkurve liegenden Koordinaten $(H_j,C_j)$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$H_j = 0 \quad \qquad C_j = 0$&lt;br /&gt;&#xd;
+$H_j = 0.2 \qquad$ $C_j = $&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+$H_j = 0.4 \qquad$ $C_j = $&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+$H_j = 0.6 \qquad$ $C_j = $&amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+$H_j = 0.8 \qquad$ $C_j = $&amp;nbsp;&lt;input name=&quot;field4&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field4&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+$H_j = 1&amp;nbsp;\qquad \quad C_j = 1$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, das Ergebnis auf die &lt;strong&gt;vierte &lt;/strong&gt;Nachkommastelle und verwenden Sie einen Dezimalpunkt.&lt;br /&gt;&#xd;
+Innerhalb ihrer Rechnungen verwenden Sie bitte auch &lt;strong&gt;vier &lt;/strong&gt;Nachkommastellen.)&lt;/em&gt;</taskDescription>
+      <skipMessage>$H_j=0 \quad \qquad C_j=0$&lt;br /&gt;
+$H_j=0.2 \qquad$ $C_j=[var=Lg1]$&lt;br /&gt;
+$H_j=0.4 \qquad$ $C_j=[var=Lg2]$&lt;br /&gt;
+$H_j=0.6 \qquad$ $C_j=[var=Lg3]$&lt;br /&gt;
+$H_j=0.8 \qquad$ $C_j=[var=Lg4]$&lt;br /&gt;
+$H_j=1\quad \qquad C_j=1$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>Versuchen Sie, die Lorenzkurve sauber zu zeichnen. Berechnen Sie für jede Steigung der Kurve die lineare Funktion und setzen Sie die Parameter ein.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="20"/>
+      <variableUpdatesBeforeCheck id="21"/>
+      <variableUpdatesAfterCheck id="22"/>
+      <variableUpdatesOnNormalExit id="23"/>
+      <variableUpdatesOnRepeat id="24"/>
+      <variableUpdatesOnSkip id="25"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="26"/>
+      <rules id="27"/>
+      <fillInFields id="28">
+        <FillInField id="29">
+          <name>field4</name>
+          <orderIndex>3</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="30">
+          <name>field3</name>
+          <orderIndex>2</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="31">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="32">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="33"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt!&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+$H_j=0 \quad \qquad C_j=0$&lt;br /&gt;
+$H_j=0.2 \qquad$ $C_j=[var=Lg1]$&lt;br /&gt;
+$H_j=0.4 \qquad$ $C_j=[var=Lg2]$&lt;br /&gt;
+$H_j=0.6 \qquad$ $C_j=[var=Lg3]$&lt;br /&gt;
+$H_j=0.8 \qquad$ $C_j=[var=Lg4]$&lt;br /&gt;
+$H_j=1\quad \qquad C_j=1$</defaultFeedback>
+      <correctAnswerRules id="34">
+        <Rule id="35">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="36">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;!isEmpty([input=field4])&amp;&amp;isRealNumber([input=field4])&amp;&amp;[input=field1]&gt;[var=L2]*0.9&amp;&amp;[input=field1]&lt;[var=L2]*1.1&amp;&amp;[input=field2]&gt;[var=L4]*0.9&amp;&amp;[input=field2]&lt;[var=L4]*1.1&amp;&amp;[input=field3]&gt;[var=L6]*0.9&amp;&amp;[input=field3]&lt;[var=L6]*1.1&amp;&amp;[input=field4]&gt;[var=h2]*0.9&amp;&amp;[input=field4]&lt;[var=h2]*1.1</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="37">
+    <VariableDeclaration id="38">
+      <name>ob20</name>
+      <initializationCode id="39">
+        <code>randomIntegerBetween(55,65)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>ob10</name>
+      <initializationCode id="41">
+        <code>randomIntegerBetween(33,35)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>un50</name>
+      <initializationCode id="43">
+        <code>randomIntegerBetween(5,15)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>ob8090</name>
+      <initializationCode id="45">
+        <code>evaluateInR(&apos;[var=ob20]-[var=ob10]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>ob5080</name>
+      <initializationCode id="47">
+        <code>evaluateInR(&apos;100-[var=un50]-[var=ob20]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>h1</name>
+      <initializationCode id="49">
+        <code>evaluateInR(&apos;[var=un50]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>h2</name>
+      <initializationCode id="51">
+        <code>evaluateInR(&apos;([var=un50]+[var=ob5080])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>h3</name>
+      <initializationCode id="53">
+        <code>evaluateInR(&apos;([var=un50]+[var=ob5080]+[var=ob8090])/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>L2</name>
+      <initializationCode id="55">
+        <code>evaluateInR(&apos;[var=h1]*0.4&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="56">
+      <name>L4</name>
+      <initializationCode id="57">
+        <code>evaluateInR(&apos;[var=h1]*0.8&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="58">
+      <name>s2</name>
+      <initializationCode id="59">
+        <code>evaluateInR(&apos;([var=h2]-[var=h1])/0.3&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="60">
+      <name>b2</name>
+      <initializationCode id="61">
+        <code>evaluateInR(&apos;[var=h1]-[var=s2]*0.5&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="62">
+      <name>L6</name>
+      <initializationCode id="63">
+        <code>evaluateInR(&apos;[var=s2]*0.6+[var=b2]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="64">
+      <name>Lg1</name>
+      <initializationCode id="65">
+        <code>evaluateInR(&apos;round([var=L2], 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="66">
+      <name>Lg2</name>
+      <initializationCode id="67">
+        <code>evaluateInR(&apos;round([var=L4], 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="68">
+      <name>Lg3</name>
+      <initializationCode id="69">
+        <code>evaluateInR(&apos;round([var=L6], 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="70">
+      <name>Lg4</name>
+      <initializationCode id="71">
+        <code>evaluateInR(&apos;round([var=h2], 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="72"/>
+  <dynamicMolecules id="73"/>
+  <resultFeedbackMappings id="74"/>
+</Exercise>

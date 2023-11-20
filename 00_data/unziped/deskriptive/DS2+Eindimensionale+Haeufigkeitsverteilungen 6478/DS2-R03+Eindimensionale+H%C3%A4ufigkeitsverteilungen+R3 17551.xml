@@ -1,0 +1,211 @@
+<Exercise id="1">
+  <name>DS2-R03 Eindimensionale Häufigkeitsverteilungen R3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Relative Häufigkeiten auf Urliste angewandt (z.B. mit table(urliste)/length(urliste))
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">dXJsaXN0ZSA8LSBjKDExLDEzLDE1LDE2LDEyLDE4LDE0LDE1LDE3LDE0LDEyLDE2LDEzLDE1LDE3LDE2LDE1LDE0LDEzLDE1KQ==</content>
+      <uploadTimestamp>2022-03-02T16:03:41.028095</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Lassen Sie sich nun anstatt der absoluten H&amp;auml;ufigkeiten die relativen H&amp;auml;ufigkeiten f&amp;uuml;r jede Merkmalsauspr&amp;auml;gung ausgeben.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Hinweis: Die Variable $\verb|urliste|$ steht bereits im Environment zur Verf&amp;uuml;gung und muss nicht neu erstellt werden.)&lt;/em&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Auch jetzt k&amp;ouml;nnen Sie die Tabelle mit dem &lt;em&gt;$\verb|table()|$ &lt;/em&gt;-Befehl erzeugen, allerdings m&amp;uuml;ssen Sie nun beachten, dass hier nach den Anteilen gefragt ist.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>&amp;Uuml;berlegen Sie sich noch einmal, wie relative H&amp;auml;ufigkeiten definiert sind.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="17">
+          <stagehint__order>2</stagehint__order>
+          <text>$h(X=x_i)=\frac{n_i}{n}$, wobei $n_i$ die Anzahl der Beobachtungen f&amp;uuml;r die $i$-te Merkmalsauspr&amp;auml;gung und $n$ die gesamte Anzahl der Beobachtungen ist.&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="18">
+          <stagehint__order>3</stagehint__order>
+          <text>Der &lt;em&gt;$\verb|table()|$ &lt;/em&gt;-Befehl gibt einem die $n_i$ aus, jetzt m&amp;uuml;ssen diese nur noch durch $n$ geteilt werden.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Dies war der letzte Hinweis.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="19"/>
+      <variableUpdatesBeforeCheck id="20"/>
+      <variableUpdatesAfterCheck id="21"/>
+      <variableUpdatesOnNormalExit id="22"/>
+      <variableUpdatesOnRepeat id="23"/>
+      <variableUpdatesOnSkip id="24"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="25"/>
+      <initialCode>urliste &lt;- c(11,13,15,16,12,18,14,15,17,14,12,16,13,15,17,16,15,14,13,15)</initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="26">
+        <TestCaseTuple id="27">
+          <testCases id="28">
+            <StaticRTestCase id="29">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Achten Sie darauf, dass sie die $\verb|table()|$-Funktion benutzen, den richtigen Variablennamen benutzen und durch die Anzahl der gesamten Beobachtungen teilen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="30">
+                <RGReQLQuery id="31">
+                  <query>		from div:V{DivOperator}, tab:V{FunctionCall}, url:V{Variable}, n:V{NumericLiteral}, e1,e2:E{Expression} with
+                div -- e1 -&gt; tab and
+                div -- e2 -&gt; n and
+                e1.position &lt; e2.position and
+                tab.name=&quot;table&quot; and
+                tab --&gt;* url and
+                url.name=&quot;urliste&quot; and
+                n.value=20
+                report 0 end
+		</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="32">
+                  <query>		from div:V{DivOperator}, tab:V{FunctionCall}, x,url:V{Variable}, lao3:V{LeftAssignmentOperator3}, n:V{NumericLiteral}, e1,e2:E{Expression}, rh:E{RightHandSide}, lh:E{LeftHandSide} with
+                div -- e1 -&gt; tab and
+                div -- e2 -&gt; n and
+                e1.position &lt; e2.position and
+                tab.name=&quot;table&quot; and
+                tab --&gt;* lao3 and
+                lao3 -- lh -&gt; x and
+                x.name=&quot;x&quot; and
+                lao3 -- rh -&gt; url and
+                url.name=&quot;urliste&quot; and
+                n.value=20
+                report 0 end</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="33">
+                  <query>		from div:V{DivOperator}, tab,len:V{FunctionCall}, url,url2:V{Variable}, e1,e2:E{Expression} with
+                div -- e1 -&gt; tab and
+                div -- e2 -&gt; len and
+                e1.position &lt; e2.position and
+                tab.name=&quot;table&quot; and
+                tab --&gt;* url and
+                url.name=&quot;urliste&quot; and
+                len.name=&quot;length&quot; and
+                len --&gt;* url2 and
+                url2.name=&quot;urliste&quot;
+                report 0 end</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="34">
+                  <query>		from div:V{DivOperator}, tab,len:V{FunctionCall}, x,url,url2:V{Variable}, lao3:V{LeftAssignmentOperator3}, n:V{NumericLiteral}, e1,e2:E{Expression}, rh:E{RightHandSide}, lh:E{LeftHandSide} with
+                div -- e1 -&gt; tab and
+                div -- e2 -&gt; len and
+                e1.position &lt; e2.position and
+                tab.name=&quot;table&quot; and
+                tab --&gt;* lao3 and
+                lao3 -- lh -&gt; x and
+                x.name=&quot;x&quot; and
+                lao3 -- rh -&gt; url and
+                url.name=&quot;urliste&quot; and
+                len.name=&quot;length&quot; and
+                len --&gt;* url2 and
+                url2.name=&quot;urliste&quot;
+                report 0 end</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="35">
+                  <query>		from lao:V{LeftAssignmentOperator}, div:V{DivOperator}, tab:V{FunctionCall}, url,n1,n2:V{Variable}, num:V{NumericLiteral}, e1:E{LeftHandSide}, e2:E{RightHandSide}, e3,e4:E{Expression} with
+                lao -- e1 -&gt; n1 and
+                lao -- e2 -&gt; num and
+                n1.name=&quot;n&quot; and
+                num.value=20 and
+                div -- e3 -&gt; tab and
+                div -- e4 -&gt; n2 and
+                e3.position &lt; e4.position and
+                tab.name=&quot;table&quot; and
+                tab --&gt;* url and
+                url.name=&quot;urliste&quot; and
+                n2.name=&quot;n&quot;
+                report 0 end</query>
+                </RGReQLQuery>
+                <RGReQLQuery id="36">
+                  <query>		from lao:V{LeftAssignmentOperator}, lao3:V{LeftAssignmentOperator3}, div:V{DivOperator}, tab:V{FunctionCall}, x,url,n1,n2:V{Variable}, num:V{NumericLiteral}, e1,lh:E{LeftHandSide}, e2,rh:E{RightHandSide}, e3,e4:E{Expression} with
+                lao -- e1 -&gt; n1 and
+                lao -- e2 -&gt; num and
+                n1.name=&quot;n&quot; and
+                num.value=20 and
+                div -- e3 -&gt; tab and
+                div -- e4 -&gt; n2 and
+                e3.position &lt; e4.position and
+                tab.name=&quot;table&quot; and
+                tab --&gt;* lao3 and
+                lao3 -- lh -&gt; x and
+                x.name=&quot;x&quot; and
+                lao3 -- rh -&gt; url and
+                url.name=&quot;urliste&quot; and
+                n2.name=&quot;n&quot;
+                report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="37">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>17555</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="38"/>
+  <jSXGraphs id="39"/>
+  <dynamicMolecules id="40"/>
+  <resultFeedbackMappings id="41"/>
+</Exercise>

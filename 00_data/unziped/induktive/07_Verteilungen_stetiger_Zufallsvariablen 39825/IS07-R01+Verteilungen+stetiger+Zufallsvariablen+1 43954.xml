@@ -1,0 +1,161 @@
+<Exercise id="1">
+  <name>IS07-R01 Verteilungen stetiger Zufallsvariablen 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Standardnormalverteilte Zufallszahlen erzeugen und Mittelwert berechnen.
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">c2V0LnNlZWQoW3Zhcj1zXSkNCg==</content>
+      <uploadTimestamp>2022-05-11T11:23:03.070006</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Erstellen Sie $1000$ standardnormalverteilte Zufallszahlen und berechnen Sie deren Mittelwert.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nutzen Sie f&amp;uuml;r die Erzeugung der Zufallszahlen den Befehl $\verb|rnorm()|$ und f&amp;uuml;r die Berechnung des Mittelwertes den Befehl $\verb|mean()|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Sie k&amp;ouml;nnen normalverteilte Zufallszahlen generieren, indem Sie die Funktion $\verb|rnorm(n,mean,sd)|$ benutzen.&lt;br /&gt;
+&lt;br /&gt;
+$\verb|n|$ legt dabei die Anzahl normalverteilter Zufallszahlen fest, die Sie erzeugen wollen.&lt;br /&gt;
+Der Parameter $\verb|mean|$ (hier nicht zu verwechseln mit der Funktion $\verb|mean()|$) spezifiziert den Erwartungswert und der Parameter $\verb|sd|$ die Standardabweichung $(!)$.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Eine normalverteilte Zufallsvariable ist standardnormalverteilt, wenn sie einen Erwartungswert von $\mu = 0$ und eine Varianz von $\sigma^2 = 1$ besitzt. Spezifizieren Sie nur das $\verb|n|$ in der Funktion $\verb|rnorm()|$, so geht R von einem Erwartungswert $\mu = 0$ und von einer Varianz $\sigma^2 = 1$ aus.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="17">
+          <stagehint__order>2</stagehint__order>
+          <text>Sie berechnen den Mittelwert dieser Zahlen mit Hilfe des Befehls $\verb|mean()|$.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="18"/>
+      <variableUpdatesBeforeCheck id="19"/>
+      <variableUpdatesAfterCheck id="20"/>
+      <variableUpdatesOnNormalExit id="21"/>
+      <variableUpdatesOnRepeat id="22"/>
+      <variableUpdatesOnSkip id="23"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="24"/>
+      <initialCode>set.seed([var=s])
+</initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="25">
+        <TestCaseTuple id="26">
+          <testCases id="27">
+            <StaticRTestCase id="28">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+Achten Sie darauf, dass Sie die $\verb|mean()$- und $\verb|rnorm()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="29">
+                <RGReQLQuery id="30">
+                  <query>	        from rnorm,mean:V{FunctionCall} with
+                rnorm.name=&quot;rnorm&quot; and
+                mean.name=&quot;mean&quot; 
+                report 0 end	
+</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="31">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43958</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="32">
+          <testCases id="33">
+            <DynamicRTestCase id="34">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}
+                hallo &lt;- function(s){
+		set.seed(s)
+		mean(rnorm(1000))
+	}
+	</postCode>
+              <expectedOutput>hallo([var=s])</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="35">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43959</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="36">
+    <VariableDeclaration id="37">
+      <name>s</name>
+      <initializationCode id="38">
+        <code>evaluateInR(&apos;round(runif(1, 1, 1000), 0)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="39"/>
+  <dynamicMolecules id="40"/>
+  <resultFeedbackMappings id="41"/>
+</Exercise>

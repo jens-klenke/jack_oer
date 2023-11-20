@@ -1,0 +1,196 @@
+<Exercise id="1">
+  <name>DS7-R09 Zweidimensionale Datensätze 9</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Chi-Quadrat-Statistik berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">a3QgPC0gbWF0cml4KGMoW3Zhcj14MV0sW3Zhcj14Ml0sW3Zhcj14M10sW3Zhcj14NF0sW3Zhcj14NV0sW3Zhcj14Nl0pLDIsMyxUKQ==</content>
+      <uploadTimestamp>2022-03-30T16:43:33.312199</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Es wurden [var=n] Befragungen zu den Merkmalen $X=\text{Geschlecht}$ und $Y=\text{Sprachkompetenz}$ mit den Auspr&amp;auml;gungen schwach, mittel und stark durchgef&amp;uuml;hrt.&lt;br /&gt;&#xd;
+Die Ergebnisse dieser Befragung wurden in folgender Kontingenztafel erfasst:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$$\begin{matrix}&lt;br /&gt;&#xd;
+X/Y &amp;amp; schwach &amp;amp; mittel &amp;amp; stark \\&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+m&amp;auml;nnlich \qquad &amp;amp; [var=x1] &amp;amp; [var=x2] &amp;amp; [var=x3] \\&lt;br /&gt;&#xd;
+weiblich \qquad &amp;amp; [var=x4] &amp;amp; [var=x5] &amp;amp; [var=x6] \\&lt;br /&gt;&#xd;
+\end{matrix}$$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie anhand der gegebenen Daten $\chi^2$.&lt;br /&gt;&#xd;
+Die Kontingenztafel wurde f&amp;uuml;r Sie bereits in der Variablen $kt$ abgespeichert.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Hinweis: Setzen Sie innerhalb der $\verb|chisq.test()|$-Funktion den Parameter $\verb|correct=F|$, da ansonsten ein anderer Wert f&amp;uuml;r die $\chi^2$-Statistik berechnet wird.)&lt;/em&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Sie k&amp;ouml;nnen an die $\chi^2$-Statistik gelangen, in dem Sie die Funktion $\verb|chisq.test()|$ benutzen. Diese Funktion gibt Ihnen eine Liste aus, die u.a. auch die $\chi^2$-Statistik enth&amp;auml;lt.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+        <StageHint id="16">
+          <stagehint__order>1</stagehint__order>
+          <text>Die Statistik ist im Unterobjekt $\verb|statistic|$ zu finden. &amp;Uuml;ber das $\$$-Zeichen k&amp;ouml;nnen Sie auf diesen Wert zugreifen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="17"/>
+      <variableUpdatesBeforeCheck id="18"/>
+      <variableUpdatesAfterCheck id="19"/>
+      <variableUpdatesOnNormalExit id="20"/>
+      <variableUpdatesOnRepeat id="21"/>
+      <variableUpdatesOnSkip id="22"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="23"/>
+      <initialCode>kt &lt;- matrix(c([var=x1],[var=x2],[var=x3],[var=x4],[var=x5],[var=x6]),2,3,T)</initialCode>
+      <finalResultComputationString>min(#{c26032},#{c26031})</finalResultComputationString>
+      <testCasetuples id="24">
+        <TestCaseTuple id="25">
+          <testCases id="26">
+            <StaticRTestCase id="27">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $\verb|chisq.test()|$-Funktion sowie die vordefinierte Variable $\verb|kt|$.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="28">
+                <RGReQLQuery id="29">
+                  <query>		from cqt:V{FunctionCall}, kt:V{Variable} with 
+                cqt.name=&quot;chisq.test&quot; and
+                kt.name=&quot;kt&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="30">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>26031</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="31">
+          <testCases id="32">
+            <DynamicRTestCase id="33">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Achten Sie darauf, auf das Unterobjekt $\verb|statistic|$ zu zugreifen und $\verb|correct=F|$ zu setzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>chisq.test(matrix(c([var=x1],[var=x2],[var=x3],[var=x4],[var=x5],[var=x6]),2,3,T),correct=F)$statistic</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="34">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>26032</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="35">
+    <VariableDeclaration id="36">
+      <name>x1</name>
+      <initializationCode id="37">
+        <code>randomIntegerBetween(10,20)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>x2</name>
+      <initializationCode id="39">
+        <code>randomIntegerBetween(5,9)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>x3</name>
+      <initializationCode id="41">
+        <code>randomIntegerBetween(0,4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>x4</name>
+      <initializationCode id="43">
+        <code>randomIntegerBetween(0,4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>x5</name>
+      <initializationCode id="45">
+        <code>randomIntegerBetween(5,9)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>x6</name>
+      <initializationCode id="47">
+        <code>randomIntegerBetween(10,20)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>n</name>
+      <initializationCode id="49">
+        <code>[var=x1]+[var=x2]+[var=x3]+[var=x4]+[var=x5]+[var=x6]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="50"/>
+  <dynamicMolecules id="51"/>
+  <resultFeedbackMappings id="52"/>
+</Exercise>

@@ -1,0 +1,162 @@
+<Exercise id="1">
+  <name>DS3-R06 Lageparameter R6</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Harmonisches Mittel berechnen (KGV Portfolio)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2"/>
+  <resources id="3">
+    <ExerciseResource id="4">
+      <content id="5">S0dWIDwtIGMoNjAuNywyMy41LDExMS44LDQyLjYsMTUuOSkNCg==</content>
+      <uploadTimestamp>2022-03-02T16:24:36.414983</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="6">
+    <RStage id="7">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nehmen Sie an, dass Sie $100$ Mio. $\$$ in ein Portfolio investiert haben. Um ein diversifiziertes Portfolio zu bekommen, haben Sie in $5$ unterschiedliche Aktien investiert, die zu gleichen Anteilen im Portfolio vertreten sind. Alle $5$ investierten Aktien weisen ein unterschiedliches Kurs-Gewinn-Verh&amp;auml;ltnis auf. Das Kurs-Gewinn-Verh&amp;auml;ltnis (KGV) ist definiert als der Kurs einer Aktie in Relation zum gegebenen Gewinn pro Aktie.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie das KGV des Portfolios.&lt;br /&gt;&#xd;
+Die entsprechenden KGV finden Sie im Vektor $\verb|KGV|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="8">
+        <conditionExpression id="9">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="10">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="11"/>
+      <stageTransitions id="12"/>
+      <hints id="13">
+        <StageHint id="14">
+          <stagehint__order>0</stagehint__order>
+          <text>Benutzen Sie die Funktion $\verb|harmonic.mean()|$.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="7"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="15"/>
+      <variableUpdatesBeforeCheck id="16"/>
+      <variableUpdatesAfterCheck id="17"/>
+      <variableUpdatesOnNormalExit id="18"/>
+      <variableUpdatesOnRepeat id="19"/>
+      <variableUpdatesOnSkip id="20"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="21"/>
+      <initialCode>KGV &lt;- c([var=x1], [var=x2], [var=x3], [var=x4], [var=x5])
+</initialCode>
+      <finalResultComputationString>#{c17849} + #{c17848}</finalResultComputationString>
+      <testCasetuples id="22">
+        <TestCaseTuple id="23">
+          <testCases id="24">
+            <StaticRTestCase id="25">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $\verb|harmonic.mean|$-Funktion und achten Sie darauf, dass Sie die vordefinierte Variable $\verb|KGV|$ benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="26">
+                <RGReQLQuery id="27">
+                  <query>		from harm:V{FunctionCall}, kgv:V{Variable}  with 
+                harm.name=&quot;harmonic.mean&quot; and
+                harm --&gt;* kgv and
+                kgv.name=&quot;KGV&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="28">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>17848</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="29">
+          <testCases id="30">
+            <DynamicRTestCase id="31">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Ergebnis leider nicht richtig! Benutzen Sie die $\verb|harmonic.mean()|$-Funktion.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>harmonic.mean(c([var=x1], [var=x2], [var=x3], [var=x4], [var=x5]))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="32">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>17849</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="7"/>
+  <variableDeclarations id="33">
+    <VariableDeclaration id="34">
+      <name>x1</name>
+      <initializationCode id="35">
+        <code>round(randomBetween(10,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>x2</name>
+      <initializationCode id="37">
+        <code>round(randomBetween(10,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>x3</name>
+      <initializationCode id="39">
+        <code>round(randomBetween(10,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>x4</name>
+      <initializationCode id="41">
+        <code>round(randomBetween(10,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>x5</name>
+      <initializationCode id="43">
+        <code>round(randomBetween(10,120),2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="44"/>
+  <dynamicMolecules id="45"/>
+  <resultFeedbackMappings id="46"/>
+</Exercise>

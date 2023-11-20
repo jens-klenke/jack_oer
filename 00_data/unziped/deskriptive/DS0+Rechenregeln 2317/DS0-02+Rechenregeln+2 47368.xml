@@ -1,0 +1,313 @@
+<Exercise id="1">
+  <name>DS0-02 Rechenregeln 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie m&amp;ouml;glichst einfach:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{20}([var=x1]-[var=x2]i)+\sum_{i=1}^{20}([var=x3]i+[var=x4])+\sum_{i=1}^{20}(-[var=x5]i-[var=x6])$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;em&gt;(Schreiben Sie Ihr Ergebnis nicht als Bruch sondern als Dezimalzahl und verwenden Sie einen Punkt als Dezimalzeichen.)&lt;/em&gt;&lt;/span&gt; &amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>$\sum_{i=1}^{20}([var=x1]-[var=x2]i)+\sum_{i=1}^{20}([var=x3]i+[var=x4])+\sum_{i=1}^{20}(-[var=x5]i-[var=x6]) $&lt;br /&gt;
+&lt;br /&gt;
+$=\sum_{i=1}^{20}([var=x1]-[var=x2]i+[var=x3]i+[var=x4]-[var=x5]i-[var=x6])$&lt;br /&gt;
+&lt;br /&gt;
+$=\sum_{i=1}^{20}([var=x1]+[var=x4]-[var=x6])+\sum_{i=1}^{20}(-[var=x2]+[var=x3]-[var=x5])i $&lt;br /&gt;
+&lt;br /&gt;
+$=20\cdot([var=x7])+[var=x8]\cdot\sum_{i=1}^{20}i $&lt;br /&gt;
+&lt;br /&gt;
+$= 20\cdot([var=x7])+[var=x8]\cdot \frac{20\cdot 21}{2}$&lt;br /&gt;
+&lt;br /&gt;
+$= 20\cdot([var=x7])+[var=x8]\cdot 210$&lt;br /&gt;
+&lt;br /&gt;
+$= [var=ergebnis]$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie m&amp;ouml;glichst einfach:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{4}([var=x1]+i)^2+\sum_{i=1}^{4}([var=x1]-i)^2$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;8&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;em&gt;(Schreiben Sie Ihr Ergebnis nicht als Bruch sondern als Dezimalzahl und verwenden Sie einen Punkt als Dezimalzeichen.)&lt;/em&gt;&lt;/span&gt; &amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+            <skipMessage>$\displaystyle \sum_{i=1}^{4}([var=x1]+i)^2+\sum_{i=1}^{4}([var=x1]-i)^2$&lt;br /&gt;
+&lt;br /&gt;
+$= \sum_{i=1}^{4}(2\cdot[var=x1]^2+2i^2)$ $\displaystyle$&lt;br /&gt;
+&lt;br /&gt;
+$= \sum_{i=1}^4 [var=x9] + 2\cdot\sum_{i=1}^4 i^2$ $\displaystyle$&lt;br /&gt;
+&lt;br /&gt;
+$= 4\cdot [var=x9] + 2\cdot \frac{1}{6}\cdot4\cdot(4+1)(2\cdot4+1)$&lt;br /&gt;
+&lt;br /&gt;
+$=\displaystyle [var=ergebnis2]$</skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18"/>
+            <stageTransitions id="19">
+              <StageTransition id="20">
+                <conditionExpression id="21">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="22">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="23">
+              <StageHint id="24">
+                <stagehint__order>0</stagehint__order>
+                <text>Beachten Sie die Rechenregeln f&amp;uuml;r Summen und verwenden Sie die binomischen Formeln.&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+              <StageHint id="25">
+                <stagehint__order>1</stagehint__order>
+                <text>$\displaystyle \sum_{i=1}^{4}([var=$x1]+i)^2+\sum_{i=1}^{4}([var=$x1]-i)^2 = \sum_{i=1}^{4}(2\cdot[var=$x1]^2+2i^2)$</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="26"/>
+            <variableUpdatesBeforeCheck id="27"/>
+            <variableUpdatesAfterCheck id="28"/>
+            <variableUpdatesOnNormalExit id="29"/>
+            <variableUpdatesOnRepeat id="30"/>
+            <variableUpdatesOnSkip id="31"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="32"/>
+            <rules id="33"/>
+            <fillInFields id="34">
+              <FillInField id="35">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>8</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="36"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht richtig!</defaultFeedback>
+            <correctAnswerRules id="37">
+              <Rule id="38">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="39">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;([var=x1]*[var=x1]*8+60)==[input=field1]</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="40">
+        <StageTransition id="41">
+          <conditionExpression id="42">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="43">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="44">
+        <StageHint id="45">
+          <stagehint__order>0</stagehint__order>
+          <text>Beachten Sie die Rechenregeln f&amp;uuml;r Summen.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="46">
+          <stagehint__order>1</stagehint__order>
+          <text>$\displaystyle \sum_{i=1}^{20}([var=$x1]-[var=$x2]i)+\sum_{i=1}^{20}([var=$x3]i+[var=$x4])+\sum_{i=1}^{20}(-[var=$x5]i-[var=$x6]) =\sum_{i=1}^{20}([var=$x1]-[var=$x2]i+[var=$x3]i+[var=$x4]-[var=$x5]i-[var=$x6])$</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="47"/>
+      <variableUpdatesBeforeCheck id="48"/>
+      <variableUpdatesAfterCheck id="49"/>
+      <variableUpdatesOnNormalExit id="50"/>
+      <variableUpdatesOnRepeat id="51"/>
+      <variableUpdatesOnSkip id="52"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="53"/>
+      <rules id="54"/>
+      <fillInFields id="55">
+        <FillInField id="56">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>8</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="57"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch!</defaultFeedback>
+      <correctAnswerRules id="58">
+        <Rule id="59">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="60">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;20*([var=x1]+[var=x4]-[var=x6])+210*(-[var=x2]+[var=x3]-[var=x5])==[input=field1]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="14"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="61">
+    <VariableDeclaration id="62">
+      <name>x1</name>
+      <initializationCode id="63">
+        <code>randomIntegerBetween(1,9)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="64">
+      <name>x2</name>
+      <initializationCode id="65">
+        <code>chooseFromComplement(list(1,2,3,4,5,6,7,8,9), list([var=x1]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="66">
+      <name>x3</name>
+      <initializationCode id="67">
+        <code>chooseFromComplement(list(1,2,3,4,5,6,7,8,9), list([var=x1], [var=x2]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="68">
+      <name>x4</name>
+      <initializationCode id="69">
+        <code>chooseFromComplement(list(1,2,3,4,5,6,7,8,9), list([var=x1], [var=x2], [var=x3]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="70">
+      <name>x5</name>
+      <initializationCode id="71">
+        <code>chooseFromComplement(list(1,2,3,4,5,6,7,8,9), list([var=x1], [var=x2], [var=x3], [var=x4]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="72">
+      <name>x6</name>
+      <initializationCode id="73">
+        <code>chooseFromComplement(list(1,2,3,4,5,6,7,8,9), list([var=x1], [var=x2], [var=x3], [var=x4], [var=x5]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="74">
+      <name>x7</name>
+      <initializationCode id="75">
+        <code>[var=x1]+[var=x4]-[var=x6]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="76">
+      <name>x8</name>
+      <initializationCode id="77">
+        <code>-[var=x2]+[var=x3]-[var=x5]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="78">
+      <name>x9</name>
+      <initializationCode id="79">
+        <code>2*[var=x1]*[var=x1]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="80">
+      <name>ergebnis</name>
+      <initializationCode id="81">
+        <code>20*([var=x1]+[var=x4]-[var=x6])+210*(-[var=x2]+[var=x3]-[var=x5])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="82">
+      <name>ergebnis2</name>
+      <initializationCode id="83">
+        <code>[var=x1]*[var=x1]*8+60</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="84"/>
+  <dynamicMolecules id="85"/>
+  <resultFeedbackMappings id="86"/>
+</Exercise>

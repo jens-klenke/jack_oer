@@ -1,0 +1,337 @@
+<Exercise id="1">
+  <name>DS8-03 Regressionsrechnung 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Regressionsgerade bei gegebenen Werten bestimmen.
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie befragen 5 Personen nach ihrem monatlichen verf&amp;uuml;gbaren Einkommen und ihren monatlichen Mietausgaben und erhalten folgende Werte (in &amp;euro;):&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[graph=scatter1]&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\begin{matrix}&lt;br /&gt;&#xd;
+\textrm{Verf&amp;uuml;gbares Einkommen }(X_i) &amp;amp; \textrm{Mietausgaben }(Y_i) \\&lt;br /&gt;&#xd;
+\hline&lt;br /&gt;&#xd;
+[var=$x1] &amp;amp; [var=$y1] \\&lt;br /&gt;&#xd;
+[var=$x2] &amp;amp; [var=$y2] \\&lt;br /&gt;&#xd;
+[var=$x3] &amp;amp; [var=$y3] \\&lt;br /&gt;&#xd;
+[var=$x4] &amp;amp; [var=$y4] \\&lt;br /&gt;&#xd;
+[var=$x5] &amp;amp; [var=$y5] \\&lt;br /&gt;&#xd;
+[var=$x6] &amp;amp; [var=$y6] \\&lt;br /&gt;&#xd;
+\end{matrix}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Im Folgenden soll ein Modell der Form $$y_i=\alpha + \beta x_i + u_i,\enspace i=1 ... 6$$ zur Beschreibung verwendet werden. Leiten Sie dazu die Regressionskoeffizienten f&amp;uuml;r dieses Modell mit Hilfe der Methode der kleinsten Quadrate her.&amp;nbsp;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&amp;nbsp; &amp;nbsp;&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;a=&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;b=&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td&gt;&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Runden Sie beide Koeffizienten auf die vierte Nachkommastelle und benutzen Sie einen Dezimalpunkt.)&lt;/em&gt;&lt;/span&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;em&gt;&amp;nbsp;&lt;/em&gt;&lt;/span&gt;&#xd;
+&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>Mietausgaben = $[var=agg]+[var=bgg] x$&lt;br /&gt;
+&lt;br /&gt;
+Verf&amp;uuml;gbares Einkommen [graph=scatter2]</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>		$a=\bar{y}-b\bar{x}\quad\text{und}\quad b=\frac{\sum_{r=1}^{n}y_{r}x_{r}-n\bar{y}\bar{x}}{\sum_{r=1}^{n}x_{r}^{2}-n\bar{x}^{2}}=\frac{\sum_{r=1}^{n}(y_{r}-\bar{y})(x_{r}-\bar{x})}{\sum_{r=1}^{n}(x_{r}-\bar{x})^{2}}=\frac{s_{xy}}{s_{x}^{2}}$
+	
+		</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="20"/>
+      <variableUpdatesBeforeCheck id="21"/>
+      <variableUpdatesAfterCheck id="22"/>
+      <variableUpdatesOnNormalExit id="23"/>
+      <variableUpdatesOnRepeat id="24"/>
+      <variableUpdatesOnSkip id="25"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="26"/>
+      <rules id="27">
+        <Rule id="28">
+          <name>Feedback_2</name>
+          <orderIndex>2</orderIndex>
+          <validationExpression id="29">
+            <code>!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field2]&gt;[var=bgg]-0.3&amp;&amp;[input=field2]&lt;[var=bgg]+0.3</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Bei b bist du ganz dicht am wahren Wert. Dieser ist [var=bgg]</feedbackText>
+          <points>40</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="30">
+          <name>Feedback_1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="31">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=agg]-4&amp;&amp;[input=field1]&lt;[var=agg]+4</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Bei a bist du ganz dicht am wahren Wert. Dieser ist [var=agg]</feedbackText>
+          <points>40</points>
+          <terminal>false</terminal>
+        </Rule>
+      </rules>
+      <fillInFields id="32">
+        <FillInField id="33">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="34">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="35"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Nicht korrekt!</defaultFeedback>
+      <correctAnswerRules id="36">
+        <Rule id="37">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="38">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field1]&gt;[var=agg]-0.11&amp;&amp;[input=field1]&lt;[var=agg]+0.11&amp;&amp;[input=field2]&gt;[var=bgg]-0.11&amp;&amp;[input=field2]&lt;[var=bgg]+0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>      Richtig.
+
+      [graph=scatter3]
+    </correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="39">
+    <VariableDeclaration id="40">
+      <name>x1</name>
+      <initializationCode id="41">
+        <code>randomIntegerBetween(400,500)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>x2</name>
+      <initializationCode id="43">
+        <code>randomIntegerBetween(800,1000)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>x3</name>
+      <initializationCode id="45">
+        <code>randomIntegerBetween(500,600)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>x4</name>
+      <initializationCode id="47">
+        <code>randomIntegerBetween(700,800)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>x5</name>
+      <initializationCode id="49">
+        <code>randomIntegerBetween(300,400)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>x6</name>
+      <initializationCode id="51">
+        <code>randomIntegerBetween(1100,1400)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>y1</name>
+      <initializationCode id="53">
+        <code>randomIntegerBetween(200,300)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>y2</name>
+      <initializationCode id="55">
+        <code>randomIntegerBetween(450,500)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="56">
+      <name>y3</name>
+      <initializationCode id="57">
+        <code>randomIntegerBetween(300,400)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="58">
+      <name>y4</name>
+      <initializationCode id="59">
+        <code>randomIntegerBetween(350,500)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="60">
+      <name>y5</name>
+      <initializationCode id="61">
+        <code>randomIntegerBetween(150,250)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="62">
+      <name>y6</name>
+      <initializationCode id="63">
+        <code>randomIntegerBetween(600,800)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="64">
+      <name>xquer</name>
+      <initializationCode id="65">
+        <code>([var=x1]+[var=x2]+[var=x3]+[var=x4]+[var=x5]+[var=x6])/6</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="66">
+      <name>yquer</name>
+      <initializationCode id="67">
+        <code>([var=y1]+[var=y2]+[var=y3]+[var=y4]+[var=y5]+[var=y6])/6</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="68">
+      <name>b</name>
+      <initializationCode id="69">
+        <code>(([var=y1]-[var=yquer])*([var=x1]-[var=xquer])+([var=y2]-[var=yquer])*([var=x2]-[var=xquer])+([var=y3]-[var=yquer])*([var=x3]-[var=xquer])+([var=y4]-[var=yquer])*([var=x4]-[var=xquer])+([var=y5]-[var=yquer])*([var=x5]-[var=xquer])+([var=y6]-[var=yquer])*([var=x6]-[var=xquer]))/(pow([var=x1]-[var=xquer], 2)+pow([var=x2]-[var=xquer], 2)+pow([var=x3]-[var=xquer], 2)+pow([var=x4]-[var=xquer], 2)+pow([var=x5]-[var=xquer], 2)+pow([var=x6]-[var=xquer], 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="70">
+      <name>bgg</name>
+      <initializationCode id="71">
+        <code>round([var=b], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="72">
+      <name>a</name>
+      <initializationCode id="73">
+        <code>[var=yquer]-[var=bgg]*[var=xquer]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="74">
+      <name>agg</name>
+      <initializationCode id="75">
+        <code>round([var=a], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="76">
+      <name>p</name>
+      <initializationCode id="77">
+        <code>1500*[var=bgg]+[var=agg]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="78">
+    <JSXGraph id="79">
+      <name>scatter2</name>
+      <orderIndex>1</orderIndex>
+      <width>600</width>
+      <height>600</height>
+      <text>var board = JXG.JSXGraph.initBoard(&apos;scatter2&apos;, {boundingbox: [-40, 800, 1400, -40], axis:true, grid:false});var point1 = board.createElement(&apos;point&apos;, [[var=x1],[var=y1]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point2 = board.create(&apos;point&apos;, [[var=x2],[var=y2]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point3 = board.create(&apos;point&apos;, [[var=x3],[var=y3]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point4 = board.create(&apos;point&apos;, [[var=x4],[var=y4]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point5 = board.create(&apos;point&apos;, [[var=x5],[var=y5]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point6 = board.create(&apos;point&apos;, [[var=x6],[var=y6]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});txt1 = board.create(&apos;text&apos;,[2,-20, &apos;Verfügbares Einkommen&apos;], {fontSize:15});txt2 = board.create(&apos;text&apos;,[0.1,200, &apos;Mietausgaben&apos;], {fontSize:15});var p1 = board.create(&apos;point&apos;,[0,[var=agg]], {name:&apos;&apos;,size:0, strokeColor:&apos;grey&apos;, fillColor:&apos;grey&apos;});var p2 = board.create(&apos;point&apos;,[1500,[var=p]], {name:&apos;&apos;,size:0});var li2 = board.create(&apos;line&apos;,[p1,p2],{straightFirst:false, straightLast:false, strokeWidth:2, dash:2});</text>
+    </JSXGraph>
+    <JSXGraph id="80">
+      <name>scatter1</name>
+      <orderIndex>0</orderIndex>
+      <width>600</width>
+      <height>600</height>
+      <text>var board = JXG.JSXGraph.initBoard(&apos;scatter1&apos;, {boundingbox: [-40, 800, 1400, -40], axis:true, grid:false});var point1 = board.createElement(&apos;point&apos;, [[var=x1],[var=y1]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point2 = board.create(&apos;point&apos;, [[var=x2],[var=y2]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point3 = board.create(&apos;point&apos;, [[var=x3],[var=y3]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point4 = board.create(&apos;point&apos;, [[var=x4],[var=y4]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point5 = board.create(&apos;point&apos;, [[var=x5],[var=y5]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point6 = board.create(&apos;point&apos;, [[var=x6],[var=y6]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});txt1 = board.create(&apos;text&apos;,[2,-20, &apos;Verfügbares Einkommen&apos;], {fontSize:15});txt2 = board.create(&apos;text&apos;,[0.1,200, &apos;Mietausgaben&apos;], {fontSize:15});var graph = board.create(&apos;functiongraph&apos;,[function(x){0.4*x+150;}]);</text>
+    </JSXGraph>
+    <JSXGraph id="81">
+      <name>scatter3</name>
+      <orderIndex>2</orderIndex>
+      <width>600</width>
+      <height>600</height>
+      <text>var board = JXG.JSXGraph.initBoard(&apos;scatter3&apos;, {boundingbox: [-40, 800, 1400, -40], axis:true, grid:false});var point1 = board.createElement(&apos;point&apos;, [[var=x1],[var=y1]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point2 = board.create(&apos;point&apos;, [[var=x2],[var=y2]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point3 = board.create(&apos;point&apos;, [[var=x3],[var=y3]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point4 = board.create(&apos;point&apos;, [[var=x4],[var=y4]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point5 = board.create(&apos;point&apos;, [[var=x5],[var=y5]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});var point6 = board.create(&apos;point&apos;, [[var=x6],[var=y6]], {face:&apos;o&apos;, size:4, strokeColor:&apos;red&apos;, fillColor:&apos;red&apos;, fillOpacity:0.4, strokeOpacity:0.4, withLabel:false, fixed:true});txt1 = board.create(&apos;text&apos;,[2,-20, &apos;Verfügbares Einkommen&apos;], {fontSize:15});txt2 = board.create(&apos;text&apos;,[0.1,200, &apos;Mietausgaben&apos;], {fontSize:15});var p1 = board.create(&apos;point&apos;,[0,[var=agg]], {name:&apos;&apos;,size:0, strokeColor:&apos;grey&apos;, fillColor:&apos;grey&apos;});var p2 = board.create(&apos;point&apos;,[1500,[var=p]], {name:&apos;&apos;,size:0});var li2 = board.create(&apos;line&apos;,[p1,p2],{straightFirst:false, straightLast:false, strokeWidth:2, dash:2});</text>
+    </JSXGraph>
+  </jSXGraphs>
+  <dynamicMolecules id="82"/>
+  <resultFeedbackMappings id="83"/>
+</Exercise>

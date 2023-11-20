@@ -1,0 +1,284 @@
+<Exercise id="1">
+  <name>IS05-04 Eindimensionale Zufallsvariablen 4</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Erkennen ob eine Verteilungsfunktion bzw. Dichtefunktion vorliegt
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Pr&amp;uuml;fen Sie, ob folgende Funktionen Verteilungs- bzw. Dichtefunktionen sein k&amp;ouml;nnen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$[var=Frage1]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;&amp;nbsp; &lt;select name=&quot;dropdown1&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown1&lt;/option&gt;&lt;/select&gt;&amp;nbsp;</taskDescription>
+      <skipMessage>    [var=Antwort1]
+
+  </skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <targetStage class="FillInStage" id="10">
+          <internalName>2</internalName>
+          <externalName>Stage 2</externalName>
+          <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Pr&amp;uuml;fen Sie, ob folgende Funktionen Verteilungs- bzw. Dichtefunktionen sein k&amp;ouml;nnen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$[var=Frage2]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt; &amp;nbsp;&lt;select name=&quot;dropdown1&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown1&lt;/option&gt;&lt;/select&gt;&amp;nbsp;</taskDescription>
+          <skipMessage>    [var=Antwort2]
+
+  </skipMessage>
+          <defaultTransition id="11">
+            <conditionExpression id="12">
+              <domain>MATH</domain>
+            </conditionExpression>
+            <stageExpression id="13">
+              <domain>MATH</domain>
+            </stageExpression>
+            <isRepeat>true</isRepeat>
+          </defaultTransition>
+          <skipTransitions id="14">
+            <StageTransition id="15">
+              <conditionExpression id="16">
+                <code></code>
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>false</isRepeat>
+            </StageTransition>
+          </skipTransitions>
+          <stageTransitions id="18">
+            <StageTransition id="19">
+              <conditionExpression id="20">
+                <code></code>
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="21">
+                <code>[meta=stageCurrentResult]&gt;=100</code>
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>false</isRepeat>
+            </StageTransition>
+          </stageTransitions>
+          <hints id="22">
+            <StageHint id="23">
+              <stagehint__order>0</stagehint__order>
+              <text>      Dichtefunktion: 
+	  
+      $f(x)\geq0\quad\text{und}\quad \int\limits^{+\infty}_{-\infty}f(x)dx=1$ 
+    </text>
+              <malus>0</malus>
+              <stage class="FillInStage" reference="10"/>
+            </StageHint>
+          </hints>
+          <variableUpdatesOnEnter id="24"/>
+          <variableUpdatesBeforeCheck id="25"/>
+          <variableUpdatesAfterCheck id="26"/>
+          <variableUpdatesOnNormalExit id="27"/>
+          <variableUpdatesOnRepeat id="28"/>
+          <variableUpdatesOnSkip id="29"/>
+          <weight>1</weight>
+          <orderIndex>1</orderIndex>
+          <allowSkip>true</allowSkip>
+          <resources id="30"/>
+          <rules id="31"/>
+          <fillInFields id="32"/>
+          <dropDownFields id="33">
+            <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="34">
+              <name>dropdown1</name>
+              <orderIndex>0</orderIndex>
+              <randomize>false</randomize>
+              <items id="35">
+                <string>Trifft nicht zu.</string>
+                <string>Trifft zu.</string>
+              </items>
+            </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+          </dropDownFields>
+          <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+          <defaultFeedback>Die Antwort ist falsch.&lt;br /&gt;
+&lt;br /&gt;
+[var=Antwort2]</defaultFeedback>
+          <correctAnswerRules id="36">
+            <Rule id="37">
+              <name>Feedback 1</name>
+              <orderIndex>1</orderIndex>
+              <validationExpression id="38">
+                <code>[input=dropdown1]==[var=Antwortnum2]</code>
+                <domain>MATH</domain>
+              </validationExpression>
+              <points>0</points>
+              <terminal>false</terminal>
+            </Rule>
+          </correctAnswerRules>
+          <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+          <defaultResult>0</defaultResult>
+        </targetStage>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="39">
+        <StageTransition id="40">
+          <conditionExpression id="41">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="42">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="10"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="43">
+        <StageTransition id="44">
+          <conditionExpression id="45">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="46">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="10"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="47">
+        <StageHint id="48">
+          <stagehint__order>0</stagehint__order>
+          <text>      Verteilungsfunktion:
+	  
+      $0\leq F(x)\leq 1,\quad \underset{x\rightarrow-\infty}{\lim}F(x)=0\quad\underset{x\rightarrow+\infty}{\lim}F(x)=1$
+    </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="49"/>
+      <variableUpdatesBeforeCheck id="50"/>
+      <variableUpdatesAfterCheck id="51"/>
+      <variableUpdatesOnNormalExit id="52"/>
+      <variableUpdatesOnRepeat id="53"/>
+      <variableUpdatesOnSkip id="54"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="55"/>
+      <rules id="56"/>
+      <fillInFields id="57"/>
+      <dropDownFields id="58">
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="59">
+          <name>dropdown1</name>
+          <orderIndex>0</orderIndex>
+          <randomize>false</randomize>
+          <items id="60">
+            <string>Trifft nicht zu.</string>
+            <string>Trifft zu.</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+      </dropDownFields>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+[var=Antwort1]</defaultFeedback>
+      <correctAnswerRules id="61">
+        <Rule id="62">
+          <name>Feedback 1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="63">
+            <code>[input=dropdown1]==[var=Antwortnum1]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="10"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="64">
+    <VariableDeclaration id="65">
+      <name>i</name>
+      <initializationCode id="66">
+        <code>randomIntegerBetween(0,2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>j</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(0,1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>Frage1</name>
+      <initializationCode id="70">
+        <code>getFromList([var=i],list(&quot;$F(x)= \begin{cases} 0 &amp; \mbox{ für }\quad x &lt; 1 \\ \frac{3}{10}x-0.2 &amp; \mbox{ für }\quad 1 \le x \le 10 \\ 1 &amp; \mbox{ für }\quad x &gt; 10  \end{cases}$&quot;,&quot;$F(x)= \begin{cases} 0.1 &amp; \mbox{ für }\quad x &lt; 0.5 \\ \frac{1}{5}x^3 &amp; \mbox{ für }\quad 0.5 \le x \le 10 \\ 1 &amp; \mbox{ für }\quad x &gt; 10  \end{cases}$&quot;,&quot;$F(x)= \begin{cases} 0 &amp; \mbox{ für }\quad x &lt; 0 \\ 1 &amp; \mbox{ für }\quad x \ge 0  \end{cases}$&quot;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>Frage2</name>
+      <initializationCode id="72">
+        <code>getFromList([var=j],list(&quot;$f(x)= \begin{cases} \textrm{sin }x &amp; \mbox{ für }\quad -\pi \le x &lt; \frac{3}{2}\pi \\ 0 &amp; \mbox{ sonst. }\  \end{cases}$&quot;,&quot;$f(x)= \begin{cases} 2e^{-2x} &amp; \mbox{ für }\quad x \ge 0 \\ 0 &amp; \mbox{ sonst. }  \end{cases}$&quot;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>Antwort1</name>
+      <initializationCode id="74">
+        <code>getFromList([var=i],list(&quot;Da z.B. $F(10)&gt;1$ ist dies keine Verteilungsfunktion&quot;,&quot;Da $\underset{x\rightarrow-\infty}{\lim} F(x)\neq 0$ ist dies keine Verteilungsfunktion&quot;,&quot;Dies ist eine Verteilungsfunktion&quot;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>Antwortnum1</name>
+      <initializationCode id="76">
+        <code>getFromList([var=i], list(0,0,1))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>Antwort2</name>
+      <initializationCode id="78">
+        <code>getFromList([var=j],list(&quot;Da $f(x) = \sin x &lt; 0$ für $x=\frac{3}{2}\pi$ und $\int\limits_{-\pi}^{\frac{3}{2}\pi}f(x)dx=-1$ ist dies keine Dichtefunktion&quot;,&quot;Da $f(x) \geq 0$ und $\int\limits^{\infty}_{-\infty} f(x) \enspace dx = \int\limits^{\infty}_{0} 2e^{-2x} \enspace dx = (-e^{-2x}) \bigg|^{\infty}_{0} = 0-(-1) = 1$ ist dies eine Dichtefunktion&quot;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>Antwortnum2</name>
+      <initializationCode id="80">
+        <code>getFromList([var=j], list(0,1))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="81"/>
+  <dynamicMolecules id="82"/>
+  <resultFeedbackMappings id="83"/>
+</Exercise>

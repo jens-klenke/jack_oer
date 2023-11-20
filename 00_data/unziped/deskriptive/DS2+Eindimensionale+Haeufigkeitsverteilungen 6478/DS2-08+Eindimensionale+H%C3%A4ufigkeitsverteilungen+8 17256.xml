@@ -1,0 +1,232 @@
+<Exercise id="1">
+  <name>DS2-08 Eindimensionale Häufigkeitsverteilungen 8</name>
+  <publicDescription></publicDescription>
+  <internalNotes>empirische Verteilungsfunktion gegeben, Quantile berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAGJApEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKzdfkvodBvZdNZVvI4i0W5cjIHpWlSMoZSpGQRg0AecyfEG5b4Xw63D5barKRbhAOPOzg8VqXPj3TvDttZWutzyzak0SvOttAW2Z7sB0FcdY+B9bT4iGzltmHhqK6N9G5Hylz/D+dR+NfAt/L40vNVXSb/VLa8jVEWzuzD5bD+96rQB3uq/ETw9pFvYTzTyyx36lrdoIi+7HbjvWFB8Uorrx9aaLFaXK2c9v5m97dg4Y9MjsPeqFt4LvtP1PwYkWmutvZNI9wBIZBCWHdj1rT1vStXi+KFtqltpstzYz2TWryxsB5RPc+1AGqfiV4bGsf2b9pm3b/AC/P8lvJ3f3d/TNZ1/4uvoLjxQtvfRSNp0SPDF9nx5ZPq38Vef2nw01CDUTp1zoN/cn7UZPtv28pb7N2c7R3rqZfC+rrf+MtljKY7u3iS2br5hA7UAdppPiq2uJNM0+5ZjqN3ai4+VPlxjnmq0/xE0G303UNQkecQWE/2ec+Uch/YdxXNXmma9o2reHtXstFlvzDZC2mhRwrIcdTntXPnwr4kufBmvwz6PLHeXepidIAQcrkcg9xQB6RonxA0HX9TfT7SWdZ1TzB50JQOvqpPWqNz8VvDFrJdK81yy2zhGkSBijNnGFboaraloN9L4t0i5S2ZLWLT2illA4Q7ehryy51p4vh/f8AhqO2hlSC84uxKv7zL5wF+9mgD2TV/iT4f0W5ht7h7qSSSMSEQQF/LU9C2Olc547+Jc2nyaTa6BId1/h/tJtWlXYfQDqazvEuhasbi3vLPw/eTyPaJGlzp9zsfOOkingitSLw/wCIjF4R+3wedcWkpa4aMACNe2cd6AOr0rxfYXi31u0kj3OmxK92fKKjkZ4FV7v4i+H7GwsL2eWdYb7PkkREk49QK5HUNN8TaL4o8Stp+hSahDrEQEUyyBVjIGPmzT9P8M6usXgwXGnODZs5uQQCI8+tAG7e/EOz1DwfrGpaFK63djGSY7iIqyHtlTVjRPHdpd6ZaJMZLjUDZC5uBbxblTjPOOn0rl9S8MazLqHjl4tPlKX8KrbEAfvTjtUvgXwlqfgy4tY4rWeS01C1H2rectBMB39qAG23xRl1Twte3ySNYXFvdLH5klozJtLYAHqf5V1utePtF8OtBBeyTzXMiBzHbQmRlBH3iB0FcDd6F4im8G6loX9hXAkS/WaKUEFZVL5yPpWxd6fr/hjxRd6vZaHLrEOoW6RlI3AaFgMYOe1AHUah8QfD2m6RZarLdO9peSeXG8aFvm9CO1TeHfGuj+J7i4t7B5hNB9+OaIxtj1APavPJfA2tW+i6HG1o00x1b7ZcRJysCnt9BXSppmpWPxR1HWhYStY/2cFV1wA7j+H60AegdK4aX4teF4Z5Ymku90M5glIt2IRgcZJ6Ae9dVpGonVtKivDbvbmQH905BK/lXmNp4V1iPwN4utG02QXd5dSvAmBmQE8EUAdfrPxE0fRLmOCa21KfzIxIr21o0iEHpyKqXfjHU9c0SKbwlplyZ5p/JaS8gKCAd3KnkioIPBetXukaYV8UappDxWiRyW0AUgMBznPeofENr4t8M+EXs9GuNR1/ULiTH2iQLvhXvigCCy8c61plnr9vrBtL680tRtntl2pIzdAR2q14b8T+IYfEdnpXiOSzlOpW5uLY26Fdn+yfX61kaJoN9qHgfU9FHh290y8dRIbi+dWNxL1ySKveHdL1zWPFmm6pq+kSaamlWxgTe4PmseCRjtQB6ZRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABWCfBXhptW/tQ6LZm+3bvO2c59a3qKAADAwKKKKACiiigAooooAKKKKACmuiyIyOMqwwQe9OooAZHEkMaxxoERRgKBwKfRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFc3e+IdSfUriy0fSftbWxAlkklEagkZwM9aAOkorG0PW5tSmubS8smtL222+ZGWDAg9CCK2aACikY7UJ9BmuU0u+8U6tp0V9C2kxxyliqOshIAYjn8qAOsorn9ni3/nto//AHzJRs8W/wDPbR/++ZKAOgorn9ni3/nto/8A3zJRs8W/89tH/wC+ZKAOgorn9ni3/nto/wD3zJRs8W/89tH/AO+ZKAOgorn9ni3/AJ7aP/3zJRs8W/8APbR/++ZKAOgorn9ni3/nto//AHzJRs8W/wDPbR/++ZKAOgorn9ni3/nto/8A3zJRs8W/89tH/wC+ZKAOgorn9ni3/nto/wD3zJRs8W/89tH/AO+ZKAOgorn9ni3/AJ7aP/3zJRs8W/8APbR/++ZKAOgorn9ni3/nto//AHzJRs8W/wDPbR/++ZKAOgorn9ni3/nto/8A3zJRs8W/89tH/wC+ZKAOgorn9ni3/nto/wD3zJRs8W/89tH/AO+ZKAOgorn9ni3/AJ7aP/3zJRs8W/8APbR/++ZKAOgorn9ni3/nto//AHzJRs8W/wDPbR/++ZKAOgorn9ni3/nto/8A3zJRs8W/89tH/wC+ZKAOgorn9ni3/nto/wD3zJRs8W/89tH/AO+ZKAOgorn9ni3/AJ7aP/3zJRs8W/8APbR/++ZKAOgorn9ni3/nto//AHzJRs8W/wDPbR/++ZKAOgorn9ni3/nto/8A3zJRs8W/89tH/wC+ZKAOgorn9ni3/nto/wD3zJRs8W/89tH/AO+ZKAOgorn9ni3/AJ7aP/3zJRs8W/8APbR/++ZKAOgorn9ni3/nto//AHzJRs8W/wDPbR/++ZKAOgorn9ni3/nto/8A3zJRs8W/89tH/wC+ZKAOgorn9ni3/nto/wD3zJRs8W/89tH/AO+ZKAOgorn9ni3/AJ7aP/3zJRs8W/8APbR/++ZKAOgorn9ni3/nto//AHzJRs8W/wDPbR/++ZKAOgornQfFTNtFzopPoBJTtni3/nto/wD3zJQB0FFc/s8W/wDPbR/++ZKNni3/AJ7aP/3zJQB0FFc/s8W/89tH/wC+ZKNni3/nto//AHzJQB0FFc/s8W/89tH/AO+ZKNni3/nto/8A3zJQB0FFc/s8W/8APbR/++ZKNni3/nto/wD3zJQB0FFc/s8W/wDPbR/++ZKNni3/AJ7aP/3zJQB0FFc9p2o6wviJtL1QWTA2v2hHtww/i24Oa6GgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKwNS8K2d/eveR3d5ZzyY8xrabZvx0yK365bVPCLalrwvTqV9HbOmHiinKAN2IoA0dF0WLR5rgRB5BIFLTyyb5JCPWtaQusTtGm9wCVXOMn0zWbo+hw6MsgiubufzOv2iUvj6VqUAc6+peJPLb/AIp+Lof+X1f8Kf4JLHwdpxddrFGyM5wd7Vuyf6t/oaw/Bn/IpWH0f/0NqAN6iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACs3XpZINGneJmQgAF1HKjPJrSpGUOpVgCp4IPegDxPxHq/ivSNX2aB4ZjmtEkX7PeLMS02fUZ5zV0eNfivj/kRYv++z/jXp9voOl2l0bmCyjSYnO7k/kOgrRoA8g/4TX4r/8AQixf99n/ABo/4TX4r/8AQixf99n/ABr1+igDyD/hNfiv/wBCLF/32f8AGj/hNfiv/wBCLF/32f8AGvX6KAPIP+E1+K//AEIsX/fZ/wAaP+E1+K//AEIsX/fZ/wAa9fooA8g/4TX4r/8AQixf99n/ABo/4TX4r/8AQixf99n/ABr1+igDyD/hNfiv/wBCLF/32f8AGj/hNfiv/wBCLF/32f8AGvX6KAPNfBWseJ9X8bzv4m0VdLlTT8QqpzvXzOTXpVc+3/JQU/7Bh/8ARtdBQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA2T/Vv9DWH4M/5FKw+j/wDobVuSf6t/oaw/Bn/IpWH0f/0NqAN6iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDn2/5KCn/YMP/o2ugrn2/wCSgp/2DD/6NroKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoorz3xD4l1S01e8hju0tkjkSJIzFklGHMmfagD0KiuW8I6jc3Vxf2r341G3gKmO7C43EjkcccV1NADZP9W/0NYfgz/kUrD6P/AOhtW5J/q3+hrD8Gf8ilYfR//Q2oA3qKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAOfb/koKf9gw/+ja6Cufb/AJKCn/YMP/o2ugoAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACuf1fxDomn3Rgu1864A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Ekc8EpikEbZUkehoA1qKKKACiiigAooooAKKKKAGSRRyqFkRXAOcMM80+ue1/Xb7S5GNvaQmCNN8ktw+1T/sr6tWzYXX22wguvLaPzUDbW6jNAFiiiigAooooAKKKKACiiigBhijMolKL5gGA2OQPSn1g6r4jGn61YabFAZXuH2yNniMf41vUAFFFFABRRRQAUUUUAFFFNkcRxs7dFBJ/CgBBFGsjSKih2wGYDk46U+uU8PeJ7vWr4qz6csOW+RGfzMDp14P4V1dABRRRQAUUUUAFFFFABRRWfrWqJo2lS3rIZNmAqDuScCgC7HFHDGEiRUQdFUYFPrJ0W/vr4Sm7Szwp+V7WXePofQ1rUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBHPH50EkWcb1K/nXE6ZoOq40fTru0WK20ucyi4EoPmgE4wvbrXdUUAFFFFABRRRQAUUUUAFFFFABWPoWn3Fg+oGdQBNctImDn5TWxRQAUUUUAFFFFABRRRQAUUUUAYHimTXhaRRaHarK0jYmcyBWRf9nPerHh2CS20wQyacbIqfutKHLnuxIrXooAKKKKACiiigAooooAKKKKAOf16DUrh5IUsYb6zlj2hGIUxN/eyetaGh2M2m6Na2k8plliTDNWhRQAUUUUAFFFFABRRRQAUUUUAcRe+E9aOq21zb6sskYu/OkDwLlR9e9duM4GTk0UUAFFFFABRRRQAUUUUAFRzqzwSIhAdlIUsMjOO4qSigDk4NL1S81HTDdWkVomnuzGSJhibIxwo6CusoooAKKKKACiiigAooooAKyfEelHWdGltAFLFlcBjgEg5xWtRQBzegaZc2+qXN49imnwvGIxbo4YMR/HxxXSUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUVkT+JNNtb+6s7iVopbeLzn3rgFfVT3q7p1/DqlhFeW4kEUo3L5i7Tj6UAWqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDzjxzp934k1eKHT7U/8SwedNIwwJe/lj1zXcaNex6hpNvcRxNCCgBjZdpQjtir9FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/2Q==</content>
+      <uploadTimestamp>2022-03-01T13:00:50.055021</uploadTimestamp>
+      <filename>hinweis.jpg</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die zu einer Urliste geh&amp;ouml;rende empirische Verteilungsfunktion sei gegeben durch&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$H(x) =&lt;br /&gt;&#xd;
+\begin{cases} 0 &amp;amp; \mbox{f&amp;uuml;r } x &amp;lt; 1 \\ 0.[var=$x1] &amp;amp; \mbox{f&amp;uuml;r } 1\leq x &amp;lt; 2 \\ 0.[var=$x2] &amp;amp; \mbox{f&amp;uuml;r } 2\leq x &amp;lt; 3\\ 0.[var=$x3] &amp;amp; \mbox{f&amp;uuml;r } 3\leq x &amp;lt; 4\\ 0.[var=$x4] &amp;amp; \mbox{f&amp;uuml;r } 4\leq x &amp;lt; 5\\ 0.[var=$x5] &amp;amp; \mbox{f&amp;uuml;r } 5\leq x &amp;lt; 6 \\ 1 &amp;amp; \mbox{f&amp;uuml;r } 6\leq x&lt;br /&gt;&#xd;
+\end{cases}$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Errechnen Sie das&lt;br /&gt;&#xd;
+0.[var=q1] Quantil: &amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp; und das&lt;br /&gt;&#xd;
+0.[var=q2] Quantil: &amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>0.[var=q1] Quantil: [var=q11]&lt;br /&gt;
+0.[var=q2] Quantil: [var=q21]</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="16">
+        <StageTransition id="17">
+          <conditionExpression id="18">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="19">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="20">
+        <StageHint id="21">
+          <stagehint__order>0</stagehint__order>
+          <text>Gesucht wird jetzt eine Auspr&amp;auml;gung der Variablen $X$, die von vorgegebenen $p\cdot100$ % der Beobachtungen (0 &amp;lt; p &amp;lt; 1) nicht &amp;uuml;berschritten wird. Diesen Wert nennt man $\textbf{p-Quantil}$ $x_{p}$.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>1</stagehint__order>
+          <text>&amp;nbsp;&lt;img height=&quot;292&quot; src=&quot;/econometrics/resource?resource=17258&quot; width=&quot;489&quot; /&gt;&amp;nbsp;&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Dies war der letzte Hinweis.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="23"/>
+      <variableUpdatesBeforeCheck id="24"/>
+      <variableUpdatesAfterCheck id="25"/>
+      <variableUpdatesOnNormalExit id="26"/>
+      <variableUpdatesOnRepeat id="27"/>
+      <variableUpdatesOnSkip id="28"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="29"/>
+      <rules id="30"/>
+      <fillInFields id="31">
+        <FillInField id="32">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="33">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="34"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.</defaultFeedback>
+      <correctAnswerRules id="35">
+        <Rule id="36">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="37">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field1]==[var=q11]&amp;&amp;[input=field2]==[var=q21]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="38">
+    <VariableDeclaration id="39">
+      <name>x1</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(10,20)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>x2</name>
+      <initializationCode id="42">
+        <code>randomIntegerBetween(21,30)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>x3</name>
+      <initializationCode id="44">
+        <code>randomIntegerBetween(31,60)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>x4</name>
+      <initializationCode id="46">
+        <code>randomIntegerBetween(61,85)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>x5</name>
+      <initializationCode id="48">
+        <code>randomIntegerBetween(86,95)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>q1</name>
+      <initializationCode id="50">
+        <code>randomIntegerBetween(10,50)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>q2</name>
+      <initializationCode id="52">
+        <code>randomIntegerBetween(51,95)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>q13</name>
+      <initializationCode id="54">
+        <code>ifthenelse([var=q1]&gt;[var=x1]&amp;&amp;[var=q1]&lt;[var=x2]+1, 2, 1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>q12</name>
+      <initializationCode id="56">
+        <code>ifthenelse([var=q1]&gt;[var=x2]&amp;&amp;[var=q1]&lt;[var=x3]+1, 3, [var=q13])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>q11</name>
+      <initializationCode id="58">
+        <code>ifthenelse([var=q1]&gt;[var=x3], 4, [var=q12])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>q22</name>
+      <initializationCode id="60">
+        <code>ifthenelse([var=q2]&lt;[var=x5]&amp;&amp;[var=q2]&gt;[var=x4], 5, 6)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>q21</name>
+      <initializationCode id="62">
+        <code>ifthenelse([var=q2]&lt;[var=x4]+1, 4, [var=q22])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="63"/>
+  <dynamicMolecules id="64"/>
+  <resultFeedbackMappings id="65"/>
+</Exercise>

@@ -1,0 +1,283 @@
+<Exercise id="1">
+  <name>IS01-02 Grundlagen 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Bestimmung der Potenzmenge
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>1</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <MCStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Gegeben ist der Stichprobenraum $\Omega = \{\text{Rot}, \text{Gr&amp;uuml;n}, \text{Blau}\}$ des einmaligen Ziehens einer farbigen Kugel.&lt;br /&gt;&#xd;
+Bestimmen Sie die Potenzmenge $\text{PM}(\Omega)$!&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;</taskDescription>
+      <skipMessage> Richtig ist die Menge $[var=true]$.</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Angenommen, die gezogene Kugel kann nicht nur rot, gr&amp;uuml;n oder blau sein. Die Kugel kann nun insgesamt eine von $[var=colors]$ m&amp;ouml;gliche Farben haben. Um wieviele Elemente vergr&amp;ouml;&amp;szlig;ert sich dadurch die Potenzmenge $\text{PM}(\Omega)$?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Anzahl neuer Elemente = &amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;</taskDescription>
+            <skipMessage>Richtig ist $[var=sol_st2]$.</skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18">
+              <StageTransition id="19">
+                <conditionExpression id="20">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="21">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="22">
+              <StageTransition id="23">
+                <conditionExpression id="24">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="25">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="26">
+              <StageHint id="27">
+                <stagehint__order>0</stagehint__order>
+                <text>Die Anzahl der Elemente der Potenzmenge errechnet sich als $2^m$ wobei $m$ die Anzahl an Elementarereignissen des Stichprobenraums $\Omega$ ist.</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="28"/>
+            <variableUpdatesBeforeCheck id="29"/>
+            <variableUpdatesAfterCheck id="30"/>
+            <variableUpdatesOnNormalExit id="31"/>
+            <variableUpdatesOnRepeat id="32"/>
+            <variableUpdatesOnSkip id="33"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="34"/>
+            <rules id="35">
+              <Rule id="36">
+                <name>Feedback_1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="37">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==128&amp;&amp;[input=field1]==64&amp;&amp;[input=field1]==32</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <feedbackText>Lesen Sie die Aufgabenstellung noch einmal ganz genau!</feedbackText>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </rules>
+            <fillInFields id="38">
+              <FillInField id="39">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="40"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $[var=sol_st2]$.</defaultFeedback>
+            <correctAnswerRules id="41">
+              <Rule id="42">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="43">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]==[var=sol_st2]</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="44">
+        <StageTransition id="45">
+          <conditionExpression id="46">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="47">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="48">
+        <StageHint id="49">
+          <stagehint__order>0</stagehint__order>
+          <text>Die Potenzmenge enth&amp;auml;lt alle Teilmengen eines Stichprobenraums.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+        <StageHint id="50">
+          <stagehint__order>1</stagehint__order>
+          <text>Zum Beispiel gilt:&lt;br /&gt;
+$\text{PM}(\{1,2,3\})= \{\emptyset, \{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3 \}\}$.</text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="51"/>
+      <variableUpdatesBeforeCheck id="52"/>
+      <variableUpdatesAfterCheck id="53"/>
+      <variableUpdatesOnNormalExit id="54"/>
+      <variableUpdatesOnRepeat id="55"/>
+      <variableUpdatesOnSkip id="56"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="57"/>
+      <answerOptions id="58">
+        <MCAnswer id="59">
+          <order>0</order>
+          <rule>CORRECT</rule>
+          <text>$\text{PM}(\Omega)=[var=true]$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="60">
+          <order>1</order>
+          <rule>WRONG</rule>
+          <text>$\text{PM}(\Omega)=[var=f1]$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="61">
+          <order>2</order>
+          <rule>WRONG</rule>
+          <text>$\text{PM}(\Omega)=[var=f2]$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="62">
+          <order>3</order>
+          <rule>WRONG</rule>
+          <text>$\text{PM}(\Omega)=[var=f3]$</text>
+          <variableName></variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+      </answerOptions>
+      <randomize>true</randomize>
+      <singleChoice>false</singleChoice>
+      <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+      <defaultFeedback>Leider nicht korrekt!.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist die Menge $[var=true]$.</defaultFeedback>
+      <defaultResult>0</defaultResult>
+      <extraFeedbacks id="63"/>
+    </MCStage>
+    <FillInStage reference="14"/>
+  </stages>
+  <startStage class="MCStage" reference="6"/>
+  <variableDeclarations id="64">
+    <VariableDeclaration id="65">
+      <name>true</name>
+      <initializationCode id="66">
+        <code>&quot;\{\{\emptyset\},\{\text{Rot}\},\{\text{Grün}\},\{\text{Blau}\},\{\text{Rot}, \text{Grün}\},\{\text{Rot}, \text{Blau}\},\{\text{Grün},\text{Blau}\},\{\Omega\}\}&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>f1</name>
+      <initializationCode id="68">
+        <code>&quot;\{\{\emptyset\},\{\text{Rot}\},\{\text{Grün}\},\{\text{Blau}\},\{\Omega\}\}&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>f2</name>
+      <initializationCode id="70">
+        <code>&quot;\{\{\text{Rot}\},\{\text{Grün}\},\{\text{Blau}\},\{\text{Rot},\text{Grün}\},\{\text{Rot},\text{Blau}\},\{\text{Grün},\text{Blau}\}\}&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>f3</name>
+      <initializationCode id="72">
+        <code>&quot;\{\{\text{Rot}\},\{\text{Grün}\},\{\text{Blau}\},\{\text{Rot},\text{Grün}\},\{\text{Rot},\text{Blau}\},\{\text{Grün},\text{Blau}\},\{\Omega\}\}&quot;</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>colors</name>
+      <initializationCode id="74">
+        <code>randomIntegerBetween(5,7)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>sol_st2</name>
+      <initializationCode id="76">
+        <code>pow(2, [var=colors])-pow(2, 3)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="77"/>
+  <dynamicMolecules id="78"/>
+  <resultFeedbackMappings id="79"/>
+</Exercise>

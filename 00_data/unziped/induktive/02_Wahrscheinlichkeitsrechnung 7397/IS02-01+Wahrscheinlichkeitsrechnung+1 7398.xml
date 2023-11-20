@@ -1,0 +1,383 @@
+<Exercise id="1">
+  <name>IS02-01 Wahrscheinlichkeitsrechnung 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Wahrscheinlichkeiten von Schnitten, Vereinigungen, Komplementärereignis usw...
+Taschenrechner upgedated
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Es liegen Ihnen folgende Ereignisse und deren Wahrscheinlichkeiten vor:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$P(A) = [var=$pA] \quad P(B)=[var=$pB] \quad P(A\cap B)=[var=$pAB]$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie folgende Wahrscheinlichkeiten:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$[var=t1] = $ &amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$[var=t2] = $ &amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$[var=t3] = $ &amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>Die L&amp;ouml;sungen lauten:&lt;br /&gt;
+$[var=t1] = [var=sol1]$&lt;br /&gt;
+$[var=t2] = [var=sol2]$&lt;br /&gt;
+$[var=t3] = [var=sol3].$</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="16">
+        <StageTransition id="17">
+          <conditionExpression id="18">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="19">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="20">
+        <StageHint id="21">
+          <stagehint__order>0</stagehint__order>
+          <text>Schauen Sie sich die Axiome von Kolmogoroff und die daraus abgeleiteten Rechenregeln f&amp;uuml;r Wahrscheinlichkeiten noch einmal an!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>1</stagehint__order>
+          <text>Versuchen Sie sich die Ereignisse mit Hilfe von Venn-Diagrammen zu verdeutlichen!</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="23"/>
+      <variableUpdatesBeforeCheck id="24"/>
+      <variableUpdatesAfterCheck id="25"/>
+      <variableUpdatesOnNormalExit id="26"/>
+      <variableUpdatesOnRepeat id="27"/>
+      <variableUpdatesOnSkip id="28"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="29"/>
+      <rules id="30">
+        <Rule id="31">
+          <name>Feedback_6</name>
+          <orderIndex>6</orderIndex>
+          <validationExpression id="32">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]==[var=sol1]&amp;&amp;[input=field2]!=[var=sol2]&amp;&amp;[input=field3]!=[var=sol3]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Nur Lösung 1 stimmt!</feedbackText>
+          <points>33</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="33">
+          <name>Feedback_5</name>
+          <orderIndex>5</orderIndex>
+          <validationExpression id="34">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]!=[var=sol1]&amp;&amp;[input=field2]==[var=sol2]&amp;&amp;[input=field3]!=[var=sol3]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Nur Lösung 2 stimmt!</feedbackText>
+          <points>33</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="35">
+          <name>Feedback_4</name>
+          <orderIndex>4</orderIndex>
+          <validationExpression id="36">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]!=[var=sol1]&amp;&amp;[input=field2]!=[var=sol2]&amp;&amp;[input=field3]==[var=sol3]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Nur Lösung 3 stimmt!</feedbackText>
+          <points>33</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="37">
+          <name>Feedback_3</name>
+          <orderIndex>3</orderIndex>
+          <validationExpression id="38">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]!=[var=sol1]&amp;&amp;[input=field2]==[var=sol2]&amp;&amp;[input=field3]==[var=sol3]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Die erste Lösung ist nicht richtig!</feedbackText>
+          <points>67</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="39">
+          <name>Feedback_2</name>
+          <orderIndex>2</orderIndex>
+          <validationExpression id="40">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]==[var=sol1]&amp;&amp;[input=field2]!=[var=sol2]&amp;&amp;[input=field3]==[var=sol3]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Lösung 2 ist falsch!</feedbackText>
+          <points>67</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="41">
+          <name>Feedback_1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="42">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]==[var=sol1]&amp;&amp;[input=field2]==[var=sol2]&amp;&amp;[input=field3]!=[var=sol3]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Die ersten beiden sind richtig!</feedbackText>
+          <points>67</points>
+          <terminal>false</terminal>
+        </Rule>
+      </rules>
+      <fillInFields id="43">
+        <FillInField id="44">
+          <name>field3</name>
+          <orderIndex>2</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="45">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="46">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="47"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Die L&amp;ouml;sungen lauten:&lt;br /&gt;
+$[var=t1] = [var=sol1]$&lt;br /&gt;
+$[var=t2] = [var=sol2]$&lt;br /&gt;
+$[var=t3] = [var=sol3].$</defaultFeedback>
+      <correctAnswerRules id="48">
+        <Rule id="49">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="50">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]&gt;[var=sol1]-0.0011&amp;&amp;[input=field1]&lt;[var=sol1]+0.0011&amp;&amp;[input=field2]&gt;[var=sol2]-0.0011&amp;&amp;[input=field2]&lt;[var=sol2]+0.0011&amp;&amp;[input=field3]&gt;[var=sol3]-0.0011&amp;&amp;[input=field3]&lt;[var=sol3]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="51">
+    <VariableDeclaration id="52">
+      <name>a1</name>
+      <initializationCode id="53">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="54">
+      <name>a</name>
+      <initializationCode id="55">
+        <code>chooseFromComplement(list(0,1,2,3,4,5), list([var=a1]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="56">
+      <name>b</name>
+      <initializationCode id="57">
+        <code>chooseFromComplement(list(0,1,2,3,4,5), list([var=a]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="58">
+      <name>c</name>
+      <initializationCode id="59">
+        <code>chooseFromComplement(list(0,1,2,3,4,5), list([var=a],[var=b]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="60">
+      <name>t1</name>
+      <initializationCode id="61">
+        <code>getFromList([var=a],list(&apos;P(A\cup B)&apos;,&apos;P(\overline{A}\cup \overline{B})&apos;,&apos;P(\overline{A}\cap \overline{B})&apos;,&apos;P(\overline{A}\cup B)&apos;,&apos;P(A\cap \overline{B})&apos;,&apos;P(\overline{A\cup B})&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="62">
+      <name>t2</name>
+      <initializationCode id="63">
+        <code>getFromList([var=b],list(&apos;P(A\cup B)&apos;,&apos;P(\overline{A}\cup \overline{B})&apos;,&apos;P(\overline{A}\cap \overline{B})&apos;,&apos;P(\overline{A}\cup B)&apos;,&apos;P(A\cap \overline{B})&apos;,&apos;P(\overline{A\cup B})&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="64">
+      <name>t3</name>
+      <initializationCode id="65">
+        <code>getFromList([var=c],list(&apos;P(A\cup B)&apos;,&apos;P(\overline{A}\cup \overline{B})&apos;,&apos;P(\overline{A}\cap \overline{B})&apos;,&apos;P(\overline{A}\cup B)&apos;,&apos;P(A\cap \overline{B})&apos;,&apos;P(\overline{A\cup B})&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="66">
+      <name>d</name>
+      <initializationCode id="67">
+        <code>randomIntegerBetween(50,75)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="68">
+      <name>e1</name>
+      <initializationCode id="69">
+        <code>randomIntegerBetween(30,45)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="70">
+      <name>f</name>
+      <initializationCode id="71">
+        <code>randomIntegerBetween(25,30)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="72">
+      <name>pA</name>
+      <initializationCode id="73">
+        <code>evaluateInR(&apos;[var=d]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="74">
+      <name>pB</name>
+      <initializationCode id="75">
+        <code>evaluateInR(&apos;[var=e1]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="76">
+      <name>pAB</name>
+      <initializationCode id="77">
+        <code>evaluateInR(&apos;[var=f]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="78">
+      <name>s1</name>
+      <initializationCode id="79">
+        <code>evaluateInR(&apos;round(([var=pA]+[var=pB]-[var=pAB]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="80">
+      <name>s2</name>
+      <initializationCode id="81">
+        <code>evaluateInR(&apos;round((1-[var=pAB]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="82">
+      <name>s3</name>
+      <initializationCode id="83">
+        <code>evaluateInR(&apos;round((1-([var=pA]+[var=pB]-[var=pAB])), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="84">
+      <name>s4</name>
+      <initializationCode id="85">
+        <code>evaluateInR(&apos;round((1-[var=pA]+[var=pAB]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="86">
+      <name>s5</name>
+      <initializationCode id="87">
+        <code>evaluateInR(&apos;round(([var=pA]-[var=pAB]), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="88">
+      <name>s6</name>
+      <initializationCode id="89">
+        <code>evaluateInR(&apos;round((1-([var=pA]+[var=pB]-[var=pAB])), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="90">
+      <name>sol1</name>
+      <initializationCode id="91">
+        <code>getFromList([var=a], list([var=s1],[var=s2],[var=s3],[var=s4],[var=s5],[var=s6]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="92">
+      <name>sol2</name>
+      <initializationCode id="93">
+        <code>getFromList([var=b], list([var=s1],[var=s2],[var=s3],[var=s4],[var=s5],[var=s6]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="94">
+      <name>sol3</name>
+      <initializationCode id="95">
+        <code>getFromList([var=c], list([var=s1],[var=s2],[var=s3],[var=s4],[var=s5],[var=s6]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="96"/>
+  <dynamicMolecules id="97"/>
+  <resultFeedbackMappings id="98"/>
+</Exercise>

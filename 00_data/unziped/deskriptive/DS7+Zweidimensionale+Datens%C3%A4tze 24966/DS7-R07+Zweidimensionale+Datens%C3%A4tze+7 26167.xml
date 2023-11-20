@@ -1,0 +1,272 @@
+<Exercise id="1">
+  <name>DS7-R07 Zweidimensionale Datensätze 7</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Korrelationskoeffizient berechnen (Lernaufwand/Punkte in der Klausur)
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">bGVybnplaXQgPC0gYyg2LDMsMyw1LDAsMCwwLDEsMiwxLDIsMiw0LDAsNCkNCnB1bmt0ZSA8LSBjKDYwLDQwLDM3LDU0LDIsMTUsMjcsMjgsMzIsMzMsMzAsNDQsNTMsMCw0Nyk=</content>
+      <uploadTimestamp>2022-03-30T16:43:33.353782</uploadTimestamp>
+      <filename>source.r</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <RStage id="8">
+      <internalName>#1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die Kovarianz l&amp;auml;sst zwar eine Aussage dar&amp;uuml;ber zu, ob ein Zusammenhang besteht, allerdings nicht dar&amp;uuml;ber, wie stark dieser Zusammenhang ist.&lt;br /&gt;&#xd;
+Berechnen Sie daher den Korrelationskoeffizienten nach Bravais-Pearson, um diesem Problem entgegenzutreten.&lt;br /&gt;&#xd;
+K&amp;ouml;nnen Sie jetzt sagen, wie stark der Zusammenhang ist? Die Variablen $\verb|lernzeit|$ und $\verb|punkte|$ stehen weiterhin zur Verf&amp;uuml;gung.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12"/>
+      <stageTransitions id="13"/>
+      <hints id="14">
+        <StageHint id="15">
+          <stagehint__order>0</stagehint__order>
+          <text>Mit Hilfe der Funktion $\verb|cor()|$ k&amp;ouml;nnen Sie den Korrelationskoeffizienten berechnen.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode>lernzeit &lt;- c([var=x1], [var=x2], [var=x3], [var=x4], [var=x5], [var=x6],  [var=x7], [var=x8], [var=x9], [var=x10])
+punkte &lt;- c([var=y1], [var=y2], [var=y3], [var=y4], [var=y5], [var=y6],  [var=y7], [var=y8], [var=y9], [var=y10])</initialCode>
+      <finalResultComputationString>min(#{c26172},#{c26171})</finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $\verb|cor()|$-Funktion und achten Sie darauf, die beiden vordefinierten Vektoren $\verb|lernzeit|$ und $\verb|punkte|$ zu benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>		from cor:V{FunctionCall}, lz,pkte:V{Variable} with 
+                cor.name=&quot;cor&quot; and
+                cor --&gt;* lz and
+                cor --&gt;* pkte and
+                lz.name=&quot;lernzeit&quot; and
+                pkte.name=&quot;punkte&quot;
+                report 0 end
+		</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>26171</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>100</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig! Benutzen Sie die $\verb|cor()|$-Funktion.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>cor(c([var=x1], [var=x2], [var=x3], [var=x4], [var=x5], [var=x6],  [var=x7], [var=x8], [var=x9], [var=x10]),c([var=y1], [var=y2], [var=y3], [var=y4], [var=y5], [var=y6],  [var=y7], [var=y8], [var=y9], [var=y10]))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>26172</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="8"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>x1</name>
+      <initializationCode id="36">
+        <code>randomIntegerBetween(0,3)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="37">
+      <name>x2</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>x3</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(2,7)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>x4</name>
+      <initializationCode id="42">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>x5</name>
+      <initializationCode id="44">
+        <code>randomIntegerBetween(4,8)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>x6</name>
+      <initializationCode id="46">
+        <code>randomIntegerBetween(0,1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>x7</name>
+      <initializationCode id="48">
+        <code>randomIntegerBetween(0,1)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>x8</name>
+      <initializationCode id="50">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>x9</name>
+      <initializationCode id="52">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>x10</name>
+      <initializationCode id="54">
+        <code>randomIntegerBetween(0,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>y1</name>
+      <initializationCode id="56">
+        <code>randomIntegerBetween(0,35)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>y2</name>
+      <initializationCode id="58">
+        <code>randomIntegerBetween(0,60)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>y3</name>
+      <initializationCode id="60">
+        <code>randomIntegerBetween(40,60)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>y4</name>
+      <initializationCode id="62">
+        <code>randomIntegerBetween(0,60)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>y5</name>
+      <initializationCode id="64">
+        <code>randomIntegerBetween(50,60)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>y6</name>
+      <initializationCode id="66">
+        <code>randomIntegerBetween(10,20)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>y7</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(10,40)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>y8</name>
+      <initializationCode id="70">
+        <code>randomIntegerBetween(0,60)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>y9</name>
+      <initializationCode id="72">
+        <code>randomIntegerBetween(10,45)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>y10</name>
+      <initializationCode id="74">
+        <code>randomIntegerBetween(20,45)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="75"/>
+  <dynamicMolecules id="76"/>
+  <resultFeedbackMappings id="77"/>
+</Exercise>

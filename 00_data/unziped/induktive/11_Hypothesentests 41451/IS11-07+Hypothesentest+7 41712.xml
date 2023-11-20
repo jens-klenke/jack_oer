@@ -1,0 +1,522 @@
+<Exercise id="1">
+  <name>IS11-07 Hypothesentest 7</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Kartoffelerträge
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+  </tags>
+  <resources id="5"/>
+  <stages id="6">
+    <FillInStage id="7">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie wollen nachweisen, dass &amp;ouml;kologischer Anbau den Kartoffelertrag im Schnitt um weniger als $[var=prozent]\%$ zur&amp;uuml;ckgehen l&amp;auml;sst.&lt;br /&gt;&#xd;
+Der Ertrag in der konventionellen Landwirtschaft betrage $[var=Ertrag]$ t/ha.&lt;br /&gt;&#xd;
+Au&amp;szlig;erdem gehen wir davon aus, dass die Standardabweichung der normalverteilten Grundgesamtheit des Ertrags bekannt ist und $[var=std]$ t betr&amp;auml;gt.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sie untersuchen $[var=n]$ Versuchsfl&amp;auml;chen mit &amp;ouml;kologischem Kartoffelanbau und finden dort einen mittleren Ertrag von $[var=mean]$ t/ha.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Zun&amp;auml;chst: Um welche Art Testproblem handelt es sich? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;select name=&quot;field1&quot;&gt;&lt;option value=&quot;0&quot;&gt;field1&lt;/option&gt;&lt;/select&gt;&amp;nbsp;</taskDescription>
+      <skipMessage>Richtig ist rechtsseitig.</skipMessage>
+      <defaultTransition id="8">
+        <conditionExpression id="9">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="10">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="11">
+        <StageTransition id="12">
+          <conditionExpression id="13">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="14">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="15">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Was ist die Verteilung der Teststatistik? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;select name=&quot;field1&quot;&gt;&lt;option value=&quot;0&quot;&gt;field1&lt;/option&gt;&lt;/select&gt;&amp;nbsp;</taskDescription>
+            <skipMessage>Richtig ist Standardnormalverteilung.</skipMessage>
+            <defaultTransition id="16">
+              <conditionExpression id="17">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="18">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="19">
+              <StageTransition id="20">
+                <conditionExpression id="21">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="22">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="23">
+                  <internalName>3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie den Wert der Teststatistik. &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                  <skipMessage>Richtig ist [var=Z].</skipMessage>
+                  <defaultTransition id="24">
+                    <conditionExpression id="25">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="26">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="27">
+                    <StageTransition id="28">
+                      <conditionExpression id="29">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="30">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" id="31">
+                        <internalName>4</internalName>
+                        <externalName>Stage 4</externalName>
+                        <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Sind Ihre Daten aussagekr&amp;auml;ftig genug, dass Sie sich Ihrer These zu $90\%$ sicher sein k&amp;ouml;nnen?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Was ist der kritische Wert zum Signifikanzniveau $\alpha=10\%$? &amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Treffen Sie die Testentscheidung, die Nullhypothese wird &amp;nbsp;&lt;select name=&quot;field2&quot;&gt;&lt;option value=&quot;0&quot;&gt;field2&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+                        <skipMessage>Richtig ist [var=quantile].</skipMessage>
+                        <defaultTransition id="32">
+                          <conditionExpression id="33">
+                            <domain>MATH</domain>
+                          </conditionExpression>
+                          <stageExpression id="34">
+                            <domain>MATH</domain>
+                          </stageExpression>
+                          <isRepeat>true</isRepeat>
+                        </defaultTransition>
+                        <skipTransitions id="35">
+                          <StageTransition id="36">
+                            <conditionExpression id="37">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="38">
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </skipTransitions>
+                        <stageTransitions id="39">
+                          <StageTransition id="40">
+                            <conditionExpression id="41">
+                              <code></code>
+                              <domain>MATH</domain>
+                            </conditionExpression>
+                            <stageExpression id="42">
+                              <code>[meta=stageCurrentResult]&gt;=100</code>
+                              <domain>MATH</domain>
+                            </stageExpression>
+                            <isRepeat>false</isRepeat>
+                          </StageTransition>
+                        </stageTransitions>
+                        <hints id="43">
+                          <StageHint id="44">
+                            <stagehint__order>0</stagehint__order>
+                            <text>Aus Aufgabenteil 2 wissen Sie, dass es sich um eine Standardnormalverteilung und einen rechtsseitigen Test handelt.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)</text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="31"/>
+                          </StageHint>
+                          <StageHint id="45">
+                            <stagehint__order>1</stagehint__order>
+                            <text>            $z_{1-\alpha}$
+        </text>
+                            <malus>0</malus>
+                            <stage class="FillInStage" reference="31"/>
+                          </StageHint>
+                        </hints>
+                        <variableUpdatesOnEnter id="46"/>
+                        <variableUpdatesBeforeCheck id="47"/>
+                        <variableUpdatesAfterCheck id="48"/>
+                        <variableUpdatesOnNormalExit id="49"/>
+                        <variableUpdatesOnRepeat id="50"/>
+                        <variableUpdatesOnSkip id="51"/>
+                        <weight>1</weight>
+                        <orderIndex>3</orderIndex>
+                        <allowSkip>true</allowSkip>
+                        <resources id="52"/>
+                        <rules id="53"/>
+                        <fillInFields id="54">
+                          <FillInField id="55">
+                            <name>field1</name>
+                            <orderIndex>0</orderIndex>
+                            <size>6</size>
+                            <formularEditorType>NUMBER</formularEditorType>
+                          </FillInField>
+                        </fillInFields>
+                        <dropDownFields id="56">
+                          <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="57">
+                            <name>field2</name>
+                            <orderIndex>1</orderIndex>
+                            <randomize>false</randomize>
+                            <items id="58">
+                              <string>belassen</string>
+                              <string>verworfen</string>
+                            </items>
+                          </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+                        </dropDownFields>
+                        <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                        <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist [var=quantile].</defaultFeedback>
+                        <correctAnswerRules id="59">
+                          <Rule id="60">
+                            <name>CorrectAnswer1</name>
+                            <orderIndex>1</orderIndex>
+                            <validationExpression id="61">
+                              <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=quantile]-0.0011&amp;&amp;[input=field1]&lt;[var=quantile]+0.0011&amp;&amp;[input=field2]==[var=decision]</code>
+                              <domain>MATH</domain>
+                            </validationExpression>
+                            <points>0</points>
+                            <terminal>false</terminal>
+                          </Rule>
+                        </correctAnswerRules>
+                        <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                        <defaultResult>0</defaultResult>
+                      </targetStage>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="62">
+                    <StageTransition id="63">
+                      <conditionExpression id="64">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="65">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <targetStage class="FillInStage" reference="31"/>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="66">
+                    <StageHint id="67">
+                      <stagehint__order>0</stagehint__order>
+                      <text>$\sqrt{n}\frac{\bar{X}-\mu_0}{\sigma}$</text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="23"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="68"/>
+                  <variableUpdatesBeforeCheck id="69"/>
+                  <variableUpdatesAfterCheck id="70"/>
+                  <variableUpdatesOnNormalExit id="71"/>
+                  <variableUpdatesOnRepeat id="72"/>
+                  <variableUpdatesOnSkip id="73"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="74"/>
+                  <rules id="75"/>
+                  <fillInFields id="76">
+                    <FillInField id="77">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="78"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist [var=Z].</defaultFeedback>
+                  <correctAnswerRules id="79">
+                    <Rule id="80">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="81">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=Z]-0.0011&amp;&amp;[input=field1]&lt;[var=Z]+0.0011</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="82">
+              <StageTransition id="83">
+                <conditionExpression id="84">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="85">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="23"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="86">
+              <StageHint id="87">
+                <stagehint__order>0</stagehint__order>
+                <text>            Überlegen Sie, welcher Fall hier vorliegt!
+            Alle benötigten Angaben zur Grundgesamtheit finden Sie in der Aufgabenstellung.
+        </text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="15"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="88"/>
+            <variableUpdatesBeforeCheck id="89"/>
+            <variableUpdatesAfterCheck id="90"/>
+            <variableUpdatesOnNormalExit id="91"/>
+            <variableUpdatesOnRepeat id="92"/>
+            <variableUpdatesOnSkip id="93"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="94"/>
+            <rules id="95"/>
+            <fillInFields id="96"/>
+            <dropDownFields id="97">
+              <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="98">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <randomize>false</randomize>
+                <items id="99">
+                  <string>Standardnormalverteilung</string>
+                  <string>t-Verteilung</string>
+                  <string>Binomialverteilung</string>
+                  <string>Rechteckverteilung</string>
+                </items>
+              </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+            </dropDownFields>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist Standardnormalverteilung.</defaultFeedback>
+            <correctAnswerRules id="100">
+              <Rule id="101">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="102">
+                  <code>[input=field1]==0</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="103">
+        <StageTransition id="104">
+          <conditionExpression id="105">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="106">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="15"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="107">
+        <StageHint id="108">
+          <stagehint__order>0</stagehint__order>
+          <text>Man testet $H_0: \mu \le \mu_0 $ gegen $H_1: \mu &amp;gt; \mu_0 $.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhaden)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="7"/>
+        </StageHint>
+        <StageHint id="109">
+          <stagehint__order>1</stagehint__order>
+          <text>Es soll nachgewiesen werden, dass der Ertrag um weniger als $[var=prozent]\%$ zur&amp;uuml;ckgeht. Also ist die Nullhypothese abzulehnen, wenn der Ertrag um mehr als $[var=prozent]\%$ zur&amp;uuml;ckgeht.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="7"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="110"/>
+      <variableUpdatesBeforeCheck id="111"/>
+      <variableUpdatesAfterCheck id="112"/>
+      <variableUpdatesOnNormalExit id="113"/>
+      <variableUpdatesOnRepeat id="114"/>
+      <variableUpdatesOnSkip id="115"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="116"/>
+      <rules id="117"/>
+      <fillInFields id="118"/>
+      <dropDownFields id="119">
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="120">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <randomize>false</randomize>
+          <items id="121">
+            <string>linksseitigen</string>
+            <string>rechtsseitigen</string>
+            <string>beidseitigen</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+      </dropDownFields>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist rechtsseitig.</defaultFeedback>
+      <correctAnswerRules id="122">
+        <Rule id="123">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="124">
+            <code>[input=field1]==1</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="15"/>
+    <FillInStage reference="23"/>
+    <FillInStage reference="31"/>
+  </stages>
+  <startStage class="FillInStage" reference="7"/>
+  <variableDeclarations id="125">
+    <VariableDeclaration id="126">
+      <name>prozent</name>
+      <initializationCode id="127">
+        <code>evaluateInR(&apos;sample(5:10, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="128">
+      <name>n</name>
+      <initializationCode id="129">
+        <code>evaluateInR(&apos;sample(10:30, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="130">
+      <name>Ertrag</name>
+      <initializationCode id="131">
+        <code>evaluateInR(&apos;sample(8:12, 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="132">
+      <name>std</name>
+      <initializationCode id="133">
+        <code>evaluateInR(&apos;round(runif(1, 0.1, 0.3), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="134">
+      <name>mean</name>
+      <initializationCode id="135">
+        <code>evaluateInR(&apos;round(rnorm(1, 9, 3), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="136">
+      <name>mu01</name>
+      <initializationCode id="137">
+        <code>evaluateInR(&apos;1-([var=prozent]/100)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="138">
+      <name>mu0</name>
+      <initializationCode id="139">
+        <code>[var=Ertrag]*[var=mu01]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="140">
+      <name>Z</name>
+      <initializationCode id="141">
+        <code>evaluateInR(&apos;round(([var=mean]-[var=mu0])/([var=std]/sqrt([var=n])), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="142">
+      <name>quantile</name>
+      <initializationCode id="143">
+        <code>evaluateInR(&apos;round(qnorm(0.90), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="144">
+      <name>decision</name>
+      <initializationCode id="145">
+        <code>evaluateInR(&apos;ifelse([var=Z]&gt;[var=quantile], 1, 0)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="146"/>
+  <dynamicMolecules id="147"/>
+  <resultFeedbackMappings id="148"/>
+</Exercise>

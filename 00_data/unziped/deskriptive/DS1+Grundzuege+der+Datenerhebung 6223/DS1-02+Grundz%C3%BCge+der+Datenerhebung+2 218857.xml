@@ -1,0 +1,377 @@
+<Exercise id="1">
+  <name>DS1-02 Grundzüge der Datenerhebung 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Skalenniveau von Variablen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>1</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>Stage 1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Welchem Skalenniveau lassen sich die nachfolgenden Variablen zuordnen?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichungen:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=Grundgesamtheit1] = &amp;nbsp;&lt;select name=&quot;dropdown1&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown1&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=Grundgesamtheit2] = &amp;nbsp;&lt;select name=&quot;dropdown2&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown2&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=Grundgesamtheit3] = &amp;nbsp;&lt;select name=&quot;dropdown3&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown3&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+[var=Grundgesamtheit4] = &amp;nbsp;&lt;select name=&quot;dropdown4&quot;&gt;&lt;option value=&quot;0&quot;&gt;dropdown4&lt;/option&gt;&lt;/select&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&amp;nbsp;</taskDescription>
+      <skipMessage></skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>Bei qualitativen Merkmalen ordnet man den einzelnen Auspr&amp;auml;gungen lediglich Zahlen zu $(\textbf{Nominalskala})$, Idee: Unterscheidbarkeit der MA herstellen, zul&amp;auml;ssige Operationen: $=$, $\neq$.&lt;br /&gt;
+Beispiele: Haarfarbe: 1 = rot, 2 = schwarz, 3 = blond, 4 = braun, 5 = wei&amp;szlig;)&lt;br /&gt;
+&lt;br /&gt;
+Ordinale Merkmale werden in einer $\textbf{Ordinalskala}$ abgetragen. Idee: Zahlenzuordnung dr&amp;uuml;ckt die Rangfolge der MA aus, die Abst&amp;auml;nde zwischen den R&amp;auml;ngen sind nicht definiert. Zul&amp;auml;ssige Operationen: $=$, $\neq$, $&amp;lt;$, $&amp;gt;$. Da die zugeordneten Zahlen nur eine Rangordnung abbilden, k&amp;ouml;nnen sie mit streng monoton steigenden (isotonen) Transformationen in andere Zahlen abgebildet werden. Eine Transformation $T$ hei&amp;szlig;t isoton, wenn aus $x_1 &amp;lt; x_2$ immer folgt: $T(x_1) &amp;lt; T(x_2)$. (Beispiele: Zensuren, G&amp;uuml;teklassen, Windst&amp;auml;rke)&lt;br /&gt;
+&lt;br /&gt;
+Eine $\textbf{Intervallskala}$ liegt vor, wenn zus&amp;auml;tzlich auch der Abstand zwischen je zwei Auspr&amp;auml;gungen definiert ist, das Verh&amp;auml;ltnis hingegen ist nicht definiert (Beispiel: Temperaturmessung). Zul&amp;auml;ssige Operationen: $=$, $\neq$, $\lt;$, $&amp;gt;$, $+$, $-$. Alle Intervallskalen k&amp;ouml;nnen durch die Funktion $y=ax+b,\: a&amp;gt;0$ transformiert werden, ohne dass sich der Skalentyp &amp;auml;ndert.&lt;em&gt;&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text>Wenn auch noch das Verh&amp;auml;ltnis zweier Auspr&amp;auml;gungen definiert ist, liegt eine $\textbf{Verh&amp;auml;ltnisskala}$ (Ratioskala) vor. Verh&amp;auml;ltnisskalierte Merkmale haben einen nat&amp;uuml;rlichen Nullpunkt, weshalb nur linear homogene Transformationen $y=ax,\: a&amp;gt;0$ zul&amp;auml;ssig sind. Zul&amp;auml;ssige Operationen: $=$, $\neq$, $&amp;lt;$, $&amp;gt;$, $+$, $-$, $\cdot$, $/$; Beispiele: Entfernungen (km, Meilen), W&amp;auml;hrungen ($EUR$, $\$$), K&amp;ouml;rpergr&amp;ouml;&amp;szlig;e (cm, Fu&amp;szlig;).&lt;br /&gt;
+&lt;br /&gt;
+Besitzen Merkmale zus&amp;auml;tzlich noch eine nat&amp;uuml;rliche Skaleneinheit, verwendet man eine $\textbf{Absolutskala}$, die nicht transformiert werden kann (Beispiel: Anzahl Kinder in einem HH). Nominal- und Ordinalskala hei&amp;szlig;en topologische Skalen; Intervall-, Verh&amp;auml;ltnis- und Absolutskala bezeichnet man als $\textbf{Kardinal- bzw. metrische Skalen}$.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Dies war der letzte Hinweis.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="21"/>
+      <variableUpdatesBeforeCheck id="22"/>
+      <variableUpdatesAfterCheck id="23"/>
+      <variableUpdatesOnNormalExit id="24"/>
+      <variableUpdatesOnRepeat id="25"/>
+      <variableUpdatesOnSkip id="26"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="27"/>
+      <rules id="28"/>
+      <fillInFields id="29"/>
+      <dropDownFields id="30">
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="31">
+          <name>dropdown2</name>
+          <orderIndex>1</orderIndex>
+          <randomize>false</randomize>
+          <items id="32">
+            <string>nominalskaliert</string>
+            <string>ordinalskaliert</string>
+            <string>kardinalskaliert</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="33">
+          <name>dropdown3</name>
+          <orderIndex>2</orderIndex>
+          <randomize>false</randomize>
+          <items id="34">
+            <string>nominalskaliert</string>
+            <string>ordinalskaliert</string>
+            <string>kardinalskaliert</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="35">
+          <name>dropdown4</name>
+          <orderIndex>3</orderIndex>
+          <randomize>false</randomize>
+          <items id="36">
+            <string>nominalskaliert</string>
+            <string>ordinalskaliert</string>
+            <string>kardinalskaliert</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+        <de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField id="37">
+          <name>dropdown1</name>
+          <orderIndex>0</orderIndex>
+          <randomize>false</randomize>
+          <items id="38">
+            <string>nominalskaliert</string>
+            <string>ordinalskaliert</string>
+            <string>kardinalskaliert</string>
+          </items>
+        </de.uni__due.s3.jack3.entities.stagetypes.fillin.DropDownField>
+      </dropDownFields>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt! Sie haben bei mindestens einer Variablen einen Fehler gemacht.</defaultFeedback>
+      <correctAnswerRules id="39">
+        <Rule id="40">
+          <name>Feedback 1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="41">
+            <code>[input=dropdown1]=[var=s1]&amp;&amp;[input=dropdown2]=[var=s2]&amp;&amp;[input=dropdown3]=[var=s3]&amp;&amp;[input=dropdown4]=[var=s4]</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback> Richtig !</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="42">
+    <VariableDeclaration id="43">
+      <name>i</name>
+      <initializationCode id="44">
+        <code>randomIntegerBetween(0,19)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>Grundgesamtheit1</name>
+      <initializationCode id="46">
+        <code>getFromList([var=i], list(&apos;Gewicht&apos;,&apos;Anzahl der Regentage pro Monat&apos;,&apos;Niederschlagsmenge pro Monat&apos;,&apos;Schuhgröße&apos;,&apos;Durchschnittliche Verspätung der S1 pro Jahr&apos;,&apos;Zufriedenheit mit der Vorlesung&apos;,&apos;Haarfarbe&apos;,&apos;Uhrzeit&apos;,&apos;Note in Statistk I&apos;,&apos;Verkehrsmittel&apos;,&apos;Geschlecht&apos;,&apos;Investitionen&apos;,&apos;Bonität&apos;,&apos;Beruf&apos;,&apos;Warengruppe&apos;,&apos;Anzahl Haustiere&apos;,&apos;Haustierart&apos;,&apos;Semesteranzahl&apos;,&apos;Dienstrang beim Militär&apos;,&apos;Geburtsort&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>Grundgesamtheit2</name>
+      <initializationCode id="48">
+        <code>chooseFromComplement(list(&apos;Gewicht&apos;,&apos;Anzahl der Regentage pro Monat&apos;,&apos;Niederschlagsmenge pro Monat&apos;,&apos;Schuhgröße&apos;,&apos;Durchschnittliche Verspätung der S1 pro Jahr&apos;,&apos;Zufriedenheit mit der Vorlesung&apos;,&apos;Haarfarbe&apos;,&apos;Uhrzeit&apos;,&apos;Note in Statistk I&apos;,&apos;Verkehrsmittel&apos;,&apos;Geschlecht&apos;,&apos;Investitionen&apos;,&apos;Bonität&apos;,&apos;Beruf&apos;,&apos;Warengruppe&apos;,&apos;Anzahl Haustiere&apos;,&apos;Haustierart&apos;,&apos;Semesteranzahl&apos;,&apos;Dienstrang beim Militär&apos;,&apos;Geburtsort&apos;), list([var=Grundgesamtheit1]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>Grundgesamtheit3</name>
+      <initializationCode id="50">
+        <code>chooseFromComplement(list(&apos;Gewicht&apos;,&apos;Anzahl der Regentage pro Monat&apos;,&apos;Niederschlagsmenge pro Monat&apos;,&apos;Schuhgröße&apos;,&apos;Durchschnittliche Verspätung der S1 pro Jahr&apos;,&apos;Zufriedenheit mit der Vorlesung&apos;,&apos;Haarfarbe&apos;,&apos;Uhrzeit&apos;,&apos;Note in Statistk I&apos;,&apos;Verkehrsmittel&apos;,&apos;Geschlecht&apos;,&apos;Investitionen&apos;,&apos;Bonität&apos;,&apos;Beruf&apos;,&apos;Warengruppe&apos;,&apos;Anzahl Haustiere&apos;,&apos;Haustierart&apos;,&apos;Semesteranzahl&apos;,&apos;Dienstrang beim Militär&apos;,&apos;Geburtsort&apos;), list([var=Grundgesamtheit1],[var=Grundgesamtheit2]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>Grundgesamtheit4</name>
+      <initializationCode id="52">
+        <code>chooseFromComplement(list(&apos;Gewicht&apos;,&apos;Anzahl der Regentage pro Monat&apos;,&apos;Niederschlagsmenge pro Monat&apos;,&apos;Schuhgröße&apos;,&apos;Durchschnittliche Verspätung der S1 pro Jahr&apos;,&apos;Zufriedenheit mit der Vorlesung&apos;,&apos;Haarfarbe&apos;,&apos;Uhrzeit&apos;,&apos;Note in Statistk I&apos;,&apos;Verkehrsmittel&apos;,&apos;Geschlecht&apos;,&apos;Investitionen&apos;,&apos;Bonität&apos;,&apos;Beruf&apos;,&apos;Warengruppe&apos;,&apos;Anzahl Haustiere&apos;,&apos;Haustierart&apos;,&apos;Semesteranzahl&apos;,&apos;Dienstrang beim Militär&apos;,&apos;Geburtsort&apos;), list([var=Grundgesamtheit1],[var=Grundgesamtheit2],[var=Grundgesamtheit3]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>a1</name>
+      <initializationCode id="54">
+        <code>ifthenelse(equals([var=Grundgesamtheit1], &quot;Haarfarbe&quot;)||equals([var=Grundgesamtheit1], &quot;Verkehrsmittel&quot;)||equals([var=Grundgesamtheit1], &quot;Geschlecht&quot;)||equals([var=Grundgesamtheit1], &quot;Beruf&quot;)||equals([var=Grundgesamtheit1], &quot;Warengruppe&quot;)||equals([var=Grundgesamtheit1], &quot;Haustierart&quot;)||equals([var=Grundgesamtheit1], &quot;Geburtsort&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>a2</name>
+      <initializationCode id="56">
+        <code>ifthenelse(equals([var=Grundgesamtheit2], &quot;Haarfarbe&quot;)||equals([var=Grundgesamtheit2], &quot;Verkehrsmittel&quot;)||equals([var=Grundgesamtheit2], &quot;Geschlecht&quot;)||equals([var=Grundgesamtheit2], &quot;Beruf&quot;)||equals([var=Grundgesamtheit2], &quot;Warengruppe&quot;)||equals([var=Grundgesamtheit2], &quot;Haustierart&quot;)||equals([var=Grundgesamtheit2], &quot;Geburtsort&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>a3</name>
+      <initializationCode id="58">
+        <code>ifthenelse(equals([var=Grundgesamtheit3], &quot;Haarfarbe&quot;)||equals([var=Grundgesamtheit3], &quot;Verkehrsmittel&quot;)||equals([var=Grundgesamtheit3], &quot;Geschlecht&quot;)||equals([var=Grundgesamtheit3], &quot;Beruf&quot;)||equals([var=Grundgesamtheit3], &quot;Warengruppe&quot;)||equals([var=Grundgesamtheit3], &quot;Haustierart&quot;)||equals([var=Grundgesamtheit3], &quot;Geburtsort&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>a4</name>
+      <initializationCode id="60">
+        <code>ifthenelse(equals([var=Grundgesamtheit4], &quot;Haarfarbe&quot;)||equals([var=Grundgesamtheit4], &quot;Verkehrsmittel&quot;)||equals([var=Grundgesamtheit4], &quot;Geschlecht&quot;)||equals([var=Grundgesamtheit4], &quot;Beruf&quot;)||equals([var=Grundgesamtheit4], &quot;Warengruppe&quot;)||equals([var=Grundgesamtheit4], &quot;Haustierart&quot;)||equals([var=Grundgesamtheit4], &quot;Geburtsort&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>b1</name>
+      <initializationCode id="62">
+        <code>ifthenelse(equals([var=Grundgesamtheit1], &quot;Schuhgröße&quot;)||equals([var=Grundgesamtheit1], &quot;Zufriedenheit mit der Vorlesung&quot;)||equals([var=Grundgesamtheit1], &quot;Note in Statistk I&quot;)||equals([var=Grundgesamtheit1], &quot;Bonität&quot;)||equals([var=Grundgesamtheit1], &quot;Dienstrang beim Militär&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>b2</name>
+      <initializationCode id="64">
+        <code>ifthenelse(equals([var=Grundgesamtheit2], &quot;Schuhgröße&quot;)||equals([var=Grundgesamtheit2], &quot;Zufriedenheit mit der Vorlesung&quot;)||equals([var=Grundgesamtheit2], &quot;Note in Statistk I&quot;)||equals([var=Grundgesamtheit2], &quot;Bonität&quot;)||equals([var=Grundgesamtheit2], &quot;Dienstrang beim Militär&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>b3</name>
+      <initializationCode id="66">
+        <code>ifthenelse(equals([var=Grundgesamtheit3], &quot;Schuhgröße&quot;)||equals([var=Grundgesamtheit3], &quot;Zufriedenheit mit der Vorlesung&quot;)||equals([var=Grundgesamtheit3], &quot;Note in Statistk I&quot;)||equals([var=Grundgesamtheit3], &quot;Bonität&quot;)||equals([var=Grundgesamtheit3], &quot;Dienstrang beim Militär&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>b4</name>
+      <initializationCode id="68">
+        <code>ifthenelse(equals([var=Grundgesamtheit4], &quot;Schuhgröße&quot;)||equals([var=Grundgesamtheit4], &quot;Zufriedenheit mit der Vorlesung&quot;)||equals([var=Grundgesamtheit4], &quot;Note in Statistk I&quot;)||equals([var=Grundgesamtheit4], &quot;Bonität&quot;)||equals([var=Grundgesamtheit4], &quot;Dienstrang beim Militär&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>c1</name>
+      <initializationCode id="70">
+        <code>ifthenelse(equals([var=Grundgesamtheit1], &quot;Gewicht&quot;)||equals([var=Grundgesamtheit1], &quot;Anzahl der Regentage pro Monat&quot;)||equals([var=Grundgesamtheit1], &quot;Niederschlagsmenge pro Monat&quot;)||equals([var=Grundgesamtheit1], &quot;Durchschnittliche Verspätung der S1 pro Jahr&quot;)||equals([var=Grundgesamtheit1], &quot;Uhrzeit&quot;)||equals([var=Grundgesamtheit1], &quot;Investitionen&quot;)||equals([var=Grundgesamtheit1], &quot;Anzahl Haustiere&quot;)||equals([var=Grundgesamtheit1], &quot;Semesteranzahl&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>c2</name>
+      <initializationCode id="72">
+        <code>ifthenelse(equals([var=Grundgesamtheit2], &quot;Gewicht&quot;)||equals([var=Grundgesamtheit2], &quot;Anzahl der Regentage pro Monat&quot;)||equals([var=Grundgesamtheit2], &quot;Niederschlagsmenge pro Monat&quot;)||equals([var=Grundgesamtheit2], &quot;Durchschnittliche Verspätung der S1 pro Jahr&quot;)||equals([var=Grundgesamtheit2], &quot;Uhrzeit&quot;)||equals([var=Grundgesamtheit2], &quot;Investitionen&quot;)||equals([var=Grundgesamtheit2], &quot;Anzahl Haustiere&quot;)||equals([var=Grundgesamtheit2], &quot;Semesteranzahl&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>c3</name>
+      <initializationCode id="74">
+        <code>ifthenelse(equals([var=Grundgesamtheit3], &quot;Gewicht&quot;)||equals([var=Grundgesamtheit3], &quot;Anzahl der Regentage pro Monat&quot;)||equals([var=Grundgesamtheit3], &quot;Niederschlagsmenge pro Monat&quot;)||equals([var=Grundgesamtheit3], &quot;Durchschnittliche Verspätung der S1 pro Jahr&quot;)||equals([var=Grundgesamtheit3], &quot;Uhrzeit&quot;)||equals([var=Grundgesamtheit3], &quot;Investitionen&quot;)||equals([var=Grundgesamtheit3], &quot;Anzahl Haustiere&quot;)||equals([var=Grundgesamtheit3], &quot;Semesteranzahl&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>c4</name>
+      <initializationCode id="76">
+        <code>ifthenelse(equals([var=Grundgesamtheit4], &quot;Gewicht&quot;)||equals([var=Grundgesamtheit4], &quot;Anzahl der Regentage pro Monat&quot;)||equals([var=Grundgesamtheit4], &quot;Niederschlagsmenge pro Monat&quot;)||equals([var=Grundgesamtheit4], &quot;Durchschnittliche Verspätung der S1 pro Jahr&quot;)||equals([var=Grundgesamtheit4], &quot;Uhrzeit&quot;)||equals([var=Grundgesamtheit4], &quot;Investitionen&quot;)||equals([var=Grundgesamtheit4], &quot;Anzahl Haustiere&quot;)||equals([var=Grundgesamtheit4], &quot;Semesteranzahl&quot;), 1, 0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>sss1</name>
+      <initializationCode id="78">
+        <code>ifthenelse(equals(concat([var=a1],[var=b1],[var=c1]), &quot;100&quot;), 0, &quot;Error&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>ss1</name>
+      <initializationCode id="80">
+        <code>ifthenelse(equals(concat([var=a1],[var=b1],[var=c1]), &quot;010&quot;), 1, [var=sss1])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>s1</name>
+      <initializationCode id="82">
+        <code>ifthenelse(equals(concat([var=a1],[var=b1],[var=c1]), &quot;001&quot;), 2, [var=ss1])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>sss2</name>
+      <initializationCode id="84">
+        <code>ifthenelse(equals(concat([var=a2],[var=b2],[var=c2]), &quot;100&quot;), 0, &quot;Error&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>ss2</name>
+      <initializationCode id="86">
+        <code>ifthenelse(equals(concat([var=a2],[var=b2],[var=c2]), &quot;010&quot;), 1, [var=sss2])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>s2</name>
+      <initializationCode id="88">
+        <code>ifthenelse(equals(concat([var=a2],[var=b2],[var=c2]), &quot;001&quot;), 2, [var=ss2])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="89">
+      <name>sss3</name>
+      <initializationCode id="90">
+        <code>ifthenelse(equals(concat([var=a3],[var=b3],[var=c3]), &quot;100&quot;), 0, &quot;Error&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="91">
+      <name>ss3</name>
+      <initializationCode id="92">
+        <code>ifthenelse(equals(concat([var=a3],[var=b3],[var=c3]), &quot;010&quot;), 1, [var=sss3])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="93">
+      <name>s3</name>
+      <initializationCode id="94">
+        <code>ifthenelse(equals(concat([var=a3],[var=b3],[var=c3]), &quot;001&quot;), 2, [var=ss3])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="95">
+      <name>sss4</name>
+      <initializationCode id="96">
+        <code>ifthenelse(equals(concat([var=a4],[var=b4],[var=c4]), &quot;100&quot;), 0, &quot;Error&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="97">
+      <name>ss4</name>
+      <initializationCode id="98">
+        <code>ifthenelse(equals(concat([var=a4],[var=b4],[var=c4]), &quot;010&quot;), 1, [var=sss4])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="99">
+      <name>s4</name>
+      <initializationCode id="100">
+        <code>ifthenelse(equals(concat([var=a4],[var=b4],[var=c4]), &quot;001&quot;), 2, [var=ss4])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="101"/>
+  <dynamicMolecules id="102"/>
+  <resultFeedbackMappings id="103"/>
+</Exercise>

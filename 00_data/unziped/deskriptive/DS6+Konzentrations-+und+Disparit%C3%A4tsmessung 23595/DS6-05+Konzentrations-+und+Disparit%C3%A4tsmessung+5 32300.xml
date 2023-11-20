@@ -1,0 +1,142 @@
+<Exercise id="1">
+  <name>DS6-05 Konzentrations- und Disparitätsmessung 5</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Sitzverteilung Bundestag, Ginikoeffizient berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>3</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4">
+    <ExerciseResource id="5">
+      <content id="6">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</content>
+      <uploadTimestamp>2022-04-19T12:26:43.63543</uploadTimestamp>
+      <filename>sitze_bundestag.jpg</filename>
+      <description></description>
+      <replacePlaceholder>false</replacePlaceholder>
+    </ExerciseResource>
+  </resources>
+  <stages id="7">
+    <MCStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die Sitzverteilung des 18. Deutschen Bundestag ergibt:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&amp;nbsp;&lt;img src=&quot;/econometrics/resource?resource=32302&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Der Gini-Koeffizient lautet (gerundet):&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Auswahl:&lt;/strong&gt;</taskDescription>
+      <skipMessage> $D_G=$ 0.346. </skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="16">
+        <StageTransition id="17">
+          <conditionExpression id="18">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="19">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="20">
+        <StageHint id="21">
+          <stagehint__order>0</stagehint__order>
+          <text> $D_{G}=\frac{\frac{2\sum_{j=1}^{n}jx_{j}}{n\bar{x}}-(1+n)}{n}=\frac{2\sum_{j=1}^{n}jx_{j}-(1+n)\sum_{j=1}^{n}x_{j}}{n\sum_{j=1}^{n}x_{j}}$ </text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="22"/>
+      <variableUpdatesBeforeCheck id="23"/>
+      <variableUpdatesAfterCheck id="24"/>
+      <variableUpdatesOnNormalExit id="25"/>
+      <variableUpdatesOnRepeat id="26"/>
+      <variableUpdatesOnSkip id="27"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="28"/>
+      <answerOptions id="29">
+        <MCAnswer id="30">
+          <order>0</order>
+          <rule>CORRECT</rule>
+          <text> 0.346</text>
+          <variableName></variableName>
+          <mcstage reference="8"/>
+        </MCAnswer>
+        <MCAnswer id="31">
+          <order>1</order>
+          <rule>WRONG</rule>
+          <text> 0.325</text>
+          <variableName></variableName>
+          <mcstage reference="8"/>
+        </MCAnswer>
+        <MCAnswer id="32">
+          <order>2</order>
+          <rule>WRONG</rule>
+          <text> 0.382</text>
+          <variableName></variableName>
+          <mcstage reference="8"/>
+        </MCAnswer>
+        <MCAnswer id="33">
+          <order>3</order>
+          <rule>WRONG</rule>
+          <text> 0.305</text>
+          <variableName></variableName>
+          <mcstage reference="8"/>
+        </MCAnswer>
+      </answerOptions>
+      <randomize>true</randomize>
+      <singleChoice>false</singleChoice>
+      <correctAnswerFeedback> Richtig </correctAnswerFeedback>
+      <defaultFeedback> Leider nicht richtig. &lt;/br&gt;
+&lt;/br&gt;
+$D_G=$ 0.346</defaultFeedback>
+      <defaultResult>0</defaultResult>
+      <extraFeedbacks id="34"/>
+    </MCStage>
+  </stages>
+  <startStage class="MCStage" reference="8"/>
+  <variableDeclarations id="35"/>
+  <jSXGraphs id="36"/>
+  <dynamicMolecules id="37"/>
+  <resultFeedbackMappings id="38"/>
+</Exercise>

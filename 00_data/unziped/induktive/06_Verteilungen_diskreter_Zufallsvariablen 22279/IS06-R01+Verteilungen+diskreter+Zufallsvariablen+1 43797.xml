@@ -1,0 +1,168 @@
+<Exercise id="1">
+  <name>IS06-R01 Verteilungen diskreter Zufallsvariablen 1</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Benutzung der Funktion pbinom() oder alternativ dbinom() und sum().
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die Wahrscheinlichkeit daf&amp;uuml;r, dass ein Bienenvolk einen harten Winter &amp;uuml;berlebt, betr&amp;auml;gt $[var=prob]$. Ein Imker besitzt $[var=Anzahl2]$ V&amp;ouml;lker.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass mindestens $[var=Anzahl1]$ V&amp;ouml;lker einen harten Winter &amp;uuml;berleben?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nutzen Sie hierzu die Funktion $\verb|pbinom()|$ oder $\verb|dbinom()|$. Im Falle der Funktion $\verb|dbinom()|$ ben&amp;ouml;tigen Sie zus&amp;auml;tzlich die Funktion $\verb|sum()|$.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Die Funktion $\verb|pbinom(q,size,prob)|$ bzw. $\verb|dbinom(x,size,prob)|$ stellt die Verteilungsfunktion bzw. Wahrscheinlichkeitsfunktion der Binomialverteilung dar.&lt;br /&gt;
+Dabei ist $\verb|q|$ bzw. $\verb|x|$ das gesuchte Quantil, $\verb|size|$ die Gesamtanzahl aller Versuche und $\verb|prob|$ stellt die Erfolgswahrscheinlichkeit dar.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Erinnern Sie sich, dass die Verteilungsfunktion definiert ist als $F_X(x) = P(X \leq x)$. Gefragt ist allerdings nach der Wahrscheinlichkeit, dass gleich oder mehr als $[var=Anzahl1]$ Bienenv&amp;ouml;lker &amp;uuml;berleben, was der Wahrscheinlichkeit $P(X \geq x)$ entspricht&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Alternativ können Sie die Wahrscheinlichkeitsfunktion nutzen, welche allgemein als $f_X(x) = P(X=x)$ definiert ist. Da Sie an der Wahrscheinlichkeit $P(X \geq x)$ interessiert sind, müssen Sie die gesuchten Wahrscheinlichkeiten noch aufsummieren, welches in R mithilfe der $\verb|sum(a)|$-Funktion möglich ist. $\verb|a|$ ist hierbei ein Vektor mit numerischen, komplexen oder logischen Werten.  </text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.
+
+Achten Sie darauf, dass Sie die $\verb|pbinom()|$ oder die $\verb|dbinom()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>                from pbinom,dbinom,sum:V{FunctionCall} with
+                pbinom.name=&quot;pbinom&quot; or
+                dbinom.name=&quot;dbinom&quot;
+                report 0 end</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43800</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}</postCode>
+              <expectedOutput>1-(pbinom([var=Anzahl1]-1,[var=Anzahl2],[var=prob]))</expectedOutput>
+              <postprocessingFunction></postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>43801</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>prob</name>
+      <initializationCode id="36">
+        <code>evaluateInR(&apos;round(runif(1, 0.2, 0.5), 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="37">
+      <name>Anzahl2</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(8,12)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>Anzahl1</name>
+      <initializationCode id="40">
+        <code>randomIntegerBetween(3,7)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>Anzahl3</name>
+      <initializationCode id="42">
+        <code>evaluateInR(&apos;[var=Anzahl1]-1&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="43"/>
+  <dynamicMolecules id="44"/>
+  <resultFeedbackMappings id="45"/>
+</Exercise>

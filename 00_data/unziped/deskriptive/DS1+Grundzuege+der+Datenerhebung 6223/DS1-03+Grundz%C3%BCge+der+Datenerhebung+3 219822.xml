@@ -1,0 +1,189 @@
+<Exercise id="1">
+  <name>DS1-03 Grundzüge der Datenerhebung 3</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>1</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <MCStage id="6">
+      <internalName>Stage 1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>Stellen die folgenden Angaben, Merkmale und dazugeh&amp;ouml;rige m&amp;ouml;gliche Merkmalsauspr&amp;auml;gungen dar?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&amp;nbsp;</taskDescription>
+      <skipMessage></skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Zu beachten ist hier, dass die Einheit der Merkmalsauspr&amp;auml;gung angegeben ist und zum Merkmal passt. Au&amp;szlig;erdem sollte sich die Auspr&amp;auml;gung auf das jeweilige Merkmal beziehen. Zum Beispiel ist &amp;quot;rot&amp;quot; zwar eine Auspr&amp;auml;gung des Merkmals &amp;quot;Haarfarbe&amp;quot;, aber nicht des Merkmals &amp;quot;Augenfarbe&amp;quot;.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Dies war der letzte Hinweis.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="MCStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="14"/>
+      <variableUpdatesBeforeCheck id="15"/>
+      <variableUpdatesAfterCheck id="16"/>
+      <variableUpdatesOnNormalExit id="17"/>
+      <variableUpdatesOnRepeat id="18"/>
+      <variableUpdatesOnSkip id="19"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="20"/>
+      <answerOptions id="21">
+        <MCAnswer id="22">
+          <order>0</order>
+          <rule>VARIABLE</rule>
+          <text>[var=Grundgesamtheit1]</text>
+          <variableName>p1</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="23">
+          <order>1</order>
+          <rule>VARIABLE</rule>
+          <text>[var=Grundgesamtheit2]</text>
+          <variableName>p2</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="24">
+          <order>2</order>
+          <rule>VARIABLE</rule>
+          <text>[var=Grundgesamtheit3]</text>
+          <variableName>p3</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+        <MCAnswer id="25">
+          <order>3</order>
+          <rule>VARIABLE</rule>
+          <text>[var=Grundgesamtheit4]</text>
+          <variableName>p4</variableName>
+          <mcstage reference="6"/>
+        </MCAnswer>
+      </answerOptions>
+      <randomize>true</randomize>
+      <singleChoice>false</singleChoice>
+      <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+      <defaultFeedback>Leider nicht korrekt! Sie haben bei mindestens einem Feld einen Fehler gemacht.</defaultFeedback>
+      <defaultResult>0</defaultResult>
+      <extraFeedbacks id="26"/>
+    </MCStage>
+  </stages>
+  <startStage class="MCStage" reference="6"/>
+  <variableDeclarations id="27">
+    <VariableDeclaration id="28">
+      <name>i</name>
+      <initializationCode id="29">
+        <code>randomIntegerBetween(0,19)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="30">
+      <name>Grundgesamtheit1</name>
+      <initializationCode id="31">
+        <code>getFromList([var=i],list(&apos;Anzahl von Verkehrsunfällen 2013 in Essen : 51 Tote&apos;,&apos;Alter von Menschen : 8 Monate&apos;,&apos;Einkommen : 1200&apos;,&apos;Klausurnote : gut&apos;,&apos;Holzart von Schränken : Eiche&apos;,&apos;Ergebnis eines Münzwurfs : Wappen&apos;,&apos;Semesterzahl : 4 Jahre&apos;,&apos;Körpergewicht : 70&apos;,&apos;Haarfarbe : blond&apos;,&apos;Verkaufte Milchmenge : 25 Liter&apos;,&apos;Wasserverdrängung von Schiffen : 23000&apos;,&apos;Länge von Schuhen : 42&apos;,&apos;Farbe von Kleidern : rot&apos;,&apos;Qualität eines Buches : 800 Seiten&apos;,&apos;Geburtsstadt : Deutschland&apos;,&apos;Geburtstag : 25. Februar&apos;,&apos;Temperatur : $68^\circ$ Fahrenheit&apos;,&apos;Anzahl Baustellen in Essen : keine&apos;,&apos;Vorlesungsbeginn : 90 Minuten&apos;,&apos;Urlaubslänge : Skiurlaub&apos;))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="32">
+      <name>Grundgesamtheit2</name>
+      <initializationCode id="33">
+        <code>chooseFromComplement(list(&apos;Anzahl von Verkehrsunfällen 2013 in Essen : 51 Tote&apos;,&apos;Alter von Menschen : 8 Monate&apos;,&apos;Einkommen : 1200&apos;,&apos;Klausurnote : gut&apos;,&apos;Holzart von Schränken : Eiche&apos;,&apos;Ergebnis eines Münzwurfs : Wappen&apos;,&apos;Semesterzahl : 4 Jahre&apos;,&apos;Körpergewicht : 70&apos;,&apos;Haarfarbe : blond&apos;,&apos;Verkaufte Milchmenge : 25 Liter&apos;,&apos;Wasserverdrängung von Schiffen : 23000&apos;,&apos;Länge von Schuhen : 42&apos;,&apos;Farbe von Kleidern : rot&apos;,&apos;Qualität eines Buches : 800 Seiten&apos;,&apos;Geburtsstadt : Deutschland&apos;,&apos;Geburtstag : 25. Februar&apos;,&apos;Temperatur : $68^\circ$ Fahrenheit&apos;,&apos;Anzahl Baustellen in Essen : keine&apos;,&apos;Vorlesungsbeginn : 90 Minuten&apos;,&apos;Urlaubslänge : Skiurlaub&apos;),list([var=Grundgesamtheit1]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="34">
+      <name>Grundgesamtheit3</name>
+      <initializationCode id="35">
+        <code>chooseFromComplement(list(&apos;Anzahl von Verkehrsunfällen 2013 in Essen : 51 Tote&apos;,&apos;Alter von Menschen : 8 Monate&apos;,&apos;Einkommen : 1200&apos;,&apos;Klausurnote : gut&apos;,&apos;Holzart von Schränken : Eiche&apos;,&apos;Ergebnis eines Münzwurfs : Wappen&apos;,&apos;Semesterzahl : 4 Jahre&apos;,&apos;Körpergewicht : 70&apos;,&apos;Haarfarbe : blond&apos;,&apos;Verkaufte Milchmenge : 25 Liter&apos;,&apos;Wasserverdrängung von Schiffen : 23000&apos;,&apos;Länge von Schuhen : 42&apos;,&apos;Farbe von Kleidern : rot&apos;,&apos;Qualität eines Buches : 800 Seiten&apos;,&apos;Geburtsstadt : Deutschland&apos;,&apos;Geburtstag : 25. Februar&apos;,&apos;Temperatur : $68^\circ$ Fahrenheit&apos;,&apos;Anzahl Baustellen in Essen : keine&apos;,&apos;Vorlesungsbeginn : 90 Minuten&apos;,&apos;Urlaubslänge : Skiurlaub&apos;),list([var=Grundgesamtheit1],[var=Grundgesamtheit2]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="36">
+      <name>Grundgesamtheit4</name>
+      <initializationCode id="37">
+        <code>chooseFromComplement(list(&apos;Anzahl von Verkehrsunfällen 2013 in Essen : 51 Tote&apos;,&apos;Alter von Menschen : 8 Monate&apos;,&apos;Einkommen : 1200&apos;,&apos;Klausurnote : gut&apos;,&apos;Holzart von Schränken : Eiche&apos;,&apos;Ergebnis eines Münzwurfs : Wappen&apos;,&apos;Semesterzahl : 4 Jahre&apos;,&apos;Körpergewicht : 70&apos;,&apos;Haarfarbe : blond&apos;,&apos;Verkaufte Milchmenge : 25 Liter&apos;,&apos;Wasserverdrängung von Schiffen : 23000&apos;,&apos;Länge von Schuhen : 42&apos;,&apos;Farbe von Kleidern : rot&apos;,&apos;Qualität eines Buches : 800 Seiten&apos;,&apos;Geburtsstadt : Deutschland&apos;,&apos;Geburtstag : 25. Februar&apos;,&apos;Temperatur : $68^\circ$ Fahrenheit&apos;,&apos;Anzahl Baustellen in Essen : keine&apos;,&apos;Vorlesungsbeginn : 90 Minuten&apos;,&apos;Urlaubslänge : Skiurlaub&apos;),list([var=Grundgesamtheit1],[var=Grundgesamtheit2],[var=Grundgesamtheit3]))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="38">
+      <name>l1</name>
+      <initializationCode id="39">
+        <code>ifthenelse(equals([var=Grundgesamtheit1],&apos;Alter von Menschen : 8 Monate&apos;)||equals([var=Grundgesamtheit1],&apos;Klausurnote : gut&apos;)||equals([var=Grundgesamtheit1],&apos;Holzart von Schränken : Eiche&apos;)||equals([var=Grundgesamtheit1],&apos;Ergebnis eines Münzwurfs : Wappen&apos;)||equals([var=Grundgesamtheit1],&apos;Haarfarbe : blond&apos;)||equals([var=Grundgesamtheit1],&apos;Verkaufte Milchmenge : 25 Liter&apos;)||equals([var=Grundgesamtheit1],&apos;Farbe von Kleidern : rot&apos;)||equals([var=Grundgesamtheit1],&apos;Geburtstag : 25.Februar&apos;)||equals([var=Grundgesamtheit1],&apos;Temperatur : 68$^\circ$ Fahrenheit&apos;)||equals([var=Grundgesamtheit1],&apos;Anzahl Baustellen in Essen : keine&apos;),&apos;10&apos;,&apos;01&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="40">
+      <name>l2</name>
+      <initializationCode id="41">
+        <code>ifthenelse(equals([var=Grundgesamtheit2],&apos;Alter von Menschen : 8 Monate&apos;)||equals([var=Grundgesamtheit2],&apos;Klausurnote : gut&apos;)||equals([var=Grundgesamtheit2],&apos;Holzart von Schränken : Eiche&apos;)||equals([var=Grundgesamtheit2],&apos;Ergebnis eines Münzwurfs : Wappen&apos;)||equals([var=Grundgesamtheit2],&apos;Haarfarbe : blond&apos;)||equals([var=Grundgesamtheit2],&apos;Verkaufte Milchmenge : 25 Liter&apos;)||equals([var=Grundgesamtheit2],&apos;Farbe von Kleidern : rot&apos;)||equals([var=Grundgesamtheit2],&apos;Geburtstag : 25.Februar&apos;)||equals([var=Grundgesamtheit2],&apos;Temperatur : 68$^\circ$ Fahrenheit&apos;)||equals([var=Grundgesamtheit2],&apos;Anzahl Baustellen in Essen : keine&apos;),&apos;10&apos;,&apos;01&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>l3</name>
+      <initializationCode id="43">
+        <code>ifthenelse(equals([var=Grundgesamtheit3],&apos;Alter von Menschen : 8 Monate&apos;)||equals([var=Grundgesamtheit3],&apos;Klausurnote : gut&apos;)||equals([var=Grundgesamtheit3],&apos;Holzart von Schränken : Eiche&apos;)||equals([var=Grundgesamtheit3],&apos;Ergebnis eines Münzwurfs : Wappen&apos;)||equals([var=Grundgesamtheit3],&apos;Haarfarbe : blond&apos;)||equals([var=Grundgesamtheit3],&apos;Verkaufte Milchmenge : 25 Liter&apos;)||equals([var=Grundgesamtheit3],&apos;Farbe von Kleidern : rot&apos;)||equals([var=Grundgesamtheit3],&apos;Geburtstag : 25.Februar&apos;)||equals([var=Grundgesamtheit3],&apos;Temperatur : 68$^\circ$ Fahrenheit&apos;)||equals([var=Grundgesamtheit3],&apos;Anzahl Baustellen in Essen : keine&apos;),&apos;10&apos;,&apos;01&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>l4</name>
+      <initializationCode id="45">
+        <code>ifthenelse(equals([var=Grundgesamtheit4],&apos;Alter von Menschen : 8 Monate&apos;)||equals([var=Grundgesamtheit4],&apos;Klausurnote : gut&apos;)||equals([var=Grundgesamtheit4],&apos;Holzart von Schränken : Eiche&apos;)||equals([var=Grundgesamtheit4],&apos;Ergebnis eines Münzwurfs : Wappen&apos;)||equals([var=Grundgesamtheit4],&apos;Haarfarbe : blond&apos;)||equals([var=Grundgesamtheit4],&apos;Verkaufte Milchmenge : 25 Liter&apos;)||equals([var=Grundgesamtheit4],&apos;Farbe von Kleidern : rot&apos;)||equals([var=Grundgesamtheit4],&apos;Geburtstag : 25.Februar&apos;)||equals([var=Grundgesamtheit4],&apos;Temperatur : 68$^\circ$ Fahrenheit&apos;)||equals([var=Grundgesamtheit4],&apos;Anzahl Baustellen in Essen : keine&apos;),&apos;10&apos;,&apos;01&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>p1</name>
+      <initializationCode id="47">
+        <code>ifthenelse(equals([var=Grundgesamtheit1],&apos;Alter von Menschen : 8 Monate&apos;)||equals([var=Grundgesamtheit1],&apos;Klausurnote : gut&apos;)||equals([var=Grundgesamtheit1],&apos;Holzart von Schränken : Eiche&apos;)||equals([var=Grundgesamtheit1],&apos;Ergebnis eines Münzwurfs : Wappen&apos;)||equals([var=Grundgesamtheit1],&apos;Haarfarbe : blond&apos;)||equals([var=Grundgesamtheit1],&apos;Verkaufte Milchmenge : 25 Liter&apos;)||equals([var=Grundgesamtheit1],&apos;Farbe von Kleidern : rot&apos;)||equals([var=Grundgesamtheit1],&apos;Geburtstag : 25.Februar&apos;)||equals([var=Grundgesamtheit1],&apos;Temperatur : 68$^\circ$ Fahrenheit&apos;)||equals([var=Grundgesamtheit1],&apos;Anzahl Baustellen in Essen : keine&apos;),1,0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>p2</name>
+      <initializationCode id="49">
+        <code>ifthenelse(equals([var=Grundgesamtheit2],&apos;Alter von Menschen : 8 Monate&apos;)||equals([var=Grundgesamtheit2],&apos;Klausurnote : gut&apos;)||equals([var=Grundgesamtheit2],&apos;Holzart von Schränken : Eiche&apos;)||equals([var=Grundgesamtheit2],&apos;Ergebnis eines Münzwurfs : Wappen&apos;)||equals([var=Grundgesamtheit2],&apos;Haarfarbe : blond&apos;)||equals([var=Grundgesamtheit2],&apos;Verkaufte Milchmenge : 25 Liter&apos;)||equals([var=Grundgesamtheit2],&apos;Farbe von Kleidern : rot&apos;)||equals([var=Grundgesamtheit2],&apos;Geburtstag : 25.Februar&apos;)||equals([var=Grundgesamtheit2],&apos;Temperatur : 68$^\circ$ Fahrenheit&apos;)||equals([var=Grundgesamtheit2],&apos;Anzahl Baustellen in Essen : keine&apos;),1,0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>p3</name>
+      <initializationCode id="51">
+        <code>ifthenelse(equals([var=Grundgesamtheit3],&apos;Alter von Menschen : 8 Monate&apos;)||equals([var=Grundgesamtheit3],&apos;Klausurnote : gut&apos;)||equals([var=Grundgesamtheit3],&apos;Holzart von Schränken : Eiche&apos;)||equals([var=Grundgesamtheit3],&apos;Ergebnis eines Münzwurfs : Wappen&apos;)||equals([var=Grundgesamtheit3],&apos;Haarfarbe : blond&apos;)||equals([var=Grundgesamtheit3],&apos;Verkaufte Milchmenge : 25 Liter&apos;)||equals([var=Grundgesamtheit3],&apos;Farbe von Kleidern : rot&apos;)||equals([var=Grundgesamtheit3],&apos;Geburtstag : 25.Februar&apos;)||equals([var=Grundgesamtheit3],&apos;Temperatur : 68$^\circ$ Fahrenheit&apos;)||equals([var=Grundgesamtheit3],&apos;Anzahl Baustellen in Essen : keine&apos;),1,0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>p4</name>
+      <initializationCode id="53">
+        <code>ifthenelse(equals([var=Grundgesamtheit4],&apos;Alter von Menschen : 8 Monate&apos;)||equals([var=Grundgesamtheit4],&apos;Klausurnote : gut&apos;)||equals([var=Grundgesamtheit4],&apos;Holzart von Schränken : Eiche&apos;)||equals([var=Grundgesamtheit4],&apos;Ergebnis eines Münzwurfs : Wappen&apos;)||equals([var=Grundgesamtheit4],&apos;Haarfarbe : blond&apos;)||equals([var=Grundgesamtheit4],&apos;Verkaufte Milchmenge : 25 Liter&apos;)||equals([var=Grundgesamtheit4],&apos;Farbe von Kleidern : rot&apos;)||equals([var=Grundgesamtheit4],&apos;Geburtstag : 25.Februar&apos;)||equals([var=Grundgesamtheit4],&apos;Temperatur : 68$^\circ$ Fahrenheit&apos;)||equals([var=Grundgesamtheit4],&apos;Anzahl Baustellen in Essen : keine&apos;),1,0)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="54"/>
+  <dynamicMolecules id="55"/>
+  <resultFeedbackMappings id="56"/>
+</Exercise>

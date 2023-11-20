@@ -1,0 +1,160 @@
+<Exercise id="1">
+  <name>DS2-09 Eindimensionale Häufigkeitsverteilungen 9</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Quantile bestimmen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>2</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Folgende Lebensdauern von Gl&amp;uuml;hbirnen (in Std.) wurden bei einer Pr&amp;uuml;fung festgestellt: $[var=sample,latex]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Bestimmen das [var=p]-Quantil!&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die zweite Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&amp;nbsp; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>	
+	$x_{[var=p,latex]}=[var=quant,latex]$
+</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>Sortieren Sie zur Berechnung der p-Quantile zun&amp;auml;chst die Beobachtungen aufsteigend: $x_{(1)},x_{(2)},x_{(3)},...,x_{(n)}$. (Hier liegen die Beobachtungen gl&amp;uuml;cklicherweise schon geordnet vor.)&lt;br /&gt;
+&lt;br /&gt;
+Die Zahlen in Klammern sind Platzierungsindizes; $x_{(1)}$ ist die kleinste und $x_{(n)}$ die gr&amp;ouml;&amp;szlig;te Beobachtung. Das Produkt $np$ bestimmt diejenige Beobachtung, die den Datensatz auf die gew&amp;uuml;nschte Weise unterteilt. Da der Platzierungsindex immer eine ganze Zahl ist, wird der ganzzahlige Teil $g$ von $np$ bestimmt: $g=\text{int}(np)$. Die Abk&amp;uuml;rzung &amp;quot;int&amp;quot; steht f&amp;uuml;r Integer (ganze Zahl); so sind z.B. $\text{int}(2,1)=2$ und $\text{int}(7,89)=7$. Ist $np$ gr&amp;ouml;&amp;szlig;er als $\text{int}(np)=g$, lautet der Platzierungsindex $g+1$ und das Quantil ist $x_{p}=x_{(g+1)}$.&lt;br /&gt;
+F&amp;uuml;r $np=\text{int}(np)=g$ ist das Quantil $x_{p}=x_{(g)}$.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Dies war der erste und einzige Hinweis.)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="20"/>
+      <variableUpdatesBeforeCheck id="21"/>
+      <variableUpdatesAfterCheck id="22"/>
+      <variableUpdatesOnNormalExit id="23"/>
+      <variableUpdatesOnRepeat id="24"/>
+      <variableUpdatesOnSkip id="25"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="26"/>
+      <rules id="27"/>
+      <fillInFields id="28">
+        <FillInField id="29">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="30"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_NO_PALETTE</formularEditorPalette>
+      <defaultFeedback>Leider falsch.</defaultFeedback>
+      <correctAnswerRules id="31">
+        <Rule id="32">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="33">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&lt;[var=quant]+0.0011&amp;&amp;[input=field1]&gt;[var=quant]-0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>n</name>
+      <initializationCode id="36">
+        <code>randomIntegerBetween(6,21)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="37">
+      <name>pu</name>
+      <initializationCode id="38">
+        <code>randomIntegerBetween(10,91)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>p</name>
+      <initializationCode id="40">
+        <code>evaluateInR(&apos;[var=pu]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>sample</name>
+      <initializationCode id="42">
+        <code>evaluateInR(&apos;sort(round(runif([var=n],0,20),1))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>quant</name>
+      <initializationCode id="44">
+        <code>evaluateInR(&apos;as.numeric(quantile(c([var=sample]), p=[var=p], type=1))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="45"/>
+  <dynamicMolecules id="46"/>
+  <resultFeedbackMappings id="47"/>
+</Exercise>

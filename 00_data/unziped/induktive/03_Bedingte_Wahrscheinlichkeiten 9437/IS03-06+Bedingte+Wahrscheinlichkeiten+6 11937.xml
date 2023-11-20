@@ -1,0 +1,342 @@
+<Exercise id="1">
+  <name>IS03-06 Bedingte Wahrscheinlichkeiten 6</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Krankheit, bed. WSK
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>3</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Eine seltene Krankheit kommt bei $[var=infected]$% der Bev&amp;ouml;lkerung vor (sogenannte &amp;quot;Pr&amp;auml;valenz&amp;quot;).&lt;br /&gt;&#xd;
+Um zu testen ob eine Person mit dieser Krankheit infiziert ist, wurde ein Test entwickelt, welcher mit $[var=sensitivity]$%iger Wahrscheinlichkeit die richtige Diagnose bei einem tats&amp;auml;chlich infizierten Patienten liefert (&amp;quot;Sensitivit&amp;auml;t&amp;quot; des Tests).&lt;br /&gt;&#xd;
+Wird der Test bei einer gesunden Person durchgef&amp;uuml;hrt, so ist die Wahrscheinlichkeit, dass der Test trotzdem positiv ausf&amp;auml;llt $[var=specificity]$% (&amp;quot;Spezifit&amp;auml;t&amp;quot;).&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass eine zuf&amp;auml;llige Person krank ist, bei der der Test angesprochen hat?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung: &lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie Ihr Ergebnis auf vier Nachkommastellen und nutzen Sie einen Dezimalpunkt!)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+      <skipMessage>Richtig ist $[var=sol11]$.</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="16">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass eine zuf&amp;auml;llige Person mit negativem Testergebnis krank ist?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung: &lt;/strong&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie Ihr Ergebnis auf vier Nachkommastellen und nutzen Sie einen Dezimalpunkt!) &amp;nbsp;&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot;onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</taskDescription>
+            <skipMessage>Richtig ist [var=sol22].</skipMessage>
+            <defaultTransition id="17">
+              <conditionExpression id="18">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="19">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="20">
+              <StageTransition id="21">
+                <conditionExpression id="22">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="23">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="24">
+              <StageTransition id="25">
+                <conditionExpression id="26">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="27">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="28">
+              <StageHint id="29">
+                <stagehint__order>0</stagehint__order>
+                <text>Es geht um bedingte Wahrscheinlichkeiten!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;br /&gt;
+&amp;nbsp;</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="30">
+                <stagehint__order>1</stagehint__order>
+                <text>Ein zentraler Satz der Wahrscheinlichkeitsrechnung k&amp;ouml;nnte Ihnen behilflich sein!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;br /&gt;
+&amp;nbsp;</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+              <StageHint id="31">
+                <stagehint__order>2</stagehint__order>
+                <text>Schauen Sie sich die Folien zum &quot;Satz von Bayes&quot; noch einmal an!</text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="16"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="32"/>
+            <variableUpdatesBeforeCheck id="33"/>
+            <variableUpdatesAfterCheck id="34"/>
+            <variableUpdatesOnNormalExit id="35"/>
+            <variableUpdatesOnRepeat id="36"/>
+            <variableUpdatesOnSkip id="37"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="38"/>
+            <rules id="39"/>
+            <fillInFields id="40">
+              <FillInField id="41">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="42"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist [var=sol22].</defaultFeedback>
+            <correctAnswerRules id="43">
+              <Rule id="44">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="45">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=sol22]-0.0011&amp;&amp;[input=field1]&lt;[var=sol22]+0.0011</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback> Richtig! </correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="46">
+        <StageTransition id="47">
+          <conditionExpression id="48">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="49">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="16"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="50">
+        <StageHint id="51">
+          <stagehint__order>0</stagehint__order>
+          <text>Es geht um bedingte Wahrscheinlichkeiten!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)&lt;br /&gt;
+&amp;nbsp;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="52">
+          <stagehint__order>1</stagehint__order>
+          <text>Ein zentraler Satz der Wahrscheinlichkeitsrechnung k&amp;ouml;nnte Ihnen behilflich sein!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden.)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="53">
+          <stagehint__order>2</stagehint__order>
+          <text>Schauen Sie sich die Folien zum &quot;Satz von Bayes&quot; noch einmal an!</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="54"/>
+      <variableUpdatesBeforeCheck id="55"/>
+      <variableUpdatesAfterCheck id="56"/>
+      <variableUpdatesOnNormalExit id="57"/>
+      <variableUpdatesOnRepeat id="58"/>
+      <variableUpdatesOnSkip id="59"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="60"/>
+      <rules id="61"/>
+      <fillInFields id="62">
+        <FillInField id="63">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="64"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+Richtig ist $[var=sol11]$.</defaultFeedback>
+      <correctAnswerRules id="65">
+        <Rule id="66">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="67">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=sol11]-0.0011&amp;&amp;[input=field1]&lt;[var=sol11]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig!</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="16"/>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="68">
+    <VariableDeclaration id="69">
+      <name>infected</name>
+      <initializationCode id="70">
+        <code>randomIntegerBetween(1,5)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>infec</name>
+      <initializationCode id="72">
+        <code>evaluateInR(&apos;[var=infected]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>i1</name>
+      <initializationCode id="74">
+        <code>randomIntegerBetween(0,3)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>sens</name>
+      <initializationCode id="76">
+        <code>getFromList([var=i1], list(0.9,0.95,0.99,0.999))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>sensitivity</name>
+      <initializationCode id="78">
+        <code>evaluateInR(&apos;[var=sens]*100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>j</name>
+      <initializationCode id="80">
+        <code>randomIntegerBetween(0,3)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>spec</name>
+      <initializationCode id="82">
+        <code>getFromList([var=j], list(0.01,0.05,0.1,0.2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>specificity</name>
+      <initializationCode id="84">
+        <code>evaluateInR(&apos;[var=spec]*100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>sol1</name>
+      <initializationCode id="86">
+        <code>evaluateInR(&apos;(([var=sens]*[var=infec])/([var=sens]*[var=infec]+[var=spec]*(1-[var=infec])))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>sol2</name>
+      <initializationCode id="88">
+        <code>evaluateInR(&apos;(((1-[var=sens])*[var=infec])/((1-[var=sens])*[var=infec]+(1-[var=spec])*(1-[var=infec])))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="89">
+      <name>sol11</name>
+      <initializationCode id="90">
+        <code>round([var=sol1], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="91">
+      <name>sol22</name>
+      <initializationCode id="92">
+        <code>round([var=sol2], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="93"/>
+  <dynamicMolecules id="94"/>
+  <resultFeedbackMappings id="95"/>
+</Exercise>

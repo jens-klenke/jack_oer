@@ -1,0 +1,185 @@
+<Exercise id="1">
+  <name>IS08-R02 Stichprobentheorie und Konvergenz 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>W&apos;keit über CLT mit pnorm
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>0</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <RStage id="6">
+      <internalName>1</internalName>
+      <externalName></externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Nehmen Sie an, dass die durchschnittliche Temperatur im August in Deutschland $[var=avg]$ Grad, mit einer Varianz von $[var=v]$ Grad$^2$, betr&amp;auml;gt.&lt;br /&gt;&#xd;
+Sie sollen im Rahmen einer Szenarioanalyse f&amp;uuml;r den deutschen Wetterdienst die Temperatur im August der n&amp;auml;chsten $[var=year]$ Jahre untersuchen.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, dass der Durchschnitt der Tagesmittelwerte der n&amp;auml;chsten $[var=year]$ Jahre (also insgesamt $31\cdot [var=year] = [var=days]$ Tage) im August &amp;uuml;ber $[var=limit]$ Grad liegt?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Bevor Sie den Code abschicken, k&amp;ouml;nnen Sie &amp;uuml;ber den Button &amp;quot;Auswerten&amp;quot; Ihren geschriebenen R-Code ausf&amp;uuml;hren und in der R-Konsole anzeigen lassen.)&lt;/em&gt;</taskDescription>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>false</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10"/>
+      <stageTransitions id="11"/>
+      <hints id="12">
+        <StageHint id="13">
+          <stagehint__order>0</stagehint__order>
+          <text>Laut dem zentralen Grenzwertsatz folgt, dass der Mittelwert einer Zufallsvariable $X$ mit unbekannter Verteilung asymptotisch normalverteilt ist mit $\bar{X}(n)\sim N(\mu, \sigma^2/n)$&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="14">
+          <stagehint__order>1</stagehint__order>
+          <text>Sie k&amp;ouml;nnen die bekannten Funktionen $\verb|pnorm(q, mean, sd)|$ oder $\verb|dnorm(x, mean, sd)|$ nutzen, um die gesuchte Wahrscheinlichkeit zu berechnen&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden).</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+        <StageHint id="15">
+          <stagehint__order>2</stagehint__order>
+          <text>Beachten Sie, dass der Faktor $\dfrac{1}{n}$ in der Normalverteilung im ersten Hinweis zur Anpassung der Varianz gehört, für die Eingabe in R wird jedoch der Faktor für die Standardabweichung ($\frac{1}{\sqrt{n}}$) benötigt.</text>
+          <malus>0</malus>
+          <stage class="RStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="16"/>
+      <variableUpdatesBeforeCheck id="17"/>
+      <variableUpdatesAfterCheck id="18"/>
+      <variableUpdatesOnNormalExit id="19"/>
+      <variableUpdatesOnRepeat id="20"/>
+      <variableUpdatesOnSkip id="21"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>false</allowSkip>
+      <resources id="22"/>
+      <initialCode></initialCode>
+      <finalResultComputationString></finalResultComputationString>
+      <testCasetuples id="23">
+        <TestCaseTuple id="24">
+          <testCases id="25">
+            <StaticRTestCase id="26">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig. 
+
+Achten Sie darauf, dass Sie die $\verb|pnorm()|$ oder $\verb|dnorm()|$-Funktion benutzen.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <queries class="linked-list" id="27">
+                <RGReQLQuery id="28">
+                  <query>	        from int, pnorm:V{FunctionCall} with
+                pnorm.name=&quot;pnorm&quot; or
+                int.name=&quot;integrate&quot;
+                report 0 end	</query>
+                </RGReQLQuery>
+              </queries>
+            </StaticRTestCase>
+          </testCases>
+          <checkerConfiguration id="29">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>44010</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+        <TestCaseTuple id="30">
+          <testCases id="31">
+            <DynamicRTestCase id="32">
+              <points>50</points>
+              <pointsMode>GAIN</pointsMode>
+              <name>imported testcase</name>
+              <feedbackIfFailed>Leider nicht richtig.</feedbackIfFailed>
+              <ruleMode>PRESENCE</ruleMode>
+              <postCode>testFunc &lt;- function(){}
+      postprocess &lt;- function(w){
+      gg &lt;- as.numeric(w[1])
+      return(gg)
+      }
+    </postCode>
+              <expectedOutput>1-pnorm([var=limit],[var=avg],[var=sd]/sqrt([var=days]))</expectedOutput>
+              <postprocessingFunction>postprocess</postprocessingFunction>
+              <tolerance>-4</tolerance>
+            </DynamicRTestCase>
+          </testCases>
+          <checkerConfiguration id="33">
+            <isActive>false</isActive>
+            <hasVisibleResult>false</hasVisibleResult>
+            <hasVisibleFeedback>false</hasVisibleFeedback>
+            <isAsync>false</isAsync>
+            <weight>1</weight>
+            <persistentReference>44011</persistentReference>
+          </checkerConfiguration>
+        </TestCaseTuple>
+      </testCasetuples>
+    </RStage>
+  </stages>
+  <startStage class="RStage" reference="6"/>
+  <variableDeclarations id="34">
+    <VariableDeclaration id="35">
+      <name>avg</name>
+      <initializationCode id="36">
+        <code>evaluateInR(&apos;round(runif(1, 17, 18), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="37">
+      <name>sd</name>
+      <initializationCode id="38">
+        <code>evaluateInR(&apos;round(runif(1, 7, 9), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="39">
+      <name>v</name>
+      <initializationCode id="40">
+        <code>evaluateInR(&apos;round([var=sd]^2, 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="41">
+      <name>limit</name>
+      <initializationCode id="42">
+        <code>evaluateInR(&apos;round(runif(1, 18.1, 19), 1)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="43">
+      <name>year</name>
+      <initializationCode id="44">
+        <code>evaluateInR(&apos;round(runif(1, 20, 25))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="45">
+      <name>days</name>
+      <initializationCode id="46">
+        <code>evaluateInR(&apos;[var=year]*31&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="47"/>
+  <dynamicMolecules id="48"/>
+  <resultFeedbackMappings id="49"/>
+</Exercise>

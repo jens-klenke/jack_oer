@@ -1,0 +1,477 @@
+<Exercise id="1">
+  <name>DS7-07 Zweidimensionale Datensätze 7 </name>
+  <publicDescription></publicDescription>
+  <internalNotes>Berechnung quadratische Kontingenz, Kontingenzkoeffizient nach Pearson, korrigierter Kontingenzkoeffizient
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>3</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Die tabellarische Aufbereitung einer Befragung von $100$ 30-j&amp;auml;hrigen Studentinnen bez&amp;uuml;glich Familienstand und Religionszugeh&amp;ouml;rigkeit ergab folgendes Bild:&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:500px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;X/Y&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;ledig&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;verh.&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;gesch.&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;$n_{i \cdot}$&lt;br /&gt;&#xd;
+			&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Ev.&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a11]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a12]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a13]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;$[var=nip1]$&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Kath.&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a21]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a22]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a23]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;$[var=nip2]$&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;Sonst.&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a31]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a32]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;$[var=a33]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;$[var=nip3]$&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td&gt;&lt;br /&gt;&#xd;
+			$n_{\cdot j}$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;br /&gt;&#xd;
+			$[var=npj1]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;br /&gt;&#xd;
+			$[var=npj2]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&lt;br /&gt;&#xd;
+			$[var=npj3]$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;&lt;br /&gt;&#xd;
+			100&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie die quadratische Kontingenz, den Kontingenzkoeffizienten nach $\textrm{Pearson}$, sowie den korrigierten Kontingenzkoeffizienten.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:200px;&quot;&gt;&#xd;
+	&lt;tbody&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;$\chi^2=$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;$\textrm{K}=$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+		&lt;tr&gt;&#xd;
+			&lt;td style=&quot;text-align: right;&quot;&gt;$\textrm{K}^*=$&lt;/td&gt;&#xd;
+			&lt;td style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+		&lt;/tr&gt;&#xd;
+	&lt;/tbody&gt;&#xd;
+&lt;/table&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie,falls n&amp;ouml;tig, ihr Ergebnis auf die zweite Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&lt;br /&gt;&#xd;
+&amp;nbsp;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>$\chi^2=[var=chisqg]$&lt;br /&gt;
+$\textrm{K}=[var=Kg]$&lt;br /&gt;
+$\textrm{K}_m=[var=Ksterng]$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="14">
+        <StageTransition id="15">
+          <conditionExpression id="16">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="17">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="18">
+        <StageHint id="19">
+          <stagehint__order>0</stagehint__order>
+          <text>\[\chi^{2}=\sum_{i=1}^{m}\sum_{j=1}^{l}\frac{(n_{ij}-\tilde{n}_{ij})^{2}}{\tilde{n}_{ij}}=n\sum_{i=1}^{m}\sum_{j=1}^{l}\frac{(n_{ij}-\tilde{n}_{ij})^{2}}{n_{i\cdot}n_{\cdot j}}\]&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="20">
+          <stagehint__order>1</stagehint__order>
+          <text>\[K=\sqrt{\frac{\chi^{2}}{\chi^{2}+n}}\]&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="21">
+          <stagehint__order>2</stagehint__order>
+          <text>\[K^{*}=\frac{K}{K_{\text{max}}}\]</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="22"/>
+      <variableUpdatesBeforeCheck id="23"/>
+      <variableUpdatesAfterCheck id="24"/>
+      <variableUpdatesOnNormalExit id="25"/>
+      <variableUpdatesOnRepeat id="26"/>
+      <variableUpdatesOnSkip id="27"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="28"/>
+      <rules id="29">
+        <Rule id="30">
+          <name>Feedback_2</name>
+          <orderIndex>2</orderIndex>
+          <validationExpression id="31">
+            <code>!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field2]&gt;[var=Kg]-0.11&amp;&amp;[input=field2]&lt;[var=Kg]+0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText>Sie haben den Kontingenzkoeffizienten nach $\textrm{Pearson}$ korrekt berechnet.</feedbackText>
+          <points>40</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="32">
+          <name>Feedback_1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="33">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&lt;[var=chisqg]+0.11&amp;&amp;[input=field1]&gt;[var=chisqg]-0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText> Sie haben die quadratische Kontingenz korrekt berechnet.</feedbackText>
+          <points>40</points>
+          <terminal>false</terminal>
+        </Rule>
+        <Rule id="34">
+          <name>Feedback_3</name>
+          <orderIndex>3</orderIndex>
+          <validationExpression id="35">
+            <code>!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field3]&gt;[var=Ksterng]-0.11&amp;&amp;[input=field3]&lt;[var=Ksterng]+0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <feedbackText> Sie haben den korrigierten Kontingenzkoeffizienten korrekt berechnet.</feedbackText>
+          <points>20</points>
+          <terminal>false</terminal>
+        </Rule>
+      </rules>
+      <fillInFields id="36">
+        <FillInField id="37">
+          <name>field2</name>
+          <orderIndex>1</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="38">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+        <FillInField id="39">
+          <name>field3</name>
+          <orderIndex>2</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="40"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+$\chi^2=[var=chisqg]$&lt;br /&gt;
+$\textrm{K}=[var=Kg]$&lt;br /&gt;
+$\textrm{K}_m=[var=Ksterng]$</defaultFeedback>
+      <correctAnswerRules id="41">
+        <Rule id="42">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="43">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]&lt;[var=chisqg]+0.11&amp;&amp;[input=field1]&gt;[var=chisqg]-0.11&amp;&amp;[input=field2]&gt;[var=Kg]-0.11&amp;&amp;[input=field2]&lt;[var=Kg]+0.11&amp;&amp;[input=field3]&gt;[var=Ksterng]-0.11&amp;&amp;[input=field3]&lt;[var=Ksterng]+0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="44">
+    <VariableDeclaration id="45">
+      <name>a11</name>
+      <initializationCode id="46">
+        <code>randomIntegerBetween(1,24)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="47">
+      <name>a12</name>
+      <initializationCode id="48">
+        <code>randomIntegerBetween(1,14)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="49">
+      <name>a13</name>
+      <initializationCode id="50">
+        <code>randomIntegerBetween(1,9)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="51">
+      <name>nip1</name>
+      <initializationCode id="52">
+        <code>evaluateInR(&apos;[var=a11]+[var=a12]+[var=a13]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="53">
+      <name>a21</name>
+      <initializationCode id="54">
+        <code>randomIntegerBetween(1,24)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="55">
+      <name>a22</name>
+      <initializationCode id="56">
+        <code>randomIntegerBetween(1,14)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="57">
+      <name>a23</name>
+      <initializationCode id="58">
+        <code>randomIntegerBetween(1,9)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="59">
+      <name>nip2</name>
+      <initializationCode id="60">
+        <code>evaluateInR(&apos;[var=a21]+[var=a22]+[var=a23]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="61">
+      <name>nip3</name>
+      <initializationCode id="62">
+        <code>evaluateInR(&apos;100-[var=nip1]-[var=nip2]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="63">
+      <name>a31h1</name>
+      <initializationCode id="64">
+        <code>evaluateInR(&apos;round([var=nip3]/3)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="65">
+      <name>a33</name>
+      <initializationCode id="66">
+        <code>randomIntegerBetween(1,[var=a31h1])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="67">
+      <name>a32</name>
+      <initializationCode id="68">
+        <code>randomIntegerBetween(1,[var=a31h1])</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="69">
+      <name>a31</name>
+      <initializationCode id="70">
+        <code>evaluateInR(&apos;[var=nip3]-[var=a33]-[var=a32]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="71">
+      <name>npj1</name>
+      <initializationCode id="72">
+        <code>evaluateInR(&apos;[var=a11]+[var=a21]+[var=a31]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="73">
+      <name>npj2</name>
+      <initializationCode id="74">
+        <code>evaluateInR(&apos;[var=a12]+[var=a22]+[var=a32]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="75">
+      <name>npj3</name>
+      <initializationCode id="76">
+        <code>evaluateInR(&apos;[var=a13]+[var=a23]+[var=a33]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="77">
+      <name>n11</name>
+      <initializationCode id="78">
+        <code>evaluateInR(&apos;[var=nip1]*[var=npj1]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="79">
+      <name>n12</name>
+      <initializationCode id="80">
+        <code>evaluateInR(&apos;[var=nip1]*[var=npj2]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="81">
+      <name>n13</name>
+      <initializationCode id="82">
+        <code>evaluateInR(&apos;[var=nip1]*[var=npj3]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="83">
+      <name>n21</name>
+      <initializationCode id="84">
+        <code>evaluateInR(&apos;[var=nip2]*[var=npj1]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="85">
+      <name>n22</name>
+      <initializationCode id="86">
+        <code>evaluateInR(&apos;[var=nip2]*[var=npj2]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="87">
+      <name>n23</name>
+      <initializationCode id="88">
+        <code>evaluateInR(&apos;[var=nip2]*[var=npj3]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="89">
+      <name>n31</name>
+      <initializationCode id="90">
+        <code>evaluateInR(&apos;[var=nip3]*[var=npj1]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="91">
+      <name>n32</name>
+      <initializationCode id="92">
+        <code>evaluateInR(&apos;[var=nip3]*[var=npj2]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="93">
+      <name>n33</name>
+      <initializationCode id="94">
+        <code>evaluateInR(&apos;[var=nip3]*[var=npj3]/100&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="95">
+      <name>chisq</name>
+      <initializationCode id="96">
+        <code>pow([var=a11]-[var=n11], 2)/[var=n11]+pow([var=a12]-[var=n12], 2)/[var=n12]+pow([var=a13]-[var=n13], 2)/[var=n13]+pow([var=a21]-[var=n21], 2)/[var=n21]+pow([var=a22]-[var=n22], 2)/[var=n22]+pow([var=a23]-[var=n23], 2)/[var=n23]+pow([var=a31]-[var=n31], 2)/[var=n31]+pow([var=a32]-[var=n32], 2)/[var=n32]+pow([var=a33]-[var=n33], 2)/[var=n33]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="97">
+      <name>K</name>
+      <initializationCode id="98">
+        <code>evaluateInR(&apos;sqrt([var=chisq]/([var=chisq]+100))&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="99">
+      <name>Km</name>
+      <initializationCode id="100">
+        <code>evaluateInR(&apos;sqrt(2/3)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="101">
+      <name>Kstern</name>
+      <initializationCode id="102">
+        <code>evaluateInR(&apos;[var=K]/[var=Km]&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="103">
+      <name>chisqg</name>
+      <initializationCode id="104">
+        <code>evaluateInR(&apos;round([var=chisq], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="105">
+      <name>Kg</name>
+      <initializationCode id="106">
+        <code>evaluateInR(&apos;round([var=K], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="107">
+      <name>Ksterng</name>
+      <initializationCode id="108">
+        <code>evaluateInR(&apos;round([var=Kstern], 2)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="109"/>
+  <dynamicMolecules id="110"/>
+  <resultFeedbackMappings id="111"/>
+</Exercise>

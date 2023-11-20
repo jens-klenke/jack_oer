@@ -1,0 +1,865 @@
+<Exercise id="1">
+  <name>DS8-02 Regressionsrechnung 2</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Stage 1: Aus Regressionsgerade und bestimmten Summen auf Korrelationskoeffizient schließen
+Stage 2: Varianz von Y berechnen
+Stage 3: R^2, erklärte + restliche Streuung berechnen
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>4</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>Desk_22</name>
+    </Tag>
+  </tags>
+  <resources id="4"/>
+  <stages id="5">
+    <FillInStage id="6">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Aufgrund einer Erhebung bei 10 Anbietern eines Produktes wurde f&amp;uuml;r die Absatzmenge $Y$ (in 1000 St&amp;uuml;ck) in Abh&amp;auml;ngigkeit vom Verkaufspreis $X$ (in 100 Euro je Stk.) nach der Methode der kleinsten Quadrate die lineare Preisabsatzfunktion&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\hat{y}=[var=agg] [var=var68] [var=bgg]x$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+ermittelt. Au&amp;szlig;erdem sind die folgenden Zwischenergebnisse bekannt:&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{10}x_i = [var=sumx]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{10}x^2_i = [var=sumxsq]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{10}y_i = [var=sumy]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$\displaystyle \sum_{i=1}^{10}y^2_i = [var=sumysq]$&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Berechnen Sie den Korrelationskoeffizienten von Bravais-Pearson.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$r_{XY}=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt. Innerhalb Ihrer Rechnungen d&amp;uuml;rfen Sie mit auf die vierte Nachkommastelle gerundeten Werten weiterrechnen.)&lt;/em&gt;&lt;/span&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>$r_{XY}=[var=rxyg]$</skipMessage>
+      <defaultTransition id="7">
+        <conditionExpression id="8">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="9">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="10">
+        <StageTransition id="11">
+          <conditionExpression id="12">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="13">
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" id="14">
+            <internalName>2</internalName>
+            <externalName>Stage 2</externalName>
+            <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Varianz der Variable Absatzmenge $Y$?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&amp;nbsp;&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+$s^2_{Y}=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die zweite Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&lt;/span&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+            <skipMessage>$s^2_{Y}=[var=powsyg]$</skipMessage>
+            <defaultTransition id="15">
+              <conditionExpression id="16">
+                <domain>MATH</domain>
+              </conditionExpression>
+              <stageExpression id="17">
+                <domain>MATH</domain>
+              </stageExpression>
+              <isRepeat>true</isRepeat>
+            </defaultTransition>
+            <skipTransitions id="18">
+              <StageTransition id="19">
+                <conditionExpression id="20">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="21">
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" id="22">
+                  <internalName>3</internalName>
+                  <externalName>Stage 3</externalName>
+                  <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Betrachten Sie die Streuungszerlegungsformel und bestimmen Sie die durch die angegebene Preisabsatzfunktion erkl&amp;auml;rte Streuung sowie die nicht erkl&amp;auml;rte Reststreuung von $Y$ .&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Der Anteil der erkl&amp;auml;rten Streuung von $Y$ an der Gesamtstreuung von $Y$ betr&amp;auml;gt $R^2=$&amp;nbsp;&lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;.&lt;br /&gt;&#xd;
+Die erkl&amp;auml;rte Streuung ist also $s_{\hat{y}}^{2}=$&amp;nbsp;&lt;input name=&quot;field2&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field2&quot; /&gt;&amp;nbsp;.&lt;br /&gt;&#xd;
+Die restliche Streuung von $s_{\hat{u}}^{2}=$&amp;nbsp;&lt;input name=&quot;field3&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field3&quot; /&gt;&amp;nbsp; bleibt unerkl&amp;auml;rt.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die zweite Nachkommastelle und verwenden Sie einen Dezimalpunkt. Innerhalb Ihrer Rechnungen d&amp;uuml;rfen Sie mit auf die vierte Nachkommastelle gerundeten Werten weiterrechnen)&lt;/em&gt;&lt;/span&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://rdrr.io/snippets/embed/&quot; onclick=&quot;window.open(&apos;https://rdrr.io/snippets/embed/?code=&apos;,&apos;R Console&apos;,&apos; margin-top: 20px; top=200,left=100,width=480,height=640,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+                  <skipMessage>Der Anteil der erkl&amp;auml;rten Streuung von $Y$ an der Gesamtstreuung von $Y$ betr&amp;auml;gt $R^2=[var=rsqrtg]$. Die erkl&amp;auml;rte Streuung ist also $s_{\hat{y}}^{2}=[var=Streuerg]$. Die restliche Streuung von $s_{\hat{u}}^{2}=[var=Streuunerg]$ bleibt unerkl&amp;auml;rt.</skipMessage>
+                  <defaultTransition id="23">
+                    <conditionExpression id="24">
+                      <domain>MATH</domain>
+                    </conditionExpression>
+                    <stageExpression id="25">
+                      <domain>MATH</domain>
+                    </stageExpression>
+                    <isRepeat>true</isRepeat>
+                  </defaultTransition>
+                  <skipTransitions id="26">
+                    <StageTransition id="27">
+                      <conditionExpression id="28">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="29">
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </skipTransitions>
+                  <stageTransitions id="30">
+                    <StageTransition id="31">
+                      <conditionExpression id="32">
+                        <code></code>
+                        <domain>MATH</domain>
+                      </conditionExpression>
+                      <stageExpression id="33">
+                        <code>[meta=stageCurrentResult]&gt;=100</code>
+                        <domain>MATH</domain>
+                      </stageExpression>
+                      <isRepeat>false</isRepeat>
+                    </StageTransition>
+                  </stageTransitions>
+                  <hints id="34">
+                    <StageHint id="35">
+                      <stagehint__order>0</stagehint__order>
+                      <text>      $\sum_{r=1}^{n}(y_{r}-\bar{y})^{2}=\sum_{r=1}^{n}(\hat{y}_{r}-\bar{y})^{2}+\sum_{r=1}^{n}\hat{u}_{r}^{2}.$
+
+    </text>
+                      <malus>0</malus>
+                      <stage class="FillInStage" reference="22"/>
+                    </StageHint>
+                  </hints>
+                  <variableUpdatesOnEnter id="36"/>
+                  <variableUpdatesBeforeCheck id="37"/>
+                  <variableUpdatesAfterCheck id="38"/>
+                  <variableUpdatesOnNormalExit id="39"/>
+                  <variableUpdatesOnRepeat id="40"/>
+                  <variableUpdatesOnSkip id="41"/>
+                  <weight>1</weight>
+                  <orderIndex>2</orderIndex>
+                  <allowSkip>true</allowSkip>
+                  <resources id="42"/>
+                  <rules id="43">
+                    <Rule id="44">
+                      <name>Feedback_3</name>
+                      <orderIndex>3</orderIndex>
+                      <validationExpression id="45">
+                        <code>!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field3]&gt;[var=Streuunerg]-0.11&amp;&amp;[input=field3]&lt;[var=Streuunerg]+0.11</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <feedbackText> $s_{\hat{u}}^{2}$ korrekt.</feedbackText>
+                      <points>33</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                    <Rule id="46">
+                      <name>Feedback_2</name>
+                      <orderIndex>2</orderIndex>
+                      <validationExpression id="47">
+                        <code>!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;[input=field2]&gt;[var=Streuerg]-0.11&amp;&amp;[input=field2]&lt;[var=Streuerg]+0.11</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <feedbackText> $s_{\hat{y}}^{2}$ korrekt.</feedbackText>
+                      <points>33</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                    <Rule id="48">
+                      <name>Feedback_1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="49">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rsqrtg]-0.2&amp;&amp;[input=field1]&lt;[var=rsqrtg]+0.2</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <feedbackText> $R^2$ korrekt.</feedbackText>
+                      <points>34</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </rules>
+                  <fillInFields id="50">
+                    <FillInField id="51">
+                      <name>field3</name>
+                      <orderIndex>2</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                    <FillInField id="52">
+                      <name>field2</name>
+                      <orderIndex>1</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                    <FillInField id="53">
+                      <name>field1</name>
+                      <orderIndex>0</orderIndex>
+                      <size>6</size>
+                      <formularEditorType>NUMBER</formularEditorType>
+                    </FillInField>
+                  </fillInFields>
+                  <dropDownFields id="54"/>
+                  <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+                  <defaultFeedback>Leider nicht korrekt.</defaultFeedback>
+                  <correctAnswerRules id="55">
+                    <Rule id="56">
+                      <name>CorrectAnswer1</name>
+                      <orderIndex>1</orderIndex>
+                      <validationExpression id="57">
+                        <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;!isEmpty([input=field2])&amp;&amp;isRealNumber([input=field2])&amp;&amp;!isEmpty([input=field3])&amp;&amp;isRealNumber([input=field3])&amp;&amp;[input=field1]&gt;[var=rsqrtg]-0.2&amp;&amp;[input=field1]&lt;[var=rsqrtg]+0.2&amp;&amp;[input=field2]&gt;[var=Streuerg]-0.11&amp;&amp;[input=field2]&lt;[var=Streuerg]+0.11&amp;&amp;[input=field3]&gt;[var=Streuunerg]-0.11&amp;&amp;[input=field3]&lt;[var=Streuunerg]+0.11</code>
+                        <domain>MATH</domain>
+                      </validationExpression>
+                      <points>0</points>
+                      <terminal>false</terminal>
+                    </Rule>
+                  </correctAnswerRules>
+                  <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+                  <defaultResult>0</defaultResult>
+                </targetStage>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </skipTransitions>
+            <stageTransitions id="58">
+              <StageTransition id="59">
+                <conditionExpression id="60">
+                  <code></code>
+                  <domain>MATH</domain>
+                </conditionExpression>
+                <stageExpression id="61">
+                  <code>[meta=stageCurrentResult]&gt;=100</code>
+                  <domain>MATH</domain>
+                </stageExpression>
+                <targetStage class="FillInStage" reference="22"/>
+                <isRepeat>false</isRepeat>
+              </StageTransition>
+            </stageTransitions>
+            <hints id="62">
+              <StageHint id="63">
+                <stagehint__order>0</stagehint__order>
+                <text>      $s_Y=\sqrt{\frac{1}{n}\sum_{i=1}^{n}y^2_i-\bar{y}^2}$
+
+    </text>
+                <malus>0</malus>
+                <stage class="FillInStage" reference="14"/>
+              </StageHint>
+            </hints>
+            <variableUpdatesOnEnter id="64"/>
+            <variableUpdatesBeforeCheck id="65"/>
+            <variableUpdatesAfterCheck id="66"/>
+            <variableUpdatesOnNormalExit id="67"/>
+            <variableUpdatesOnRepeat id="68"/>
+            <variableUpdatesOnSkip id="69"/>
+            <weight>1</weight>
+            <orderIndex>1</orderIndex>
+            <allowSkip>true</allowSkip>
+            <resources id="70"/>
+            <rules id="71"/>
+            <fillInFields id="72">
+              <FillInField id="73">
+                <name>field1</name>
+                <orderIndex>0</orderIndex>
+                <size>6</size>
+                <formularEditorType>NUMBER</formularEditorType>
+              </FillInField>
+            </fillInFields>
+            <dropDownFields id="74"/>
+            <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+            <defaultFeedback>Leider nicht korrekt.</defaultFeedback>
+            <correctAnswerRules id="75">
+              <Rule id="76">
+                <name>CorrectAnswer1</name>
+                <orderIndex>1</orderIndex>
+                <validationExpression id="77">
+                  <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=powsyg]-0.2&amp;&amp;[input=field1]&lt;[var=powsyg]+0.2</code>
+                  <domain>MATH</domain>
+                </validationExpression>
+                <points>0</points>
+                <terminal>false</terminal>
+              </Rule>
+            </correctAnswerRules>
+            <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+            <defaultResult>0</defaultResult>
+          </targetStage>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="78">
+        <StageTransition id="79">
+          <conditionExpression id="80">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="81">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <targetStage class="FillInStage" reference="14"/>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="82">
+        <StageHint id="83">
+          <stagehint__order>0</stagehint__order>
+          <text>$b=\frac{s_{XY}}{s^2_{X}}$&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;(Es ist ein weiterer Hinweis vorhanden)&lt;/em&gt;</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+        <StageHint id="84">
+          <stagehint__order>1</stagehint__order>
+          <text>      $r_{XY}=\frac{s_{XY}}{s_{X}s_{Y}}$
+
+    </text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="6"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="85"/>
+      <variableUpdatesBeforeCheck id="86"/>
+      <variableUpdatesAfterCheck id="87"/>
+      <variableUpdatesOnNormalExit id="88"/>
+      <variableUpdatesOnRepeat id="89"/>
+      <variableUpdatesOnSkip id="90"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="91"/>
+      <rules id="92"/>
+      <fillInFields id="93">
+        <FillInField id="94">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="95"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider nicht korrekt.</defaultFeedback>
+      <correctAnswerRules id="96">
+        <Rule id="97">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="98">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=rxyg]-0.11&amp;&amp;[input=field1]&lt;[var=rxyg]+0.11</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+    <FillInStage reference="14"/>
+    <FillInStage reference="22"/>
+  </stages>
+  <startStage class="FillInStage" reference="6"/>
+  <variableDeclarations id="99">
+    <VariableDeclaration id="100">
+      <name>yyy1</name>
+      <initializationCode id="101">
+        <code>randomIntegerBetween(-200,200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="102">
+      <name>yyy2</name>
+      <initializationCode id="103">
+        <code>randomIntegerBetween(-200,200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="104">
+      <name>yyy3</name>
+      <initializationCode id="105">
+        <code>randomIntegerBetween(-200,200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="106">
+      <name>yyy4</name>
+      <initializationCode id="107">
+        <code>randomIntegerBetween(-200,200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="108">
+      <name>yyy5</name>
+      <initializationCode id="109">
+        <code>randomIntegerBetween(-200,200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="110">
+      <name>yyy6</name>
+      <initializationCode id="111">
+        <code>randomIntegerBetween(-200,200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="112">
+      <name>yyy7</name>
+      <initializationCode id="113">
+        <code>randomIntegerBetween(-200,200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="114">
+      <name>yyy8</name>
+      <initializationCode id="115">
+        <code>randomIntegerBetween(-200,200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="116">
+      <name>yyy9</name>
+      <initializationCode id="117">
+        <code>randomIntegerBetween(-200,200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="118">
+      <name>yyy10</name>
+      <initializationCode id="119">
+        <code>randomIntegerBetween(-200,200)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="120">
+      <name>yy1</name>
+      <initializationCode id="121">
+        <code>[var=yyy1]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="122">
+      <name>yy2</name>
+      <initializationCode id="123">
+        <code>[var=yyy2]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="124">
+      <name>yy3</name>
+      <initializationCode id="125">
+        <code>[var=yyy3]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="126">
+      <name>yy4</name>
+      <initializationCode id="127">
+        <code>[var=yyy4]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="128">
+      <name>yy5</name>
+      <initializationCode id="129">
+        <code>[var=yyy5]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="130">
+      <name>yy6</name>
+      <initializationCode id="131">
+        <code>[var=yyy6]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="132">
+      <name>yy7</name>
+      <initializationCode id="133">
+        <code>[var=yyy7]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="134">
+      <name>yy8</name>
+      <initializationCode id="135">
+        <code>[var=yyy8]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="136">
+      <name>yy9</name>
+      <initializationCode id="137">
+        <code>[var=yyy9]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="138">
+      <name>yy10</name>
+      <initializationCode id="139">
+        <code>[var=yyy10]/100</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="140">
+      <name>x1</name>
+      <initializationCode id="141">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="142">
+      <name>x2</name>
+      <initializationCode id="143">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="144">
+      <name>x3</name>
+      <initializationCode id="145">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="146">
+      <name>x4</name>
+      <initializationCode id="147">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="148">
+      <name>x5</name>
+      <initializationCode id="149">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="150">
+      <name>x6</name>
+      <initializationCode id="151">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="152">
+      <name>x7</name>
+      <initializationCode id="153">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="154">
+      <name>x8</name>
+      <initializationCode id="155">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="156">
+      <name>x9</name>
+      <initializationCode id="157">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="158">
+      <name>x10</name>
+      <initializationCode id="159">
+        <code>randomIntegerBetween(1,10)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="160">
+      <name>y1</name>
+      <initializationCode id="161">
+        <code>16.98-1.73*[var=x1]+[var=yy1]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="162">
+      <name>y2</name>
+      <initializationCode id="163">
+        <code>16.98-1.73*[var=x2]+[var=yy2]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="164">
+      <name>y3</name>
+      <initializationCode id="165">
+        <code>16.98-1.73*[var=x3]+[var=yy3]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="166">
+      <name>y4</name>
+      <initializationCode id="167">
+        <code>16.98-1.73*[var=x4]+[var=yy4]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="168">
+      <name>y5</name>
+      <initializationCode id="169">
+        <code>16.98-1.73*[var=x5]+[var=yy5]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="170">
+      <name>y6</name>
+      <initializationCode id="171">
+        <code>16.98-1.73*[var=x6]+[var=yy6]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="172">
+      <name>y7</name>
+      <initializationCode id="173">
+        <code>16.98-1.73*[var=x7]+[var=yy7]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="174">
+      <name>y8</name>
+      <initializationCode id="175">
+        <code>16.98-1.73*[var=x8]+[var=yy8]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="176">
+      <name>y9</name>
+      <initializationCode id="177">
+        <code>16.98-1.73*[var=x9]+[var=yy9]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="178">
+      <name>y10</name>
+      <initializationCode id="179">
+        <code>16.98-1.73*[var=x10]+[var=yy10]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="180">
+      <name>xquer</name>
+      <initializationCode id="181">
+        <code>([var=x1]+[var=x2]+[var=x3]+[var=x4]+[var=x5]+[var=x6]+[var=x7]+[var=x8]+[var=x9]+[var=x10])/10</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="182">
+      <name>yquer</name>
+      <initializationCode id="183">
+        <code>([var=y1]+[var=y2]+[var=y3]+[var=y4]+[var=y5]+[var=y6]+[var=y7]+[var=y8]+[var=y9]+[var=y10])/10</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="184">
+      <name>b</name>
+      <initializationCode id="185">
+        <code>(([var=y1]-[var=yquer])*([var=x1]-[var=xquer])+([var=y2]-[var=yquer])*([var=x2]-[var=xquer])+([var=y3]-[var=yquer])*([var=x3]-[var=xquer])+([var=y4]-[var=yquer])*([var=x4]-[var=xquer])+([var=y5]-[var=yquer])*([var=x5]-[var=xquer])+([var=y6]-[var=yquer])*([var=x6]-[var=xquer])+([var=y7]-[var=yquer])*([var=x7]-[var=xquer])+([var=y8]-[var=yquer])*([var=x8]-[var=xquer])+([var=y9]-[var=yquer])*([var=x9]-[var=xquer])+([var=y10]-[var=yquer])*([var=x10]-[var=xquer]))/(pow([var=x1]-[var=xquer], 2)+pow([var=x2]-[var=xquer], 2)+pow([var=x3]-[var=xquer], 2)+pow([var=x4]-[var=xquer], 2)+pow([var=x5]-[var=xquer], 2)+pow([var=x6]-[var=xquer], 2)+pow([var=x7]-[var=xquer], 2)+pow([var=x8]-[var=xquer], 2)+pow([var=x9]-[var=xquer], 2)+pow([var=x10]-[var=xquer], 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="186">
+      <name>a</name>
+      <initializationCode id="187">
+        <code>[var=yquer]-[var=b]*[var=xquer]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="188">
+      <name>punkt</name>
+      <initializationCode id="189">
+        <code>[var=a]+[var=b]*30</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="190">
+      <name>agg</name>
+      <initializationCode id="191">
+        <code>round([var=a], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="192">
+      <name>bgg</name>
+      <initializationCode id="193">
+        <code>round([var=b], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="194">
+      <name>sumx</name>
+      <initializationCode id="195">
+        <code>[var=x1]+[var=x2]+[var=x3]+[var=x4]+[var=x5]+[var=x6]+[var=x7]+[var=x8]+[var=x9]+[var=x10]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="196">
+      <name>ttsumy</name>
+      <initializationCode id="197">
+        <code>[var=y1]+[var=y2]+[var=y3]+[var=y4]+[var=y5]+[var=y6]+[var=y7]+[var=y8]+[var=y9]+[var=y10]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="198">
+      <name>sumy</name>
+      <initializationCode id="199">
+        <code>round([var=ttsumy], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="200">
+      <name>sumxsq</name>
+      <initializationCode id="201">
+        <code>(pow([var=x1], 2)+pow([var=x2], 2)+pow([var=x3], 2)+pow([var=x4], 2)+pow([var=x5], 2)+pow([var=x6], 2)+pow([var=x7], 2)+pow([var=x8], 2)+pow([var=x9], 2)+pow([var=x10], 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="202">
+      <name>ttsumysq</name>
+      <initializationCode id="203">
+        <code>(pow([var=y1], 2)+pow([var=y2], 2)+pow([var=y3], 2)+pow([var=y4], 2)+pow([var=y5], 2)+pow([var=y6], 2)+pow([var=y7], 2)+pow([var=y8], 2)+pow([var=y9], 2)+pow([var=y10], 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="204">
+      <name>sumysq</name>
+      <initializationCode id="205">
+        <code>round([var=ttsumysq], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="206">
+      <name>sx</name>
+      <initializationCode id="207">
+        <code>sqrt([var=sumxsq]/10-pow([var=xquer], 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="208">
+      <name>sy</name>
+      <initializationCode id="209">
+        <code>sqrt([var=sumysq]/10-pow([var=yquer], 2))</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="210">
+      <name>sxg</name>
+      <initializationCode id="211">
+        <code>round([var=sx], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="212">
+      <name>syg</name>
+      <initializationCode id="213">
+        <code>round([var=sy], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="214">
+      <name>rxy</name>
+      <initializationCode id="215">
+        <code>[var=bgg]*[var=sxg]/[var=syg]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="216">
+      <name>rxyg</name>
+      <initializationCode id="217">
+        <code>round([var=rxy], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="218">
+      <name>powsy</name>
+      <initializationCode id="219">
+        <code>[var=sumysq]/10-pow([var=yquer], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="220">
+      <name>powsyg</name>
+      <initializationCode id="221">
+        <code>round([var=powsy], 4)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="222">
+      <name>rsqrt</name>
+      <initializationCode id="223">
+        <code>pow([var=rxy], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="224">
+      <name>Streuer</name>
+      <initializationCode id="225">
+        <code>[var=rsqrt]*[var=powsy]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="226">
+      <name>Streuuner</name>
+      <initializationCode id="227">
+        <code>[var=powsy]-[var=Streuer]</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="228">
+      <name>rsqrtg</name>
+      <initializationCode id="229">
+        <code>round([var=rsqrt], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="230">
+      <name>Streuerg</name>
+      <initializationCode id="231">
+        <code>round([var=Streuer], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="232">
+      <name>Streuunerg</name>
+      <initializationCode id="233">
+        <code>round([var=Streuuner], 2)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="234">
+      <name>var68</name>
+      <initializationCode id="235">
+        <code>ifthenelse([var=bgg]&lt;0, &quot; &quot;, &quot;+&quot;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="236"/>
+  <dynamicMolecules id="237"/>
+  <resultFeedbackMappings id="238"/>
+</Exercise>

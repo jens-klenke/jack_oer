@@ -1,0 +1,204 @@
+<Exercise id="1">
+  <name>IS02-06 Wahrscheinlichkeitsrechnung  6</name>
+  <publicDescription></publicDescription>
+  <internalNotes>Additionssatz
+
+Die  Materialien sind lizenziert unter CC BY-NC-SA 4.0. Eine Kopie dieser Lizenz finden Sie unter http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The materials are licensed under CC BY-NC-SA 4.0. You can find a copy of this license at http://creativecommons.org/licenses/by-nc-sa/4.0/</internalNotes>
+  <language>de</language>
+  <difficulty>1</difficulty>
+  <tags id="2">
+    <Tag id="3">
+      <name>IndStat</name>
+    </Tag>
+    <Tag id="4">
+      <name>TR_neu</name>
+    </Tag>
+    <Tag id="5">
+      <name>TR</name>
+    </Tag>
+  </tags>
+  <resources id="6"/>
+  <stages id="7">
+    <FillInStage id="8">
+      <internalName>1</internalName>
+      <externalName>Stage 1</externalName>
+      <taskDescription>&lt;strong&gt;Aufgabenstellung:&lt;/strong&gt;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Statistikstudent A. Priori m&amp;ouml;chte gerne ein Praktikum absolvieren. Dazu bewirbt er sich bei zwei Unternehmen. Die Wahrscheinlichkeit von Unternehmen $A$ genommen zu werden sch&amp;auml;tzt er mit $[var=a]$ ein. Die f&amp;uuml;r Unternehmen $B$ mit $[var=b]$.&lt;br /&gt;&#xd;
+Auch das er von beiden Unternehmen eine Zusage bekommt, ist mit $[var=ab]$ nicht unwahrscheinlich.&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+Wie gro&amp;szlig; ist die Wahrscheinlichkeit, von mindestens einem Unternehmen eine Zusage zu bekommen?&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;strong&gt;Einreichung:&lt;/strong&gt; &lt;input name=&quot;field1&quot; size=&quot;6&quot; type=&quot;text&quot; value=&quot;field1&quot; /&gt;&amp;nbsp;&lt;br /&gt;&#xd;
+&lt;br /&gt;&#xd;
+&lt;em&gt;(Runden Sie, falls n&amp;ouml;tig, auf die vierte Nachkommastelle und verwenden Sie einen Dezimalpunkt.)&lt;/em&gt;&#xd;
+&lt;p&gt;&lt;a href=&quot;https://webrtaschenrechner.netlify.app/&quot; onclick=&quot;window.open(&apos;https://webrtaschenrechner.netlify.app/&apos;,&apos;R Console&apos;,&apos;top=320, left=1525, width=400,height=600,menubar=no,toolbar=no,&apos;); return false;&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;R_ Logo&quot; pull-right=&quot;&quot; src=&quot;/econometrics/resource?resource=157444&quot; style=&quot;width: 40px; height: 50px; float: right; margin: 5px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+</taskDescription>
+      <skipMessage>$P(A\cup B) = P(A) + P(B) - P(A\cap B) = [var=a] + [var=b] - [var=ab] = [var=sol].$</skipMessage>
+      <defaultTransition id="9">
+        <conditionExpression id="10">
+          <domain>MATH</domain>
+        </conditionExpression>
+        <stageExpression id="11">
+          <domain>MATH</domain>
+        </stageExpression>
+        <isRepeat>true</isRepeat>
+      </defaultTransition>
+      <skipTransitions id="12">
+        <StageTransition id="13">
+          <conditionExpression id="14">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="15">
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </skipTransitions>
+      <stageTransitions id="16">
+        <StageTransition id="17">
+          <conditionExpression id="18">
+            <code></code>
+            <domain>MATH</domain>
+          </conditionExpression>
+          <stageExpression id="19">
+            <code>[meta=stageCurrentResult]&gt;=100</code>
+            <domain>MATH</domain>
+          </stageExpression>
+          <isRepeat>false</isRepeat>
+        </StageTransition>
+      </stageTransitions>
+      <hints id="20">
+        <StageHint id="21">
+          <stagehint__order>0</stagehint__order>
+          <text>Schauen Sie sich den &amp;quot;Additionssatz&amp;quot; noch einmal an!&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="22">
+          <stagehint__order>1</stagehint__order>
+          <text>Es sind alle ben&amp;ouml;tigten W&amp;#39;keiten f&amp;uuml;r den Additionssatz im Text gegeben.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="23">
+          <stagehint__order>2</stagehint__order>
+          <text>Es gilt: $P(A\cup B) = P(A) + P(B) - P(A\cap B)$.&lt;br /&gt;
+Nun m&amp;uuml;ssen Sie nur noch die entsprechenden W&amp;#39;keiten aus dem Text ermitteln.&lt;br /&gt;
+&lt;br /&gt;
+(Es ist ein weiterer Hinweis vorhanden)</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+        <StageHint id="24">
+          <stagehint__order>3</stagehint__order>
+          <text>$P(A)=[var=a]$, ist die W&amp;#39;keit von Unternehmen $A$ genommen zu werden.&lt;br /&gt;
+$P(B)=[var=b]$, ist die W&amp;#39;keit von Unternehmen $B$ genommen zu werden.&lt;br /&gt;
+$P(A\cap B)=[var=ab]$, ist die W&amp;#39;keit von Unternehmen $A$ $\textbf{und}$ $B$ genommen zu werden.</text>
+          <malus>0</malus>
+          <stage class="FillInStage" reference="8"/>
+        </StageHint>
+      </hints>
+      <variableUpdatesOnEnter id="25"/>
+      <variableUpdatesBeforeCheck id="26"/>
+      <variableUpdatesAfterCheck id="27"/>
+      <variableUpdatesOnNormalExit id="28"/>
+      <variableUpdatesOnRepeat id="29"/>
+      <variableUpdatesOnSkip id="30"/>
+      <weight>1</weight>
+      <orderIndex>0</orderIndex>
+      <allowSkip>true</allowSkip>
+      <resources id="31"/>
+      <rules id="32"/>
+      <fillInFields id="33">
+        <FillInField id="34">
+          <name>field1</name>
+          <orderIndex>0</orderIndex>
+          <size>6</size>
+          <formularEditorType>NUMBER</formularEditorType>
+        </FillInField>
+      </fillInFields>
+      <dropDownFields id="35"/>
+      <formularEditorPalette>MATHDOX_FORMULAR_EDITOR_BASIC</formularEditorPalette>
+      <defaultFeedback>Leider falsch.&lt;br /&gt;
+&lt;br /&gt;
+$P(A\cup B) = P(A) + P(B) - P(A\cap B) = [var=a] + [var=b] - [var=ab] = [var=sol].$</defaultFeedback>
+      <correctAnswerRules id="36">
+        <Rule id="37">
+          <name>CorrectAnswer1</name>
+          <orderIndex>1</orderIndex>
+          <validationExpression id="38">
+            <code>!isEmpty([input=field1])&amp;&amp;isRealNumber([input=field1])&amp;&amp;[input=field1]&gt;[var=sol]-0.0011&amp;&amp;[input=field1]&lt;[var=sol]+0.0011</code>
+            <domain>MATH</domain>
+          </validationExpression>
+          <points>0</points>
+          <terminal>false</terminal>
+        </Rule>
+      </correctAnswerRules>
+      <correctAnswerFeedback>Richtig.</correctAnswerFeedback>
+      <defaultResult>0</defaultResult>
+    </FillInStage>
+  </stages>
+  <startStage class="FillInStage" reference="8"/>
+  <variableDeclarations id="39">
+    <VariableDeclaration id="40">
+      <name>ii</name>
+      <initializationCode id="41">
+        <code>randomIntegerBetween(25,40)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="42">
+      <name>j</name>
+      <initializationCode id="43">
+        <code>randomIntegerBetween(40,60)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="44">
+      <name>k</name>
+      <initializationCode id="45">
+        <code>randomIntegerBetween(10,24)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="46">
+      <name>a</name>
+      <initializationCode id="47">
+        <code>evaluateInR(&apos;round(([var=ii]/100), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="48">
+      <name>b</name>
+      <initializationCode id="49">
+        <code>evaluateInR(&apos;round(([var=j]/100), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="50">
+      <name>ab</name>
+      <initializationCode id="51">
+        <code>evaluateInR(&apos;round(([var=k]/100), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+    <VariableDeclaration id="52">
+      <name>sol</name>
+      <initializationCode id="53">
+        <code>evaluateInR(&apos;round(([var=a]+[var=b]-[var=ab]), 4)&apos;)</code>
+        <domain>MATH</domain>
+      </initializationCode>
+    </VariableDeclaration>
+  </variableDeclarations>
+  <jSXGraphs id="54"/>
+  <dynamicMolecules id="55"/>
+  <resultFeedbackMappings id="56"/>
+</Exercise>
