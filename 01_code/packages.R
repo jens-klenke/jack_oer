@@ -26,5 +26,6 @@ pacman::p_load(dplyr,
                pROC,
                scales,
                yardstick,
-               rsample)
+               rsample,
+               XML)
 
